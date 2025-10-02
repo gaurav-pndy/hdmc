@@ -140,7 +140,7 @@ const MembershipSection = () => {
         </div>
 
         {/* PLANS */}
-        <div>
+        {/* <div>
           <div className="text-center text-brand1 font-bold text-2xl mb-16 mt-12">
             Выберите подходящий план
           </div>
@@ -192,7 +192,7 @@ const MembershipSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* FAQ Accordion */}
         <div>

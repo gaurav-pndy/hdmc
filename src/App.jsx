@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Home from "./pages/Home";
 import HDMCPlus from "./pages/HDMCPlus";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,10 @@ function App() {
         {
           path: "/hdmc-plus",
           element: <HDMCPlus />,
+        },
+        {
+          path: "/service-details",
+          element: <ServiceDetails />,
         },
       ],
     },

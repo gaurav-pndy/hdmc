@@ -26,7 +26,7 @@ const ContactSection = () => {
 
   return (
     <section className="w-full bg-[#fafbfc] py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-brand1 text-center  text-4xl font-bold mb-6">
           Свяжитесь с нами
         </h2>
@@ -34,7 +34,7 @@ const ContactSection = () => {
           Свяжитесь с нами любым удобным способом. Мы работаем для вашего
           здоровья и готовы ответить на все ваши вопросы.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className=" gap-8 items-start">
           {/* Left: Form */}
           <div className="bg-white rounded-xl shadow p-10">
             <div className="font-medium text-2xl mb-10 flex items-center gap-2">
@@ -121,8 +121,7 @@ const ContactSection = () => {
               Отправить
             </button>
           </div>
-          {/* Right: Info */}
-          <div className="flex-1 flex flex-col gap-5 min-w-[340px]">
+          {/* <div className="flex-1 flex flex-col gap-5 min-w-[340px]">
             <div className="bg-white rounded-xl shadow p-10">
               <div className="font-medium text-2xl mb-4 flex items-center gap-2">
                 {" "}
@@ -222,7 +221,7 @@ const ContactSection = () => {
                 <FiPhone className="inline-block mr-2" /> Поменять связь
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

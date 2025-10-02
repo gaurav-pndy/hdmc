@@ -173,11 +173,11 @@ const Header = () => {
         </div>
         <div className="flex justify-between w-full md:justify-normal md:w-fit text-sm gap-3">
           <button className="bg-[#125e84] text-white px-6 py-2 rounded font-medium hover:bg-sky-600 transition whitespace-nowrap">
-            {t("header.bookAppointment")}
+            {t("header.personalAccount")}
           </button>
-          <button className="border hidden md:block px-6 py-2 rounded font-medium bg-white hover:bg-gray-100 transition whitespace-nowrap">
+          {/* <button className="border hidden md:block px-6 py-2 rounded font-medium bg-white hover:bg-gray-100 transition whitespace-nowrap">
             {t("header.login")}
-          </button>
+          </button> */}
           {/* Mobile Hamburger */}
           <button
             className="md:hidden text-2xl text-gray-700"
@@ -257,11 +257,11 @@ const Header = () => {
               </Link>
 
               <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition mt-4">
-                {t("header.bookAppointment")}
+                {t("header.personalAccount")}
               </button>
-              <button className="border px-6 py-2 rounded font-bold bg-white hover:bg-gray-100 transition mt-2">
+              {/* <button className="border px-6 py-2 rounded font-bold bg-white hover:bg-gray-100 transition mt-2">
                 {t("header.login")}
-              </button>
+              </button> */}
             </nav>
           </motion.aside>
         )}

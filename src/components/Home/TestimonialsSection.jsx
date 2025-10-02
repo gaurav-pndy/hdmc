@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CiPlay1 } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // Place YouTube video IDs corresponding to each testimonial
 const testimonials = [
@@ -41,59 +46,40 @@ const TestimonialsSection = () => {
         <h2 className="text-brand1 text-center text-4xl font-bold mb-10">
           {t("testimonials.title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-7">
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-3 gap-8 mb-7">
           {testimonials.map((test, idx) => (
-            <div
+            <TestimonialCard
               key={idx}
-              className="bg-white rounded-lg border border-brand4/20 shadow-sm p-6 flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-              onClick={() => handleOpen(idx)}
-            >
-              <div className="relative mb-4">
-                <span className="absolute left-3 top-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-                  {test.country}
-                </span>
-                <div className="rounded-lg bg-[#cccccc] h-48 flex items-center justify-center relative">
-                  <button
-                    className="relative z-10 bg-white text-brand1 rounded-full p-3 mx-auto cursor-pointer flex items-center justify-center shadow"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleOpen(idx);
-                    }}
-                    aria-label="Play Video"
-                  >
-                    <CiPlay1 />
-                  </button>
-                </div>
-              </div>
-              <div className="flex items-center justify-between mb-2">
-                <div className="font-semibold text-black text-lg">
-                  {test.name}
-                </div>
-                <div className="flex flex-row">
-                  {Array(test.stars)
-                    .fill(0)
-                    .map((_, i) => (
-                      <svg
-                        key={i}
-                        viewBox="0 0 16 16"
-                        height="18"
-                        width="18"
-                        className="text-[#ffd700]"
-                      >
-                        <polygon
-                          points="8,2 10,6 14,6 11,9 12,13 8,11 4,13 5,9 2,6 6,6"
-                          fill="#ffd700"
-                        />
-                      </svg>
-                    ))}
-                </div>
-              </div>
-              <div className="text-brand1/80 text-sm leading-tight">
-                "{test.text}"
-              </div>
-            </div>
+              test={test}
+              idx={idx}
+              handleOpen={handleOpen}
+            />
           ))}
         </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden mb-7">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            centeredSlides
+            pagination={{ clickable: true }}
+          >
+            {testimonials.map((test, idx) => (
+              <SwiperSlide key={idx}>
+                <TestimonialCard
+                  test={test}
+                  idx={idx}
+                  handleOpen={handleOpen}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
         <div className="flex justify-center">
           <a href="/testimonials">
             <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 transition text-lg block mx-auto">
@@ -139,5 +125,47 @@ const TestimonialsSection = () => {
     </section>
   );
 };
+
+// Separate Testimonial Card Component
+const TestimonialCard = ({ test, idx, handleOpen }) => (
+  <div
+    className="bg-white rounded-lg border border-brand4/20 shadow-sm p-6 flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+    onClick={() => handleOpen(idx)}
+  >
+    <div className="relative mb-4">
+      <span className="absolute left-3 top-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+        {test.country}
+      </span>
+      <div className="rounded-lg bg-[#cccccc] h-48 flex items-center justify-center relative">
+        <button
+          className="relative z-10 bg-white text-brand1 rounded-full p-3 mx-auto cursor-pointer flex items-center justify-center shadow"
+          onClick={(e) => {
+            e.stopPropagation();
+            handleOpen(idx);
+          }}
+          aria-label="Play Video"
+        >
+          <CiPlay1 />
+        </button>
+      </div>
+    </div>
+    <div className="flex items-center justify-between mb-2">
+      <div className="font-semibold text-black text-lg">{test.name}</div>
+      <div className="flex flex-row">
+        {Array(test.stars)
+          .fill(0)
+          .map((_, i) => (
+            <svg key={i} viewBox="0 0 16 16" height="18" width="18">
+              <polygon
+                points="8,2 10,6 14,6 11,9 12,13 8,11 4,13 5,9 2,6 6,6"
+                fill="#ffd700"
+              />
+            </svg>
+          ))}
+      </div>
+    </div>
+    <div className="text-brand1/80 text-sm leading-tight">"{test.text}"</div>
+  </div>
+);
 
 export default TestimonialsSection;
