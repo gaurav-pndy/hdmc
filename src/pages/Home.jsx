@@ -20,7 +20,7 @@ const Home = () => {
       <PatientMap />
       <TestimonialsSection />
       <MembershipSection />
-      <BookingForm />
+      {/* <BookingForm /> */}
       <ContactSection />
       <AddressSection />
     </div>
