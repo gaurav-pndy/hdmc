@@ -133,7 +133,7 @@ const Header = () => {
 
           {/* City Selection Popup */}
           {showCitySelect && (
-            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
+            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
               <div className="text-lg md:text-xl font-semibold text-brand1 mb-5">
                 Please select your city
               </div>
