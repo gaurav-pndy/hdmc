@@ -145,7 +145,7 @@ const DoctorsSection = () => {
                   </div>
                 </div>
               </div>
-              <button className=" mt-4  px-6 py-2.5 hover:bg-[#105374]text-base block w-full bg-gradient-to-r from-brand1 to-brand1/80 cursor-pointer hover:from-brand1/90 hover:to-brand1/70 text-white font-semibold rounded-xl transition-all duration-500 shadow-lg shadow-brand1/30 hover:shadow-xl hover:shadow-brand1/40 hover:-translate-y-1">
+              <button className=" mt-4  px-6 py-2.5 hover:bg-[#105374]text-base block w-full bg-brand1 cursor-pointer hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30">
                 {t("doctors.viewProfile")}
               </button>
             </div>

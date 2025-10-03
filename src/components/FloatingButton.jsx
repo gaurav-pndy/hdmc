@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCalendarCheck } from "react-icons/fa";
 
-const FloatingButton = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    className="fixed z-50 bottom-6 right-1/2  translate-x-1/2  md:translate-x-0 md:right-6 bg-brand1 border border-white text-white rounded-full shadow-xl px-6 py-4 flex items-center justify-center gap-3 w-[80%] md:w-fit font-semibold md:text-lg hover:bg-brand1/90 transition-all duration-300 cursor-pointer hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand4"
-    style={{ boxShadow: "0 8px 32px rgba(18,94,132,0.17)" }}
-  >
-    <FaCalendarCheck className="text-2xl" />
-    Book an Appointment
-  </button>
-);
+const FloatingButton = ({ onClick }) => {
+  const [overFooter, setOverFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.getElementById("footer");
+      if (footer) {
+        const footerTop = footer.getBoundingClientRect().top;
+        setOverFooter(footerTop < window.innerHeight);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <button
+      onClick={onClick}
+      className={`fixed bottom-6 w-[80%] md:w-fit z-40 right-1/2 translate-x-1/2 md:right-6 md:translate-0 px-6 py-4 flex justify-center items-center gap-3 rounded-full font-semibold shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 ${
+        overFooter
+          ? "bg-white text-brand1 hover:bg-gray-200"
+          : "bg-brand1 text-white hover:bg-brand5/90"
+      }`}
+    >
+      <FaCalendarCheck className="text-2xl" />
+      Book an Appointment
+    </button>
+  );
+};
 
 export default FloatingButton;

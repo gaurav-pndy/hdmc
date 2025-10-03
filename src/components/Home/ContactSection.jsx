@@ -115,7 +115,7 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-brand1 rounded-lg cursor-pointer flex items-center justify-center gap-2 mt-2 px-2 py-3  text-white font-semibold text-base shadow hover:bg-[#0f4966] transition-all duration-300"
+              className="w-full bg-brand1 rounded-lg cursor-pointer flex items-center justify-center gap-2 mt-2 px-2 py-3  text-white font-semibold text-base shadow hover:bg-brand5/90 transition-all duration-300"
             >
               <IoPaperPlaneOutline />
               Отправить

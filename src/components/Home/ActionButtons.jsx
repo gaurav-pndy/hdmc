@@ -2,7 +2,7 @@ import React from "react";
 import { FaCalendarCheck, FaPhoneAlt, FaRegSmile } from "react-icons/fa";
 
 const ActionButtons = () => (
-  <div className="w-full  bg-brand4 py-5 px-4">
+  <div className="w-full  bg-gray-100 py-5 px-4">
     <div className="flex flex-wrap gap-5 justify-between max-w-7xl mx-auto">
       {/* Book an appointment */}
       <button
@@ -14,7 +14,7 @@ const ActionButtons = () => (
         text-lg font-semibold
         rounded-xl
         shadow
-        hover:bg-brand1/90
+        hover:bg-brand5/90
         transition-all duration-300 cursor-pointer
         border-none
         focus:outline-none
@@ -58,7 +58,7 @@ const ActionButtons = () => (
       "
       >
         <FaRegSmile />
-        Спасибо МЕДСИ
+        Спасибо HDMC
       </button>
     </div>
   </div>

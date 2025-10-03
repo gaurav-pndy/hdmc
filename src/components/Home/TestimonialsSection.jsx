@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { CiPlay1 } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
@@ -7,50 +7,61 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
-// Place YouTube video IDs corresponding to each testimonial
 const testimonials = [
   {
-    country: "US USA",
+    country: "USA",
+    isoCode: "us",
     name: "Sarah Johnson",
     stars: 5,
-    text: "Excellent care and professional IMETC consultation helped me get the right treatment.",
-    videoId: "dQw4w9WgXcQ",
+    text: "Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=6",
   },
   {
-    country: "AE UAE",
-    name: "Ahmad Al-Rashid",
-    stars: 5,
-    text: "The telemedicine service connected me with world-class specialists.",
-    videoId: "dQw4w9WgXcQ",
-  },
-  {
-    country: "ES Spain",
-    name: "Maria Garcia",
-    stars: 5,
-    text: "Professional diagnosis and treatment plan from Moscow clinic.",
-    videoId: "dQw4w9WgXcQ",
-  },
-];
-
-const textTestimonials = [
-  {
-    country: "US USA",
+    country: "USA",
+    isoCode: "us",
     name: "Sarah Johnson",
     stars: 5,
-    text: "Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. ",
+    text: "Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=1",
+    videoId: "dQw4w9WgXcQ",
   },
   {
-    country: "AE UAE",
+    country: "India",
+    isoCode: "in",
+    name: "Rahul Mehta",
+    stars: 4.8,
+    text: "The team guided me throughout the treatment process seamlessly.Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=2",
+  },
+  {
+    country: "UAE",
+    isoCode: "ae",
     name: "Ahmad Al-Rashid",
-    stars: 5,
-    text: "The telemedicine service connected me with world-class specialists. Excellent care and professional IMETC consultation helped me get the right treatment. ",
+    stars: 4.2,
+    text: "The telemedicine service connected me with world-class specialists. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=3",
+    videoId: "dQw4w9WgXcQ",
   },
   {
-    country: "ES Spain",
+    country: "UAE",
+    isoCode: "ae",
+    name: "Ahmad Al-Rashid",
+    stars: 4.2,
+    text: "The telemedicine service connected me with world-class specialists. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=4",
+  },
+  {
+    country: "Spain",
+    isoCode: "es",
     name: "Maria Garcia",
     stars: 5,
-    text: "Professional diagnosis and treatment plan from Moscow clinic. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. ",
+    text: "Professional diagnosis and treatment plan from Moscow clinic. Excellent care and professional IMETC consultation helped me get the right treatment.",
+    image: "https://i.pravatar.cc/150?img=5",
+    videoId: "dQw4w9WgXcQ",
   },
 ];
 
@@ -58,40 +69,65 @@ const TestimonialsSection = () => {
   const { t } = useTranslation();
   const [selectedIdx, setSelectedIdx] = useState(null);
 
+  // Refs for custom navigation
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   const handleOpen = (idx) => setSelectedIdx(idx);
   const handleClose = () => setSelectedIdx(null);
 
   return (
-    <section className="w-full py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-10">
-          {" "}
+    <section className="w-full py-12 bg-white ">
+      <div className="max-w-7xl relative mx-auto px-4">
+        <h2 className="text-brand1 text-center text-4xl md:text-5xl font-bold mb-10">
           {t("testimonials.title")}
         </h2>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-3 gap-8 mb-7">
-          {testimonials.map((test, idx) => (
-            <TestimonialCard
-              key={idx}
-              test={test}
-              idx={idx}
-              handleOpen={handleOpen}
-            />
-          ))}
+        {/* Custom arrows */}
+        <div className="absolute top-1/2 left-0 lg:-left-5 transform -translate-y-1/2 z-20 flex">
+          <button
+            ref={prevRef}
+            className="cursor-pointer  text-brand1  transition"
+          >
+            <FaChevronLeft size={32} />
+          </button>
+        </div>
+        <div className="absolute top-1/2 right-0 lg:-right-5 transform -translate-y-1/2 z-20 flex">
+          <button
+            ref={nextRef}
+            className="cursor-pointer text-brand1  transition"
+          >
+            <FaChevronRight size={32} />
+          </button>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden mb-7">
+        {/* Swiper carousel */}
+        <div className="mb-7">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={16}
+            spaceBetween={24}
             slidesPerView={1}
-            centeredSlides
-            pagination={{ clickable: true }}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            loop={true}
+            onSwiper={(swiper) => {
+              // Delay assigning refs until after render
+              setTimeout(() => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
           >
             {testimonials.map((test, idx) => (
-              <SwiperSlide key={idx}>
+              <SwiperSlide key={idx} className="py-10">
                 <TestimonialCard
                   test={test}
                   idx={idx}
@@ -102,45 +138,23 @@ const TestimonialsSection = () => {
           </Swiper>
         </div>
 
-        <div className="hidden md:grid grid-cols-3 gap-8 mb-7">
-          {textTestimonials.map((test, idx) => (
-            <TextTestimonialCard key={idx} test={test} />
-          ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden mb-7">
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={16}
-            slidesPerView={1}
-            centeredSlides
-            pagination={{ clickable: true }}
-          >
-            {textTestimonials.map((test, idx) => (
-              <SwiperSlide key={idx}>
-                <TextTestimonialCard test={test} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
+        {/* CTA */}
         <div className="flex justify-center">
           <a href="/testimonials">
-            <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 transition text-lg block mx-auto">
+            <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 text-lg">
               {t("testimonials.allBtn")}
             </button>
           </a>
         </div>
       </div>
 
-      {/* Dialog/Modal for video playback */}
-      {selectedIdx !== null && (
+      {/* Video modal */}
+      {selectedIdx !== null && testimonials[selectedIdx].videoId && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
           <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 p-6 pt-14 relative flex flex-col">
             <button
-              className="absolute cursor-pointer top-4 right-4 text-2xl text-brand1 hover:text-brand5"
-              onClick={handleClose}
+              className="absolute top-4 right-4 text-2xl text-brand1 hover:text-brand5"
+              onClick={() => setSelectedIdx(null)}
               aria-label="Close"
             >
               <IoClose />
@@ -161,7 +175,7 @@ const TestimonialsSection = () => {
               {testimonials[selectedIdx].name} -{" "}
               {testimonials[selectedIdx].country}
             </div>
-            <div className="text-brand1/80 text-base leading-snug">
+            <div className="text-brand1 text-base leading-snug">
               {testimonials[selectedIdx].text}
             </div>
           </div>
@@ -171,72 +185,76 @@ const TestimonialsSection = () => {
   );
 };
 
-// Separate Testimonial Card Component
-const TestimonialCard = ({ test, idx, handleOpen }) => (
-  <div
-    className="bg-white rounded-lg border border-brand4/20 shadow-sm p-6 flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-    onClick={() => handleOpen(idx)}
-  >
-    <div className="relative mb-4">
-      <span className="absolute left-3 top-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-        {test.country}
-      </span>
-      <div className="rounded-lg bg-[#cccccc] h-48 flex items-center justify-center relative">
-        <button
-          className="relative z-10 bg-white text-brand1 rounded-full p-3 mx-auto cursor-pointer flex items-center justify-center shadow"
-          onClick={(e) => {
-            e.stopPropagation();
-            handleOpen(idx);
-          }}
-          aria-label="Play Video"
+const TestimonialCard = ({ test, idx, handleOpen }) => {
+  const hasVideo = !!test.videoId;
+  return (
+    <div
+      className={`rounded-lg shadow-md h-96 p-6 flex flex-col transition-all duration-300 hover:shadow-xl ${
+        hasVideo
+          ? "bg-gradient-to-br from-brand2 to-brand1 text-white "
+          : "bg-white text-brand1 "
+      } cursor-pointer relative`}
+    >
+      {" "}
+      {/* Avatar + name */}{" "}
+      <div className="flex gap-3 mb-4">
+        {" "}
+        <img
+          src={test.image}
+          alt={test.name}
+          className="w-20 md:w-22 h-20 md:h-22 rounded-full object-cover border-4 border-brand4/40"
+        />{" "}
+        <div className="flex-1 flex items-start justify-between">
+          {" "}
+          <div>
+            {" "}
+            <div className="font-semibold text-lg md:text-xl">
+              {test.name}
+            </div>{" "}
+            <div className="text-sm md:text-base">
+              {" "}
+              <div className="text-sm md:text-base flex items-center gap-2">
+                {" "}
+                {test.isoCode && (
+                  <img
+                    src={`https://flagcdn.com/24x18/${test.isoCode}.png`}
+                    alt={test.country}
+                    className="w-6 h-4 object-cover rounded-sm"
+                  />
+                )}{" "}
+                {test.country}{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+          <div className="flex items-center gap-1 font-semibold">
+            {" "}
+            {test.stars} <FaStar className="text-yellow-300" />{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
+      {/* Text */}{" "}
+      <div className={`flex-1 border-t border-brand4 pt-4 `}>
+        {" "}
+        “{test.text}”{" "}
+      </div>{" "}
+      {/* Play overlay if video */}{" "}
+      {hasVideo && (
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition bg-black/40 rounded-lg"
+          onClick={() => handleOpen(idx)}
         >
-          <CiPlay1 />
-        </button>
-      </div>
+          {" "}
+          <button
+            className="bg-white text-brand1 rounded-full p-4 shadow-lg"
+            aria-label="Play video"
+          >
+            {" "}
+            <CiPlay1 size={28} />{" "}
+          </button>{" "}
+        </div>
+      )}{" "}
     </div>
-    <div className="flex items-center justify-between mb-2">
-      <div className="font-semibold text-black text-lg">{test.name}</div>
-      <div className="flex flex-row">
-        {Array(test.stars)
-          .fill(0)
-          .map((_, i) => (
-            <svg key={i} viewBox="0 0 16 16" height="18" width="18">
-              <polygon
-                points="8,2 10,6 14,6 11,9 12,13 8,11 4,13 5,9 2,6 6,6"
-                fill="#ffd700"
-              />
-            </svg>
-          ))}
-      </div>
-    </div>
-    <div className="text-brand1/80 text-sm leading-tight">"{test.text}"</div>
-  </div>
-);
-
-const TextTestimonialCard = ({ test }) => (
-  <div className="bg-white rounded-lg border border-brand4/20 shadow-sm p-6 flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-    <div className="mb-4">
-      <span className="bg-brand1/10 text-brand1 text-xs px-3 py-1 rounded-full">
-        {test.country}
-      </span>
-    </div>
-    <div className="flex items-center justify-between mb-2">
-      <div className="font-semibold text-black text-lg">{test.name}</div>
-      <div className="flex flex-row">
-        {Array(test.stars)
-          .fill(0)
-          .map((_, i) => (
-            <svg key={i} viewBox="0 0 16 16" height="18" width="18">
-              <polygon
-                points="8,2 10,6 14,6 11,9 12,13 8,11 4,13 5,9 2,6 6,6"
-                fill="#ffd700"
-              />
-            </svg>
-          ))}
-      </div>
-    </div>
-    <div className="text-brand1/80 text-sm leading-tight">"{test.text}"</div>
-  </div>
-);
+  );
+};
 
 export default TestimonialsSection;

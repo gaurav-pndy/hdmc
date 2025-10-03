@@ -70,7 +70,7 @@ const AboutSection = () => {
                 ))}
               </div>
               {/* Button left aligned */}
-              <button className="mt-5 bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 transition w-fit text-center">
+              <button className="mt-5 bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit text-center">
                 {t("aboutClinic.moreBtn")}
               </button>
             </div>
@@ -81,7 +81,7 @@ const AboutSection = () => {
           {stats.map((s, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-12 flex flex-col  shadow-sm"
+              className="bg-white rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-12 flex flex-col  "
             >
               <span className="text-brand1 text-3xl font-bold mb-2">
                 {t(s.value)}

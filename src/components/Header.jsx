@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
@@ -26,6 +26,14 @@ const Header = () => {
   const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language);
+
+  const [showCityInit, setShowCityInit] = useState(true);
+  const [showCitySelect, setShowCitySelect] = useState(false);
+
+  useEffect(() => {
+    // Only show the popup if city isn't already stored in session/local storage, for example.
+    setShowCityInit(true);
+  }, []);
 
   // Handle language toggle
   const languages = [
@@ -70,7 +78,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full  fixed top-0 z-50 bg-white">
+    <header className="w-full border-b border-brand4 text-brand1 fixed top-0 z-50 bg-white">
       {/* Top Bar */}
       <div className="flex w-full bg-[#f3f5f7]">
         <motion.div
@@ -94,15 +102,81 @@ const Header = () => {
             </select>
           </div>
 
+          {/* City Confirmation Popup */}
+          {showCityInit && (
+            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
+              <div className="text-lg md:text-xl font-semibold text-brand1 mb-3">
+                Is your city Moscow?
+              </div>
+              <div className="flex gap-5 w-full justify-center">
+                <button
+                  className="bg-brand1 text-white font-semibold rounded-lg px-6 py-2 hover:bg-brand5 transition-all duration-300 cursor-pointer"
+                  onClick={() => {
+                    setCity("Moscow");
+                    setShowCityInit(false);
+                  }}
+                >
+                  Yes
+                </button>
+                <button
+                  className="bg-gray-200 text-brand1 font-semibold rounded-lg px-6 py-2 hover:bg-brand4/30 transition-all duration-300 cursor-pointer"
+                  onClick={() => {
+                    setShowCityInit(false);
+                    setShowCitySelect(true);
+                  }}
+                >
+                  No
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* City Selection Popup */}
+          {showCitySelect && (
+            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
+              <div className="text-lg md:text-xl font-semibold text-brand1 mb-5">
+                Please select your city
+              </div>
+              <div className="flex gap-5 justify-center">
+                <button
+                  className={`${
+                    city === "Moscow"
+                      ? "bg-brand1 text-white"
+                      : "bg-gray-100 text-brand1"
+                  } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
+                  onClick={() => {
+                    setCity("Moscow");
+                    setShowCitySelect(false);
+                  }}
+                >
+                  Moscow
+                </button>
+                <button
+                  className={`${
+                    city === "Makhachkala"
+                      ? "bg-brand1 text-white"
+                      : "bg-gray-100 text-brand1"
+                  } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
+                  onClick={() => {
+                    setCity("Makhachkala");
+                    setShowCitySelect(false);
+                  }}
+                >
+                  Makhachkala
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Contact Info */}
           <div className="hidden md:flex flex-wrap ml-8 items-center gap-8 flex-1  justify-center md:justify-start">
             <div className="flex flex-col  text-sm">
-              <span className="whitespace-nowrap flex items-center gap-1 text-gray-800 mb-1">
+              <span className="whitespace-nowrap flex items-center gap-1  mb-1">
                 <FaPhoneAlt /> +7 (495) 123-45-67
               </span>
               <a
                 href="mailto:info@medclinic.ru"
-                className="underline text-gray-800 flex items-center gap-1 whitespace-nowrap"
+                className="underline  flex items-center gap-1 whitespace-nowrap"
               >
                 <FaEnvelope />
                 info@medclinic.ru
@@ -146,10 +220,10 @@ const Header = () => {
               className="relative md:ml-6 flex gap-1 md:gap-2 items-center"
               ref={dropdownRef}
             >
-              <FaGlobe className="text-xl md:text-2xl text-gray-800" />
+              <FaGlobe className="text-xl md:text-2xl text-brand1" />
               <div className="relative">
                 <button
-                  className="cursor-pointer border font-semibold   md:text-base px-2 py-1 rounded-lg text-xs flex items-center gap-2"
+                  className="cursor-pointer border font-semibold   md:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-xs flex items-center gap-2"
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
                   <img
@@ -183,7 +257,7 @@ const Header = () => {
                 )}
               </div>
             </div>
-            <button className="bg-[#125e84] text-white px-4 py-2 rounded-lg font-medium hover:bg-brand1/90 cursor-pointer transition-all duration-300 whitespace-nowrap flex items-center gap-2">
+            <button className="border hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap">
               <FaUser className="" />
               {t("header.personalAccount")}
             </button>
@@ -207,26 +281,29 @@ const Header = () => {
           {" "}
           <Link
             to="/"
-            className="text-sky-700 font-semibold hover:underline whitespace-nowrap"
+            className="  hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             {t("header.home")}{" "}
           </Link>{" "}
           <Link
             to="/about"
-            className=" font-semibold hover:underline whitespace-nowrap"
+            className="   hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             About Us
           </Link>{" "}
-          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             {t("header.doctors")}{" "}
           </Link>{" "}
           {/* Services Dropdown - Desktop */}{" "}
-          <div className="relative group whitespace-nowrap">
+          <div className="relative group whitespace-nowrap  cursor-pointer">
             {" "}
-            <button className="font-semibold flex cursor-pointer items-center gap-1">
+            <button className=" flex cursor-pointer items-center gap-1 hover:text-brand4 transition-all duration-300">
               {" "}
               {t(
                 "header.services"
@@ -246,30 +323,45 @@ const Header = () => {
               ))}{" "}
             </div>{" "}
           </div>{" "}
-          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             For Patients
           </Link>{" "}
-          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             CT Scan 24/7{" "}
           </Link>{" "}
-          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             Special Offers{" "}
           </Link>{" "}
-          <Link to="/hdmc-plus" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/hdmc-plus"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             HDMC+{" "}
           </Link>{" "}
-          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
             {" "}
             Reviews{" "}
           </Link>{" "}
         </div>
 
         <div className="flex justify-between  md:justify-normal md:w-fit text-sm gap-3">
-          <button className="border hidden md:flex border-[#125e84] text-[#125e84] px-4 py-2 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer  gap-2 items-center transition whitespace-nowrap">
+          <button className="  bg-[#125e84] text-white px-4 py-2.5 rounded-lg font-medium hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
             {t("header.bookAppointment")}
@@ -292,7 +384,7 @@ const Header = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed top-0 right-0 h-full w-[85vw] sm:w-1/2 bg-white shadow-lg z-50 flex flex-col p-6 overflow-y-auto"
+            className="fixed top-0 right-0 h-full w-[90vw] sm:w-1/2 bg-white shadow-lg z-50 flex flex-col p-6 overflow-y-auto"
           >
             {/* Close Button */}
             <button
@@ -317,18 +409,15 @@ const Header = () => {
               </select>
             </div>
 
-            <nav className="flex  flex-col gap-6 font-medium text-lg">
+            <nav className="flex  flex-col gap-4 text-lg">
               <Link to="/" onClick={() => setIsOpen(false)}>
                 {t("header.home")}
               </Link>
-              <Link
-                to="/about"
-                className=" font-semibold hover:underline whitespace-nowrap"
-              >
+              <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
                 About Us
               </Link>{" "}
-              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+              <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
                 {t("header.doctors")}{" "}
               </Link>{" "}
@@ -367,28 +456,22 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <Link
-                to="/about"
-                className=" font-semibold hover:underline whitespace-nowrap"
-              >
+              <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
                 For Patients
               </Link>{" "}
-              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+              <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
                 CT Scan 24/7
               </Link>{" "}
-              <Link
-                to="/about"
-                className=" font-semibold hover:underline whitespace-nowrap"
-              >
+              <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
                 Special Offers{" "}
               </Link>{" "}
               <Link to="/hdmc-plus" onClick={() => setIsOpen(false)}>
                 HDMC+
               </Link>
-              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+              <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
                 Reviews{" "}
               </Link>{" "}

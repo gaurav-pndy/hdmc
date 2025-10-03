@@ -23,35 +23,54 @@ const PatientMap = () => {
 
   const locations = [
     {
-      country: "Moscow",
+      country: "Russia",
+      code: "ru",
       patients: 156,
       color: "#DDA0DD",
       coords: [37.6, 55.75],
     },
     {
-      country: "St. Petersburg",
-      patients: 94,
-      color: "#B19CD9",
-      coords: [30.3, 59.9],
+      country: "India",
+      code: "in",
+      patients: 91,
+      color: "#FFD93D",
+      coords: [78, 20],
     },
     {
-      country: "Makhachkala",
-      patients: 71,
-      color: "#C9ADE0",
-      coords: [47.5, 42.98],
+      country: "USA",
+      code: "us",
+      patients: 145,
+      color: "#FF6B6B",
+      coords: [-95, 37],
     },
     {
-      country: "Vladivostok",
-      patients: 83,
-      color: "#E0BBE4",
-      coords: [131.9, 43.1],
+      country: "Poland",
+      code: "pl",
+      patients: 89,
+      color: "#4ECDC4",
+      coords: [19, 52],
     },
-    { country: "India", patients: 91, color: "#FFD93D", coords: [78, 20] },
-    { country: "USA", patients: 145, color: "#FF6B6B", coords: [-95, 37] },
-    { country: "Poland", patients: 89, color: "#4ECDC4", coords: [19, 52] },
-    { country: "Hungary", patients: 67, color: "#45B7D1", coords: [19, 47] },
-    { country: "UK", patients: 112, color: "#96CEB4", coords: [-3, 54] },
-    { country: "Switzerland", patients: 78, color: "#FFEAA7", coords: [8, 47] },
+    {
+      country: "Hungary",
+      code: "hu",
+      patients: 67,
+      color: "#45B7D1",
+      coords: [19, 47],
+    },
+    {
+      country: "UK",
+      code: "gb",
+      patients: 112,
+      color: "#96CEB4",
+      coords: [-3, 54],
+    },
+    {
+      country: "Switzerland",
+      code: "ch",
+      patients: 78,
+      color: "#FFEAA7",
+      coords: [8, 47],
+    },
   ];
 
   const totalPatients = locations.reduce((sum, loc) => sum + loc.patients, 0);
@@ -79,8 +98,8 @@ const PatientMap = () => {
             style={{ width: "100%", height: "auto" }}
           >
             <ZoomableGroup
-              zoom={1}
-              minZoom={1}
+              zoom={0.6}
+              minZoom={0.5}
               maxZoom={8}
               center={[20, 50]}
               zoomOnScroll={false}
@@ -139,7 +158,7 @@ const PatientMap = () => {
 
           {/* Statistics Grid */}
           <Swiper
-            modules={[Autoplay, Navigation]}
+            modules={[Autoplay, Navigation, Pagination]}
             navigation
             spaceBetween={16}
             slidesPerView={2}
@@ -149,18 +168,26 @@ const PatientMap = () => {
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 5 },
             }}
-            className="my-8"
+            className="mt-8"
           >
             {locations.map((loc, idx) => (
               <SwiperSlide key={idx}>
                 <div
-                  className={`border border-brand4/30 p-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                  className={`border border-brand4/30 p-3 rounded-lg transition-all duration-300 cursor-pointer ${
                     hovered === idx ? "shadow-lg scale-105" : ""
                   }`}
                   onMouseEnter={() => setHovered(idx)}
                   onMouseLeave={() => setHovered(null)}
                 >
-                  <div className="text-center">
+                  <div className="flex flex-col items-center text-center space-y-1">
+                    {/* Flag */}
+                    <img
+                      src={`https://flagcdn.com/w40/${loc.code}.png`}
+                      alt={`${loc.country} flag`}
+                      className="w-8 h-6 object-cover rounded shadow-lg"
+                    />
+
+                    {/* Country + Patients */}
                     <div className="font-medium text-black">{loc.country}</div>
                     <div className="text-brand1 text-xs">
                       {loc.patients} пациентов
