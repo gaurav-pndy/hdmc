@@ -69,10 +69,11 @@ const DoctorsSection = () => {
 
   return (
     <section className="w-full  py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto">
-      <h2 className="text-brand1 text-4xl font-bold mb-4">
+      <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
+        {" "}
         {t("doctors.title")}
       </h2>
-      <p className="text-lg text-brand1/80  max-w-3xl">
+      <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto">
         {t("doctors.subtitle")}
       </p>
 
@@ -99,50 +100,52 @@ const DoctorsSection = () => {
           768: { slidesPerView: 2 },
           1200: { slidesPerView: 4 },
         }}
-        className="w-full overflow-visible "
+        className="w-full h-full overflow-visible "
       >
         {cards.map((doc, idx) => (
-          <SwiperSlide key={idx}>
-            <div className="bg-white my-4 rounded-xl  hover:-translate-y-1 shadow-md transition-all duration-300 p-4 flex flex-col justify-between h-full">
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1612349316228-5942a9b489c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGRvY3RvcnxlbnwwfHwwfHx8Mg%3D%3D"
-                  alt="Doctor Image"
-                  className="w-full h-60 object-cover rounded-lg"
-                />
-                <div className="text-brand1/80 absolute top-2 right-2 font-medium text-xs bg-white px-2 py-1 rounded-full">
-                  {doc.experience}
-                </div>
-                <div className="font-bold text-black text-xl mt-4 mb-3 leading-tight">
-                  {doc.name}
-                </div>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {doc.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 rounded-full border border-brand4 text-black text-xs font-medium"
-                    >
-                      {tag}
+          <SwiperSlide className="h-full" key={idx}>
+            <div className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem] h-full">
+              <div className="flex-1 flex flex-col">
+                <div className="relative flex-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1612349316228-5942a9b489c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGRvY3RvcnxlbnwwfHwwfHx8Mg%3D%3D"
+                    alt="Doctor Image"
+                    className="w-full h-52 object-cover rounded-lg"
+                  />
+                  <div className="text-brand1/80 absolute top-2 right-2 font-medium text-xs bg-white px-2 py-1 rounded-full">
+                    {doc.experience}
+                  </div>
+                  <div className="font-bold text-black text-xl mt-4 mb-3 leading-tight">
+                    {doc.name}
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {doc.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 rounded-full border border-brand4 text-black text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-brand1 text-sm mb-3 leading-snug max-h-[44px] overflow-hidden text-ellipsis line-clamp-2">
+                    {doc.desc}
+                  </div>
+                  <div className="flex flex-row gap-6 items-center mb-3 text-brand1/90 text-xs">
+                    <span className="flex items-center">
+                      <FaLocationDot className="mr-1" /> {doc.location}
                     </span>
-                  ))}
-                </div>
-                <div className="text-brand1 text-sm mb-3 leading-snug max-h-[44px] overflow-hidden text-ellipsis line-clamp-2">
-                  {doc.desc}
-                </div>
-                <div className="flex flex-row gap-6 items-center mb-3 text-brand1/90 text-xs">
-                  <span className="flex items-center">
-                    <FaLocationDot className="mr-1" /> {doc.location}
-                  </span>
-                  <span className="flex items-center">
-                    <FaRegCalendar className="mr-1" /> {doc.schedule}
-                  </span>
-                </div>
-                <div className="text-brand1/60 text-xs">Языки:</div>
-                <div className="text-brand1 text-sm font-medium">
-                  {doc.languages}
+                    <span className="flex items-center">
+                      <FaRegCalendar className="mr-1" /> {doc.schedule}
+                    </span>
+                  </div>
+                  <div className="text-brand1/60 text-xs">Языки:</div>
+                  <div className="text-brand1 text-sm font-medium">
+                    {doc.languages}
+                  </div>
                 </div>
               </div>
-              <button className="bg-brand1 mt-4 text-white font-medium rounded-lg cursor-pointer px-6 py-2.5 shadow hover:bg-[#105374] transition-all duration-300 text-base block w-full">
+              <button className=" mt-4  px-6 py-2.5 hover:bg-[#105374]text-base block w-full bg-gradient-to-r from-brand1 to-brand1/80 cursor-pointer hover:from-brand1/90 hover:to-brand1/70 text-white font-semibold rounded-xl transition-all duration-500 shadow-lg shadow-brand1/30 hover:shadow-xl hover:shadow-brand1/40 hover:-translate-y-1">
                 {t("doctors.viewProfile")}
               </button>
             </div>

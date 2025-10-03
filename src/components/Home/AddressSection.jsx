@@ -38,68 +38,88 @@ const AddressSection = () => (
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
         {/* Clinic Cards */}
-        <div className="flex flex-col gap-6">
-          {clinics.map((c, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3 min-w-[280px]"
-            >
-              <div className="flex items-start gap-2  text-black text-lg mb-1">
-                <FaMapMarkerAlt className="mt-1.5 text-brand1" />{" "}
-                <div>
-                  {" "}
-                  <h4 className="font-medium"> {c.title}</h4>{" "}
-                  <p className="text-brand1 text-sm ">{c.address}</p>{" "}
-                  <p className="text-brand1 text-sm ">{c.schedule}</p>
-                </div>
-              </div>
 
-              <div className="flex  text-black gap-2 mb-1">
-                <FaPhoneAlt className=" text-brand1 mt-1.5" />
-                <span className="font-semibold ">{c.phone}</span>
-              </div>
-              <div className="flex  text-black gap-2 mb-1">
-                <TiLocationArrowOutline className=" text-brand1 text-xl mt-1" />
-                <span className="font-semibold ">Построить маршрут</span>
-              </div>
-
-              <button className="bg-brand1 text-white font-semibold rounded-lg px-4 py-2.5 shadow hover:bg-brand5/90 transition text-sm w-full">
-                Записаться в эту клинику
-              </button>
+        <div className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3 ">
+          <div className="flex items-start gap-2  text-black text-lg mb-1">
+            <FaMapMarkerAlt className="mt-1.5 text-brand1" />{" "}
+            <div>
+              {" "}
+              <h4 className="font-medium"> Kvartal West</h4>{" "}
+              <p className="text-brand1 text-sm ">
+                Moscow, Aminyevskoye Highway, 6 подъезд 1
+              </p>{" "}
+              <p className="text-brand1 text-sm ">
+                Пн-Пт: 08:00-21:00, Сб-Вс: 09:00-18:00
+              </p>
             </div>
-          ))}
-        </div>
-        {/* Map Block */}
-        <div className="bg-white rounded-xl shadow flex flex-col items-center justify-center py-16 px-10 text-center lg:col-span-2">
-          <div className="flex flex-col items-center">
-            <FaMapMarkerAlt className="text-brand1 text-4xl mb-2" />
-            <div className="font-bold text-lg text-brand1 mb-3">
-              Интерактивная карта
-            </div>
-            <div className="text-brand1/60 mb-6 text-base">
-              Здесь будет отображаться карта с нашими клиниками
-            </div>
-            <button className="border px-6 py-2 rounded text-sm font-semibold text-brand1 bg-white shadow hover:bg-brand4/10 transition">
-              Открыть в Яндекс.Картах
-            </button>
           </div>
+
+          <div className="flex  text-black gap-2 mb-1">
+            <FaPhoneAlt className=" text-brand1 mt-1.5" />
+            <span className="font-semibold ">+7 (495) 514-20-58</span>
+          </div>
+          <div className="flex  text-black gap-2 mb-1">
+            <TiLocationArrowOutline className=" text-brand1 text-xl mt-1" />
+            <span className="font-semibold ">Построить маршрут</span>
+          </div>
+
+          <button className="bg-brand1 text-white font-semibold rounded-lg px-4 py-2.5 shadow hover:bg-brand5/90 transition text-sm w-full">
+            Записаться в эту клинику
+          </button>
         </div>
-        {/* Empty column for spacing/alignment on desktop */}
+
+        <div className="lg:col-span-2 bg-white rounded-xl shadow overflow-hidden ">
+          <iframe
+            src="https://yandex.com/map-widget/v1/org/kvartal_west/161241477081/?indoorLevel=1&ll=37.456828%2C55.707299&utm_source=share&z=16"
+            frameborder="1"
+            allowfullscreen="true"
+            width={"100%"}
+            height={"100%"}
+          ></iframe>
+        </div>
+        <div className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3 ">
+          <div className="flex items-start gap-2  text-black text-lg mb-1">
+            <FaMapMarkerAlt className="mt-1.5 text-brand1" />{" "}
+            <div>
+              {" "}
+              <h4 className="font-medium">
+                {" "}
+                Ali-Gadzhi Akushinskogo Avenue
+              </h4>{" "}
+              <p className="text-brand1 text-sm ">
+                Ali-Gadzhi Akushinskogo Avenue, 7, Makhachkala
+              </p>{" "}
+              <p className="text-brand1 text-sm ">
+                Пн-Пт: 08:00-21:00, Сб-Вс: 09:00-18:00
+              </p>
+            </div>
+          </div>
+
+          <div className="flex  text-black gap-2 mb-1">
+            <FaPhoneAlt className=" text-brand1 mt-1.5" />
+            <span className="font-semibold ">+7 (988) 204-55-75</span>
+          </div>
+          <div className="flex  text-black gap-2 mb-1">
+            <TiLocationArrowOutline className=" text-brand1 text-xl mt-1" />
+            <span className="font-semibold ">Построить маршрут</span>
+          </div>
+
+          <button className="bg-brand1 text-white font-semibold rounded-lg px-4 py-2.5 shadow hover:bg-brand5/90 transition text-sm w-full">
+            Записаться в эту клинику
+          </button>
+        </div>
+
+        <div className="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow  ">
+          <iframe
+            src="https://yandex.com/map-widget/v1/?ll=47.467719%2C42.982145&mode=whatshere&tab=inside&utm_source=share&whatshere%5Bpoint%5D=47.467977%2C42.982315&whatshere%5Bzoom%5D=17&z=18"
+            frameborder="1"
+            allowfullscreen="true"
+            width={"100%"}
+            height={"100%"}
+          ></iframe>
+        </div>
+
         <div />
-      </div>
-      {/* STATISTICS */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-3">
-        {stats.map((s, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-xl shadow py-7 flex flex-col items-center text-center"
-          >
-            <div className="text-brand1 text-3xl font-medium mb-2">
-              {s.value}
-            </div>
-            <div className="text-brand1/80 text-base">{s.label}</div>
-          </div>
-        ))}
       </div>
     </div>
   </section>

@@ -8,6 +8,10 @@ import {
 } from "react-simple-maps";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // Official TopoJSON file
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
@@ -18,11 +22,6 @@ const PatientMap = () => {
   const [hovered, setHovered] = useState(null);
 
   const locations = [
-    { country: "USA", patients: 145, color: "#FF6B6B", coords: [-95, 37] },
-    { country: "Poland", patients: 89, color: "#4ECDC4", coords: [19, 52] },
-    { country: "Hungary", patients: 67, color: "#45B7D1", coords: [19, 47] },
-    { country: "UK", patients: 112, color: "#96CEB4", coords: [-3, 54] },
-    { country: "Switzerland", patients: 78, color: "#FFEAA7", coords: [8, 47] },
     {
       country: "Moscow",
       patients: 156,
@@ -48,6 +47,11 @@ const PatientMap = () => {
       coords: [131.9, 43.1],
     },
     { country: "India", patients: 91, color: "#FFD93D", coords: [78, 20] },
+    { country: "USA", patients: 145, color: "#FF6B6B", coords: [-95, 37] },
+    { country: "Poland", patients: 89, color: "#4ECDC4", coords: [19, 52] },
+    { country: "Hungary", patients: 67, color: "#45B7D1", coords: [19, 47] },
+    { country: "UK", patients: 112, color: "#96CEB4", coords: [-3, 54] },
+    { country: "Switzerland", patients: 78, color: "#FFEAA7", coords: [8, 47] },
   ];
 
   const totalPatients = locations.reduce((sum, loc) => sum + loc.patients, 0);
@@ -57,10 +61,10 @@ const PatientMap = () => {
       <div className="max-w-[87rem] w-full mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-brand1 text-center text-4xl font-bold mb-6">
+          <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
             {t("patientMap.title")}
           </h2>
-          <p className="text-lg text-center text-brand1/80 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto mb-10">
             {t("patientMap.subtitle")}
           </p>
         </div>
@@ -71,10 +75,16 @@ const PatientMap = () => {
             projection="geoMercator"
             projectionConfig={{ scale: 140 }}
             width={1200}
-            height={400}
+            height={350}
             style={{ width: "100%", height: "auto" }}
           >
-            <ZoomableGroup zoom={1} minZoom={1} maxZoom={8} center={[20, 20]}>
+            <ZoomableGroup
+              zoom={1}
+              minZoom={1}
+              maxZoom={8}
+              center={[20, 50]}
+              zoomOnScroll={false}
+            >
               {/* Draw countries */}
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
@@ -103,25 +113,24 @@ const PatientMap = () => {
                   onMouseEnter={() => setHovered(idx)}
                   onMouseLeave={() => setHovered(null)}
                 >
-                  <circle
-                    r={hovered === idx ? 6 : 4}
-                    fill={loc.color}
-                    stroke="#fff"
-                    strokeWidth={1}
-                    className={hovered === idx ? "animate-pulse" : ""}
+                  <FaMapMarkerAlt
+                    x={-8}
+                    y={-12}
+                    size={hovered === idx ? 18 : 14}
+                    color={loc.color}
+                    className="cursor-pointer"
                   />
+
                   {hovered === idx && (
-                    <text
-                      textAnchor="middle"
-                      y={-10}
-                      style={{
-                        fontFamily: "sans-serif",
-                        fill: "#333",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {loc.country} ({loc.patients})
-                    </text>
+                    <foreignObject x={-50} y={-60} width={100} height={40}>
+                      <div className="bg-white border border-gray-200 shadow-md rounded-md text-xs px-2 py-1 text-center">
+                        <span className="font-medium">{loc.country}</span>{" "}
+                        <br />
+                        <span className="text-brand1">
+                          {loc.patients} пациентов
+                        </span>
+                      </div>
+                    </foreignObject>
                   )}
                 </Marker>
               ))}
@@ -129,31 +138,38 @@ const PatientMap = () => {
           </ComposableMap>
 
           {/* Statistics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 my-8">
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            navigation
+            spaceBetween={16}
+            slidesPerView={2}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 5 },
+            }}
+            className="my-8"
+          >
             {locations.map((loc, idx) => (
-              <div
-                key={idx}
-                className={`bg-gradient-to-br from-slate-50 to-white p-4 rounded-xl  transition-all duration-300 cursor-pointer ${
-                  hovered === idx ? " shadow-lg scale-105" : ""
-                }`}
-                onMouseEnter={() => setHovered(idx)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <div className="flex items-center justify-center mb-2">
-                  <FaMapMarkerAlt
-                    style={{ color: loc.color }}
-                    className="text-xl"
-                  />
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-black  ">{loc.country}</div>
-                  <div className="text-brand1 text-sm">
-                    {loc.patients} пациентов
+              <SwiperSlide key={idx}>
+                <div
+                  className={`border border-brand4/30 p-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                    hovered === idx ? "shadow-lg scale-105" : ""
+                  }`}
+                  onMouseEnter={() => setHovered(idx)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <div className="text-center">
+                    <div className="font-medium text-black">{loc.country}</div>
+                    <div className="text-brand1 text-xs">
+                      {loc.patients} пациентов
+                    </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </div>
     </div>

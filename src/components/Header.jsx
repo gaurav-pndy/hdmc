@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
@@ -10,20 +10,39 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaChevronDown,
+  FaCalendarCheck,
+  FaUser,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
 import { FaLocationDot } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Header = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
+  const [city, setCity] = useState("Moscow");
+  const dropdownRef = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(i18n.language);
 
   // Handle language toggle
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ru" : "en";
-    i18n.changeLanguage(newLang);
+  const languages = [
+    { code: "en", name: "English", flag: "/flags/us_flag.png" },
+    { code: "ru", name: "Русский", flag: "/flags/russia_flag.png" },
+  ];
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setSelectedLang(lang);
+    setDropdownOpen(false);
+  };
+
+  // City addresses
+  const addresses = {
+    Moscow: "Moscow, Lenina Street 10, Building A",
+    Makhachkala: "Makhachkala, Gorkogo Street 25, Block B",
   };
 
   const menuVariants = {
@@ -55,31 +74,30 @@ const Header = () => {
       {/* Top Bar */}
       <div className="flex w-full bg-[#f3f5f7]">
         <motion.div
-          className="flex max-w-[87rem] w-full mx-auto flex-col md:flex-row items-center justify-between px-4 py-3 text-sm"
+          className="flex max-w-[87rem] w-full mx-auto flex-col md:flex-row items-center justify-between px-4 md:py-3 text-sm"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="flex items-center justify-between w-full md:w-auto">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <img src="/HD.png" alt="Logo" className="h-6 object-contain" />
-            </div>
-
-            <button
-              className="flex md:hidden items-center gap-1 border rounded px-2 py-1 ml-4 font-medium whitespace-nowrap"
-              onClick={toggleLanguage}
-              aria-label="Toggle language"
+          {/* City Selector (instead of logo) */}
+          <div className="hidden md:flex flex-col">
+            <label htmlFor="city" className="text-xs mb-1">
+              Select your City:
+            </label>
+            <select
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              className="border rounded px-2 py-0.5"
             >
-              <FaGlobe />
-              {i18n.language === "en" ? "EN" : "RU"}
-            </button>
+              <option value="Moscow">Moscow</option>
+              <option value="Makhachkala">Makhachkala</option>
+            </select>
           </div>
 
-          {/* Contact Info (hidden on mobile) */}
-          <div className="hidden md:flex flex-wrap ml-4 items-center gap-4 flex-1 min-w-0 justify-center md:justify-start">
-            <div className="flex flex-wrap gap-6 text-sm truncate">
-              <span className="whitespace-nowrap flex items-center gap-1 text-gray-800">
+          {/* Contact Info */}
+          <div className="hidden md:flex flex-wrap ml-8 items-center gap-8 flex-1  justify-center md:justify-start">
+            <div className="flex flex-col  text-sm">
+              <span className="whitespace-nowrap flex items-center gap-1 text-gray-800 mb-1">
                 <FaPhoneAlt /> +7 (495) 123-45-67
               </span>
               <a
@@ -89,19 +107,28 @@ const Header = () => {
                 <FaEnvelope />
                 info@medclinic.ru
               </a>
-              <span className="flex items-center gap-1 text-gray-500 whitespace-nowrap">
-                <FaLocationDot /> {t("header.location")}
-              </span>
+            </div>
+            <div className=" items-center gap-1  whitespace-nowrap">
+              <h6 className="font-semibold">Moscow</h6>
+              <p className="text-xs text-brand1 leading-4">
+                Moscow, Aminyevskoye Highway, <br /> 6 подъезд 1
+              </p>
+            </div>
+            <div className=" items-center gap-1  whitespace-nowrap">
+              <h6 className="font-semibold">Makhachkala</h6>
+              <p className="text-xs text-brand1 leading-4">
+                Ali-Gadzhi Akushinskogo Avenue, <br /> 7, Makhachkala
+              </p>
             </div>
           </div>
 
-          {/* Socials & Language Switch (hidden on mobile) */}
+          {/* Socials & Language Switch */}
           <div className="hidden md:flex items-center gap-4 justify-end min-w-0">
             <a
               href="https://wa.me/74951234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-500 text-xl"
+              className="text-green-500 text-2xl hover:scale-125 transition-all duration-300"
               aria-label="WhatsApp"
             >
               <FaWhatsapp />
@@ -110,75 +137,143 @@ const Header = () => {
               href="https://t.me/medclinic"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-500 text-xl"
+              className="text-sky-500 text-2xl hover:scale-125 transition-all duration-300"
               aria-label="Telegram"
             >
               <FaTelegramPlane />
             </a>
-            <button
-              className="flex items-center gap-1 border rounded px-2 py-1 ml-4 font-medium whitespace-nowrap"
-              onClick={toggleLanguage}
-              aria-label="Toggle language"
+            <div
+              className="relative md:ml-6 flex gap-1 md:gap-2 items-center"
+              ref={dropdownRef}
             >
-              <FaGlobe />
-              {i18n.language === "en" ? "EN" : "RU"}
+              <FaGlobe className="text-xl md:text-2xl text-gray-800" />
+              <div className="relative">
+                <button
+                  className="cursor-pointer border font-semibold   md:text-base px-2 py-1 rounded-lg text-xs flex items-center gap-2"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                  <img
+                    src={
+                      languages.find((lang) => lang.code === selectedLang)?.flag
+                    }
+                    alt="Flag"
+                    className="w-3 md:w-4 h-3 md:h-4"
+                  />
+                  {languages.find((lang) => lang.code === selectedLang)?.name}
+                  <IoIosArrowDown className=" text-sm " />
+                </button>
+
+                {dropdownOpen && (
+                  <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                    {languages.map((lang) => (
+                      <li
+                        key={lang.code}
+                        className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
+                        onClick={() => changeLanguage(lang.code)}
+                      >
+                        <img
+                          src={lang.flag}
+                          className="w-3 md:w-4 h-3 md:h-4"
+                          alt={`${lang.name} Flag`}
+                        />
+                        {lang.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+            <button className="bg-[#125e84] text-white px-4 py-2 rounded-lg font-medium hover:bg-brand1/90 cursor-pointer transition-all duration-300 whitespace-nowrap flex items-center gap-2">
+              <FaUser className="" />
+              {t("header.personalAccount")}
             </button>
-            <span className="text-gray-600 text-xs">
-              {t("header.moscowTime")} | {t("header.mahachkalaTime")}
-            </span>
           </div>
         </motion.div>
       </div>
 
-      {/* Desktop Nav Bar */}
+      {/* Desktop Nav Bar with Logo */}
       <motion.nav
-        className="flex max-w-[87rem] w-full mx-auto items-center justify-between px-4 py-3"
+        className="flex max-w-[87rem]  w-full mx-auto items-center justify-between px-4 py-4 md:py-2"
         initial={{ opacity: 0, y: -5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
-        <div className="hidden md:flex gap-8 items-center flex-1">
+        {/* Logo now here */}
+        <div className="flex items-center gap-2">
+          <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
+        </div>
+
+        <div className="hidden md:flex gap-6 ml-8 items-center flex-1">
+          {" "}
           <Link
             to="/"
             className="text-sky-700 font-semibold hover:underline whitespace-nowrap"
           >
-            {t("header.home")}
-          </Link>
-
-          {/* Services Dropdown - Desktop */}
+            {" "}
+            {t("header.home")}{" "}
+          </Link>{" "}
+          <Link
+            to="/about"
+            className=" font-semibold hover:underline whitespace-nowrap"
+          >
+            {" "}
+            About Us
+          </Link>{" "}
+          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+            {" "}
+            {t("header.doctors")}{" "}
+          </Link>{" "}
+          {/* Services Dropdown - Desktop */}{" "}
           <div className="relative group whitespace-nowrap">
+            {" "}
             <button className="font-semibold flex cursor-pointer items-center gap-1">
-              {t("header.services")}
-              <FaChevronDown className="text-sm mt-1" />
-            </button>
-            <div className="absolute h-96 overflow-y-scroll  text-sm left-1/2 mt-1 pt-2  -translate-x-1/2 hidden group-hover:block bg-white shadow-lg shadow-black/40 rounded p-2 z-40 min-w-72 w-full">
+              {" "}
+              {t(
+                "header.services"
+              )} <FaChevronDown className="text-sm mt-1" />{" "}
+            </button>{" "}
+            <div className="absolute h-96 overflow-y-scroll text-sm left-1/2 mt-1 pt-2 -translate-x-1/2 hidden group-hover:block bg-white shadow-lg shadow-black/40 rounded p-2 z-40 min-w-72 w-full">
+              {" "}
               {services.map((s, idx) => (
                 <Link
                   key={idx}
                   to={s.path}
                   className="block px-2 py-2 text-wrap hover:bg-gray-100"
                 >
-                  {s.label}
+                  {" "}
+                  {s.label}{" "}
                 </Link>
-              ))}
-            </div>
-          </div>
-
+              ))}{" "}
+            </div>{" "}
+          </div>{" "}
           <Link to="/doctors" className="font-semibold whitespace-nowrap">
-            {t("header.doctors")}
-          </Link>
+            {" "}
+            For Patients
+          </Link>{" "}
+          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+            {" "}
+            CT Scan 24/7{" "}
+          </Link>{" "}
+          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+            {" "}
+            Special Offers{" "}
+          </Link>{" "}
           <Link to="/hdmc-plus" className="font-semibold whitespace-nowrap">
-            HDMC+
-          </Link>
+            {" "}
+            HDMC+{" "}
+          </Link>{" "}
+          <Link to="/doctors" className="font-semibold whitespace-nowrap">
+            {" "}
+            Reviews{" "}
+          </Link>{" "}
         </div>
-        <div className="flex justify-between w-full md:justify-normal md:w-fit text-sm gap-3">
-          <button className="bg-[#125e84] text-white px-6 py-2 rounded font-medium hover:bg-sky-600 transition whitespace-nowrap">
-            {t("header.personalAccount")}
+
+        <div className="flex justify-between  md:justify-normal md:w-fit text-sm gap-3">
+          <button className="border hidden md:flex border-[#125e84] text-[#125e84] px-4 py-2 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer  gap-2 items-center transition whitespace-nowrap">
+            <FaCalendarCheck className="text-lg" />
+
+            {t("header.bookAppointment")}
           </button>
-          {/* <button className="border hidden md:block px-6 py-2 rounded font-medium bg-white hover:bg-gray-100 transition whitespace-nowrap">
-            {t("header.login")}
-          </button> */}
-          {/* Mobile Hamburger */}
           <button
             className="md:hidden text-2xl text-gray-700"
             onClick={() => setIsOpen(true)}
@@ -208,11 +303,35 @@ const Header = () => {
               <FaTimes />
             </button>
 
+            <div className="flex flex-col mb-6">
+              <label htmlFor="city" className="text-xs mb-1">
+                Select your City:
+              </label>
+              <select
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                className="border rounded px-2 py-0.5"
+              >
+                <option value="Moscow">Moscow</option>
+                <option value="Makhachkala">Makhachkala</option>
+              </select>
+            </div>
+
             <nav className="flex  flex-col gap-6 font-medium text-lg">
               <Link to="/" onClick={() => setIsOpen(false)}>
                 {t("header.home")}
               </Link>
-
+              <Link
+                to="/about"
+                className=" font-semibold hover:underline whitespace-nowrap"
+              >
+                {" "}
+                About Us
+              </Link>{" "}
+              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+                {" "}
+                {t("header.doctors")}{" "}
+              </Link>{" "}
               {/* Services Dropdown - Mobile */}
               <div>
                 <button
@@ -248,20 +367,40 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </div>
-
-              <Link to="/doctors" onClick={() => setIsOpen(false)}>
-                {t("header.doctors")}
-              </Link>
+              <Link
+                to="/about"
+                className=" font-semibold hover:underline whitespace-nowrap"
+              >
+                {" "}
+                For Patients
+              </Link>{" "}
+              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+                {" "}
+                CT Scan 24/7
+              </Link>{" "}
+              <Link
+                to="/about"
+                className=" font-semibold hover:underline whitespace-nowrap"
+              >
+                {" "}
+                Special Offers{" "}
+              </Link>{" "}
               <Link to="/hdmc-plus" onClick={() => setIsOpen(false)}>
                 HDMC+
               </Link>
-
-              <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition mt-4">
+              <Link to="/doctors" className="font-semibold whitespace-nowrap">
+                {" "}
+                Reviews{" "}
+              </Link>{" "}
+              <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition flex items-center gap-2 mt-4">
+                <FaUser className="text-lg" />
                 {t("header.personalAccount")}
               </button>
-              {/* <button className="border px-6 py-2 rounded font-bold bg-white hover:bg-gray-100 transition mt-2">
-                {t("header.login")}
-              </button> */}
+              <button className="border border-[#125e84] text-[#125e84] px-6 py-2 rounded-lg font-medium flex gap-2 items-center hover:bg-[#125e84]/10 cursor-pointer transition whitespace-nowrap">
+                <FaCalendarCheck className="text-lg" />
+
+                {t("header.bookAppointment")}
+              </button>
             </nav>
           </motion.aside>
         )}

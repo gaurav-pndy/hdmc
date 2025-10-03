@@ -9,20 +9,25 @@ import MembershipSection from "../components/Home/MembershipSection";
 import BookingForm from "../components/Home/BookingForm";
 import ContactSection from "../components/Home/ContactSection";
 import AddressSection from "../components/Home/AddressSection";
+import ActionButtons from "../components/Home/ActionButtons";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <AboutSection />
+
       <DoctorsSection />
       <ServicesSection />
+
       <PatientMap />
-      <TestimonialsSection />
       <MembershipSection />
+      <TestimonialsSection />
+
       {/* <BookingForm /> */}
       <ContactSection />
       <AddressSection />
+      <ActionButtons />
     </div>
   );
 };

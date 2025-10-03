@@ -18,10 +18,6 @@ function App() {
           path: "/hdmc-plus",
           element: <HDMCPlus />,
         },
-        {
-          path: "/service-details",
-          element: <ServiceDetails />,
-        },
       ],
     },
   ]);

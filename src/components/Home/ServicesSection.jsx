@@ -88,10 +88,10 @@ const ServicesSection = () => {
   return (
     <section className="w-full bg-[#fbfbfc] py-16">
       <div className=" mx-auto ">
-        <h2 className="text-brand1 px-4 text-center text-4xl font-bold mb-6">
+        <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
           {t("services.title")}
         </h2>
-        <p className="text-lg px-4 text-center text-brand1/80 mb-10 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto mb-10">
           {t("services.subtitle")}
         </p>
 
@@ -112,7 +112,7 @@ const ServicesSection = () => {
           breakpoints={{
             0: {
               slidesPerView: 1.2,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 2.4,
@@ -123,6 +123,7 @@ const ServicesSection = () => {
             },
             1280: {
               slidesPerView: 4.1,
+              spaceBetween: 30,
             },
           }}
           className=" !py-10 !pb-20 "
@@ -133,30 +134,57 @@ const ServicesSection = () => {
             return (
               <SwiperSlide key={index}>
                 <div
-                  className={`bg-white rounded-lg shadow-sm p-4 flex flex-col justify-between overflow-hidden transition-all  duration-500 ease-in-out cursor-pointer h-96 xl:h-90 ${
-                    isActive ? "scale-110 z-10" : "scale-95"
+                  className={`relative group rounded-3xl p-4 md:p-6 flex flex-col justify-between overflow-hidden transition-all duration-500 ease-in-out cursor-pointer h-[28rem] md:h-[30rem] border border-white/20 backdrop-blur-xl bg-white/70 ${
+                    isActive
+                      ? "scale-105 z-10 shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+                      : "scale-95 hover:scale-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
                   }`}
                 >
-                  <div>
-                    <img
-                      src={service.image}
-                      alt=""
-                      className="w-20 mb-4 object-contain self-start"
-                    />
-                    <div className="font-medium text-black mb-1 text-lg leading-tight">
-                      {t(service.title)}
-                    </div>
-                    <div className="text-brand1/60 text-ellipsis line-clamp-4 mb-3 leading-snug">
-                      {t(service.desc)}
-                    </div>
+                  {/* Decorative Glow Background */}
+                  <div className="absolute inset-0 -z-10">
+                    <div className="absolute -top-28 -right-28 w-56 h-56 bg-gradient-to-tr from-brand1/30 to-brand1/10 rounded-full blur-3xl" />
+                    <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-gradient-to-br from-brand1/20 to-transparent rounded-full blur-3xl" />
                   </div>
-                  <div className="flex flex-row text-sm lg:text-base justify-between mt-4 gap-1">
-                    <button className="text-brand1 hover:underline cursor-pointer  transition-all duration-300 font-semibold px-0 py-0">
-                      {t("services.moreBtn")}
-                    </button>
 
-                    <button className="text-brand1 hover:underline  cursor-pointer transition-all duration-300 font-semibold px-0 py-0">
-                      {t("services.referralBtn")} &rarr;
+                  {/* Content */}
+                  <div className="relative z-10 flex-1">
+                    {/* Icon */}
+                    <div className="w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-brand1 to-brand1/80 flex items-center justify-center shadow-lg shadow-brand1/30 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <img
+                        src={service.image}
+                        alt=""
+                        className="w-12 h-12 object-contain brightness-0 invert"
+                      />
+                    </div>
+
+                    {/* Title & Description */}
+                    <h3 className="font-bold text-gray-900 mb-3 text-[1.3rem] leading-tight tracking-tight">
+                      {t(service.title)}
+                    </h3>
+                    <p className="text-gray-600 text-base line-clamp-4 ">
+                      {t(service.desc)}
+                    </p>
+                  </div>
+
+                  {/* Button */}
+                  <div className="relative z-10 mt-8">
+                    <button className="w-full bg-gradient-to-r from-brand1 to-brand1/80 cursor-pointer hover:from-brand1/90 hover:to-brand1/70 text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-500 shadow-lg shadow-brand1/30 hover:shadow-xl hover:shadow-brand1/40 hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                      <span className="tracking-wide">
+                        {t("services.moreBtn")}
+                      </span>
+                      <svg
+                        className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </div>
