@@ -112,7 +112,7 @@ const MembershipSection = () => {
   };
   return (
     <section className="w-full bg-[#fbfbfb] py-16">
-      <div className="max-w-[87rem] mx-auto px-4 ">
+      <div className="max-w-[87rem] text-center mx-auto px-4 ">
         <div className="flex justify-center">
           <span className="bg-brand4/30 px-4 py-2 text-brand1  rounded-full font-medium mb-2 flex items-center gap-2">
             <LuCrown className="text-lg" /> HDMC+ Членство

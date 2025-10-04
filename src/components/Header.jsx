@@ -27,13 +27,32 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language);
 
-  const [showCityInit, setShowCityInit] = useState(true);
+  const [showCityInit, setShowCityInit] = useState(false);
   const [showCitySelect, setShowCitySelect] = useState(false);
 
   useEffect(() => {
-    // Only show the popup if city isn't already stored in session/local storage, for example.
-    setShowCityInit(true);
+    const cityConfirmed = localStorage.getItem("cityConfirmed");
+    if (!cityConfirmed) {
+      // Show initial confirm popup only if not already confirmed
+      setShowCityInit(true);
+    }
   }, []);
+  const handleCityConfirm = (confirmedCity) => {
+    setCity(confirmedCity);
+    setShowCityInit(false);
+    localStorage.setItem("cityConfirmed", "true");
+  };
+
+  const handleShowCitySelect = () => {
+    setShowCityInit(false);
+    setShowCitySelect(true);
+  };
+
+  const handleCitySelect = (selectedCity) => {
+    setCity(selectedCity);
+    setShowCitySelect(false);
+    localStorage.setItem("cityConfirmed", "true");
+  };
 
   // Handle language toggle
   const languages = [
@@ -111,19 +130,13 @@ const Header = () => {
               <div className="flex gap-5 w-full justify-center">
                 <button
                   className="bg-brand1 text-white font-semibold rounded-lg px-6 py-2 hover:bg-brand5 transition-all duration-300 cursor-pointer"
-                  onClick={() => {
-                    setCity("Moscow");
-                    setShowCityInit(false);
-                  }}
+                  onClick={() => handleCityConfirm("Moscow")}
                 >
                   Yes
                 </button>
                 <button
                   className="bg-gray-200 text-brand1 font-semibold rounded-lg px-6 py-2 hover:bg-brand4/30 transition-all duration-300 cursor-pointer"
-                  onClick={() => {
-                    setShowCityInit(false);
-                    setShowCitySelect(true);
-                  }}
+                  onClick={handleShowCitySelect}
                 >
                   No
                 </button>
@@ -144,10 +157,7 @@ const Header = () => {
                       ? "bg-brand1 text-white"
                       : "bg-gray-100 text-brand1"
                   } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
-                  onClick={() => {
-                    setCity("Moscow");
-                    setShowCitySelect(false);
-                  }}
+                  onClick={() => handleCitySelect("Moscow")}
                 >
                   Moscow
                 </button>
@@ -157,10 +167,7 @@ const Header = () => {
                       ? "bg-brand1 text-white"
                       : "bg-gray-100 text-brand1"
                   } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
-                  onClick={() => {
-                    setCity("Makhachkala");
-                    setShowCitySelect(false);
-                  }}
+                  onClick={() => handleCitySelect("Makhachkala")}
                 >
                   Makhachkala
                 </button>

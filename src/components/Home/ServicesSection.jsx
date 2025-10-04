@@ -87,7 +87,7 @@ const ServicesSection = () => {
 
   return (
     <section className="w-full bg-[#fbfbfc] py-16">
-      <div className="max-w-[87rem] mx-auto px-4">
+      <div className="max-w-[87rem] text-center mx-auto px-4">
         <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
           {t("services.title")}
         </h2>
@@ -109,7 +109,7 @@ const ServicesSection = () => {
 
               {/* Texts */}
               <div>
-                <h3 className="font-bold text-gray-900 mb-1 text-xl leading-snug">
+                <h3 className="font-bold group-hover:text-brand1/90 transition-all duration-300 cursor-pointer text-gray-900 mb-1 text-xl leading-snug">
                   {t(service.title)}
                 </h3>
                 <p className="text-gray-600  text-ellipsis line-clamp-4">

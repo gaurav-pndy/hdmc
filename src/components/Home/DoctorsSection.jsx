@@ -69,14 +69,15 @@ const DoctorsSection = () => {
 
   return (
     <section className="w-full  py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto">
-      <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
-        {" "}
-        {t("doctors.title")}
-      </h2>
-      <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto">
-        {t("doctors.subtitle")}
-      </p>
-
+      <div className="max-w-[87rem] text-center mx-auto px-4 ">
+        <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
+          {" "}
+          {t("doctors.title")}
+        </h2>
+        <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto">
+          {t("doctors.subtitle")}
+        </p>
+      </div>
       {/* Navigation Buttons */}
       <div className="flex items-center justify-end w-full mt-2 gap-2">
         <button className="prev-btn bg-white rounded px-3 py-2 border border-brand4 text-brand1 transition hover:bg-brand4/10">

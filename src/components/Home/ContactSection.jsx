@@ -27,13 +27,15 @@ const ContactSection = () => {
   return (
     <section className="w-full bg-[#fafbfc] py-16">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-brand1 text-center  text-4xl font-bold mb-6">
-          Свяжитесь с нами
-        </h2>
-        <p className="text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
-          Свяжитесь с нами любым удобным способом. Мы работаем для вашего
-          здоровья и готовы ответить на все ваши вопросы.
-        </p>
+        <div className="max-w-[87rem] text-center mx-auto px-4">
+          <h2 className="text-brand1 text-center  text-4xl font-bold mb-6">
+            Свяжитесь с нами
+          </h2>
+          <p className="text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
+            Свяжитесь с нами любым удобным способом. Мы работаем для вашего
+            здоровья и готовы ответить на все ваши вопросы.
+          </p>
+        </div>
         <div className=" gap-8 items-start">
           {/* Left: Form */}
           <div className="bg-white rounded-xl shadow p-10">

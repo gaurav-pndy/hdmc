@@ -55,7 +55,7 @@ const benefits = [
 
 const HDMCPlusBenefits = () => (
   <section className="w-full  py-16">
-    <div className="max-w-[87rem] mx-auto px-4">
+    <div className="max-w-[87rem] text-center mx-auto px-4">
       <h2 className="text-brand1 text-center  text-4xl font-bold mb-6">
         Детальные преимущества членства
       </h2>
