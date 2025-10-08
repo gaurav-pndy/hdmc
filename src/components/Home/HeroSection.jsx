@@ -15,8 +15,7 @@ const slides = [
     subtitleKey: "hero.slide1.subtitle",
     buttonKey: "hero.slide1.button",
     gradient: "bg-gradient-to-r from-[#125e84] to-[#36bbbe]",
-    image:
-      "https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // 👈 Unsplash image
+    image: "/hero1.png", // 👈 Unsplash image
   },
   {
     icon: <LuUsers className="text-3xl text-white " />,
@@ -24,8 +23,7 @@ const slides = [
     subtitleKey: "hero.slide2.subtitle",
     buttonKey: "hero.slide2.button",
     gradient: "bg-gradient-to-r from-[#36bbbe] to-[#125e84]",
-    image:
-      "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVkaWNpbmV8ZW58MHx8MHx8fDI%3D", // 👈 Unsplash image
+    image: "/hero2.png", // 👈 Unsplash image
   },
 ];
 
@@ -76,7 +74,7 @@ const HeroSection = () => {
                     <img
                       src={image}
                       alt="Hero illustration"
-                      className="rounded-2xl shadow-xl h-full w-full object-cover"
+                      className="rounded-2xl max-h-[36rem]  h-full w-full object-contain"
                     />
                   </div>
                 </div>

@@ -46,7 +46,7 @@ const AddressSection = () => {
           {clinics.map((clinic, idx) => (
             <React.Fragment key={idx}>
               <div className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3">
-                <div className="flex items-start gap-2 text-black text-lg mb-1">
+                <div className="flex items-start text-left gap-2 text-black text-lg mb-1">
                   <FaMapMarkerAlt className="mt-1.5 text-brand1" />
                   <div>
                     <h4 className="font-medium">{clinic.title}</h4>

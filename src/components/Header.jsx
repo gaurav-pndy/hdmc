@@ -12,6 +12,7 @@ import {
   FaChevronDown,
   FaCalendarCheck,
   FaUser,
+  FaSearch,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -101,13 +102,12 @@ const Header = () => {
       {/* Top Bar */}
       <div className="flex w-full bg-[#f3f5f7]">
         <motion.div
-          className="flex max-w-[87rem] w-full mx-auto flex-col md:flex-row items-center justify-between px-4 md:py-3 text-sm"
+          className="flex max-w-[90rem] w-full mx-auto flex-col md:flex-row items-center justify-between px-4 md:py-3 text-sm"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* City Selector (instead of logo) */}
-          <div className="hidden md:flex flex-col">
+          {/* <div className="hidden md:flex flex-col">
             <label htmlFor="city" className="text-xs mb-1">
               Select your City:
             </label>
@@ -119,6 +119,14 @@ const Header = () => {
               <option value="Moscow">Moscow</option>
               <option value="Makhachkala">Makhachkala</option>
             </select>
+          </div> */}
+
+          <div className="flex items-center gap-2">
+            <img
+              src="/HD.png"
+              alt="Logo"
+              className="h-5 md:h-6 object-contain"
+            />
           </div>
 
           {/* City Confirmation Popup */}
@@ -176,7 +184,7 @@ const Header = () => {
           )}
 
           {/* Contact Info */}
-          <div className="hidden md:flex flex-wrap ml-8 items-center gap-8 flex-1  justify-center md:justify-start">
+          <div className="hidden md:flex flex-wrap ml-8 items-center gap-5 flex-1  justify-center md:justify-start">
             <div className="flex flex-col  text-sm">
               <span className="whitespace-nowrap flex items-center gap-1  mb-1">
                 <FaPhoneAlt /> +7 (495) 123-45-67
@@ -204,7 +212,7 @@ const Header = () => {
           </div>
 
           {/* Socials & Language Switch */}
-          <div className="hidden md:flex items-center gap-4 justify-end min-w-0">
+          <div className="hidden md:flex items-center gap-2 justify-end min-w-0">
             <a
               href="https://wa.me/74951234567"
               target="_blank"
@@ -224,7 +232,7 @@ const Header = () => {
               <FaTelegramPlane />
             </a>
             <div
-              className="relative md:ml-6 flex gap-1 md:gap-2 items-center"
+              className="relative md:ml-2 flex gap-1 md:gap-2 items-center"
               ref={dropdownRef}
             >
               <FaGlobe className="text-xl md:text-2xl text-brand1" />
@@ -268,23 +276,30 @@ const Header = () => {
               <FaUser className="" />
               {t("header.personalAccount")}
             </button>
+            <input
+              type="text"
+              className="border w-40 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
+              placeholder="Search..."
+            >
+              {/* <FaSearch className="" /> */}
+            </input>
           </div>
         </motion.div>
       </div>
 
       {/* Desktop Nav Bar with Logo */}
       <motion.nav
-        className="flex max-w-[87rem]  w-full mx-auto items-center justify-between px-4 py-4 md:py-2"
+        className="flex max-w-[90rem]  w-full mx-auto items-center justify-between px-4 py-4 md:py-2"
         initial={{ opacity: 0, y: -5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         {/* Logo now here */}
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
-        </div>
+        </div> */}
 
-        <div className="hidden md:flex gap-6 ml-8 items-center flex-1">
+        <div className="hidden md:flex gap-6  items-center flex-1">
           {" "}
           <Link
             to="/"

@@ -115,8 +115,8 @@ const PatientMap = () => {
                       stroke="#90CAF9"
                       strokeWidth={0.3}
                       style={{
-                        default: { outline: "none" },
-                        hover: { fill: "#BBDEFB", outline: "none" },
+                        default: { fill: "#125e84", outline: "none" },
+                        hover: { fill: "#af6ca5", outline: "none" },
                         pressed: { fill: "#64B5F6", outline: "none" },
                       }}
                     />
@@ -135,7 +135,7 @@ const PatientMap = () => {
                   <FaMapMarkerAlt
                     x={-8}
                     y={-12}
-                    size={hovered === idx ? 18 : 14}
+                    size={hovered === idx ? 24 : 20}
                     color={loc.color}
                     className="cursor-pointer"
                   />
