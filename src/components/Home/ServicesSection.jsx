@@ -64,16 +64,6 @@ const services = [
     title: "services.s12.title",
     desc: "services.s12.desc",
   },
-  {
-    image: "/services/13.svg",
-    title: "services.s13.title",
-    desc: "services.s13.desc",
-  },
-  {
-    image: "/services/14.svg",
-    title: "services.s14.title",
-    desc: "services.s14.desc",
-  },
 ];
 
 const ServicesSection = () => {
