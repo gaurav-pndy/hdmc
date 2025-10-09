@@ -441,7 +441,7 @@ const Header = () => {
               </Link>
               <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
-                About Us
+                {t("header.about")}
               </Link>{" "}
               <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
@@ -484,15 +484,15 @@ const Header = () => {
               </div>
               <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
-                For Patients
+                {t("header.forPatients")}
               </Link>{" "}
               <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
-                CT Scan 24/7
+                {t("header.ctScan")}
               </Link>{" "}
               <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
-                Special Offers{" "}
+                {t("header.offers")}
               </Link>{" "}
               <Link to="/hdmc-plus" onClick={() => setIsOpen(false)}>
                 HDMC+
