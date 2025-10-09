@@ -499,7 +499,7 @@ const Header = () => {
               </Link>
               <Link to="/doctors" className=" whitespace-nowrap">
                 {" "}
-                Reviews{" "}
+                {t("header.reviews")}
               </Link>{" "}
               <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition flex items-center gap-2 mt-4">
                 <FaUser className="text-lg" />
