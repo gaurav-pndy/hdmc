@@ -93,8 +93,6 @@ const Header = () => {
     { path: "/services/international", label: t("header.service10") },
     { path: "/services/international", label: t("header.service11") },
     { path: "/services/international", label: t("header.service12") },
-    { path: "/services/international", label: t("header.service13") },
-    { path: "/services/international", label: t("header.service14") },
   ];
 
   return (
@@ -107,7 +105,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* <div className="hidden md:flex flex-col">
+          <div className="hidden md:flex flex-col">
             <label htmlFor="city" className="text-xs mb-1">
               Select your City:
             </label>
@@ -119,15 +117,15 @@ const Header = () => {
               <option value="Moscow">Moscow</option>
               <option value="Makhachkala">Makhachkala</option>
             </select>
-          </div> */}
+          </div>
 
-          <div className="hidden md:flex items-center gap-2">
+          {/* <div className="hidden md:flex items-center gap-2">
             <img
               src="/HD.png"
               alt="Logo"
               className="h-5 md:h-6 object-contain"
             />
-          </div>
+          </div> */}
 
           {/* City Confirmation Popup */}
           {showCityInit && (
@@ -299,11 +297,11 @@ const Header = () => {
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         {/* Logo now here */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex  items-center gap-2">
           <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
         </div>
 
-        <div className="hidden md:flex gap-6  items-center flex-1">
+        <div className="hidden md:flex gap-6 ml-6 items-center flex-1">
           {" "}
           <Link
             to="/"
@@ -361,7 +359,7 @@ const Header = () => {
             className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            {t("header.ctScan")}{" "}
+            {t("header.reviews")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
@@ -369,20 +367,6 @@ const Header = () => {
           >
             {" "}
             {t("header.offers")}
-          </Link>{" "}
-          <Link
-            to="/hdmc-plus"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
-          >
-            {" "}
-            HDMC+{" "}
-          </Link>{" "}
-          <Link
-            to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
-          >
-            {" "}
-            {t("header.reviews")}{" "}
           </Link>{" "}
         </div>
 
@@ -401,6 +385,47 @@ const Header = () => {
           </button>
         </div>
       </motion.nav>
+
+      <nav className="hidden md:flex py-2 w-full bg-brand1/10 justify-end">
+        <div className="hidden max-w-[87rem] mx-auto md:flex gap-6  justify-end items-center flex-1">
+          {" "}
+          <Link
+            to="/"
+            className="  hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
+          >
+            {" "}
+            IMETC{" "}
+          </Link>{" "}
+          <Link
+            to="/about"
+            className="   hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
+          >
+            {" "}
+            {t("header.earlyDiagnosis")}{" "}
+          </Link>{" "}
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+            {t("header.expertise")}{" "}
+          </Link>{" "}
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+            Pathologica
+          </Link>{" "}
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+            HDMC+
+          </Link>{" "}
+        </div>
+      </nav>
 
       {/* Mobile Sidebar Menu */}
       <AnimatePresence>
