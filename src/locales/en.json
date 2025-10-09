@@ -354,7 +354,64 @@
   "address": "Kvartal West, Moscow, Aminyevskoye Highway, 6",
   "time": "From 10:00 to 18:00 | Open daily",
   "copyright": "© 2025. All rights reserved by Health-Direct"
+},
+
+"feedback": {
+  "title": "Unified HDMC Hotline",
+  "subtitle": "You can leave feedback about a doctor, file a complaint about service quality, or report fraud or corruption.",
+  "boxes": {
+    "box1": {
+      "title": "Leave a Thank You",
+      "point1": "If you are completely satisfied with the quality of medical or other services provided by the Medsi Group, you can leave positive feedback about our work.",
+       "point2": "To express your gratitude, please use the feedback form."
+      ,
+      "button": "Leave a Thank You"
+    },
+    "box2": {
+      "title": "Submit a Complaint",
+      "point1": "If you are dissatisfied with the quality of medical or other services provided by the Medsi Group, you can write to us about it.",
+       "point2": "Use the feedback form to file a complaint about poor service received at the Medsi Group."
+      ,
+      "button": "Submit a Complaint"
+    },
+    "box3": {
+      "title": "Anti-Corruption",
+      "point1": "If you notice any unlawful, fraudulent, or corrupt actions by Medsi Group employees, please report it.",
+       "point2": "Use the feedback form to report violations during procurement procedures or actions of suppliers/contractors."
+      ,
+      "button": "Report Corruption"
+    },
+    "box4": {
+      "title": "Suggestion",
+      "point1": "If you have suggestions for improving service, opening a new clinic near your home, etc., please send them to us.",
+       "point2": "Use the feedback form to submit your business proposal."
+      ,
+      "button": "Send Suggestion"
+    }
+  },
+  "descText": [
+    "One of the tools for maintaining business ethics standards is the 'Unified Hotline.' This communication channel aims to enhance the Medsi Group’s efforts in combating potential misconduct, fraud, corruption, violations, and shortcomings.",
+    "If you did not find a suitable form, you can send your inquiry to the email address claim@medsigroup.ru. The request will be reviewed within 30 days. To process the request, please include your contact details (full name, date of birth, and phone number). Requests submitted without contact details will not be reviewed.",
+    "All messages are recorded by an authorized Medsi Group employee for further analysis and verification. The confidentiality of message senders is guaranteed. Reports on the operation of the 'Unified Hotline' and the results of investigations are submitted to the President of the Medsi Group for appropriate action."
+  ],
+  "form": {
+    "heading": "Feedback Form",
+    "select": "Select Type of Request",
+    "gratitude": "Gratitude",
+    "complaint": "Complaint",
+    "corruption": "Report Corruption",
+    "proposition": "Suggestion",
+    "email": "Email",
+    "surname": "Last Name",
+    "firstName": "First Name",
+    "patronymic": "Middle Name",
+    "message": "Message",
+    "attach": "Attach File",
+    "agree": "I agree to the terms of the Personal Data Processing Policy and give my consent to the processing of my personal data.",
+    "button": "Submit"
+  }
 }
+
 
 
 

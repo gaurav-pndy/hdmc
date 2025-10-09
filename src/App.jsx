@@ -4,6 +4,7 @@ import AppLayout from "./layout/AppLayout";
 import Home from "./pages/Home";
 import HDMCPlus from "./pages/HDMCPlus";
 import ServiceDetails from "./pages/ServiceDetails";
+import LeaveFeedback from "./pages/LeaveFeedback";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
         {
           path: "/hdmc-plus",
           element: <HDMCPlus />,
+        },
+        {
+          path: "/leave-a-feedback",
+          element: <LeaveFeedback />,
         },
       ],
     },

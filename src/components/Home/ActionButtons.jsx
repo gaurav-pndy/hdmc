@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaCalendarCheck, FaPhoneAlt, FaRegSmile } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ActionButtons = () => {
   const { t } = useTranslation();
@@ -28,7 +29,8 @@ const ActionButtons = () => {
           {t("actionBtns.btn1")}
         </button>
         {/* Hotline/Feedback */}
-        <button
+        <Link
+          to={"/leave-a-feedback"}
           className="
         flex items-center gap-2 w-full md:w-fit
         px-8 py-3 
@@ -45,7 +47,7 @@ const ActionButtons = () => {
         >
           <FaPhoneAlt />
           {t("actionBtns.btn2")}{" "}
-        </button>
+        </Link>
         <button
           className="
         flex items-center gap-2 w-full  md:w-fit

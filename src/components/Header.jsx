@@ -121,7 +121,7 @@ const Header = () => {
             </select>
           </div> */}
 
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <img
               src="/HD.png"
               alt="Logo"
@@ -299,9 +299,9 @@ const Header = () => {
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         {/* Logo now here */}
-        {/* <div className="flex items-center gap-2">
+        <div className="flex md:hidden items-center gap-2">
           <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
-        </div> */}
+        </div>
 
         <div className="hidden md:flex gap-6  items-center flex-1">
           {" "}
@@ -511,6 +511,71 @@ const Header = () => {
                 {t("header.bookAppointment")}
               </button>
             </nav>
+
+            <div className="flex  md:hidden items-center gap-2 justify-between mt-6 w-full">
+              <div
+                className="relative md:ml-2 flex gap-2 items-center"
+                ref={dropdownRef}
+              >
+                <FaGlobe className="text-2xl text-brand1" />
+                <div className="relative">
+                  <button
+                    className="cursor-pointer border font-semibold   md:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-lg flex items-center gap-2"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
+                    <img
+                      src={
+                        languages.find((lang) => lang.code === selectedLang)
+                          ?.flag
+                      }
+                      alt="Flag"
+                      className="w-4 h-4"
+                    />
+                    {languages.find((lang) => lang.code === selectedLang)?.name}
+                    <IoIosArrowDown className=" text-sm " />
+                  </button>
+
+                  {dropdownOpen && (
+                    <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                      {languages.map((lang) => (
+                        <li
+                          key={lang.code}
+                          className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
+                          onClick={() => changeLanguage(lang.code)}
+                        >
+                          <img
+                            src={lang.flag}
+                            className="w-3 md:w-4 h-3 md:h-4"
+                            alt={`${lang.name} Flag`}
+                          />
+                          {lang.name}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <a
+                  href="https://wa.me/74951234567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 text-3xl hover:scale-125 transition-all duration-300"
+                  aria-label="WhatsApp"
+                >
+                  <FaWhatsapp />
+                </a>
+                <a
+                  href="https://t.me/medclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-500 text-3xl hover:scale-125 transition-all duration-300"
+                  aria-label="Telegram"
+                >
+                  <FaTelegramPlane />
+                </a>
+              </div>
+            </div>
           </motion.aside>
         )}
       </AnimatePresence>
