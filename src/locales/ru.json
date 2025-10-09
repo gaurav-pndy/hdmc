@@ -29,7 +29,24 @@
     "expertConsultation": "Экспертная консультация",
     "ctDiagnosis": "КТ диагностика 24/7",
     "voluntaryObservation": "Добровольное наблюдение",
-    "imetc": "IMETC - Международные консультации"
+    "imetc": "IMETC - Международные консультации",
+
+    "about": "О нас",
+  "forPatients": "Пациентам",
+  "ctScan": "КТ 24/7",
+  "offers": "Специальные предложения",
+  "reviews": "Отзывы",
+  "cityConfirm": {
+    "question": "Ваш город — Москва?",
+    "yes": "Да",
+    "no": "Нет"
+  },
+  "citySelect": "Пожалуйста, выберите ваш город",
+  "moscow": "Москва",
+  "makhachkala": "Махачкала",
+  "moscowAddress": "Москва, Аминьевское шоссе, <br /> подъезд 1",
+  "makhachkalaAddress": "Проспект Али-Гаджи Акушинского, <br /> 7, Махачкала",
+  "search": "Поиск..."
   },
   "hero": {
     "slide1": {
@@ -60,6 +77,17 @@
   "doctors": {
   "title": "Наши врачи",
   "subtitle": "Наша команда — это больше, чем просто опытные специалисты. <br/> Это врачи, которые формируют современную повестку медицинского мира:  организовывают отечественные и международные конференции и семинары, публикуют научные труды, разрабатывают клинические рекомендации и образовательные программы. <br/> Работая в междисциплинарном формате и объединяя экспертизу разных направлений, мы выстраиваем доступные и эффективные алгоритмы даже в самых сложных клинических случаях. <br/> Мы не соревнуемся — мы создаём сообщество профессионалов, где знания, опыт и сотрудничество работают на благо пациента.",
+  "filter": {
+  "enterName": "Введите специализацию или имя врача",
+  "hideFilters": "Скрыть фильтры",
+  "refine": "Уточнить поиск",
+  "start": "Начать поиск",
+  "consultationType": "Тип консультации",
+  "all": "Все",
+  "personal": "Личная",
+  "remote": "Дистанционная",
+  "specialization": "Специализация врача"
+},
   "viewProfile": "Посмотреть профиль",
   "doctorsList": {
   "doctor1": {
@@ -191,27 +219,182 @@
     "moreBtn": "Подробнее",
     "askBtn": "Задать вопрос",
     "referralBtn": "Оставить заявку",
-    "s1": { "title": "Консультация эксперта", "desc": "Get direct access to top medical experts who will carefully review your case and guide you toward the best treatment options. Every consultation is personalized, ensuring your concerns are heard and your care plan is tailored specifically to you." },
-    "s2": { "title": "Индивидуальная ранняя диагностика заболеваний", "desc": "Stay ahead of illness with advanced check-ups designed to detect health problems at the very earliest stage — when they’re easiest to treat. Our goal is to give you peace of mind through proactive, precise health screening." },
-    "s3": { "title": "Патоморфологические исследования в PathoLogica Service", "desc": "Our specialists analyze tissue samples with the highest precision to ensure your diagnosis is accurate and reliable. This detailed examination helps doctors create the most effective treatment plan for you." },
-    "s4": { "title": "Молекулярный консилиум", "desc": "A team of leading experts works together to study your cancer at the genetic level, creating a treatment plan that is truly personalized." },
-    "s5": { "title": "Международный онкологический консилиум", "desc": "Your case is reviewed by world-class oncologists from around the globe, giving you access to international expertise without leaving home. This ensures you benefit from the latest knowledge and treatment approaches worldwide." },
-    "s6": { "title": "Экспертный пересмотр КТ, МРТ, ПЭТ-КТ", "desc": "A second opinion you can trust — our radiology experts re-examine your scans to confirm results and provide accurate, reliable insights for your treatment plan. Every image is carefully analyzed to ensure nothing is overlooked in your diagnosis." },
-    "s7": { "title": "ПЭТ/КТ", "desc": "Cutting-edge imaging that not only shows the structure of organs but also reveals how they function — crucial for early and accurate cancer detection. This technology helps your doctors monitor treatment progress with unparalleled precision." },
-    "s8": { "title": "Лекарственная терапия злокачественных новообразований", "desc": "We offer the latest in cancer treatment: chemotherapy, targeted therapy, and immunotherapy — all tailored to your unique diagnosis." },
-    "s9": { "title": "Онкохирургия", "desc": "Our surgeons use advanced techniques to remove tumors safely and effectively, focusing on both cure and quality of life. We combine skill and care to ensure recovery is as smooth and comfortable as possible." },
-    "s10": { "title": "Медицинское сопровождение", "desc": "From your first visit to every step of treatment, our team is by your side to support, guide, and care for you. We provide continuous attention so you never feel alone on your health journey." },
-    "s11": { "title": "Лучевая терапия", "desc": "State-of-the-art radiation technology that targets tumors with precision, protecting healthy tissue while fighting cancer. Our specialists design treatments that are effective yet gentle, helping you maintain your quality of life." },
-    "s12": { "title": "Травматология и ортопедия", "desc": "Expert care for bones, joints, and the musculoskeletal system — whether you’ve suffered an injury or need long-term orthopedic treatment. We use modern surgical and non-surgical methods to restore mobility and reduce pain." }   ,
-    "s13": { "title": "Установка венозной порт-системы", "desc": "A simple and comfortable solution for patients requiring long-term therapy, making regular treatments like chemotherapy much easier. This minimally invasive procedure improves comfort and convenience throughout your treatment." },
-    "s14": { "title": "Цифровая диагностика новообразований кожи", "desc": "Smart digital imaging to track moles and skin changes — helping detect skin cancer early and keep your skin healthy. Early detection allows for less invasive treatments and better long-term outcomes." }   
+   "s1": { 
+  "title": "Экспертная консультация", 
+  "desc": "Получите прямой доступ к ведущим медицинским специалистам, которые тщательно изучат ваш случай и помогут выбрать оптимальные варианты лечения. Каждая консультация индивидуальна — ваши жалобы будут услышаны, а план лечения составлен с учётом всех особенностей вашего состояния." 
+},
+"s2": { 
+  "title": "Индивидуальная ранняя диагностика заболеваний", 
+  "desc": "Будьте на шаг впереди болезни с помощью современных обследований, направленных на выявление проблем со здоровьем на самых ранних стадиях — когда лечение наиболее эффективно. Наша цель — ваше спокойствие благодаря точной и своевременной диагностике." 
+},
+"s3": { 
+  "title": "Патоморфологические исследования (сервис PathoLogica)", 
+  "desc": "Наши специалисты проводят тщательный анализ образцов тканей с высочайшей точностью, обеспечивая достоверность диагноза. Эти исследования помогают врачам составить наиболее эффективный план лечения именно для вас." 
+},
+"s4": { 
+  "title": "Молекулярный консилиум по опухолям", 
+  "desc": "Команда ведущих специалистов совместно изучает опухоль на генетическом уровне, чтобы разработать по-настоящему персонализированный план лечения." 
+},
+"s5": { 
+  "title": "Международный онкологический консилиум", 
+  "desc": "Ваш случай рассматривается онкологами мирового уровня из разных стран, что позволяет получить доступ к международному опыту и передовым методам лечения, не покидая дома." 
+},
+"s6": { 
+  "title": "Экспертная оценка КТ, МРТ и ПЭТ-КТ исследований", 
+  "desc": "Второе мнение, которому можно доверять — наши специалисты повторно анализируют снимки, подтверждают результаты и предоставляют точные, надёжные рекомендации для вашего лечения. Каждое изображение тщательно изучается, чтобы ничего не было упущено." 
+},
+"s7": { 
+  "title": "ПЭТ/КТ (Позитронно-эмиссионная и компьютерная томография)", 
+  "desc": "Современная технология визуализации, позволяющая увидеть не только строение органов, но и их функции — это ключ к раннему и точному выявлению онкологических заболеваний. Такой подход помогает врачам отслеживать эффективность лечения с исключительной точностью." 
+},
+"s8": { 
+  "title": "Лекарственная терапия злокачественных опухолей", 
+  "desc": "Мы применяем новейшие методы лечения рака: химиотерапию, таргетную и иммунотерапию — индивидуально подобранные под ваш диагноз." 
+},
+"s9": { 
+  "title": "Онкологическая хирургия", 
+  "desc": "Наши хирурги используют передовые методы для безопасного и эффективного удаления опухолей, уделяя внимание не только излечению, но и качеству жизни. Мы стремимся сделать процесс восстановления максимально комфортным." 
+},
+"s10": { 
+  "title": "Медицинское сопровождение и наблюдение", 
+  "desc": "С момента вашего первого визита и на протяжении всего лечения наша команда рядом с вами — поддерживает, направляет и заботится. Мы обеспечиваем постоянное внимание, чтобы вы никогда не чувствовали себя одни на пути к выздоровлению." 
+},
+"s11": { 
+  "title": "Лучевая терапия", 
+  "desc": "Современные технологии лучевой терапии позволяют воздействовать на опухоль с максимальной точностью, защищая здоровые ткани. Наши специалисты подбирают эффективное и щадящее лечение, сохраняя качество вашей жизни." 
+},
+"s12": { 
+  "title": "Травматология и ортопедия", 
+  "desc": "Профессиональная помощь при заболеваниях костей, суставов и опорно-двигательного аппарата — будь то травма или хроническое заболевание. Мы используем современные хирургические и консервативные методы для восстановления подвижности и уменьшения боли." 
+},
+"s13": { 
+  "title": "Установка венозного порта", 
+  "desc": "Простое и удобное решение для пациентов, проходящих длительное лечение, например химиотерапию. Минимально инвазивная процедура делает регулярные процедуры более комфортными и безопасными." 
+},
+"s14": { 
+  "title": "Цифровая диагностика кожных новообразований", 
+  "desc": "Интеллектуальная цифровая система наблюдения за родинками и изменениями кожи помогает выявить рак кожи на ранней стадии и сохранить здоровье кожи. Раннее обнаружение позволяет применять щадящие методы лечения и добиваться лучших результатов." 
+}
+
   },
     "patientMap": {
     "title": "Мы помогаем пациентам со всего мира",
-    "subtitle": "Международные телемедицинские консультации и лечение пациентов из более чем 50 стран мира"
+    "subtitle": "Международные телемедицинские консультации и лечение пациентов из более чем 50 стран мира",
+    "russia": "Россия",
+"india": "Индия",
+"usa": "США",
+"poland": "Польша",
+"hungary": "Венгрия",
+"uk": "Великобритания",
+"switzerland": "Швейцария",
+"patients": "пациентов"
+  },
+    "membership": {
+    "badge": "HDMC+ Членство",
+    "title": "Премиум медицинское обслуживание",
+    "subtitle": "Эксклюзивная программа членства для тех, кто ценит качественную медицину и персональный подход",
+    "features": {
+      "feature1": {
+        "title": "Приоритетная запись",
+        "desc": "Запись к нужному специалисту или операцию в удобные сроки"
+      },
+      "feature2": {
+        "title": "Скидки на обследования",
+        "desc": "До 20% скидки на диагностические процедуры и обследования"
+      },
+      "feature3": {
+        "title": "Персональный координатор",
+        "desc": "Выделенный ассистент для решения всех медицинских вопросов"
+      },
+      "feature4": {
+        "title": "Ежегодный чекап",
+        "desc": "Комплексное профосмотренное обследование 1 раз в год"
+      },
+      "feature5": {
+        "title": "IMETC консультации",
+        "desc": "Дистанционные международные консультации"
+      },
+      "feature6": {
+        "title": "Электронная карта",
+        "desc": "Безлимитный доступ к личной электронной карте 24/7"
+      }
+    },
+       "button": "Присоединиться к HDMC+",
+    "contactText": "Или свяжитесь с нами для персональной консультации",
+   
+    "faq": {
+      "title": "Часто задаваемые вопросы",
+      "faq1": {
+        "question": "Как работает приоритетная запись?",
+        "answer": "Члены HDMC+ могут записаться к нужному врачу с сокращенным временем ожидания и могут записаться к врачу экстренно при появлении новых жалоб или симптомов."
+      },
+      "faq2": {
+        "question": "Что включают IMETC консультации?",
+        "answer": "IMETC консультации — это возможность получить дистанционное экспертное мнение международных специалистов по вашему медицинскому случаю."
+      },
+      "faq3": {
+        "question": "Можно ли приостановить членство?",
+        "answer": "Да, членство может быть приостановлено на срок до 6 мес. с сохранением всех преимуществ на оставшийся период."
+      }
+    }
+ 
   },
    "testimonials": {
     "title": "Отзывы наших пациентов",
     "allBtn": "Все отзывы"
-  }
+  },
+  "contact": {
+    "title": "Свяжитесь с нами",
+    "subtitle": "Свяжитесь с нами любым удобным способом. Мы работаем для вашего здоровья и готовы ответить на все ваши вопросы.",
+    "heading": "Отправить сообщение",
+    "name": "Имя",
+    "email": "Email",
+    "phone": "Телефон",
+    "city": "Город",
+    "chooseCity": "Выберите город",
+    "moscow": "Москва",
+    "makhachkala": "Махачкала",
+    "another": " Другой город",
+    "message": "Сообщение",
+    "privacy": "Я согласен на обработку персональных данных и получение информации от медицинской клиники",
+    "button": "Отправить"
+  },
+
+  "address": {
+  "title": "Наши адреса",
+  "subtitle": "Две современные клиники в Москве и Махачкале для вашего удобства",
+  "route": "Построить маршрут",
+  "clinic1": {
+    "title": "Квартал Вест",
+    "address": "Москва, Аминьевское шоссе, дом 6, подъезд 1",
+    "schedule": "Пн–Пт: 08:00–21:00, Сб–Вс: 09:00–18:00"
+  },
+  "clinic2": {
+    "title": "Проспект Али-Гаджи Акушинского",
+    "address": "Махачкала, проспект Али-Гаджи Акушинского, дом 7",
+    "schedule": "Пн–Пт: 08:00–21:00, Сб–Вс: 09:00–18:00"
+  },
+  "button": "Записаться в эту клинику"
+  },
+
+  "actionBtns": {
+    "btn1": "Записаться на прием",
+    "btn2": "Горячая линия/Оставить отзыв",
+    "btn3": "Спасибо HDMC"
+  },
+
+      "footer": {
+      "desc": "Международный проект \"Health-Direct\" <br />Автономная некоммерческая организация <br />«Научно-образовательный центр» <br />«Евразийская онкологическая программа «ЕАФО»",
+      "navigation": "Навигация",
+      "documents": "Документы",
+      "priceList": "Прайс-лист на услуги",
+      "agreement": "Договор оферты",
+      "privacy": "Политика конфиденциальности",
+      "contact": "Контакты",
+      "address": "Kvartal West Moscow, Aminyevskoye Highway, 6",
+      "time": "С 10:00 до 18:00 | Без выходных",
+      "copyright": "© 2025. Все права защищены Health-Direct"
+
+    }
+
 }

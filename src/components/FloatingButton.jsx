@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaCalendarCheck } from "react-icons/fa";
 
 const FloatingButton = ({ onClick }) => {
   const [overFooter, setOverFooter] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +29,7 @@ const FloatingButton = ({ onClick }) => {
       }`}
     >
       <FaCalendarCheck className="text-2xl" />
-      Book an Appointment
+      {t("header.bookAppointment")}
     </button>
   );
 };

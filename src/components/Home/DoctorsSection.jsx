@@ -60,7 +60,7 @@ const DoctorsSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-3 px-4 py-3 border-b border-brand4/20">
           <input
             type="text"
-            placeholder="Enter specialization or doctor's name"
+            placeholder={t("doctors.filter.enterName")}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="flex-1 border border-brand4/40 rounded-lg px-4 py-2.5 outline-none text-brand1 placeholder:text-brand1/50 focus:border-brand1 transition-all"
@@ -69,10 +69,13 @@ const DoctorsSection = () => {
             onClick={() => setShowFilters((prev) => !prev)}
             className="flex items-center gap-2 text-brand1 text-sm font-medium hover:text-brand1/80 transition"
           >
-            <FiFilter /> {showFilters ? "Hide filters" : "Refine search"}
+            <FiFilter />{" "}
+            {showFilters
+              ? t("doctors.filter.hideFilters")
+              : t("doctors.filter.refine")}
           </button>
           <button className="flex items-center gap-2 bg-brand1 text-white font-medium rounded-lg px-6 py-2.5 hover:bg-brand1/90 transition">
-            <FiSearch className="text-lg" /> Start Search
+            <FiSearch className="text-lg" /> {t("doctors.filter.start")}
           </button>
         </div>
 
@@ -91,17 +94,21 @@ const DoctorsSection = () => {
                   Type of consultation
                 </label>
                 <div className="flex gap-3">
-                  {["All", "Personal", "Remote"].map((item) => (
+                  {[
+                    { label: t("doctors.filter.all"), value: "All" },
+                    { label: t("doctors.filter.personal"), value: "Personal" },
+                    { label: t("doctors.filter.remote"), value: "Remote" },
+                  ].map((item) => (
                     <button
-                      key={item}
-                      onClick={() => setType(item)}
+                      key={item.value}
+                      onClick={() => setType(item.value)}
                       className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all ${
-                        type === item
+                        type === item.value
                           ? "bg-brand1 text-white border-brand1"
                           : "bg-white border-brand4 text-brand1 hover:bg-brand4/20"
                       }`}
                     >
-                      {item}
+                      {item.label}
                     </button>
                   ))}
                 </div>
@@ -110,14 +117,14 @@ const DoctorsSection = () => {
               {/* Specialization */}
               <div>
                 <label className="text-sm font-medium text-brand1 block mb-2">
-                  Doctor specialization
+                  {t("doctors.filter.specialization")}
                 </label>
                 <select
                   value={specialization}
                   onChange={(e) => setSpecialization(e.target.value)}
                   className="w-full border border-brand4/40 rounded-lg px-3 py-2.5 text-sm text-brand1 outline-none focus:border-brand1 transition-all bg-white"
                 >
-                  <option value="All">All</option>
+                  <option value="All">{t("doctors.filter.all")}</option>
                   {allTags.map((tag, i) => (
                     <option key={i} value={tag}>
                       {tag}

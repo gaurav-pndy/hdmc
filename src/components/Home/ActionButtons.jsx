@@ -1,12 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaCalendarCheck, FaPhoneAlt, FaRegSmile } from "react-icons/fa";
 
-const ActionButtons = () => (
-  <div className="w-full  bg-gray-100 py-5 px-4">
-    <div className="flex flex-wrap gap-5 justify-between max-w-7xl mx-auto">
-      {/* Book an appointment */}
-      <button
-        className="
+const ActionButtons = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="w-full  bg-gray-100 py-5 px-4">
+      <div className="flex flex-wrap gap-5 justify-between max-w-7xl mx-auto">
+        {/* Book an appointment */}
+        <button
+          className="
         flex items-center gap-2 w-full md:w-fit
         px-8 py-3 
         bg-brand1
@@ -19,13 +23,13 @@ const ActionButtons = () => (
         border-none
         focus:outline-none
       "
-      >
-        <FaCalendarCheck />
-        Записаться на прием
-      </button>
-      {/* Hotline/Feedback */}
-      <button
-        className="
+        >
+          <FaCalendarCheck />
+          {t("actionBtns.btn1")}
+        </button>
+        {/* Hotline/Feedback */}
+        <button
+          className="
         flex items-center gap-2 w-full md:w-fit
         px-8 py-3 
         bg-white
@@ -38,13 +42,12 @@ const ActionButtons = () => (
         transition-all duration-300 cursor-pointer
         focus:outline-none
       "
-      >
-        <FaPhoneAlt />
-        Горячая линия/Оставить отзыв
-      </button>
-      {/* Thank you MEDSI */}
-      <button
-        className="
+        >
+          <FaPhoneAlt />
+          {t("actionBtns.btn2")}{" "}
+        </button>
+        <button
+          className="
         flex items-center gap-2 w-full  md:w-fit
         px-8 py-3 
         bg-brand2
@@ -56,12 +59,13 @@ const ActionButtons = () => (
         transition-all duration-300 cursor-pointer
         focus:outline-none
       "
-      >
-        <FaRegSmile />
-        Спасибо HDMC
-      </button>
+        >
+          <FaRegSmile />
+          {t("actionBtns.btn3")}{" "}
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ActionButtons;

@@ -133,20 +133,20 @@ const Header = () => {
           {showCityInit && (
             <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
               <div className="text-lg md:text-xl font-semibold text-brand1 mb-3">
-                Is your city Moscow?
+                {t("header.cityConfirm.question")}
               </div>
               <div className="flex gap-5 w-full justify-center">
                 <button
                   className="bg-brand1 text-white font-semibold rounded-lg px-6 py-2 hover:bg-brand5 transition-all duration-300 cursor-pointer"
                   onClick={() => handleCityConfirm("Moscow")}
                 >
-                  Yes
+                  {t("header.cityConfirm.yes")}
                 </button>
                 <button
                   className="bg-gray-200 text-brand1 font-semibold rounded-lg px-6 py-2 hover:bg-brand4/30 transition-all duration-300 cursor-pointer"
                   onClick={handleShowCitySelect}
                 >
-                  No
+                  {t("header.cityConfirm.no")}
                 </button>
               </div>
             </div>
@@ -156,7 +156,7 @@ const Header = () => {
           {showCitySelect && (
             <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
               <div className="text-lg md:text-xl font-semibold text-brand1 mb-5">
-                Please select your city
+                {t("header.citySelect")}
               </div>
               <div className="flex gap-5 justify-center">
                 <button
@@ -167,7 +167,7 @@ const Header = () => {
                   } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
                   onClick={() => handleCitySelect("Moscow")}
                 >
-                  Moscow
+                  {t("header.moscow")}
                 </button>
                 <button
                   className={`${
@@ -177,7 +177,7 @@ const Header = () => {
                   } font-semibold rounded-lg px-6 py-2 hover:bg-brand5/80 transition-all duration-300 cursor-pointer`}
                   onClick={() => handleCitySelect("Makhachkala")}
                 >
-                  Makhachkala
+                  {t("header.makhachkala")}
                 </button>
               </div>
             </div>
@@ -198,16 +198,20 @@ const Header = () => {
               </a>
             </div>
             <div className=" items-center gap-1  whitespace-nowrap">
-              <h6 className="font-semibold">Moscow</h6>
-              <p className="text-xs text-brand1 leading-4">
-                Moscow, Aminyevskoye Highway, <br /> 6 подъезд 1
-              </p>
+              <h6 className="font-semibold"> {t("header.moscow")} </h6>
+              <p
+                className="text-xs text-brand1 leading-4"
+                dangerouslySetInnerHTML={{ __html: t("header.moscowAddress") }}
+              ></p>
             </div>
             <div className=" items-center gap-1  whitespace-nowrap">
-              <h6 className="font-semibold">Makhachkala</h6>
-              <p className="text-xs text-brand1 leading-4">
-                Ali-Gadzhi Akushinskogo Avenue, <br /> 7, Makhachkala
-              </p>
+              <h6 className="font-semibold"> {t("header.makhachkala")} </h6>
+              <p
+                className="text-xs text-brand1 leading-4"
+                dangerouslySetInnerHTML={{
+                  __html: t("header.makhachkalaAddress"),
+                }}
+              ></p>
             </div>
           </div>
 
@@ -279,7 +283,7 @@ const Header = () => {
             <input
               type="text"
               className="border w-40 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
-              placeholder="Search..."
+              placeholder={t("header.search")}
             >
               {/* <FaSearch className="" /> */}
             </input>
@@ -313,7 +317,7 @@ const Header = () => {
             className="   hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
-            About Us
+            {t("header.about")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
@@ -350,21 +354,21 @@ const Header = () => {
             className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            For Patients
+            {t("header.forPatients")}
           </Link>{" "}
           <Link
             to="/doctors"
             className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            CT Scan 24/7{" "}
+            {t("header.ctScan")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
             className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            Special Offers{" "}
+            {t("header.offers")}
           </Link>{" "}
           <Link
             to="/hdmc-plus"
@@ -378,7 +382,7 @@ const Header = () => {
             className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            Reviews{" "}
+            {t("header.reviews")}{" "}
           </Link>{" "}
         </div>
 

@@ -23,49 +23,49 @@ const PatientMap = () => {
 
   const locations = [
     {
-      country: "Russia",
+      country: t("patientMap.russia"),
       code: "ru",
       patients: 156,
       color: "#DDA0DD",
       coords: [37.6, 55.75],
     },
     {
-      country: "India",
+      country: t("patientMap.india"),
       code: "in",
       patients: 91,
       color: "#FFD93D",
       coords: [78, 20],
     },
     {
-      country: "USA",
+      country: t("patientMap.usa"),
       code: "us",
       patients: 145,
       color: "#FF6B6B",
       coords: [-95, 37],
     },
     {
-      country: "Poland",
+      country: t("patientMap.poland"),
       code: "pl",
       patients: 89,
       color: "#4ECDC4",
       coords: [19, 52],
     },
     {
-      country: "Hungary",
+      country: t("patientMap.hungary"),
       code: "hu",
       patients: 67,
       color: "#45B7D1",
       coords: [19, 47],
     },
     {
-      country: "UK",
+      country: t("patientMap.uk"),
       code: "gb",
       patients: 112,
       color: "#96CEB4",
       coords: [-3, 54],
     },
     {
-      country: "Switzerland",
+      country: t("patientMap.switzerland"),
       code: "ch",
       patients: 78,
       color: "#FFEAA7",
@@ -146,7 +146,7 @@ const PatientMap = () => {
                         <span className="font-medium">{loc.country}</span>{" "}
                         <br />
                         <span className="text-brand1">
-                          {loc.patients} пациентов
+                          {loc.patients} {t("patientMap.patients")}
                         </span>
                       </div>
                     </foreignObject>
@@ -190,7 +190,7 @@ const PatientMap = () => {
                     {/* Country + Patients */}
                     <div className="font-medium text-black">{loc.country}</div>
                     <div className="text-brand1 text-xs">
-                      {loc.patients} пациентов
+                      {loc.patients} {t("patientMap.patients")}
                     </div>
                   </div>
                 </div>
