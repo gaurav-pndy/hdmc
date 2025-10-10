@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Home from "./pages/Home";
 import HDMCPlus from "./pages/HDMCPlus";
-import ServiceDetails from "./pages/ServiceDetails";
 import LeaveFeedback from "./pages/LeaveFeedback";
+import ThankYou from "./pages/ThankYou";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +22,10 @@ function App() {
         {
           path: "/leave-a-feedback",
           element: <LeaveFeedback />,
+        },
+        {
+          path: "/thank-you-hdmc",
+          element: <ThankYou />,
         },
       ],
     },

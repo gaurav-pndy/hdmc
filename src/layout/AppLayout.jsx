@@ -7,7 +7,7 @@ const AppLayout = () => {
   return (
     <div>
       <Header />
-      <div className="mt-14 md:mt-28">
+      <div className="mt-14 md:mt-40">
         <Outlet />
         <FloatingButton />
         <Footer />

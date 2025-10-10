@@ -410,6 +410,22 @@
     "agree": "I agree to the terms of the Personal Data Processing Policy and give my consent to the processing of my personal data.",
     "button": "Submit"
   }
+},
+
+"thankyou": {
+  "title": "PROJECT «THANK YOU!»",
+  "transferBtn": "Transfer funds",
+  "lastName": "Last name of the donor",
+  "firstName": "First name of the donor",
+  "patronymic": "Patronymic of the donor",
+  "phone": "Phone",
+  "fundPurpose": "Please direct the transferred funds to:",
+  "facility": "Full name/Clinic team",
+  "amount": "Amount, rub.",
+  "message": "Message",
+  "agree": "I agree to the service Personal data processing policies and I give a Consent to the processing of my personal data",
+  "downloadGifts": "Download catalog of gifts 'Thank you'",
+  "supportNote": "For questions regarding the funds raised or ideas that can be used in the improvement of clinics, please contact us by email"
 }
 
 
