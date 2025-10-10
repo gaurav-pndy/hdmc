@@ -48,7 +48,8 @@ const ActionButtons = () => {
           <FaPhoneAlt />
           {t("actionBtns.btn2")}{" "}
         </Link>
-        <button
+        <Link
+          to="/thank-you-hdmc"
           className="
         flex items-center gap-2 w-full  md:w-fit
         px-8 py-3 
@@ -64,7 +65,7 @@ const ActionButtons = () => {
         >
           <FaRegSmile />
           {t("actionBtns.btn3")}{" "}
-        </button>
+        </Link>
       </div>
     </div>
   );
