@@ -38,10 +38,10 @@ const ThankYou = () => {
             <FaDove className="relative text-brand4 text-8xl md:text-9xl drop-shadow-lg" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-brand1 text-center mb-4">
-            {t("thankyou.title")}
+            {t("thankyou.title")}!»
           </h1>
           <p className="text-brand1/60 text-lg mb-6 text-center max-w-2xl">
-            Project «Thank you, MEDSI!»
+            {t("thankyou.title")}, HDMC!»
           </p>
           <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 hover:bg-brand5 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
             {t("thankyou.transferBtn")}
@@ -51,31 +51,13 @@ const ThankYou = () => {
         {/* Description Section */}
         <div className=" mb-12 text-brand1/70 text-base leading-relaxed space-y-4 bg-white/60 backdrop-blur rounded-2xl p-8 shadow-md">
           <p className="text-center font-semibold text-brand1 text-lg">
-            The world's leading medical organizations share one common secret of
-            success — good relationship between patient and clinic.
+            {t("thankyou.para1")}
           </p>
-          <p>
-            When the interests of the patient are most important, he benefits
-            both from the latest achievements of the industry and well-defined
-            working conditions.
-          </p>
-          <p>
-            This science of interaction between the patient and the clinic must
-            form — to exceed the patient's expectations, which will be even
-            longer, and who decides to stay. now you.
-          </p>
-          <p>
-            MEDSI involves its patients in improving its activities, the
-            clinic's design, doctors and nurses, and donations for the launch of
-            funds and charitable programs, the development of clinics, the
-            introduction of new services and the implementation of socially
-            significant projects.
-          </p>
+          <p>{t("thankyou.para2")}</p>
+          <p>{t("thankyou.para3")}</p>
+          <p>{t("thankyou.para4")}</p>
           <p className="border-l-4 border-brand4 pl-4 italic">
-            The funds collected in "Thank you, MEDSI!" will be used for specific
-            goals — with the patient's consent — in accordance with his wishes
-            and ideas that are important for him personally, his family members,
-            and his healthcare provider.
+            {t("thankyou.para5")}
           </p>
         </div>
 
@@ -87,11 +69,9 @@ const ThankYou = () => {
 
           <div className="relative">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-1 h-10 bg-brand4 rounded-full"></div>
-              <h2 className="text-2xl font-bold text-brand1">
-                {lang === "ru"
-                  ? "Форма перевода средств"
-                  : "Transfer Funds Form"}
+              <div className="w-1 h-8 bg-gradient-to-b from-brand1 to-brand4 rounded-full"></div>
+              <h2 className="font-bold text-2xl text-brand1">
+                {t("thankyou.formHeading")}
               </h2>
             </div>
 
@@ -204,7 +184,7 @@ const ThankYou = () => {
                 >
                   <option value="">{t("thankyou.fundPurpose")}</option>
                   <option value="development">
-                    Development goals of Medical Group of Companies
+                    {t("thankyou.developmentGoals")}
                   </option>
                 </select>
               </div>
@@ -270,12 +250,11 @@ const ThankYou = () => {
         {/* Contact Information */}
         <div className=" text-center bg-white/60 backdrop-blur rounded-xl p-6 shadow-md">
           <p className="text-sm text-brand1/70 mb-2">
-            {t("thankyou.downloadGifts")}:{" "}
             <a
               href="#"
               className="text-brand4 font-semibold hover:text-brand5 underline transition-colors"
             >
-              Download catalog of gifts "Thank you, MEDSI!"
+              {t("thankyou.downloadGifts")}:{" "}
             </a>
           </p>
           <p className="text-sm text-brand1/70">
