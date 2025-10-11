@@ -13,7 +13,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer id="footer" className="bg-brand1 text-white pt-8 pb-4 px-2">
+    <footer id="footer" className="bg-brand1 text-white pt-8 pb-4 px-4">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr] gap-8">
         {/* Column 1: Logo and about */}
         <div className="flex-1">

@@ -95,6 +95,10 @@
       "specialization": "Doctor Specialization"
 
     },
+    "languages": "Languages known",
+    "location": "Location",
+    "about": "About Doctor",
+    "bookAppt": "Book Appointment",
     "viewProfile": "View Profile",
     "doctorsList": {
       "doctor1": {
@@ -102,119 +106,119 @@
         "location": "Moscow, Russia",
         "tags": ["Surgeon", "Oncologist", "Oncoplastic Surgeon"],
         "langs": "Russian, English, Tamil, Hindi",
-        "desc": "A doctor who takes on the most complex cases. Dr. Soma is not only a brilliant surgeon specializing in head and neck tumors but also the founder of the Eurasian Oncology Program (EAFO), which brings together doctors from different countries to exchange experience. In the operating room, he is precise; in conversation — open; in life — inspiring.<br/>• Oncologist, surgeon, maxillofacial surgeon, ENT specialist, plastic surgeon<br/>• Specialization: tumors of the head and neck, skin, thyroid and breast, lymph node dissection, oncoplasty<br/>• President and founder of the Scientific and Educational Center \"Eurasian Oncology Program\" (EAFO)<br/>• Head of reconstructive and oncoplastic surgery projects"
+        "desc": "A doctor who takes on the most complex cases. Dr. Soma is not only a brilliant surgeon specializing in head and neck tumors but also the founder of the Eurasian Oncology Program (EAFO), which brings together doctors from different countries to exchange experience. In the operating room, he is precise; in conversation — open; in life — inspiring.<br/> &nbsp; &nbsp; • Oncologist, surgeon, maxillofacial surgeon, ENT specialist, plastic surgeon<br/> &nbsp; &nbsp; • Specialization: tumors of the head and neck, skin, thyroid and breast, lymph node dissection, oncoplasty<br/> &nbsp; &nbsp; • President and founder of the Scientific and Educational Center \"Eurasian Oncology Program\" (EAFO)<br/> &nbsp; &nbsp; • Head of reconstructive and oncoplastic surgery projects"
       },
       "doctor2": {
         "name": "Hasanbekova Zarema Medzhidovna",
         "location": "Makhachkala, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A specialist with whom it’s easy to discuss even the most delicate topics. Zarema Medzhidovna helps women cope with gynecological and mammological problems, combining evidence-based medicine with genuine care and empathy. Her goal is not only to heal but to preserve quality of life.<br/>• PhD in Medicine, Oncogynecologist, Mammologist<br/>• Senior Research Fellow at EAFO Scientific and Educational Center<br/>• Specialization: cervical, ovarian, and breast diseases, aesthetic gynecology<br/>• Participant in educational and scientific projects in oncogynecology"
+        "desc": "A specialist with whom it’s easy to discuss even the most delicate topics. Zarema Medzhidovna helps women cope with gynecological and mammological problems, combining evidence-based medicine with genuine care and empathy. Her goal is not only to heal but to preserve quality of life.<br/> &nbsp; &nbsp; • PhD in Medicine, Oncogynecologist, Mammologist<br/> &nbsp; &nbsp; • Senior Research Fellow at EAFO Scientific and Educational Center<br/> &nbsp; &nbsp; • Specialization: cervical, ovarian, and breast diseases, aesthetic gynecology<br/> &nbsp; &nbsp; • Participant in educational and scientific projects in oncogynecology"
       },
       "doctor3": {
         "name": "Nechushkina Valentina Mikhailovna",
         "location": "Moscow, Russia",
         "tags": ["Surgeon", "Oncogynecologist"],
         "langs": "Russian, English",
-        "desc": "Experience, strength, and science — all describe Valentina Mikhailovna. She performs complex surgeries, teaches, and leads oncogynecology projects at EAFO. Her style: precision, thoughtfulness, and mastery. With her, patients know they’re in safe hands.<br/>• Doctor of Medical Sciences, Professor, Oncogynecologist<br/>• Head of the Eurasian Working Group on Oncogynecology<br/>• Specialization: cervical and ovarian cancer, HIPEC, cytoreduction<br/>• Expert and lecturer at PIMU, scientific leader at EAFO"
+        "desc": "Experience, strength, and science — all describe Valentina Mikhailovna. She performs complex surgeries, teaches, and leads oncogynecology projects at EAFO. Her style: precision, thoughtfulness, and mastery. With her, patients know they’re in safe hands.<br/> &nbsp; &nbsp; • Doctor of Medical Sciences, Professor, Oncogynecologist<br/> &nbsp; &nbsp; • Head of the Eurasian Working Group on Oncogynecology<br/> &nbsp; &nbsp; • Specialization: cervical and ovarian cancer, HIPEC, cytoreduction<br/> &nbsp; &nbsp; • Expert and lecturer at PIMU, scientific leader at EAFO"
       },
       "doctor4": {
         "name": "Kondratyeva Tatyana Tikhonovna",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A specialist whose diagnosis determines the course of treatment — a doctor who sees what others cannot.<br/>• Doctor of Medical Sciences, Pathologist<br/>• Head of the diagnostic service “Pathologica Service” and expert of EAFO oncopathology program<br/>• Chief Research Fellow at EAFO Scientific and Educational Center<br/>• Specialization: tumors, blood and lymphoid system diseases<br/>• Expert in complex diagnostic cases<br/>Doctor of Medical Sciences, highest-category pathologist.<br/>Head of Pathologica Service, Chief Research Fellow at the EAFO Scientific and Educational Center, and Head of the EAFO Oncopathology Program.<br/>Specializes in morphological diagnosis of benign and malignant neoplasms, as well as blood and lymphoid diseases."
+        "desc": "A specialist whose diagnosis determines the course of treatment — a doctor who sees what others cannot.<br/> &nbsp; &nbsp; • Doctor of Medical Sciences, Pathologist<br/> &nbsp; &nbsp; • Head of the diagnostic service “Pathologica Service” and expert of EAFO oncopathology program<br/> &nbsp; &nbsp; • Chief Research Fellow at EAFO Scientific and Educational Center<br/> &nbsp; &nbsp; • Specialization: tumors, blood and lymphoid system diseases<br/> &nbsp; &nbsp; • Expert in complex diagnostic cases<br/>Doctor of Medical Sciences, highest-category pathologist.<br/>Head of Pathologica Service, Chief Research Fellow at the EAFO Scientific and Educational Center, and Head of the EAFO Oncopathology Program.<br/>Specializes in morphological diagnosis of benign and malignant neoplasms, as well as blood and lymphoid diseases."
       },
       "doctor5": {
         "name": "Mozhenkova Anna Vasilievna",
         "location": "USA",
         "tags": [],
         "langs": "",
-        "desc": "Anna Vasilievna is an expert in one of the most intricate fields — laboratory diagnostics of hematological and oncological diseases. She deciphers complex analyses and helps 'see' disease under the microscope. Her work often becomes the key to the right decision.<br/>• PhD in Medicine, Laboratory Diagnostics Specialist<br/>• Specialization: immunomorphology, cytology, bone marrow<br/>• Participant in international medical consiliums<br/>• Focus: diagnosis of lymphomas, leukemias, and rare tumors"
+        "desc": "Anna Vasilievna is an expert in one of the most intricate fields — laboratory diagnostics of hematological and oncological diseases. She deciphers complex analyses and helps 'see' disease under the microscope. Her work often becomes the key to the right decision.<br/> &nbsp; &nbsp; • PhD in Medicine, Laboratory Diagnostics Specialist<br/> &nbsp; &nbsp; • Specialization: immunomorphology, cytology, bone marrow<br/> &nbsp; &nbsp; • Participant in international medical consiliums<br/> &nbsp; &nbsp; • Focus: diagnosis of lymphomas, leukemias, and rare tumors"
       },
       "doctor6": {
         "name": "Sinitsyna Marina Evgenievna",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A specialist who helps 'see' disease first. Her ultrasound examinations are precise, timely, and invaluable in early diagnostics — helping determine the extent of disease.<br/>• PhD in Medicine, Ultrasound Specialist<br/>• Specialization: vessels, abdominal organs, thyroid gland, genitourinary system<br/>• Active participant in multidisciplinary consiliums"
+        "desc": "A specialist who helps 'see' disease first. Her ultrasound examinations are precise, timely, and invaluable in early diagnostics — helping determine the extent of disease.<br/> &nbsp; &nbsp; • PhD in Medicine, Ultrasound Specialist<br/> &nbsp; &nbsp; • Specialization: vessels, abdominal organs, thyroid gland, genitourinary system<br/> &nbsp; &nbsp; • Active participant in multidisciplinary consiliums"
       },
       "doctor7": {
         "name": "Popova Ekaterina Yuryevna",
         "location": "USA",
         "tags": [],
         "langs": "",
-        "desc": "A young specialist who already thinks and acts like a doctor of the future. Studying in the USA, overcoming high competition, and being awarded the Presidential Scholarship all reflect her ambition to become a strong clinician. Ekaterina Yuryevna trains in a major U.S. healthcare system, adopting global best practices while maintaining a genuine passion for patient care.<br/>• Neurologist<br/>• Presidential Scholar 2021–2022<br/>• Resident, Neurology Program, University of Texas Medical Branch, Galveston<br/>• Research interests: neuro-oncology, interdisciplinary diagnostics, neurological rehabilitation"
+        "desc": "A young specialist who already thinks and acts like a doctor of the future. Studying in the USA, overcoming high competition, and being awarded the Presidential Scholarship all reflect her ambition to become a strong clinician. Ekaterina Yuryevna trains in a major U.S. healthcare system, adopting global best practices while maintaining a genuine passion for patient care.<br/> &nbsp; &nbsp; • Neurologist<br/> &nbsp; &nbsp; • Presidential Scholar 2021–2022<br/> &nbsp; &nbsp; • Resident, Neurology Program, University of Texas Medical Branch, Galveston<br/> &nbsp; &nbsp; • Research interests: neuro-oncology, interdisciplinary diagnostics, neurological rehabilitation"
       },
       "doctor8": {
         "name": "Sidorova Elizaveta Ivanovna",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A thoughtful, multidisciplinary specialist combining clinical practice, research, and work in one of the country’s leading surgical centers. She treats, studies, and supports patients with severe liver pathology at the forefront of transplant medicine.<br/>• Therapist, Gastroenterologist<br/>• 9 years of experience<br/>• Specialization: liver diseases, pre- and post-transplant management"
+        "desc": "A thoughtful, multidisciplinary specialist combining clinical practice, research, and work in one of the country’s leading surgical centers. She treats, studies, and supports patients with severe liver pathology at the forefront of transplant medicine.<br/> &nbsp; &nbsp; • Therapist, Gastroenterologist<br/> &nbsp; &nbsp; • 9 years of experience<br/> &nbsp; &nbsp; • Specialization: liver diseases, pre- and post-transplant management"
       },
       "doctor9": {
         "name": "Sankaranarayanan Arumugam Saravanan (Dr. Sas)",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A doctor confidently handling both post-traumatic cases and musculoskeletal oncology. He develops personalized treatment plans, selects prostheses, and takes an active role in patient rehabilitation — restoring mobility and quality of life.<br/>• Orthopedic Traumatologist, Oncologist, PhD in Medicine<br/>• Specialization: arthritis treatment, joint replacement, bone tumor diagnostics and treatment, deformity correction, trauma surgery<br/>• Expert in personalized rehabilitation plans<br/>• Member of a multidisciplinary onco-orthopedic team"
+        "desc": "A doctor confidently handling both post-traumatic cases and musculoskeletal oncology. He develops personalized treatment plans, selects prostheses, and takes an active role in patient rehabilitation — restoring mobility and quality of life.<br/> &nbsp; &nbsp; • Orthopedic Traumatologist, Oncologist, PhD in Medicine<br/> &nbsp; &nbsp; • Specialization: arthritis treatment, joint replacement, bone tumor diagnostics and treatment, deformity correction, trauma surgery<br/> &nbsp; &nbsp; • Expert in personalized rehabilitation plans<br/> &nbsp; &nbsp; • Member of a multidisciplinary onco-orthopedic team"
       },
       "doctor10": {
         "name": "Streltsova Olga Nikolaevna",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "A doctor you turn to when accuracy matters most. A specialist who not only interprets images but understands their clinical context.<br/>• Oncologist, Radiologist, PhD in Medicine<br/>• 22 years of experience<br/>• Specialization: X-ray, mammography, CT, MRI, second opinions, complex case review<br/>• Participant in oncological consiliums, expert in advanced imaging"
+        "desc": "A doctor you turn to when accuracy matters most. A specialist who not only interprets images but understands their clinical context.<br/> &nbsp; &nbsp; • Oncologist, Radiologist, PhD in Medicine<br/> &nbsp; &nbsp; • 22 years of experience<br/> &nbsp; &nbsp; • Specialization: X-ray, mammography, CT, MRI, second opinions, complex case review<br/> &nbsp; &nbsp; • Participant in oncological consiliums, expert in advanced imaging"
       },
       "doctor11": {
         "name": "Glotov Mikhail Nikolaevich",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "An attentive and meticulous doctor who treats every patient not as a case, but as a person deserving individual attention and care.<br/>Mikhail Nikolaevich doesn’t just diagnose — he finds the essence of the problem and solutions where others see contradictions.<br/>Patients appreciate his systematic approach, precision, and ability to explain complex things clearly.<br/>• Cardiologist, Therapist, Hepatologist, Family Doctor<br/>• PhD in Medicine<br/>• 40 years of experience<br/>• Specialization: diagnostics and treatment of internal diseases, ENT pathologies, cardiovascular, respiratory, and digestive disorders<br/>• Experience in CIS and European countries<br/>• Consultant for oncological consiliums on supportive therapy and complications"
+        "desc": "An attentive and meticulous doctor who treats every patient not as a case, but as a person deserving individual attention and care.<br/>Mikhail Nikolaevich doesn’t just diagnose — he finds the essence of the problem and solutions where others see contradictions.<br/>Patients appreciate his systematic approach, precision, and ability to explain complex things clearly.<br/> &nbsp; &nbsp; • Cardiologist, Therapist, Hepatologist, Family Doctor<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • 40 years of experience<br/> &nbsp; &nbsp; • Specialization: diagnostics and treatment of internal diseases, ENT pathologies, cardiovascular, respiratory, and digestive disorders<br/> &nbsp; &nbsp; • Experience in CIS and European countries<br/> &nbsp; &nbsp; • Consultant for oncological consiliums on supportive therapy and complications"
       },
       "doctor12": {
         "name": "Alyoshina Olga Alexandrovna",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "",
-        "desc": "An experienced hematologist and department head focused on a personalized approach and advanced methods of cellular and immune therapy.<br/>Olga Alexandrovna not only manages her department — she sets standards for the treatment of acute leukemias and malignant lymphomas, participates in international studies, and applies targeted and immunotherapy based on cutting-edge science.<br/>• Hematologist, Oncologist<br/>• PhD in Medicine<br/>• Head of the Department of Cellular and Immune Therapy, National Medical Research Center of Hematology, Ministry of Health of Russia<br/>• 15 years of experience<br/>• Specialization: acute leukemias, aggressive lymphomas, immune and targeted therapy, clinical protocol development"
+        "desc": "An experienced hematologist and department head focused on a personalized approach and advanced methods of cellular and immune therapy.<br/>Olga Alexandrovna not only manages her department — she sets standards for the treatment of acute leukemias and malignant lymphomas, participates in international studies, and applies targeted and immunotherapy based on cutting-edge science.<br/> &nbsp; &nbsp; • Hematologist, Oncologist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Head of the Department of Cellular and Immune Therapy, National Medical Research Center of Hematology, Ministry of Health of Russia<br/> &nbsp; &nbsp; • 15 years of experience<br/> &nbsp; &nbsp; • Specialization: acute leukemias, aggressive lymphomas, immune and targeted therapy, clinical protocol development"
       },
       "doctor13": {
         "name": "Prikhodchenko Alexey Olegovich",
         "location": "Moscow, Russia",
         "tags": ["Anesthesiologist-Resuscitator"],
         "langs": "Russian, English",
-        "desc": "A doctor with over 10 years of experience specializing in intensive care for oncology patients after complex surgeries. Alexey Olegovich combines deep clinical knowledge with a scientific approach, enabling him to provide high-quality perioperative care.<br/>• Anesthesiologist-Resuscitator<br/>• PhD in Medicine<br/>• 10 years of experience<br/>• Head of Anesthesiology and Intensive Care at 'Health-Direct' Medical Center<br/>• Member of the Russian Society of Clinical Oncology (RUSSCO)<br/>• Member of the National Association of Specialists in Thrombosis and Hemostasis (NATG)<br/>• Member of the Russian Association of Supportive Care in Oncology (RASSC)"
+        "desc": "A doctor with over 10 years of experience specializing in intensive care for oncology patients after complex surgeries. Alexey Olegovich combines deep clinical knowledge with a scientific approach, enabling him to provide high-quality perioperative care.<br/> &nbsp; &nbsp; • Anesthesiologist-Resuscitator<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • 10 years of experience<br/> &nbsp; &nbsp; • Head of Anesthesiology and Intensive Care at 'Health-Direct' Medical Center<br/> &nbsp; &nbsp; • Member of the Russian Society of Clinical Oncology (RUSSCO)<br/> &nbsp; &nbsp; • Member of the National Association of Specialists in Thrombosis and Hemostasis (NATG)<br/> &nbsp; &nbsp; • Member of the Russian Association of Supportive Care in Oncology (RASSC)"
       },
       "doctor14": {
         "name": "Snegovoy Anton Vladimirovich",
         "location": "Moscow, Russia",
         "tags": ["Chemotherapist"],
         "langs": "Russian, English",
-        "desc": "An experienced oncologist-chemotherapist who applies modern methods of treating malignant tumors, considering the individual characteristics of each patient. <br/>Anton Vladimirovich is actively engaged in research, serves as the Chairman of the Russian Association of Supportive Care in Oncology (RASSC), and is the author of numerous scientific publications.<br/>• Oncologist, Chemotherapist<br/>• Professor, Doctor of Medical Sciences<br/>• Specialization: chemotherapy for various cancers, supportive therapy, personalized treatment<br/>• Participant in international oncology consiliums<br/>• Head of the Department of Drug Treatment of Tumors, N.A. Lopatkin Research Institute of Urology and Interventional Radiology"
+        "desc": "An experienced oncologist-chemotherapist who applies modern methods of treating malignant tumors, considering the individual characteristics of each patient. <br/>Anton Vladimirovich is actively engaged in research, serves as the Chairman of the Russian Association of Supportive Care in Oncology (RASSC), and is the author of numerous scientific publications.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • Professor, Doctor of Medical Sciences<br/> &nbsp; &nbsp; • Specialization: chemotherapy for various cancers, supportive therapy, personalized treatment<br/> &nbsp; &nbsp; • Participant in international oncology consiliums<br/> &nbsp; &nbsp; • Head of the Department of Drug Treatment of Tumors, N.A. Lopatkin Research Institute of Urology and Interventional Radiology"
       },
       "doctor15": {
         "name": "Kurnosov Ivan Alexandrovich",
         "location": "Saint Petersburg, Russia",
         "tags": [],
         "langs": "Russian, English",
-        "desc": "A leading neurosurgeon and oncologist for whom every operation is a carefully designed plan with maximum attention to detail. Each of his surgeries integrates science, experience, and deep compassion for the patient.<br/>Ivan Alexandrovich combines advanced neurosurgical techniques with personalized assessment to ensure not only successful treatment but also safe recovery.<br/>• Neurosurgeon, Oncologist<br/>• PhD in Medicine<br/>• Head of the Department of Neuro-Oncology, N.N. Petrov National Medical Research Center of Oncology<br/>• 9 years of experience<br/>• Specialization: diagnosis and treatment of oncological diseases of the central and peripheral nervous system, skull base tumors, and spinal disorders"
+        "desc": "A leading neurosurgeon and oncologist for whom every operation is a carefully designed plan with maximum attention to detail. Each of his surgeries integrates science, experience, and deep compassion for the patient.<br/>Ivan Alexandrovich combines advanced neurosurgical techniques with personalized assessment to ensure not only successful treatment but also safe recovery.<br/> &nbsp; &nbsp; • Neurosurgeon, Oncologist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Head of the Department of Neuro-Oncology, N.N. Petrov National Medical Research Center of Oncology<br/> &nbsp; &nbsp; • 9 years of experience<br/> &nbsp; &nbsp; • Specialization: diagnosis and treatment of oncological diseases of the central and peripheral nervous system, skull base tumors, and spinal disorders"
       },
       "doctor16": {
         "name": "Kononenko Inessa Borisovna",
         "location": "Moscow, Russia",
         "tags": ["Chemotherapist"],
         "langs": "Russian, English, French",
-        "desc": "For over 25 years, Inessa Borisovna has been developing and implementing personalized chemo- and immunotherapy regimens, emphasizing both effectiveness and treatment tolerability.<br/>Her approach is never random — each therapeutic strategy is built considering the tumor’s molecular features, comorbidities, and patient’s real quality of life.<br/>Patients value her thoughtful approach, clear explanations, and constant support throughout treatment.<br/>• Oncologist, Chemotherapist<br/>• PhD in Medicine<br/>• Highest qualification category<br/>• 25 years of experience<br/>• Specialization: cancer drug therapy, supportive care, immunotherapy, and targeted therapy<br/>• Executive Director of the Russian Association of Supportive Care in Oncology (RASSC)<br/>• Member of the European Society for Medical Oncology (ESMO) and the Russian Society of Clinical Oncology (RUSSCO)"
+        "desc": "For over 25 years, Inessa Borisovna has been developing and implementing personalized chemo- and immunotherapy regimens, emphasizing both effectiveness and treatment tolerability.<br/>Her approach is never random — each therapeutic strategy is built considering the tumor’s molecular features, comorbidities, and patient’s real quality of life.<br/>Patients value her thoughtful approach, clear explanations, and constant support throughout treatment.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Highest qualification category<br/> &nbsp; &nbsp; • 25 years of experience<br/> &nbsp; &nbsp; • Specialization: cancer drug therapy, supportive care, immunotherapy, and targeted therapy<br/> &nbsp; &nbsp; • Executive Director of the Russian Association of Supportive Care in Oncology (RASSC)<br/> &nbsp; &nbsp; • Member of the European Society for Medical Oncology (ESMO) and the Russian Society of Clinical Oncology (RUSSCO)"
       },
       "doctor17": {
         "name": "Timashkov Ivan Alexandrovich",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "Russian, English",
-        "desc": "A specialist whose accuracy determines the right diagnosis. Works with all types of radiological imaging — from joint CT scans to chest and pelvic studies. Helps detect what others might miss. Has extensive experience participating in oncology consiliums.<br/>• Radiologist<br/>• Specialization: X-ray and CT diagnostics of abdominal, ENT, musculoskeletal, gastrointestinal, thoracic, pelvic, spinal, and joint systems<br/>• Experience in oncology and general medical institutions"
+        "desc": "A specialist whose accuracy determines the right diagnosis. Works with all types of radiological imaging — from joint CT scans to chest and pelvic studies. Helps detect what others might miss. Has extensive experience participating in oncology consiliums.<br/> &nbsp; &nbsp; • Radiologist<br/> &nbsp; &nbsp; • Specialization: X-ray and CT diagnostics of abdominal, ENT, musculoskeletal, gastrointestinal, thoracic, pelvic, spinal, and joint systems<br/> &nbsp; &nbsp; • Experience in oncology and general medical institutions"
       }
     }
   },
