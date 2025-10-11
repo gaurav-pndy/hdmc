@@ -35,11 +35,11 @@ const AddressSection = () => {
         <h2 className="text-brand1 text-center text-4xl font-bold mb-6">
           {t("address.title")}
         </h2>
-        <p className="text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
+        <p className="md:text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
           {t("address.subtitle")}
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
           {clinics.map((clinic, idx) => (
             <React.Fragment key={idx}>
               <div className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3">

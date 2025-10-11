@@ -15,19 +15,19 @@ const ContactSection = () => {
   });
 
   return (
-    <section className="w-full bg-[#fafbfc] py-16">
+    <section className="w-full bg-[#fafbfc] py-16 mb-8">
       <div className="max-w-5xl mx-auto px-4">
         <div className="max-w-[87rem] text-center mx-auto px-4">
           <h2 className="text-brand1 text-center  text-4xl font-bold mb-6">
             {t("contact.title")}
           </h2>
-          <p className="text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
+          <p className="md:text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
             {t("contact.subtitle")}
           </p>
         </div>
         <div className=" gap-8 items-start">
           {/* Left: Form */}
-          <div className="bg-white rounded-xl shadow p-10">
+          <div className="bg-gradient-to-br from-brand1/10 to-brand4/10 rounded-xl  p-10">
             <div className="font-medium text-2xl mb-10 flex items-center gap-2">
               {" "}
               <IoPaperPlaneOutline />
@@ -40,7 +40,7 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
-                  className="border border-gray-200 text-sm rounded-lg px-3 py-2 w-full"
+                  className="border border-brand4 bg-white text-sm rounded-lg px-3 py-2 w-full"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
@@ -52,7 +52,7 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="number"
-                  className="border border-gray-200 text-sm rounded-lg px-3 py-2 w-full"
+                  className="border border-brand4 bg-white text-sm rounded-lg px-3 py-2 w-full"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 />
@@ -63,7 +63,7 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="email"
-                  className="border border-gray-200 text-sm rounded-lg px-3 py-2 w-full"
+                  className="border border-brand4 bg-white text-sm rounded-lg px-3 py-2 w-full"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
@@ -74,7 +74,7 @@ const ContactSection = () => {
                   {t("contact.city")}
                 </label>
                 <select
-                  className="border border-gray-200 text-sm rounded-lg px-3 py-2 w-full "
+                  className="border border-brand4 bg-white text-sm rounded-lg px-3 py-2 w-full "
                   value={form.city}
                   onChange={(e) => setForm({ ...form, city: e.target.value })}
                 >
@@ -92,7 +92,7 @@ const ContactSection = () => {
                 {t("contact.message")}
               </label>
               <textarea
-                className="border border-gray-200 text-sm rounded-lg px-3 py-2 w-full "
+                className="border border-brand4 bg-white text-sm rounded-lg px-3 py-2 w-full "
                 rows={3}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}

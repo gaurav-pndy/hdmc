@@ -37,15 +37,16 @@ const LeaveFeedback = () => {
       ],
       btn: t("feedback.boxes.box1.button"),
     },
+
     {
-      icon: <FaFrown className="text-4xl" />,
-      key: "complaint",
-      title: t("feedback.boxes.box2.title"),
+      icon: <FaLightbulb className="text-4xl" />,
+      key: "proposal",
+      title: t("feedback.boxes.box4.title"),
       bullets: [
-        t("feedback.boxes.box2.point1"),
-        t("feedback.boxes.box2.point2"),
+        t("feedback.boxes.box4.point1"),
+        t("feedback.boxes.box4.point2"),
       ],
-      btn: t("feedback.boxes.box2.button"),
+      btn: t("feedback.boxes.box4.button"),
     },
     {
       icon: <FaShieldAlt className="text-4xl" />,
@@ -56,16 +57,6 @@ const LeaveFeedback = () => {
         t("feedback.boxes.box3.point2"),
       ],
       btn: t("feedback.boxes.box3.button"),
-    },
-    {
-      icon: <FaLightbulb className="text-4xl" />,
-      key: "proposal",
-      title: t("feedback.boxes.box4.title"),
-      bullets: [
-        t("feedback.boxes.box4.point1"),
-        t("feedback.boxes.box4.point2"),
-      ],
-      btn: t("feedback.boxes.box4.button"),
     },
   ];
 
@@ -111,10 +102,12 @@ const LeaveFeedback = () => {
         </div>
 
         <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-          {CARDS.map((card) => (
+          {CARDS.map((card, index) => (
             <div
               key={card.key}
-              className={`group rounded-2xl shadow-md  transition-all duration-300 p-6 flex flex-col items-start bg-white hover:bg-brand4/20 hover:shadow-lg hover:scale-105`}
+              className={`group rounded-2xl shadow-md transition-all duration-300 p-6 flex flex-col items-start bg-white hover:bg-brand4/20 hover:shadow-lg hover:scale-105 ${
+                index === 2 ? "md:col-span-2 md:w-1/2 md:mx-auto" : ""
+              }`}
             >
               <div
                 className={`mb-4 p-4 rounded-xl bg-gradient-to-br from-brand2 to-brand1 text-white shadow-md`}
@@ -132,7 +125,7 @@ const LeaveFeedback = () => {
                 ))}
               </ul>
               <button
-                className=" px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30"
+                className="px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30"
                 type="button"
                 onClick={() => setForm((f) => ({ ...f, type: card.key }))}
               >
@@ -140,16 +133,6 @@ const LeaveFeedback = () => {
               </button>
             </div>
           ))}
-        </div>
-
-        <div className=" mb-6">
-          <div className="space-y-4 text-brand1 leading-relaxed">
-            {BELOW_CARDS.map((p, i) => (
-              <p key={i} className="md:text-lg">
-                {p}
-              </p>
-            ))}
-          </div>
         </div>
 
         <div className="rounded-2xl bg-white shadow-lg p-8 border border-gray-200">
@@ -173,14 +156,12 @@ const LeaveFeedback = () => {
                 >
                   <option value="">{t("feedback.form.select")}</option>
                   <option value="thank">{t("feedback.form.gratitude")}</option>
-                  <option value="complaint">
-                    {t("feedback.form.complaint")}{" "}
+
+                  <option value="proposal">
+                    {t("feedback.form.proposition")}
                   </option>
                   <option value="corruption">
                     {t("feedback.form.corruption")}
-                  </option>
-                  <option value="proposal">
-                    {t("feedback.form.proposition")}
                   </option>
                 </select>
               </div>

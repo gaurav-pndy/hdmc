@@ -30,7 +30,8 @@
     "ctDiagnosis": "CT diagnosis 24/7",
     "voluntaryObservation": "Voluntary observation",
     "imetc": "IMETC - International consultation",
-
+    "addresses": "Addresses",
+    "contact": "Contact Us",
     "about": "About Us",
     "forPatients": "For Patients",
     "ctScan": "CT Scan 24/7",
@@ -81,7 +82,7 @@
  
   "doctors": {
     "title": "Our Doctors",
-    "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. <br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. <br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
+    "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. <br/><br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. <br/><br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
     "filter": {
       "enterName": "Enter specialization or doctor's name",
       "hideFilters": "Hide Filters",

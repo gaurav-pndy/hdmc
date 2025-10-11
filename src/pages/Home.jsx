@@ -25,8 +25,9 @@ const Home = () => {
       <TestimonialsSection />
 
       {/* <BookingForm /> */}
-      <ContactSection />
       <AddressSection />
+      <ContactSection />
+
       <ActionButtons />
     </div>
   );

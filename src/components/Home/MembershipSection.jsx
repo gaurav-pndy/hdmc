@@ -80,7 +80,7 @@ const MembershipSection = () => {
           {" "}
           {t("membership.title")}
         </h2>
-        <p className="text-lg md:text-xl px-4 text-center text-brand1/90  max-w-3xl mx-auto mb-10">
+        <p className="md:text-lg  px-4 text-center text-brand1/90  max-w-3xl mx-auto mb-10">
           {t("membership.subtitle")}
         </p>
 

@@ -14,7 +14,7 @@ const slides = [
     titleKey: "hero.slide1.title",
     subtitleKey: "hero.slide1.subtitle",
     buttonKey: "hero.slide1.button",
-    gradient: "bg-gradient-to-r from-[#125e84] to-[#36bbbe]",
+    gradient: "bg-gradient-to-r from-brand1 to-brand5",
     image: "/hero1.png", // 👈 Unsplash image
   },
   {
@@ -22,7 +22,7 @@ const slides = [
     titleKey: "hero.slide2.title",
     subtitleKey: "hero.slide2.subtitle",
     buttonKey: "hero.slide2.button",
-    gradient: "bg-gradient-to-r from-[#36bbbe] to-[#125e84]",
+    gradient: "bg-gradient-to-r from-brand5 to-brand1",
     image: "/hero2.png", // 👈 Unsplash image
   },
 ];

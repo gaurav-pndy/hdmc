@@ -278,13 +278,6 @@ const Header = () => {
               <FaUser className="" />
               {t("header.personalAccount")}
             </button>
-            <input
-              type="text"
-              className="border w-40 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
-              placeholder={t("header.search")}
-            >
-              {/* <FaSearch className="" /> */}
-            </input>
           </div>
         </motion.div>
       </div>
@@ -297,29 +290,22 @@ const Header = () => {
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         {/* Logo now here */}
-        <div className="flex  items-center gap-2">
+        <Link to="/" className="flex  items-center gap-2">
           <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
-        </div>
+        </Link>
 
-        <div className="hidden md:flex gap-6 ml-6 items-center flex-1">
+        <div className="hidden md:flex justify-end gap-6 mr-6 items-center flex-1 ">
           {" "}
           <Link
-            to="/"
-            className="  hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
-          >
-            {" "}
-            {t("header.home")}{" "}
-          </Link>{" "}
-          <Link
             to="/about"
-            className="   hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
+            className="   hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             {t("header.about")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.doctors")}{" "}
@@ -327,7 +313,7 @@ const Header = () => {
           {/* Services Dropdown - Desktop */}{" "}
           <div className="relative group whitespace-nowrap  cursor-pointer">
             {" "}
-            <button className=" flex cursor-pointer items-center gap-1 hover:text-brand4 transition-all duration-300">
+            <button className=" flex cursor-pointer items-center gap-1 hover:text-brand2 transition-all duration-300">
               {" "}
               {t(
                 "header.services"
@@ -349,33 +335,42 @@ const Header = () => {
           </div>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.forPatients")}
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.reviews")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.offers")}
           </Link>{" "}
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+            {t("header.addresses")}
+          </Link>{" "}
         </div>
 
         <div className="flex justify-between  md:justify-normal md:w-fit text-sm gap-3">
-          <button className="  bg-[#125e84] text-white px-4 py-2.5 rounded-lg font-medium hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex items-center gap-2">
-            <FaCalendarCheck className="text-lg" />
-
-            {t("header.bookAppointment")}
-          </button>
+          <input
+            type="text"
+            className="border w-40 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
+            placeholder={t("header.search")}
+          >
+            {/* <FaSearch className="" /> */}
+          </input>
           <button
             className="md:hidden text-2xl text-gray-700"
             onClick={() => setIsOpen(true)}
@@ -386,44 +381,56 @@ const Header = () => {
         </div>
       </motion.nav>
 
-      <nav className="hidden md:flex py-2 w-full bg-brand1/10 justify-end">
-        <div className="hidden max-w-[87rem] mx-auto md:flex gap-6  justify-end items-center flex-1">
+      <nav className="hidden md:flex  py-2 w-full bg-brand1/10 justify-end ">
+        <div className="hidden max-w-[90rem] px-4  mx-auto md:flex gap-6  justify-end items-center flex-1">
           {" "}
           <Link
             to="/"
-            className="  hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
+            className="  hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             IMETC{" "}
           </Link>{" "}
           <Link
             to="/about"
-            className="   hover:text-brand4 transition-all duration-300 cursor-pointer whitespace-nowrap"
+            className="   hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             {t("header.earlyDiagnosis")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.expertise")}{" "}
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             Pathologica
           </Link>{" "}
           <Link
             to="/doctors"
-            className=" whitespace-nowrap hover:text-brand4 transition-all duration-300 cursor-pointer"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             HDMC+
           </Link>{" "}
+          <Link
+            to="/doctors"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+            {t("header.contact")}
+          </Link>{" "}
+          <button className="  bg-[#125e84] text-white px-4 py-2 rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex items-center gap-2">
+            <FaCalendarCheck className="text-lg" />
+
+            {t("header.bookAppointment")}
+          </button>
         </div>
       </nav>
 
@@ -518,6 +525,10 @@ const Header = () => {
               <Link to="/about" className="  hover:underline whitespace-nowrap">
                 {" "}
                 {t("header.offers")}
+              </Link>{" "}
+              <Link to="/about" className="  hover:underline whitespace-nowrap">
+                {" "}
+                {t("header.addresses")}
               </Link>{" "}
               <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition flex items-center gap-2 mt-4">
                 <FaUser className="text-lg" />

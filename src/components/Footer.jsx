@@ -18,10 +18,6 @@ const Footer = () => {
         {/* Column 1: Logo and about */}
         <div className="flex-1">
           <img src="/hd-logo-white.svg" alt="Logo" className="h-10" />
-          <div
-            className="mb-4 mt-4 text-white leading-snug"
-            dangerouslySetInnerHTML={{ __html: t("footer.desc") }}
-          ></div>
         </div>
 
         {/* Column 2: Navigation links */}
@@ -30,31 +26,31 @@ const Footer = () => {
             {t("footer.navigation")}
           </h3>
           <div className="flex flex-col gap-1">
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.home")}{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.about")}{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.doctors")}{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.services")}{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.forPatients")}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.ctScan")}{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.offers")}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               HDMC+{" "}
             </a>
-            <a href="#" className=" hover:text-brand4">
+            <a href="#" className=" hover:text-brand2">
               {t("header.reviews")}{" "}
             </a>
           </div>

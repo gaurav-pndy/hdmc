@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import HDMCPlus from "./pages/HDMCPlus";
 import LeaveFeedback from "./pages/LeaveFeedback";
 import ThankYou from "./pages/ThankYou";
+import DoctorDetails from "./pages/DoctorDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +15,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/doctors/:doctorId",
+          element: <DoctorDetails />,
         },
         {
           path: "/hdmc-plus",

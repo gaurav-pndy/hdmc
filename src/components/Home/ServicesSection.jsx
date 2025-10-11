@@ -76,7 +76,7 @@ const ServicesSection = () => {
         <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
           {t("services.title")}
         </h2>
-        <p className="text-lg md:text-xl text-brand1/90 max-w-3xl mx-auto mb-12">
+        <p className="md:text-lg  text-brand1/90 max-w-3xl mx-auto mb-12">
           {t("services.subtitle")}
         </p>
 
@@ -85,19 +85,19 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col group gap-4 cursor-pointer"
+              className="flex  items-center group gap-4 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
-              <div className="w-20 h-20 rounded-full bg-brand1 flex items-center justify-center shrink-0 group-hover:rotate-15 group-hover:bg-gradient-to-br from-brand2 to-brand1 transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 rounded-full bg-brand1 flex items-center justify-center shrink-0 group-hover:rotate-15 group-hover:bg-gradient-to-br from-brand2 to-brand1 transition-all duration-300 group-hover:scale-110">
                 <img
                   src={service.image}
                   alt={t(service.title)}
-                  className="w-12 h-12 object-contain brightness-0 invert"
+                  className="w-8 h-8 object-contain brightness-0 invert"
                 />
               </div>
 
               <div>
-                <h3 className="text-left group-hover:text-brand2 group-hover:scale-105 transition-all duration-300 cursor-pointer text-gray-900 mb-1 text-xl leading-snug">
+                <h3 className="text-left group-hover:text-brand2 group-hover:scale-105 transition-all duration-300 cursor-pointer text-gray-900 mb-1 text-lg leading-snug">
                   {t(service.title)}
                 </h3>
               </div>
