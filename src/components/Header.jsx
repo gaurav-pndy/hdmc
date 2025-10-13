@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   FaWhatsapp,
@@ -30,6 +30,8 @@ const Header = () => {
 
   const [showCityInit, setShowCityInit] = useState(false);
   const [showCitySelect, setShowCitySelect] = useState(false);
+
+  const [showServices, setShowServices] = useState(false);
 
   useEffect(() => {
     const cityConfirmed = localStorage.getItem("cityConfirmed");
@@ -81,26 +83,96 @@ const Header = () => {
 
   // Services list
   const services = [
-    { path: "/services/diagnostics", label: t("header.service1") },
-    { path: "/services/therapy", label: t("header.service2") },
-    { path: "/services/consultation", label: t("header.service3") },
-    { path: "/services/ct", label: t("header.service4") },
-    { path: "/services/observation", label: t("header.service5") },
-    { path: "/services/international", label: t("header.service6") },
-    { path: "/services/international", label: t("header.service7") },
-    { path: "/services/international", label: t("header.service8") },
-    { path: "/services/international", label: t("header.service9") },
-    { path: "/services/international", label: t("header.service10") },
-    { path: "/services/international", label: t("header.service11") },
-    { path: "/services/international", label: t("header.service12") },
+    {
+      path: "/services/diagnostics",
+      label: t("header.service1"),
+      icon: "/services/1.svg",
+    },
+    {
+      path: "/services/therapy",
+      label: t("header.service2"),
+      icon: "/services/2.svg",
+    },
+    {
+      path: "/services/consultation",
+      label: t("header.service3"),
+      icon: "/services/3.svg",
+    },
+    {
+      path: "/services/ct",
+      label: t("header.service4"),
+      icon: "/services/4.svg",
+    },
+    {
+      path: "/services/observation",
+      label: t("header.service5"),
+      icon: "/services/5.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service6"),
+      icon: "/services/6.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service7"),
+      icon: "/services/7.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service8"),
+      icon: "/services/8.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service9"),
+      icon: "/services/9.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service10"),
+      icon: "/services/10.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service11"),
+      icon: "/services/11.svg",
+    },
+    {
+      path: "/services/international",
+      label: t("header.service12"),
+      icon: "/services/12.svg",
+    },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const target = document.querySelector(sectionId);
+    if (target) {
+      const topOffset =
+        target.getBoundingClientRect().top + window.scrollY - 150;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
+  };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScrollToSection = (sectionId) => {
+    if (location.pathname === "/") {
+      // Already on homepage → just scroll
+      scrollToSection(sectionId);
+    } else {
+      // Go to homepage first, then scroll
+      navigate("/", { state: { scrollTo: sectionId } });
+    }
+  };
 
   return (
     <header className="w-full border-b border-brand4 text-brand1 fixed top-0 z-50 bg-white">
       {/* Top Bar */}
       <div className="flex w-full bg-[#f3f5f7]">
         <motion.div
-          className="flex max-w-[90rem] w-full mx-auto flex-col md:flex-row items-center justify-between px-4 md:py-3 text-sm"
+          className="flex max-w-[90rem] w-full mx-auto flex-col md:flex-row items-center justify-between md:justify-end  px-4 md:py-3 text-sm"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
@@ -129,7 +201,7 @@ const Header = () => {
 
           {/* City Confirmation Popup */}
           {showCityInit && (
-            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
+            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%]  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
               <div className="text-lg md:text-xl font-semibold text-brand1 mb-3">
                 {t("header.cityConfirm.question")}
               </div>
@@ -152,7 +224,7 @@ const Header = () => {
 
           {/* City Selection Popup */}
           {showCitySelect && (
-            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%] md:translate-0 md:left-20  bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
+            <div className="absolute z-50 top-20 left-1/2 translate-x-[-50%]   bg-white border border-brand4 shadow-black/70 shadow-2xl rounded-lg px-6 py-5 w-[95%] max-w-xs text-center flex flex-col items-center">
               <div className="text-lg md:text-xl font-semibold text-brand1 mb-5">
                 {t("header.citySelect")}
               </div>
@@ -182,7 +254,7 @@ const Header = () => {
           )}
 
           {/* Contact Info */}
-          <div className="hidden md:flex flex-wrap ml-8 items-center gap-5 flex-1  justify-center md:justify-start">
+          <div className="hidden md:flex flex-wrap mx-8 items-center gap-5  w-fit justify-center md:justify-end">
             <div className="flex flex-col  text-sm">
               <span className="whitespace-nowrap flex items-center gap-1  mb-1">
                 <FaPhoneAlt /> +7 (495) 123-45-67
@@ -296,77 +368,97 @@ const Header = () => {
 
         <div className="hidden md:flex justify-end gap-6 mr-6 items-center flex-1 ">
           {" "}
-          <Link
-            to="/about"
+          <button
+            onClick={() => handleScrollToSection("#about")}
             className="   hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
             {t("header.about")}{" "}
-          </Link>{" "}
-          <Link
-            to="/doctors"
+          </button>{" "}
+          <button
+            onClick={() => handleScrollToSection("#doctors")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.doctors")}{" "}
-          </Link>{" "}
+          </button>{" "}
           {/* Services Dropdown - Desktop */}{" "}
-          <div className="relative group whitespace-nowrap  cursor-pointer">
-            {" "}
-            <button className=" flex cursor-pointer items-center gap-1 hover:text-brand2 transition-all duration-300">
-              {" "}
-              {t(
-                "header.services"
-              )} <FaChevronDown className="text-sm mt-1" />{" "}
-            </button>{" "}
-            <div className="absolute h-96 overflow-y-scroll text-sm left-1/2 mt-1 pt-2 -translate-x-1/2 hidden group-hover:block bg-white shadow-lg shadow-black/40 rounded p-2 z-40 min-w-72 w-full">
-              {" "}
-              {services.map((s, idx) => (
-                <Link
-                  key={idx}
-                  to={s.path}
-                  className="block px-2 py-2 text-wrap hover:bg-gray-100"
+          <div
+            onMouseEnter={() => setShowServices(true)}
+            onMouseLeave={() => setShowServices(false)}
+            className="relative   whitespace-nowrap cursor-pointer"
+          >
+            <button
+              onClick={() => handleScrollToSection("#services")}
+              className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
+            >
+              {t("header.services")} <FaChevronDown className="text-sm mt-1" />
+            </button>
+
+            {/* Animated dropdown */}
+            <AnimatePresence>
+              {showServices && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-6xl"
                 >
-                  {" "}
-                  {s.label}{" "}
-                </Link>
-              ))}{" "}
-            </div>{" "}
-          </div>{" "}
+                  {services.map((s, idx) => (
+                    <Link
+                      key={idx}
+                      to={s.path}
+                      className="block  group  text-wrap   transition-all duration-300 rounded-lg"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  mb-2">
+                        <img
+                          src={s.icon}
+                          alt={s.label}
+                          className="w-6 h-6 object-contain brightness-0 invert"
+                        />
+                      </div>
+                      <p className="group-hover:text-brand2">{s.label}</p>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <Link
-            to="/doctors"
+            to="/"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.forPatients")}
           </Link>{" "}
-          <Link
-            to="/doctors"
+          <button
+            onClick={() => handleScrollToSection("#reviews")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.reviews")}{" "}
-          </Link>{" "}
+          </button>{" "}
           <Link
-            to="/doctors"
+            to="/"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.offers")}
           </Link>{" "}
-          <Link
-            to="/doctors"
+          <button
+            onClick={() => handleScrollToSection("#contact")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
-            {t("header.addresses")}
-          </Link>{" "}
+            {t("header.contact")}
+          </button>{" "}
         </div>
 
         <div className="flex justify-between  md:justify-normal md:w-fit text-sm gap-3">
           <input
             type="text"
-            className="border w-40 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
+            className="border min-w-56 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
             placeholder={t("header.search")}
           >
             {/* <FaSearch className="" /> */}
@@ -392,7 +484,7 @@ const Header = () => {
             IMETC{" "}
           </Link>{" "}
           <Link
-            to="/about"
+            to="/early-detection-program"
             className="   hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
@@ -413,20 +505,13 @@ const Header = () => {
             Pathologica
           </Link>{" "}
           <Link
-            to="/doctors"
+            to="/hdmc-plus"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             HDMC+
           </Link>{" "}
-          <Link
-            to="/doctors"
-            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
-          >
-            {" "}
-            {t("header.contact")}
-          </Link>{" "}
-          <button className="  bg-[#125e84] text-white px-4 py-2 rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex items-center gap-2">
+          <button className=" min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
             {t("header.bookAppointment")}
@@ -468,17 +553,20 @@ const Header = () => {
             </div>
 
             <nav className="flex  flex-col gap-4 text-lg">
-              <Link to="/" onClick={() => setIsOpen(false)}>
-                {t("header.home")}
-              </Link>
-              <Link to="/about" className="  hover:underline whitespace-nowrap">
+              <button
+                onClick={() => handleScrollToSection("#about")}
+                className="  hover:underline whitespace-nowrap"
+              >
                 {" "}
                 {t("header.about")}
-              </Link>{" "}
-              <Link to="/doctors" className=" whitespace-nowrap">
+              </button>{" "}
+              <button
+                onClick={() => handleScrollToSection("#doctors")}
+                className=" whitespace-nowrap"
+              >
                 {" "}
                 {t("header.doctors")}{" "}
-              </Link>{" "}
+              </button>{" "}
               {/* Services Dropdown - Mobile */}
               <div>
                 <button
@@ -514,22 +602,28 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <Link to="/about" className="  hover:underline whitespace-nowrap">
+              <Link to="/" className="  hover:underline whitespace-nowrap">
                 {" "}
                 {t("header.forPatients")}
               </Link>{" "}
-              <Link to="/doctors" className=" whitespace-nowrap">
+              <button
+                onClick={() => handleScrollToSection("#reviews")}
+                className=" whitespace-nowrap"
+              >
                 {" "}
                 {t("header.reviews")}
-              </Link>{" "}
-              <Link to="/about" className="  hover:underline whitespace-nowrap">
+              </button>{" "}
+              <Link to="/" className="  hover:underline whitespace-nowrap">
                 {" "}
                 {t("header.offers")}
               </Link>{" "}
-              <Link to="/about" className="  hover:underline whitespace-nowrap">
+              <button
+                onClick={() => handleScrollToSection("#contact")}
+                className="  hover:underline whitespace-nowrap"
+              >
                 {" "}
-                {t("header.addresses")}
-              </Link>{" "}
+                {t("header.contact")}
+              </button>{" "}
               <button className="bg-[#125e84] text-white px-6 py-2 rounded font-bold hover:bg-sky-600 transition flex items-center gap-2 mt-4">
                 <FaUser className="text-lg" />
                 {t("header.personalAccount")}

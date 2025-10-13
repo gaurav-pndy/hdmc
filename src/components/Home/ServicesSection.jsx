@@ -71,24 +71,36 @@ const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   return (
-    <section className="w-full bg-[#fbfbfc] py-16">
+    <section id="services" className="w-full bg-[#fbfbfc] py-16">
       <div className="max-w-[87rem] text-center mx-auto px-4">
-        <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
-          {t("services.title")}
-        </h2>
-        <p className="md:text-lg  text-brand1/90 max-w-3xl mx-auto mb-12">
-          {t("services.subtitle")}
-        </p>
+        <div className="flex flex-col md:flex-row items-center  gap-8 md:gap-16">
+          <div className="md:w-1/2 text-left">
+            <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
+              {t("services.title")}
+            </h2>
+            <p
+              className="md:text-lg text-brand1/90"
+              dangerouslySetInnerHTML={{ __html: t("services.subtitle") }}
+            ></p>
+          </div>
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="/services.png"
+              alt="Doctors illustration"
+              className="w-full max-h-96 rounded-lg shadow-lg object-cover"
+            />
+          </div>
+        </div>
 
         {/* --- Services Grid --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid mt-10 md:mt-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
           {services.map((service, index) => (
             <div
               key={index}
               className="flex  items-center group gap-4 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
-              <div className="w-16 h-16 rounded-full bg-brand1 flex items-center justify-center shrink-0 group-hover:rotate-15 group-hover:bg-gradient-to-br from-brand2 to-brand1 transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 rounded-full from-[#125e84] to-[#33babd] flex items-center justify-center shrink-0 group-hover:rotate-15 bg-gradient-to-br group-hover:from-brand2 group-hover:to-brand1 transition-all duration-300 group-hover:scale-110">
                 <img
                   src={service.image}
                   alt={t(service.title)}

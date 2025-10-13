@@ -39,7 +39,7 @@ const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full py-16 ">
+    <section id="about" className="w-full py-16 ">
       <div className="max-w-[87rem] bg-gradient-to-br from-brand1/30  to-brand2/30 mx-auto px-4 md:p-10 rounded-xl w-full">
         {/* Top Section - Text + Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -97,7 +97,7 @@ const AboutSection = () => {
           {/* Right - Image */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/about.png" // Replace with your image
+              src="/about.jpg" // Replace with your image
               alt="About Clinic"
               className="w-full max-w-lg  object-cover"
             />

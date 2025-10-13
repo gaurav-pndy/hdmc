@@ -125,9 +125,22 @@ const LeaveFeedback = () => {
                 ))}
               </ul>
               <button
-                className="px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30"
+                className="px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg cursor-pointer shadow-brand1/30"
                 type="button"
-                onClick={() => setForm((f) => ({ ...f, type: card.key }))}
+                onClick={() => {
+                  setForm((f) => ({ ...f, type: card.key }));
+
+                  // Scroll smoothly to the feedback form
+                  const target = document.querySelector("#feedback-form");
+                  if (target) {
+                    const topOffset =
+                      target.getBoundingClientRect().top + window.scrollY - 200; // 100px top margin
+                    window.scrollTo({
+                      top: topOffset,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 {card.btn}
               </button>
@@ -135,7 +148,10 @@ const LeaveFeedback = () => {
           ))}
         </div>
 
-        <div className="rounded-2xl bg-white shadow-lg p-8 border border-gray-200">
+        <div
+          id="feedback-form"
+          className="rounded-2xl bg-white shadow-lg p-8 border border-gray-200"
+        >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-8 bg-gradient-to-b from-brand1 to-brand4 rounded-full"></div>
             <h2 className="font-bold text-2xl text-brand1">

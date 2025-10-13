@@ -31,7 +31,7 @@
     "voluntaryObservation": "Voluntary observation",
     "imetc": "IMETC - International consultation",
     "addresses": "Addresses",
-    "contact": "Contact Us",
+    "contact": "Contact",
     "about": "About Us",
     "forPatients": "For Patients",
     "ctScan": "CT Scan 24/7",
@@ -48,8 +48,8 @@
     "citySelect":  "Please select your city",
       "moscow": "Moscow",
       "makhachkala": "Makhachkala",
-      "moscowAddress": "Moscow, Aminyevskoye Highway, <br /> 6 подъезд 1",
-      "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue, <br /> 7, Makhachkala",
+      "moscowAddress": "Moscow, Aminyevskoye Highway 6, <br />подъезд 1",
+      "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7, <br />Makhachkala",
       "search": "Search..."
  
   },
@@ -225,7 +225,7 @@
 
 "services": {
    "title": "Our Services",
-"subtitle": "A full range of medical services using advanced technologies and international quality standards",
+"subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.<br/><br/> Our medical centers bring together professionals from various fields to provide comprehensive care under one roof. From initial consultations and preventive screenings to complex diagnostic procedures, every patient receives personalized attention and evidence-based treatment recommendations.<br/><br/>Equipped with cutting-edge technology, our clinics ensure early and accurate detection of diseases, allowing patients to begin treatment without delay.",
 "moreBtn": "Learn More",
 "askBtn": "Ask a Question",
 "referralBtn": "Submit a Request",
@@ -331,12 +331,12 @@
   "route": "Set a route",
   "clinic1": {
     "title": "Kvartal West",
-    "address": "Moscow, Aminyevskoye Highway, Building 6, Entrance 1",
+    "address": "Moscow, Aminyevskoye Highway Building 6, Entrance 1",
     "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
   },
   "clinic2": {
     "title": "Ali-Gadzhi Akushinskogo Avenue",
-    "address": "Ali-Gadzhi Akushinskogo Avenue, 7, Makhachkala",
+    "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala",
     "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
   },
   "button": "Enroll in this clinic"

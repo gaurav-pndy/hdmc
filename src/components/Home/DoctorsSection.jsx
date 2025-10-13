@@ -53,7 +53,10 @@ const DoctorsSection = () => {
   });
 
   return (
-    <section className="w-full py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto">
+    <section
+      id="doctors"
+      className="w-full py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto"
+    >
       {/* --- Header --- */}
       <div className="max-w-[87rem] mx-auto px-4 flex flex-col md:flex-row items-center  gap-8 md:gap-16">
         {/* Left side: Text */}

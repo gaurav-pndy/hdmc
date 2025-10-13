@@ -18,32 +18,32 @@ const MembershipSection = () => {
   // FEATURES
   const features = [
     {
-      icon: <CiCalendar className="text-brand1 text-4xl" />,
+      icon: <CiCalendar className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature1.title"),
       text: t("membership.features.feature1.desc"),
     },
     {
-      icon: <IoShieldOutline className="text-brand1 text-4xl" />,
+      icon: <IoShieldOutline className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature2.title"),
       text: t("membership.features.feature2.desc"),
     },
     {
-      icon: <LuUsers className="text-brand1 text-4xl" />,
+      icon: <LuUsers className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature3.title"),
       text: t("membership.features.feature3.desc"),
     },
     {
-      icon: <RiStethoscopeFill className="text-brand1 text-4xl" />,
+      icon: <RiStethoscopeFill className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature4.title"),
       text: t("membership.features.feature4.desc"),
     },
     {
-      icon: <IoDocumentTextOutline className="text-brand1 text-4xl" />,
+      icon: <IoDocumentTextOutline className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature5.title"),
       text: t("membership.features.feature5.desc"),
     },
     {
-      icon: <FiCheckCircle className="text-brand1 text-4xl" />,
+      icon: <FiCheckCircle className="text-[#125e84] text-4xl" />,
       title: t("membership.features.feature6.title"),
       text: t("membership.features.feature6.desc"),
     },
@@ -89,15 +89,17 @@ const MembershipSection = () => {
           {features.map((f, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl px-8 py-7 flex flex-col items-center text-center hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300"
+              className="bg-white rounded-xl px-8 py-7 flex flex-col items-center text-center hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 group"
             >
               <span className="flex items-center justify-center w-16 h-16 rounded-full bg-brand1/30 mb-4">
                 {f.icon}
               </span>
-              <div className="text-black font-medium text-xl mb-2">
+              <div className="text-black group-hover:text-brand2 transition-all duration-300 font-medium text-xl mb-2">
                 {f.title}
               </div>
-              <div className="text-brand1 text-base">{f.text}</div>
+              <div className="text-brand1 group-hover:text-brand2 transition-all duration-300 text-base">
+                {f.text}
+              </div>
             </div>
           ))}
         </div>

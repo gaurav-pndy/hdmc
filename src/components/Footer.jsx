@@ -25,7 +25,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">
             {t("footer.navigation")}
           </h3>
-          <div className="flex flex-col gap-1">
+          <div className="flex md:grid md:grid-cols-2 flex-col gap-1">
             <a href="#" className=" hover:text-brand2">
               {t("header.home")}{" "}
             </a>
