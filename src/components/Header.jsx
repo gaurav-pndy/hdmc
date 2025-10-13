@@ -411,7 +411,7 @@ const Header = () => {
                       to={s.path}
                       className="block  group  text-wrap   transition-all duration-300 rounded-lg"
                     >
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  mb-2">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c668a9] to-[#af6ca5] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  mb-2">
                         <img
                           src={s.icon}
                           alt={s.label}

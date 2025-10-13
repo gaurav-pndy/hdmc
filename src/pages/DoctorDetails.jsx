@@ -42,7 +42,7 @@ const DoctorDetails = () => {
               <div className="flex flex-col md:flex-row gap-8 xl:gap-12 mb-10 pb-10 border-b-2 border-gray-100">
                 {/* Profile image with decorative ring */}
                 <div className="relative flex-shrink-0">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-2xl transform rotate-6 opacity-20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#c668a9] to-[#af6ca5] rounded-2xl transform rotate-6 opacity-20"></div>
                   <img
                     src={doctor.image}
                     alt={name}
@@ -77,7 +77,7 @@ const DoctorDetails = () => {
                   {/* Info cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                     <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
-                      <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                      <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#c668a9] to-[#af6ca5] rounded-lg flex items-center justify-center text-white flex-shrink-0">
                         <svg
                           className="w-5 md:w-8 h-5 md:h-8"
                           fill="currentColor"
@@ -130,7 +130,7 @@ const DoctorDetails = () => {
               {/* About section */}
               <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-xl flex items-center justify-center text-white">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#c668a9] to-[#af6ca5] rounded-xl flex items-center justify-center text-white">
                     <svg
                       className="w-5 md:w-8 h-5 md:h-8"
                       fill="currentColor"
