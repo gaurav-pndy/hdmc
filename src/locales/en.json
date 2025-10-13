@@ -439,6 +439,22 @@
   "downloadGifts": "Download catalog of gifts 'Thank you'",
   "supportNote": "For questions regarding the funds raised or ideas that can be used in the improvement of clinics, please contact us by email"
 }
+,
+
+
+"earlyDetection": {
+  "hero": {
+      "programBadge": "HDMC Program",
+      "title": "Early Detection",
+      "subtitle": "Affordable diagnostics for socially significant diseases",
+      "description": "Comprehensive examinations based on evidence-based medicine for timely detection of health problems.",
+      "benefit1": "International recommendations",
+      "benefit2": "Leading experts",
+      "benefit3": "Personalized approach",
+      "programButton": "Choose a program",
+      "moreButton": "Learn More"
+  }
+}
 
 
 

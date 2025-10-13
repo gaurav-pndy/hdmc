@@ -6,6 +6,7 @@ import HDMCPlus from "./pages/HDMCPlus";
 import LeaveFeedback from "./pages/LeaveFeedback";
 import ThankYou from "./pages/ThankYou";
 import DoctorDetails from "./pages/DoctorDetails";
+import EarlyDetection from "./pages/EarlyDetection";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/hdmc-plus",
           element: <HDMCPlus />,
+        },
+        {
+          path: "/early-detection-program",
+          element: <EarlyDetection />,
         },
         {
           path: "/leave-a-feedback",
