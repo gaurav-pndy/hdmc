@@ -167,6 +167,26 @@ const Header = () => {
     }
   };
 
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, setIsOpen]);
+
   return (
     <header className="w-full border-b border-brand4 text-brand1 fixed top-0 z-50 bg-white">
       {/* Top Bar */}
@@ -522,213 +542,227 @@ const Header = () => {
       {/* Mobile Sidebar Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.aside
-            variants={menuVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="fixed top-0 right-0 h-full w-[90vw] sm:w-1/2 bg-white shadow-lg z-50 flex flex-col p-6 overflow-y-auto"
-          >
-            {/* Close Button */}
-            <button
-              className="self-end text-2xl mb-4"
+          <>
+            {" "}
+            <motion.div
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
               onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+            <motion.aside
+              ref={sidebarRef}
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="fixed top-0 right-0 h-full w-[90vw] sm:w-1/2 bg-white shadow-lg z-50 flex flex-col p-6 overflow-y-auto"
             >
-              <FaTimes />
-            </button>
-
-            <div className="flex  md:hidden items-center gap-2 justify-between mb-2 w-full">
-              <div
-                className="relative md:ml-2 flex gap-2 items-center"
-                ref={dropdownRef}
+              {/* Close Button */}
+              <button
+                className="self-end text-2xl mb-4"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
               >
-                <FaGlobe className="text-2xl text-brand1" />
-                <div className="relative">
-                  <button
-                    className="cursor-pointer border font-semibold   md:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-lg flex items-center gap-2"
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                  >
-                    <img
-                      src={
-                        languages.find((lang) => lang.code === selectedLang)
-                          ?.flag
-                      }
-                      alt="Flag"
-                      className="w-4 h-4"
-                    />
-                    {languages.find((lang) => lang.code === selectedLang)?.name}
-                    <IoIosArrowDown className=" text-sm " />
-                  </button>
+                <FaTimes />
+              </button>
 
-                  {dropdownOpen && (
-                    <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
-                      {languages.map((lang) => (
-                        <li
-                          key={lang.code}
-                          className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
-                          onClick={() => changeLanguage(lang.code)}
-                        >
-                          <img
-                            src={lang.flag}
-                            className="w-3 md:w-4 h-3 md:h-4"
-                            alt={`${lang.name} Flag`}
-                          />
-                          {lang.name}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+              <div className="flex  md:hidden items-center gap-2 justify-between mb-2 w-full">
+                <div
+                  className="relative md:ml-2 flex gap-2 items-center"
+                  ref={dropdownRef}
+                >
+                  <FaGlobe className="text-2xl text-brand1" />
+                  <div className="relative">
+                    <button
+                      className="cursor-pointer border font-semibold   md:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-lg flex items-center gap-2"
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                    >
+                      <img
+                        src={
+                          languages.find((lang) => lang.code === selectedLang)
+                            ?.flag
+                        }
+                        alt="Flag"
+                        className="w-4 h-4"
+                      />
+                      {
+                        languages.find((lang) => lang.code === selectedLang)
+                          ?.name
+                      }
+                      <IoIosArrowDown className=" text-sm " />
+                    </button>
+
+                    {dropdownOpen && (
+                      <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                        {languages.map((lang) => (
+                          <li
+                            key={lang.code}
+                            className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
+                            onClick={() => changeLanguage(lang.code)}
+                          >
+                            <img
+                              src={lang.flag}
+                              className="w-3 md:w-4 h-3 md:h-4"
+                              alt={`${lang.name} Flag`}
+                            />
+                            {lang.name}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <a
+                    href="https://wa.me/74951234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-500 text-3xl hover:scale-125 transition-all duration-300"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                  <a
+                    href="https://t.me/medclinic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-500 text-3xl hover:scale-125 transition-all duration-300"
+                    aria-label="Telegram"
+                  >
+                    <FaTelegramPlane />
+                  </a>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <a
-                  href="https://wa.me/74951234567"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-500 text-3xl hover:scale-125 transition-all duration-300"
-                  aria-label="WhatsApp"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a
-                  href="https://t.me/medclinic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-500 text-3xl hover:scale-125 transition-all duration-300"
-                  aria-label="Telegram"
-                >
-                  <FaTelegramPlane />
-                </a>
-              </div>
-            </div>
 
-            <div className="flex flex-col gap-2 text-lg mb-4">
-              <button className="bg-[#125e84] text-white px-6 py-2 rounded-lg font-medium hover:bg-sky-600 transition flex items-center gap-2 mt-4">
-                <FaUser className="text-lg" />
-                {t("header.personalAccount")}
-              </button>
-              <button className="border border-[#125e84] text-[#125e84] px-6 py-2 rounded-lg font-medium flex gap-2 items-center hover:bg-[#125e84]/10 cursor-pointer transition whitespace-nowrap">
-                <FaCalendarCheck className="text-lg" />
-
-                {t("header.bookAppointment")}
-              </button>
-            </div>
-
-            <div className="flex flex-col mb-6">
-              <label htmlFor="city" className="text-xs mb-1">
-                Select your City:
-              </label>
-              <select
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className="border rounded-lg px-2 py-1"
-              >
-                <option value="Moscow">Moscow</option>
-                <option value="Makhachkala">Makhachkala</option>
-              </select>
-            </div>
-
-            <nav className="flex  flex-col gap-4 text-lg">
-              <button
-                onClick={() => handleScrollToSection("#about")}
-                className=" text-left hover:underline whitespace-nowrap"
-              >
-                {" "}
-                {t("header.about")}
-              </button>{" "}
-              <button
-                onClick={() => handleScrollToSection("#doctors")}
-                className="text-left  whitespace-nowrap"
-              >
-                {" "}
-                {t("header.doctors")}{" "}
-              </button>{" "}
-              {/* Services Dropdown - Mobile */}
-              <div>
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full"
-                >
-                  {t("header.services")}
-                  <FaChevronDown
-                    className={`ml-2 transform transition ${
-                      isServicesOpen ? "rotate-180" : ""
-                    }`}
-                  />
+              <div className="flex flex-col gap-2 text-lg mb-4">
+                <button className="bg-[#125e84] text-white px-6 py-2 rounded-lg font-medium hover:bg-sky-600 transition flex items-center gap-2 mt-4">
+                  <FaUser className="text-lg" />
+                  {t("header.personalAccount")}
                 </button>
-                <AnimatePresence>
-                  {isServicesOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="ml-4 mt-2 max-h-80 py-2  overflow-y-auto text-sm font-normal flex flex-col gap-4"
-                    >
-                      {services.map((s, idx) => (
-                        <Link
-                          key={idx}
-                          to={s.path}
-                          onClick={() => setIsOpen(false)}
-                          className="block"
-                        >
-                          {s.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <button className="border border-[#125e84] text-[#125e84] px-6 py-2 rounded-lg font-medium flex gap-2 items-center hover:bg-[#125e84]/10 cursor-pointer transition whitespace-nowrap">
+                  <FaCalendarCheck className="text-lg" />
+
+                  {t("header.bookAppointment")}
+                </button>
               </div>
-              <Link to="/" className="  hover:underline whitespace-nowrap">
-                {" "}
-                {t("header.forPatients")}
-              </Link>{" "}
-              <button
-                onClick={() => handleScrollToSection("#reviews")}
-                className="text-left  whitespace-nowrap"
-              >
-                {" "}
-                {t("header.reviews")}
-              </button>{" "}
-              <Link to="/" className="  hover:underline whitespace-nowrap">
-                {" "}
-                {t("header.offers")}
-              </Link>{" "}
-              <button
-                onClick={() => handleScrollToSection("#contact")}
-                className="text-left   hover:underline whitespace-nowrap"
-              >
-                {" "}
-                {t("header.contact")}
-              </button>{" "}
-              <Link to="/" className="  hover:underline whitespace-nowrap">
-                {" "}
-                IMETC
-              </Link>{" "}
-              <Link
-                to="/early-detection-program"
-                className="  hover:underline whitespace-nowrap"
-              >
-                {" "}
-                {t("header.earlyDiagnosis")}
-              </Link>{" "}
-              <Link to="/" className="  hover:underline whitespace-nowrap">
-                {" "}
-                {t("header.expertise")}
-              </Link>{" "}
-              <Link to="/" className="  hover:underline whitespace-nowrap">
-                {" "}
-                Pathologica
-              </Link>{" "}
-              <Link
-                to="/hdmc-plus"
-                className="  hover:underline whitespace-nowrap"
-              >
-                {" "}
-                HDMC+
-              </Link>{" "}
-            </nav>
-          </motion.aside>
+
+              <div className="flex flex-col mb-6">
+                <label htmlFor="city" className="text-xs mb-1">
+                  Select your City:
+                </label>
+                <select
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  className="border rounded-lg px-2 py-1"
+                >
+                  <option value="Moscow">Moscow</option>
+                  <option value="Makhachkala">Makhachkala</option>
+                </select>
+              </div>
+
+              <nav className="flex  flex-col gap-4 text-lg">
+                <button
+                  onClick={() => handleScrollToSection("#about")}
+                  className=" text-left hover:underline whitespace-nowrap"
+                >
+                  {" "}
+                  {t("header.about")}
+                </button>{" "}
+                <button
+                  onClick={() => handleScrollToSection("#doctors")}
+                  className="text-left  whitespace-nowrap"
+                >
+                  {" "}
+                  {t("header.doctors")}{" "}
+                </button>{" "}
+                {/* Services Dropdown - Mobile */}
+                <div>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center justify-between w-full"
+                  >
+                    {t("header.services")}
+                    <FaChevronDown
+                      className={`ml-2 transform transition ${
+                        isServicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="ml-4 mt-2 max-h-80 py-2  overflow-y-auto text-sm font-normal flex flex-col gap-4"
+                      >
+                        {services.map((s, idx) => (
+                          <Link
+                            key={idx}
+                            to={s.path}
+                            onClick={() => setIsOpen(false)}
+                            className="block"
+                          >
+                            {s.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                <Link to="/" className="  hover:underline whitespace-nowrap">
+                  {" "}
+                  {t("header.forPatients")}
+                </Link>{" "}
+                <button
+                  onClick={() => handleScrollToSection("#reviews")}
+                  className="text-left  whitespace-nowrap"
+                >
+                  {" "}
+                  {t("header.reviews")}
+                </button>{" "}
+                <Link to="/" className="  hover:underline whitespace-nowrap">
+                  {" "}
+                  {t("header.offers")}
+                </Link>{" "}
+                <button
+                  onClick={() => handleScrollToSection("#contact")}
+                  className="text-left   hover:underline whitespace-nowrap"
+                >
+                  {" "}
+                  {t("header.contact")}
+                </button>{" "}
+                <Link to="/" className="  hover:underline whitespace-nowrap">
+                  {" "}
+                  IMETC
+                </Link>{" "}
+                <Link
+                  to="/early-detection-program"
+                  className="  hover:underline whitespace-nowrap"
+                >
+                  {" "}
+                  {t("header.earlyDiagnosis")}
+                </Link>{" "}
+                <Link to="/" className="  hover:underline whitespace-nowrap">
+                  {" "}
+                  {t("header.expertise")}
+                </Link>{" "}
+                <Link to="/" className="  hover:underline whitespace-nowrap">
+                  {" "}
+                  Pathologica
+                </Link>{" "}
+                <Link
+                  to="/hdmc-plus"
+                  className="  hover:underline whitespace-nowrap"
+                >
+                  {" "}
+                  HDMC+
+                </Link>{" "}
+              </nav>
+            </motion.aside>
+          </>
         )}
       </AnimatePresence>
     </header>
