@@ -49,16 +49,16 @@ const HeroSection = () => {
               <div
                 className={`mx-auto w-full min-h-[80vh] h-full flex items-center ${gradient}`}
               >
-                <div className="flex flex-col md:flex-row max-w-[87rem] w-full px-6 md:px-12 mx-auto items-center gap-10">
+                <div className="flex flex-col md:flex-row max-w-[87rem] w-full px-6 md:px-12 py-6 md:py-0 mx-auto items-center gap-10">
                   {/* Left Side (Text) */}
                   <div className="flex-1 flex flex-col items-start">
-                    <div className="mb-8 flex items-center">
+                    <div className="mb-4 md:mb-8 flex items-center">
                       <div className="bg-white/[0.13] rounded-full p-4 mr-4">
                         {icon}
                       </div>
                       <div className="w-1 h-14 bg-white/40 rounded" />
                     </div>
-                    <h1 className="text-white font-bold text-4xl md:text-6xl leading-tight mb-6">
+                    <h1 className="text-white font-bold text-4xl md:text-6xl leading-tight mb-2 md:mb-6">
                       {t(titleKey)}
                     </h1>
                     <div className="text-gray-200 text-lg md:text-2xl mb-8">
