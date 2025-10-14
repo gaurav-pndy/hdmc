@@ -97,7 +97,7 @@ const AboutSection = () => {
           {/* Right - Image */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/about2.png" // Replace with your image
+              src="/about1.png" // Replace with your image
               alt="About Clinic"
               className="w-full max-w-lg  object-cover"
             />
