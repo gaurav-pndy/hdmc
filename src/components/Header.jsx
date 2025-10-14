@@ -89,7 +89,7 @@ const Header = () => {
       icon: "/services/1.svg",
     },
     {
-      path: "/services/therapy",
+      path: "/early-detection-program",
       label: t("header.service2"),
       icon: "/services/2.svg",
     },
