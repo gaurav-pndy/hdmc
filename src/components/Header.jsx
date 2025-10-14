@@ -423,7 +423,7 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-6xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
                 >
                   {services.map((s, idx) => (
                     <Link
@@ -431,14 +431,16 @@ const Header = () => {
                       to={s.path}
                       className="block  group  text-wrap   transition-all duration-300 rounded-lg"
                     >
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c668a9] to-[#af6ca5] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  mb-2">
+                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#c668a9] to-[#af6ca5] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
                         <img
                           src={s.icon}
                           alt={s.label}
-                          className="w-6 h-6 object-contain brightness-0 invert"
+                          className="w-4 xl:w-6 h-4 xl:h-6 object-contain brightness-0 invert"
                         />
                       </div>
-                      <p className="group-hover:text-brand2">{s.label}</p>
+                      <p className="group-hover:text-brand2 text-sm xl:text-base">
+                        {s.label}
+                      </p>
                     </Link>
                   ))}
                 </motion.div>
