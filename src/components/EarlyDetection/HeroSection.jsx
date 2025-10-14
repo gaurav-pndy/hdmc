@@ -6,7 +6,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full flex flex-col justify-center items-center text-center relative py-18 px-2 bg-gradient-to-br from-pink-300 to-pink-600">
+    <section className="w-full flex flex-col justify-center items-center text-center relative py-18 px-2 bg-gradient-to-br from-brand5 to-brand1">
       {/* Soft watermark illustration */}
       <img
         src="/hero1.png"

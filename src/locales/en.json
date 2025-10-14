@@ -453,6 +453,43 @@
       "benefit3": "Personalized approach",
       "programButton": "Choose a program",
       "moreButton": "Learn More"
+  },
+   "about": {
+    "heading": "About the Program",
+    "topText": "“Early Detection” is a project to improve access to high-quality diagnostics for major chronic diseases: cancer, cardiovascular diseases, diabetes, and widespread infectious diseases.",
+    "missionTitle": "Our mission",
+    "missionText": "Many people spend significant money on car service or unhealthy habits, forgetting the main value – their health. Early diagnostics and prevention are a way of timely problem detection; it’s a chance to save time, money and quality of life.",
+    "missionHighlight": "Early detection is an alternative for those who value their health, time, and budget.",
+    "evidenceTitle": "Evidence-based medicine",
+    "evidenceDesc": "The program is based on international recommendations and up-to-date screening protocols.",
+    "teamTitle": "Expert team",
+    "teamDesc": "Developed by leading specialists from various medical fields.",
+    "personalTitle": "Personalized approach",
+    "personalDesc": "Reliable assessment of your condition, taking individual factors into account.",
+    "experienceTitle": "Many years’ experience",
+    "experienceDesc": "Confirmed by years of successful practice in diagnosis and prevention.",
+    "bottomText": "Thanks to this approach, you get a reliable, effective and personalized assessment of your health status, which allows you to assess risks, detect problems in time and have a more efficient and less invasive treatment with better outcomes."
+  },
+  "why": {
+    "heading": "Why is early detection important?",
+    "preamble": "We believe diagnosis should be accessible and thorough, and early disease detection — a priority.",
+    "statText": "years of experience in diagnostics and prevention",
+    "timeTitle": "Saves time",
+    "timeDesc": "Timely detection of disease at early stages reduces treatment time.",
+    "moneyTitle": "Saves money",
+    "moneyDesc": "Treatment at early stages is much cheaper and more effective.",
+    "qualityTitle": "Quality of life",
+    "qualityDesc": "Prevention and early detection help preserve your quality of life.",
+    "prognosisTitle": "Better prognosis",
+    "prognosisDesc": "Early detection ensures the best outcome for treatment.",
+    "important": "Important: Early detection allows for more effective and less intensive treatment with the best outcomes."
+  },
+  "insurance": {
+    "title": "Oncoinsurance",
+    "desc": "A long-term agreement with our Center for regular follow-up, regular examinations and necessary treatment. Protect your health for years to come.",
+    "button": "Learn about the program",
+        "appointmentBtn": "Make an Appointment"
+
   }
 }
 
