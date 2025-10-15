@@ -1,11 +1,91 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { TiLocationArrowOutline } from "react-icons/ti";
 
+// Custom map component using Yandex Maps API
+const YandexMap = ({ center, zoom, placemarks, language }) => {
+  const mapRef = useRef(null);
+  const mapInstanceRef = useRef(null);
+
+  useEffect(() => {
+    // Load Yandex Maps API script
+    const script = document.createElement("script");
+    script.src = `https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=${language}`;
+    script.async = true;
+    script.onload = () => initMap();
+    document.head.appendChild(script);
+
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.destroy();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (mapInstanceRef.current && window.ymaps) {
+      // Update language when it changes
+      initMap();
+    }
+  }, [language, center, zoom]);
+
+  const initMap = () => {
+    if (!window.ymaps || !mapRef.current) return;
+
+    window.ymaps.ready(() => {
+      // Destroy existing map if any
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.destroy();
+      }
+
+      // Create new map
+      const map = new window.ymaps.Map(mapRef.current, {
+        center: center,
+        zoom: zoom,
+        controls: ["zoomControl"],
+      });
+
+      // Apply grayscale filter to match your brand
+      map.panes.get("ground").getElement().style.filter =
+        "grayscale(1) sepia(0.01) brightness(0.98)";
+
+      // Add custom placemarks
+      placemarks.forEach((place) => {
+        const placemark = new window.ymaps.Placemark(
+          place.coords,
+          {
+            balloonContentHeader: `<div style="font-weight: bold; font-size: 24px; color: #1e3a8a; margin-bottom: 8px;">HDMC</div>`,
+            balloonContentBody: `
+              <div style="padding: 5px; font-size: 14px; color: #374151;">
+                <p style="margin: 5px 0;"><strong>📍 Адрес:</strong> ${place.address}</p>
+                <p style="margin: 5px 0;"><strong>🕐 График:</strong> ${place.schedule}</p>
+                <p style="margin: 5px 0;"><strong>📞 Телефон:</strong> <a href="tel:${place.phone}" style="color: #2563eb; text-decoration: none;">${place.phone}</a></p>
+              </div>
+            `,
+            hintContent: "HDMC",
+          },
+          {
+            // Custom icon - you can use your own SVG or create one
+            iconLayout: "default#image",
+            iconImageHref: "/plus.png",
+            iconImageSize: [62, 62],
+            iconImageOffset: [-29, -73],
+          }
+        );
+        map.geoObjects.add(placemark);
+      });
+
+      mapInstanceRef.current = map;
+    });
+  };
+
+  return <div ref={mapRef} style={{ width: "100%", height: "100%" }} />;
+};
+
 const AddressSection = () => {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language; // e.g., 'ru' or 'en'
+  const currentLang = i18n.language;
 
   const clinics = [
     {
@@ -13,20 +93,19 @@ const AddressSection = () => {
       address: t("address.clinic1.address"),
       schedule: t("address.clinic1.schedule"),
       phone: "+7 (495) 514-20-58",
-      mapUrl:
-        "https://yandex.com/map-widget/v1/org/kvartal_west/161241477081/?indoorLevel=1&ll=37.456828%2C55.707299&utm_source=share&z=16",
+      coords: [55.707299, 37.456828],
+      zoom: 17,
     },
     {
       title: t("address.clinic2.title"),
       address: t("address.clinic2.address"),
       schedule: t("address.clinic2.schedule"),
       phone: "+7 (988) 204-55-75",
-      mapUrl:
-        "https://yandex.com/map-widget/v1/?ll=47.467719%2C42.982145&mode=whatshere&tab=inside&utm_source=share&whatshere%5Bpoint%5D=47.467977%2C42.982315&whatshere%5Bzoom%5D=17&z=18",
+      coords: [42.982315, 47.467977],
+      zoom: 17,
     },
   ];
 
-  // Map language parameter for Yandex
   const mapLang = currentLang === "ru" ? "ru_RU" : "en_US";
 
   return (
@@ -66,15 +145,13 @@ const AddressSection = () => {
                 </button>
               </div>
 
-              <div className="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow">
-                <iframe
-                  src={`${clinic.mapUrl}&lang=${mapLang}`}
-                  frameBorder="1"
-                  allowFullScreen
-                  width="100%"
-                  height="100%"
-                  title={clinic.title}
-                ></iframe>
+              <div className="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow ">
+                <YandexMap
+                  center={clinic.coords}
+                  zoom={clinic.zoom}
+                  placemarks={[clinic]}
+                  language={mapLang}
+                />
               </div>
             </React.Fragment>
           ))}

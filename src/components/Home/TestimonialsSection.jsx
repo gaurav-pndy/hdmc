@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
         </h2>
 
         {/* Custom arrows */}
-        <div className="absolute top-1/2 left-0 lg:-left-5 transform -translate-y-1/2 z-20 flex">
+        <div className="absolute top-1/2 left-0 xl:-left-5 transform -translate-y-1/2 z-20 flex">
           <button
             ref={prevRef}
             className="cursor-pointer  text-brand1  transition"
@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
             <FaChevronLeft size={32} />
           </button>
         </div>
-        <div className="absolute top-1/2 right-0 lg:-right-5 transform -translate-y-1/2 z-20 flex">
+        <div className="absolute top-1/2 right-0 xl:-right-5 transform -translate-y-1/2 z-20 flex">
           <button
             ref={nextRef}
             className="cursor-pointer text-brand1  transition"

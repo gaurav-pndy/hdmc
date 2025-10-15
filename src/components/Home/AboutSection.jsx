@@ -7,22 +7,22 @@ import { FaRegClock } from "react-icons/fa";
 
 const features = [
   {
-    icon: <LuBuilding2 className="text-brand1 text-xl" />,
+    icon: <LuBuilding2 className="text-white text-xl" />,
     title: "aboutClinic.feature1.title",
     desc: "aboutClinic.feature1.desc",
   },
   {
-    icon: <FiUsers className="text-brand1 text-xl" />,
+    icon: <FiUsers className="text-white text-xl" />,
     title: "aboutClinic.feature2.title",
     desc: "aboutClinic.feature2.desc",
   },
   {
-    icon: <SlBadge className="text-brand1 text-xl" />,
+    icon: <SlBadge className="text-white text-xl" />,
     title: "aboutClinic.feature3.title",
     desc: "aboutClinic.feature3.desc",
   },
   {
-    icon: <FaRegClock className="text-brand1 text-xl" />,
+    icon: <FaRegClock className="text-white text-xl" />,
     title: "aboutClinic.feature4.title",
     desc: "aboutClinic.feature4.desc",
   },
@@ -40,7 +40,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="w-full py-16 ">
-      <div className="max-w-[87rem] bg-gradient-to-br from-brand1/30  to-brand2/30 mx-auto px-4 md:p-10 rounded-xl w-full">
+      <div className="max-w-[87rem] bg-gradient-to-br from-[#f3f5f7]  to-gray-300 mx-auto px-4 md:p-10 rounded-xl w-full">
         {/* Top Section - Text + Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left - Text & Features */}
@@ -56,7 +56,7 @@ const AboutSection = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               {features.map((f, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center bg-brand4 rounded-lg shrink-0 mt-1">
+                  <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
                     {f.icon}
                   </div>
                   <div>
@@ -97,9 +97,9 @@ const AboutSection = () => {
           {/* Right - Image */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/about1.png" // Replace with your image
+              src="/about3.png" // Replace with your image
               alt="About Clinic"
-              className="w-full max-w-lg  object-cover"
+              className="w-full max-w-2xl  object-cover"
             />
           </div>
         </div>

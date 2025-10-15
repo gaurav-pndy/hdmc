@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaLocationDot } from "react-icons/fa6";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import { motion, AnimatePresence } from "framer-motion";
-import "swiper/css";
-import "swiper/css/navigation";
-import { FiFilter, FiSearch } from "react-icons/fi";
-import { doctorsData } from "../../data/doctors";
-import { Link } from "react-router-dom";
 
-const DoctorsSection = () => {
+import { motion, AnimatePresence } from "framer-motion";
+
+import { Link } from "react-router-dom";
+import { doctorsData } from "../data/doctors";
+
+const DoctorsPage = () => {
   const { t } = useTranslation();
   const [type, setType] = useState("All");
   const [specialization, setSpecialization] = useState("All");
@@ -57,31 +54,8 @@ const DoctorsSection = () => {
       id="doctors"
       className="w-full py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto"
     >
-      {/* --- Header --- */}
-      <div className="max-w-[87rem] mx-auto px-4 flex flex-col md:flex-row items-center  gap-8 md:gap-16">
-        {/* Left side: Text */}
-        <div className="md:w-1/2 text-left">
-          <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
-            {t("doctors.title")}
-          </h2>
-          <p
-            className="md:text-lg text-brand1/90"
-            dangerouslySetInnerHTML={{ __html: t("doctors.subtitle") }}
-          ></p>
-        </div>
-
-        {/* Right side: Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
-            src="/doctors2.png"
-            alt="Doctors illustration"
-            className="w-full max-h-96 rounded-lg shadow-lg object-cover"
-          />
-        </div>
-      </div>
-
       {/* --- Filter Bar --- */}
-      <div className="w-full bg-white border border-brand4/30 rounded-xl shadow-sm mt-10 md:mt-12">
+      <div className="w-full bg-white border border-brand4/30 rounded-xl shadow-sm ">
         {/* Top Row: Search + Toggle Filters */}
         {/* <div className="flex flex-col md:flex-row items-center gap-3 px-4 py-3 border-b border-brand4/20">
           <input
@@ -161,84 +135,58 @@ const DoctorsSection = () => {
         </AnimatePresence>
       </div>
 
-      {/* --- Navigation Buttons --- */}
-      <div className="flex items-center justify-end w-full mt-6 gap-2">
-        <button className="prev-btn bg-white rounded px-3 py-2 border border-brand4 text-brand1 transition hover:bg-brand4/10">
-          &lt;
-        </button>
-        <button className="next-btn bg-white rounded px-3 py-2 border border-brand4 text-brand1 transition hover:bg-brand4/10">
-          &gt;
-        </button>
-      </div>
-
       {/* --- Swiper with Filtered Results --- */}
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 4 },
-        }}
-        className="w-full h-full overflow-visible mt-2"
-        navigation={{
-          prevEl: ".prev-btn",
-          nextEl: ".next-btn",
-        }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
         {filteredDoctors.map((doc) => (
-          <SwiperSlide key={doc.id}>
+          <Link
+            key={doc.id}
+            to={`/doctors/${doc.id}`}
+            className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem]"
+          >
+            <div className="flex-1 flex flex-col">
+              {/* Add avatar or doctor photo here if you have */}
+              <img
+                src={doc.image}
+                alt={doc.name}
+                className="w-full h-52 object-cover rounded-lg"
+              />
+              <div className="font-bold text-black text-xl mt-4 mb-3">
+                {doc.name}
+              </div>
+              <div className="flex flex-wrap gap-1 mb-3">
+                {doc.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="text-brand1 text-sm mb-3 line-clamp-2">
+                {doc.desc}
+              </div>
+              <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
+                <span className="flex items-center">
+                  <FaLocationDot className="mr-1" /> {doc.location}
+                </span>
+              </div>
+              <div className="text-brand1/60 text-xs">
+                {t("doctors.languages")}:
+              </div>
+              <div className="text-brand1 text-sm font-medium">{doc.langs}</div>
+            </div>
             <Link
               to={`/doctors/${doc.id}`}
-              className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem]"
+              className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center"
             >
-              <div className="flex-1 flex flex-col">
-                {/* Add avatar or doctor photo here if you have */}
-                <img
-                  src={doc.image}
-                  alt={doc.name}
-                  className="w-full h-52 object-cover rounded-lg"
-                />
-                <div className="font-bold text-black text-xl mt-4 mb-3">
-                  {doc.name}
-                </div>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {doc.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="text-brand1 text-sm mb-3 line-clamp-2">
-                  {doc.desc}
-                </div>
-                <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
-                  <span className="flex items-center">
-                    <FaLocationDot className="mr-1" /> {doc.location}
-                  </span>
-                </div>
-                <div className="text-brand1/60 text-xs">
-                  {t("doctors.languages")}:
-                </div>
-                <div className="text-brand1 text-sm font-medium">
-                  {doc.langs}
-                </div>
-              </div>
-              <Link
-                to={`/doctors/${doc.id}`}
-                className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center"
-              >
-                {t("doctors.viewProfile")}
-              </Link>
+              {t("doctors.viewProfile")}
             </Link>
-          </SwiperSlide>
+          </Link>
         ))}
-      </Swiper>
+      </div>
     </section>
   );
 };
 
-export default DoctorsSection;
+export default DoctorsPage;

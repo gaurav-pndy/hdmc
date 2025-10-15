@@ -50,8 +50,15 @@
       "makhachkala": "Makhachkala",
       "moscowAddress": "Moscow, Aminyevskoye Highway 6, <br />подъезд 1",
       "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7, <br />Makhachkala",
-      "search": "Search..."
- 
+      "search": "Search...",
+      
+  "about1": "Information about the medical organization",
+  "about2": "Licenses and certificates",
+  "about3": "Contacts of regulatory authorities",
+  "about4": "Information for patients",
+  "about5": "Information about the organization's medical staff",
+  "about6": "Personal Data Processing Policy",
+  "about7": "The Offer Agreement"
   },
    "hero": {
    
@@ -67,7 +74,7 @@
     }
   },
    "aboutClinic": {
-    "title": "About Our Clinic",
+    "title": "About Clinic",
     "subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.",
     "feature1": { "title": "Moscow & Makhachkala", "desc": "Modern clinics in two cities" },
     "feature2": { "title": "International Standards", "desc": "World-class quality" },
@@ -99,7 +106,10 @@
     "location": "Location",
     "about": "About Doctor",
     "bookAppt": "Book Appointment",
+    "onlineConsult": "Online Consultation",
     "viewProfile": "View Profile",
+    "reviews": "reviews",
+
     "doctorsList": {
       "doctor1": {
         "name": "Subramanian Somasundaram (Dr. Soma)",
@@ -220,6 +230,13 @@
         "langs": "Russian, English",
         "desc": "A specialist whose accuracy determines the right diagnosis. Works with all types of radiological imaging — from joint CT scans to chest and pelvic studies. Helps detect what others might miss. Has extensive experience participating in oncology consiliums.<br/> &nbsp; &nbsp; • Radiologist<br/> &nbsp; &nbsp; • Specialization: X-ray and CT diagnostics of abdominal, ENT, musculoskeletal, gastrointestinal, thoracic, pelvic, spinal, and joint systems<br/> &nbsp; &nbsp; • Experience in oncology and general medical institutions"
       }
+    },
+    "tabs": {
+      "tab1": "About the Doctor",
+      "tab2": "Work Experience and Education",
+      "tab3": "Scientific Activities",
+      "tab4": "Reviews",
+      "tab5": "Video"
     }
   },
 
@@ -321,7 +338,8 @@
   "makhachkala": "Makhachkala",
   "another": "Another city",
   "message": "Message",
-  "privacy": "I agree to the processing of personal data and to receive information from the medical clinic",
+  "checkbox1" : "I agree with the <a href='/privacy-policy' target='_blank' class='text-blue-500 underline'> Privacy Policy </a> and the processing of personal data",
+    "checkbox2" : "I give my consent to receive informational messages, advertising and promotional offer",
   "button": "Send"
 },
 
@@ -330,8 +348,8 @@
   "subtitle": "Two modern clinics in Moscow and Makhachkala for your convenience",
   "route": "Set a route",
   "clinic1": {
-    "title": "Kvartal West",
-    "address": "Moscow, Aminyevskoye Highway Building 6, Entrance 1",
+    "title": "HDMC",
+    "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1",
     "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
   },
   "clinic2": {
@@ -491,6 +509,10 @@
         "appointmentBtn": "Make an Appointment"
 
   }
+},
+
+"privacy": {
+  "title": "Privacy Policy"
 }
 
 

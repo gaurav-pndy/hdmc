@@ -98,7 +98,7 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
               />
             </div>
-            <div className="flex items-start my-4">
+            <div className="flex items-start mt-4">
               <input
                 type="checkbox"
                 checked={form.agree}
@@ -106,9 +106,25 @@ const ContactSection = () => {
                 className="mr-2  mt-1"
                 id="form-agree"
               />
-              <label htmlFor="form-agree" className="text-sm font-medium">
-                {t("contact.privacy")}
-              </label>
+              <label
+                htmlFor="form-agree"
+                className="text-sm font-medium"
+                dangerouslySetInnerHTML={{ __html: t("contact.checkbox1") }}
+              ></label>
+            </div>
+            <div className="flex items-start mt-2 mb-4">
+              <input
+                type="checkbox"
+                checked={form.agree}
+                onChange={(e) => setForm({ ...form, agree: e.target.checked })}
+                className="mr-2  mt-1"
+                id="form-agree"
+              />
+              <label
+                htmlFor="form-agree"
+                className="text-sm font-medium"
+                dangerouslySetInnerHTML={{ __html: t("contact.checkbox2") }}
+              ></label>
             </div>
             <button
               type="submit"

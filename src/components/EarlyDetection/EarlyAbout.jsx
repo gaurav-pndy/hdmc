@@ -30,14 +30,29 @@ const EarlyAbout = () => {
 
   return (
     <section className="max-w-[87rem] mx-auto py-16 px-4">
-      <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
-        {" "}
-        {t("earlyDetection.about.heading")}
-      </h2>
-      <p className="md:text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
-        {t("earlyDetection.about.topText")}
-      </p>
-      <div className="bg-brand1/10 p-4 md:p-12 rounded-xl mb-10">
+      <div className="max-w-[87rem] mx-auto px-4 flex flex-col md:flex-row items-center  gap-8 md:gap-16">
+        {/* Left side: Text */}
+        <div className="md:w-1/2 text-left">
+          <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
+            {t("earlyDetection.about.heading")}
+          </h2>
+          <p className="md:text-lg text-brand1/90">
+            {" "}
+            {t("earlyDetection.about.topText")}
+          </p>
+        </div>
+
+        {/* Right side: Image */}
+        <div className="md:w-1/2 flex justify-center md:justify-end">
+          <img
+            src="/early-about.png"
+            alt="Doctors illustration"
+            className="mx-auto w-full max-h-80 rounded-lg shadow-lg object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="bg-brand1/10 p-4 mt-10 md:p-12 rounded-xl mb-10">
         <div className="max-w-4xl mx-auto">
           <h3 className="font-bold text-xl md:text-3xl text-brand2 mb-6">
             {t("earlyDetection.about.missionTitle")}

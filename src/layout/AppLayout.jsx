@@ -9,7 +9,7 @@ const AppLayout = () => {
     <div>
       <ScrollToTop />
       <Header />
-      <div className="mt-14 md:mt-40">
+      <div className="mt-14 lg:mt-40">
         <Outlet />
         <FloatingButton />
         <Footer />

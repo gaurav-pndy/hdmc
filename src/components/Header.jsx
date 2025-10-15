@@ -13,25 +13,35 @@ import {
   FaCalendarCheck,
   FaUser,
   FaSearch,
+  FaHospital,
+  FaUsers,
+  FaHandshake,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
+import { TbLicense } from "react-icons/tb";
+import { BiSolidContact } from "react-icons/bi";
+import { IoInformation } from "react-icons/io5";
 
 const Header = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
+  const [isAboutOpen, setIsAboutOpen] = useState(false); // mobile dropdown
   const [city, setCity] = useState("Moscow");
   const dropdownRef = useRef(null);
+  const aboutDropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [aboutDropdownOpen, setaboutDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language);
 
   const [showCityInit, setShowCityInit] = useState(false);
   const [showCitySelect, setShowCitySelect] = useState(false);
 
   const [showServices, setShowServices] = useState(false);
+  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
 
   useEffect(() => {
     const cityConfirmed = localStorage.getItem("cityConfirmed");
@@ -67,12 +77,6 @@ const Header = () => {
     i18n.changeLanguage(lang);
     setSelectedLang(lang);
     setDropdownOpen(false);
-  };
-
-  // City addresses
-  const addresses = {
-    Moscow: "Moscow, Lenina Street 10, Building A",
-    Makhachkala: "Makhachkala, Gorkogo Street 25, Block B",
   };
 
   const menuVariants = {
@@ -145,6 +149,44 @@ const Header = () => {
     },
   ];
 
+  const aboutItems = [
+    {
+      path: "/",
+      label: t("header.about1"),
+      icon: <FaHospital className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about2"),
+      icon: <TbLicense className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about3"),
+      icon: <BiSolidContact className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about4"),
+      icon: <IoInformation className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about5"),
+      icon: <FaUsers className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about6"),
+      icon: <FaUser className="text-xl text-white" />,
+    },
+    {
+      path: "/",
+      label: t("header.about7"),
+      icon: <FaHandshake className="text-xl text-white" />,
+    },
+  ];
+
   const scrollToSection = (sectionId) => {
     const target = document.querySelector(sectionId);
     if (target) {
@@ -192,12 +234,12 @@ const Header = () => {
       {/* Top Bar */}
       <div className="flex w-full bg-[#f3f5f7]">
         <motion.div
-          className="flex max-w-[90rem] w-full mx-auto flex-col md:flex-row items-center justify-between md:justify-end  px-4 md:py-3 text-sm"
+          className="flex max-w-[90rem] w-full mx-auto flex-col lg:flex-row items-center justify-between lg:justify-end  px-4 lg:py-3 text-xs xl:text-sm"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="hidden md:flex flex-col">
+          <div className="hidden lg:flex flex-col">
             <label htmlFor="city" className="text-xs mb-1">
               Select your City:
             </label>
@@ -210,14 +252,6 @@ const Header = () => {
               <option value="Makhachkala">Makhachkala</option>
             </select>
           </div>
-
-          {/* <div className="hidden md:flex items-center gap-2">
-            <img
-              src="/HD.png"
-              alt="Logo"
-              className="h-5 md:h-6 object-contain"
-            />
-          </div> */}
 
           {/* City Confirmation Popup */}
           {showCityInit && (
@@ -274,8 +308,8 @@ const Header = () => {
           )}
 
           {/* Contact Info */}
-          <div className="hidden md:flex flex-wrap mx-8 items-center gap-5  w-fit justify-center md:justify-end">
-            <div className="flex flex-col  text-sm">
+          <div className="hidden lg:flex mx-4 xl:mx-8 items-center gap-3 xl:gap-5  w-fit justify-center lg:justify-end">
+            <div className="flex flex-col  text-xs xl:text-sm">
               <span className="whitespace-nowrap flex items-center gap-1  mb-1">
                 <FaPhoneAlt /> +7 (495) 123-45-67
               </span>
@@ -287,8 +321,8 @@ const Header = () => {
                 info@medclinic.ru
               </a>
             </div>
-            <div className=" items-center gap-1  whitespace-nowrap">
-              <h6 className="font-semibold"> {t("header.moscow")} </h6>
+            <div className=" items-center gap-1   whitespace-nowrap">
+              <h6 className="font-semibold "> {t("header.moscow")} </h6>
               <p
                 className="text-xs text-brand1 leading-4"
                 dangerouslySetInnerHTML={{ __html: t("header.moscowAddress") }}
@@ -306,12 +340,12 @@ const Header = () => {
           </div>
 
           {/* Socials & Language Switch */}
-          <div className="hidden md:flex items-center gap-2 justify-end min-w-0">
+          <div className="hidden lg:flex items-center gap-2 justify-end min-w-0">
             <a
               href="https://wa.me/74951234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-500 text-2xl hover:scale-125 transition-all duration-300"
+              className="text-green-500 text-lg xl:text-2xl hover:scale-125 transition-all duration-300"
               aria-label="WhatsApp"
             >
               <FaWhatsapp />
@@ -320,7 +354,7 @@ const Header = () => {
               href="https://t.me/medclinic"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-500 text-2xl hover:scale-125 transition-all duration-300"
+              className="text-sky-500 text-lg xl:text-2xl hover:scale-125 transition-all duration-300"
               aria-label="Telegram"
             >
               <FaTelegramPlane />
@@ -329,10 +363,10 @@ const Header = () => {
               className="relative md:ml-2 flex gap-1 md:gap-2 items-center"
               ref={dropdownRef}
             >
-              <FaGlobe className="text-xl md:text-2xl text-brand1" />
+              <FaGlobe className="text-lg xl:text-2xl text-brand1" />
               <div className="relative">
                 <button
-                  className="cursor-pointer border font-semibold   md:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-xs flex items-center gap-2"
+                  className="cursor-pointer border font-semibold   xl:text-base px-2 hover:bg-brand1/10 transition-all duration-300 py-1 rounded-lg text-xs flex items-center gap-2"
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
                   <img
@@ -340,7 +374,7 @@ const Header = () => {
                       languages.find((lang) => lang.code === selectedLang)?.flag
                     }
                     alt="Flag"
-                    className="w-3 md:w-4 h-3 md:h-4"
+                    className="w-3 xl:w-4 h-3 xl:h-4"
                   />
                   {languages.find((lang) => lang.code === selectedLang)?.name}
                   <IoIosArrowDown className=" text-sm " />
@@ -351,7 +385,7 @@ const Header = () => {
                     {languages.map((lang) => (
                       <li
                         key={lang.code}
-                        className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
+                        className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs xl:text-base"
                         onClick={() => changeLanguage(lang.code)}
                       >
                         <img
@@ -376,32 +410,65 @@ const Header = () => {
 
       {/* Desktop Nav Bar with Logo */}
       <motion.nav
-        className="flex max-w-[90rem]  w-full mx-auto items-center justify-between px-4 py-4 md:py-2"
+        className="flex max-w-[90rem]  w-full mx-auto items-center justify-between px-4 py-4 lg:py-2"
         initial={{ opacity: 0, y: -5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         {/* Logo now here */}
-        <Link to="/" className="flex  items-center gap-2">
+        <Link to="/" className="flex  items-center gap-2 mr-2">
           <img src="/HD.png" alt="Logo" className="h-5 md:h-7 object-contain" />
         </Link>
 
-        <div className="hidden md:flex justify-end gap-6 mr-6 items-center flex-1 ">
+        <div className="hidden lg:flex justify-end gap-3 xl:gap-6 mr-3 xl:mr-6 items-center flex-1 text-sm xl:text-base font-medium">
           {" "}
-          <button
-            onClick={() => handleScrollToSection("#about")}
-            className="   hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
+          <div
+            onMouseEnter={() => setShowAboutDropdown(true)}
+            onMouseLeave={() => setShowAboutDropdown(false)}
+            className="relative   whitespace-nowrap cursor-pointer"
           >
-            {" "}
-            {t("header.about")}{" "}
-          </button>{" "}
-          <button
-            onClick={() => handleScrollToSection("#doctors")}
+            <button
+              onClick={() => handleScrollToSection("#about")}
+              className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
+            >
+              {t("header.about")} <FaChevronDown className="text-sm mt-1" />
+            </button>
+
+            {/* Animated dropdown */}
+            <AnimatePresence>
+              {showAboutDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute left-1/2 -translate-x-1/3 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-5xl"
+                >
+                  {aboutItems.map((a, idx) => (
+                    <Link
+                      key={idx}
+                      to={a.path}
+                      className="block  group  text-wrap   transition-all duration-300 rounded-lg"
+                    >
+                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
+                        {a.icon}
+                      </div>
+                      <p className="group-hover:text-brand2 text-sm xl:text-base">
+                        {a.label}
+                      </p>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <Link
+            to="/doctors"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             {t("header.doctors")}{" "}
-          </button>{" "}
+          </Link>{" "}
           {/* Services Dropdown - Desktop */}{" "}
           <div
             onMouseEnter={() => setShowServices(true)}
@@ -431,7 +498,7 @@ const Header = () => {
                       to={s.path}
                       className="block  group  text-wrap   transition-all duration-300 rounded-lg"
                     >
-                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#c668a9] to-[#af6ca5] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
+                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
                         <img
                           src={s.icon}
                           alt={s.label}
@@ -480,13 +547,13 @@ const Header = () => {
         <div className="flex justify-between  md:justify-normal md:w-fit text-sm gap-3">
           <input
             type="text"
-            className="border min-w-56 hidden md:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
+            className="border w-48 xl:min-w-56 hidden lg:flex border-[#125e84] text-[#125e84] px-4 py-1.5 rounded-lg font-medium hover:bg-[#125e84]/10 cursor-pointer transition-all duration-300 gap-2 items-center  whitespace-nowrap"
             placeholder={t("header.search")}
           >
             {/* <FaSearch className="" /> */}
           </input>
           <button
-            className="md:hidden text-2xl text-gray-700"
+            className="lg:hidden text-2xl text-gray-700"
             onClick={() => setIsOpen(true)}
             aria-label="Open menu"
           >
@@ -495,8 +562,8 @@ const Header = () => {
         </div>
       </motion.nav>
 
-      <nav className="hidden md:flex  py-2 w-full bg-brand1/10 justify-end ">
-        <div className="hidden max-w-[90rem] px-4  mx-auto md:flex gap-6  justify-end items-center flex-1">
+      <nav className="hidden lg:flex  py-2 w-full bg-brand1/10 justify-end ">
+        <div className="hidden max-w-[90rem] px-4  mx-auto md:flex gap-3 xl:gap-6  justify-end items-center flex-1 text-sm xl:text-base font-medium">
           {" "}
           <Link
             to="/"
@@ -533,7 +600,7 @@ const Header = () => {
             {" "}
             HDMC+
           </Link>{" "}
-          <button className=" min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
+          <button className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
             {t("header.bookAppointment")}
@@ -665,20 +732,44 @@ const Header = () => {
               </div>
 
               <nav className="flex  flex-col gap-4 text-lg">
-                <button
-                  onClick={() => handleScrollToSection("#about")}
-                  className=" text-left hover:underline whitespace-nowrap"
-                >
-                  {" "}
-                  {t("header.about")}
-                </button>{" "}
-                <button
-                  onClick={() => handleScrollToSection("#doctors")}
-                  className="text-left  whitespace-nowrap"
-                >
+                <div>
+                  <button
+                    onClick={() => setIsAboutOpen(!isAboutOpen)}
+                    className="flex items-center justify-between w-full"
+                  >
+                    {t("header.about")}
+                    <FaChevronDown
+                      className={`ml-2 transform transition ${
+                        isAboutOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {isAboutOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="ml-4 mt-2 max-h-80 py-2  overflow-y-auto text-sm font-normal flex flex-col gap-4"
+                      >
+                        {aboutItems.map((a, idx) => (
+                          <Link
+                            key={idx}
+                            to={a.path}
+                            onClick={() => setIsOpen(false)}
+                            className="block"
+                          >
+                            {a.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                <Link to="/doctors" className="text-left  whitespace-nowrap">
                   {" "}
                   {t("header.doctors")}{" "}
-                </button>{" "}
+                </Link>{" "}
                 {/* Services Dropdown - Mobile */}
                 <div>
                   <button

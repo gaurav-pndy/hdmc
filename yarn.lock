@@ -456,6 +456,13 @@
     "@emnapi/runtime" "^1.5.0"
     "@tybys/wasm-util" "^0.10.1"
 
+"@pbe/react-yandex-maps@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@pbe/react-yandex-maps/-/react-yandex-maps-1.2.5.tgz#96c9781b2cb1f8ccc6d1650e8384afa38667c4ac"
+  integrity sha512-cBojin5e1fPx9XVCAqHQJsCnHGMeBNsP0TrNfpWCrPFfxb30ye+JgcGr2mn767Gbr1d+RufBLRiUcX2kaiAwjQ==
+  dependencies:
+    "@types/yandex-maps" "2.1.29"
+
 "@rolldown/pluginutils@1.0.0-beta.38":
   version "1.0.0-beta.38"
   resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.38.tgz#95253608c4629eb2a5f3d656009ac9ba031eb292"
@@ -742,6 +749,11 @@
   integrity sha512-1LOH8xovvsKsCBq1wnT4ntDUdCJKmnEakhsuoUSy6ExlHCkGP2hqnatagYTgFk6oeL0VU31u7SNjunPN+GchtA==
   dependencies:
     csstype "^3.0.2"
+
+"@types/yandex-maps@2.1.29":
+  version "2.1.29"
+  resolved "https://registry.yarnpkg.com/@types/yandex-maps/-/yandex-maps-2.1.29.tgz#88dba8d99a4a05c6bf6d7fbc36c78e891ef30d38"
+  integrity sha512-nuibRWj3RU/9KXlCzTrRtDE+n6V9l7NbT9JakicqZ5OXIdwyb6blvV2Uwn6lB58WYm3DSUDP2I2AWlnWMc8z2w==
 
 "@vitejs/plugin-react@^5.0.3":
   version "5.0.4"

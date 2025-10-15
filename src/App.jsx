@@ -7,6 +7,8 @@ import LeaveFeedback from "./pages/LeaveFeedback";
 import ThankYou from "./pages/ThankYou";
 import DoctorDetails from "./pages/DoctorDetails";
 import EarlyDetection from "./pages/EarlyDetection";
+import PriPolicy from "./pages/PriPolicy";
+import DoctorsPage from "./pages/DoctorsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +18,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/doctors",
+          element: <DoctorsPage />,
         },
         {
           path: "/doctors/:doctorId",
@@ -36,6 +42,10 @@ function App() {
         {
           path: "/thank-you-hdmc",
           element: <ThankYou />,
+        },
+        {
+          path: "/privacy-policy",
+          element: <PriPolicy />,
         },
       ],
     },

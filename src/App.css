@@ -1,0 +1,9 @@
+.map-tint > ymaps {
+  filter: grayscale(0.9) sepia(0.3) hue-rotate(315deg) saturate(1.8)
+    brightness(1.05);
+  transition: filter 0.4s ease;
+}
+
+.map-tint:hover > ymaps {
+  filter: grayscale(0) sepia(0.1) hue-rotate(320deg) saturate(2);
+}
