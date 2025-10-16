@@ -515,7 +515,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
           <Link
-            to="/"
+            to="/for-patients"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
@@ -805,7 +805,10 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link to="/" className="  hover:underline whitespace-nowrap">
+                <Link
+                  to="/for-patients"
+                  className="  hover:underline whitespace-nowrap"
+                >
                   {" "}
                   {t("header.forPatients")}
                 </Link>{" "}

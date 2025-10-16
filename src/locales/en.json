@@ -89,7 +89,7 @@
  
   "doctors": {
     "title": "Our Doctors",
-    "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. <br/><br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. <br/><br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
+    "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. </div> <br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. </div> <br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
     "filter": {
       "enterName": "Enter specialization or doctor's name",
       "hideFilters": "Hide Filters",
@@ -242,7 +242,7 @@
 
 "services": {
    "title": "Our Services",
-"subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.<br/><br/> Our medical centers bring together professionals from various fields to provide comprehensive care under one roof. From initial consultations and preventive screenings to complex diagnostic procedures, every patient receives personalized attention and evidence-based treatment recommendations.<br/><br/>Equipped with cutting-edge technology, our clinics ensure early and accurate detection of diseases, allowing patients to begin treatment without delay.",
+"subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.</div> <br/> Our medical centers bring together professionals from various fields to provide comprehensive care under one roof. From initial consultations and preventive screenings to complex diagnostic procedures, every patient receives personalized attention and evidence-based treatment recommendations.</div> <br/>Equipped with cutting-edge technology, our clinics ensure early and accurate detection of diseases, allowing patients to begin treatment without delay.",
 "moreBtn": "Learn More",
 "askBtn": "Ask a Question",
 "referralBtn": "Submit a Request",
@@ -513,7 +513,115 @@
 
 "privacy": {
   "title": "Privacy Policy"
+},
+
+"forPatients": {
+  "hero": {
+    "title": "For Patients",
+    "subtitle": "All the necessary information about receiving medical care, your rights, and obligations.",
+    "address": "Moscow, Example Street, Building 1"
+  },
+  "info": {
+    "title": "Information for Patients",
+    "subtitle": "Comprehensive information about your rights, the procedure for receiving medical care, and the services of our clinic.",
+    "contactHeading": "Contact Information",
+    "contactSubheading": "Addresses and phone numbers of healthcare authorities",
+    "heading1": "Regional government authority in the field of healthcare:",
+    "contact1": "Ministry of Health of the Russian Federation",
+    "address": "Address",
+    "moscowAddress1": "127994, Moscow, Rakhmanovsky Lane, Building 3",
+    "phone": "Phone",
+    "heading2": "Territorial body of Roszdravnadzor:",
+    "contact2": "Federal Service for Surveillance in Healthcare",
+    "hotline": "Hotline phone number",
+    "heading3": "Territorial body of Rospotrebnadzor:",
+    "contact3": "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing",
+    "consulting": "Unified Consultation Center",
+    "rightsTitle": "Patients’ Rights and Obligations",
+    "rightsSubtitle": "Information about citizens’ rights in the field of healthcare",
+    "rights": {
+      "heading1": "Right to Information:",
+      "rti1": "About their state of health",
+      "rti2": "About the results of examinations",
+      "rti3": "About the presence of a disease",
+      "rti4": "About the established diagnosis",
+      "rti5": "About the prognosis of disease development",
+      "rti6": "About the methods of medical care",
+      "rti7": "About associated risks",
+      "rti8": "About possible types of medical intervention",
+      "rti9": "About the consequences of medical intervention",
+      "rti10": "About the results of medical care provided",
+      "heading2": "Right to Choose:",
+      "rtc1": "Choice of doctor and medical organization",
+      "rtc2": "Choice of individuals who may be informed about their health condition",
+      "rtc3": "Refusal of medical intervention",
+      "heading3": "Patient Obligations:",
+      "res1": "Follow the prescribed treatment regimen",
+      "res2": "Comply with the internal rules of the medical organization",
+      "res3": "Treat the property of the medical organization with care",
+      "res4": "Show respect towards medical staff and other patients"
+    },
+    "careTitle": "Types of Medical Care",
+    "careSubtitle": "Information about methods of providing medical care",
+    "care": {
+      "heading1": "Types of Medical Care:",
+      "type1": "Primary healthcare",
+      "type2": "Specialized, including high-tech, medical care",
+      "type3": "Emergency, including specialized emergency medical care",
+      "type4": "Palliative medical care",
+      "heading2": "Forms of Medical Care:",
+      "form1": "Emergency — for sudden acute illnesses, conditions, or exacerbations of chronic diseases",
+      "form2": "Urgent — for sudden acute illnesses, conditions, or exacerbations of chronic diseases without obvious signs of life-threatening conditions",
+      "form3": "Planned — for preventive measures, diseases, and conditions not accompanied by a threat to life",
+      "heading3": "Information about Risks:",
+      "riskInfo": "Medical intervention may involve certain risks. Before any medical procedure, the doctor is obliged to inform the patient about possible complications and consequences."
+    }
+  },
+  "accordion": {
+    "freeCareTitle": "Free Medical Care",
+    "freeCareSubtitle": "State Guarantee Program",
+    "freeCareContent": "<p class='font-semibold text-black'>State Guarantee Program:</p>Citizens of the Russian Federation have the right to receive free medical care under the state guarantee program of free medical services. </div><br/>  <br/> <p class='font-semibold text-black'>Provided free of charge:</p> <div class='ml-4'>• Primary healthcare<br/>• Specialized medical care<br/>• Emergency medical care<br/>• Palliative medical care</div> <br/> <p class='font-semibold text-black'>Territorial program:</p>Under the territorial program of state guarantees, the types of medical care established in the territory of the subject of the Russian Federation are provided free of charge." ,
+
+    "careConditionsTitle": "Procedure and Conditions for Care",
+    "careConditionsSubtitle": "Scope and conditions of medical care",
+    "careConditionsContent": "<p class='font-semibold text-black'>Procedure for providing medical care:</p>Medical care is provided in accordance with the procedures for providing medical care approved by the Ministry of Health of the Russian Federation. </div> <br/><br/> <p class='font-semibold text-black'>Conditions of provision:</p> <div class='ml-4'>• Outside the medical organization (at the location of the ambulance call, as well as in the transport vehicle during medical evacuation)<br/>• Outpatient (in conditions that do not provide round-the-clock medical supervision and treatment)<br/>• Day hospital (in conditions providing medical supervision and treatment during daytime)<br/>• Inpatient (in conditions providing round-the-clock medical supervision and treatment) </div> <br/> <p class='font-semibold text-black'>Scope of medical care:</p>The scope of medical care is determined in accordance with the territorial program of state guarantees and medical indications.",
+
+    "careQualityTitle": "Quality Indicators",
+    "careQualitySubtitle": "Accessibility and quality of medical care",
+    "careQualityContent": "<p class='font-semibold text-black'>Indicators of accessibility of medical care:</p><div class='ml-4'>• Population satisfaction with medical care (percentage)<br/>• Average waiting time to see a doctor from the moment of request (days)<br/>• Share of patients who received specialized medical care in inpatient conditions no later than 30 days from referral</div></div> <br/><p class='font-semibold text-black'>Indicators of quality of medical care:</p><div class='ml-4'>• Mortality from major socially significant diseases<br/>• Share of patients with myocardial infarction hospitalized within the first 12 hours from onset<br/>• Share of patients with acute myocardial infarction who underwent coronary artery stenting<br/>• Mortality of the working-age population</div>",
+
+    "appointmentTitle": "Rules for Scheduling Appointments",
+    "appointmentSubtitle": "Procedure for consultation and examination",
+    "appointmentContent": "<p class='font-semibold text-black'>Ways to make an appointment:</p><div class='ml-4'>• In person at the medical organization's registration desk<br/>• By phone to the registration desk<br/>• Through the Unified Portal of State and Municipal Services (Gosuslugi.ru)<br/>• Through a self-service kiosk at the medical organization</div></div> <br/><p class='font-semibold text-black'>Required documents:</p><div class='ml-4'>• Passport of a citizen of the Russian Federation<br/>• Compulsory medical insurance policy<br/>• SNILS (if available)</div></div> <br/><p class='font-semibold text-black'>Waiting times for appointments:</p>The waiting time to see specialist doctors for primary specialized medical care should not exceed 14 working days from the date of the patient’s request.",
+
+    "diagnosticsTitle": "Preparation for Diagnostics",
+    "diagnosticsSubtitle": "Rules for preparing for examinations",
+    "diagnosticsContent": "<p class='font-semibold text-black'>General preparation rules:</p><div class='ml-4'>• Blood tests should be taken on an empty stomach (fasting for at least 8 hours)<br/>• Exclude fatty foods and alcohol 1–2 days before the test<br/>• Avoid physical activity before tests<br/>• Do not smoke at least 1 hour before the test</div></div> <br/><p class='font-semibold text-black'>Abdominal ultrasound:</p><div class='ml-4'>• The examination is performed on an empty stomach<br/>• Last meal 8–12 hours before the examination<br/>• Exclude foods that cause gas 2–3 days before the examination</div></div> <br/><p class='font-semibold text-black'>Radiological examinations:</p>Preparation depends on the type of examination. Detailed recommendations are provided when scheduling the test.",
+
+    "hospitalizationTitle": "Hospitalization Rules",
+    "hospitalizationSubtitle": "Procedure and timing of hospitalization",
+    "hospitalizationContent": "<p class='font-semibold text-black'>Types of hospitalization:</p><div class='ml-4'>• Emergency: For conditions requiring urgent medical intervention<br/>• Planned: For conditions not requiring urgent care</div></div> <br/><p class='font-semibold text-black'>Documents for hospitalization:</p><div class='ml-4'>• Passport<br/>• Medical insurance policy<br/>• SNILS<br/>• Referral for hospitalization (for planned hospitalization)<br/>• Examination results (according to the medical organization's list)</div></div> <br/><p class='font-semibold text-black'>Waiting times for planned hospitalization:</p>No more than 30 calendar days from the date of referral (for specialized medical care).",
+
+    "paidServicesTitle": "Paid Medical Services",
+    "paidServicesSubtitle": "Rules for providing paid services",
+    "paidServicesContent": "<p class='font-semibold text-black'>Conditions for providing paid services:</p><div class='ml-4'>• Paid medical services are provided on the basis of a contract<br/>• The contract is concluded in writing<br/>• The patient has the right to refuse a paid medical service</div></div> <br/><p class='font-semibold text-black'>Pricing information:</p>The price list for paid medical services is posted on the information boards of the medical organization and on the official website.</div> <br/><br/> <p class='font-semibold text-black'>Patient rights:</p><div class='ml-4'>• Receiving full information about the service and its cost<br/>• Receiving a receipt and a service contract<br/>• Refusing the service before it is provided</div>",
+
+    "vacanciesTitle": "Vacancies",
+    "vacanciesSubtitle": "Information about open positions",
+    "vacanciesContent": "<p class='font-semibold text-black'>Current vacancies:</p>Information about open positions is posted on the official website of the medical organization in the \"Vacancies\" section and is updated regularly.</div><br/>  <br/><p class='font-semibold text-black'>Candidate requirements:</p><div class='ml-4'>• Higher or secondary medical education<br/>• Valid specialist certificate or accreditation<br/>• Work experience (depending on the position)</div></div> <br/><p class='font-semibold text-black'>Contact for applicants:</p>For employment inquiries, contact the HR department by phone or email listed on the website.",
+
+    "medListTitle": "Lists of Medications",
+    "medListSubtitle": "Information about drug lists",
+    "medListContent": "<p class='font-semibold text-black'>Essential and vital medicines (EVM):</p>The list is approved by the order of the Government of the Russian Federation dated October 12, 2019, No. 2406-r. </div> <br/>The list includes medicines for treating major diseases and conditions.</div><br/>  <br/><p class='font-semibold text-black'>Specialized medicines:</p>List of drugs for patients with:<div class='ml-4'>• Hemophilia<br/>• Cystic fibrosis<br/>• Pituitary dwarfism<br/>• Gaucher disease<br/>• Malignant neoplasms of lymphoid and hematopoietic tissues<br/>• Multiple sclerosis<br/>• Juvenile arthritis with systemic onset<br/>• Mucopolysaccharidosis types I, II, and VI<br/>• Other diseases, as well as for patients after organ transplantation</div></div> <br/><p class='font-semibold text-black'>Additional medicines:</p>List of drugs prescribed by the decision of medical organization commissions.",
+
+    "standardsTitle": "Standards and Guidelines",
+    "standardsSubtitle": "Medical care standards",
+    "standardsContent": "<p class='font-semibold text-black'>Medical care standards:</p>Medical care is provided in accordance with the standards of medical care approved by the Ministry of Health of the Russian Federation.</div><br/>  <br/><p class='font-semibold text-black'>Clinical guidelines:</p>Clinical guidelines are developed by medical professional non-profit organizations and include information about:<div class='ml-4'>• Diagnosis of disease or condition<br/>• Medical services provided for the disease or condition<br/>• Sequence of drug use<br/>• Medical devices and specialized nutrition</div></div> <br/><p class='font-semibold text-black'>Access to information:</p>Standards of medical care and clinical guidelines are posted on the official website of the Ministry of Health of the Russian Federation."
 }
+
+}
+
+
 
 
 

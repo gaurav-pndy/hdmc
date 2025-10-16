@@ -9,6 +9,7 @@ import DoctorDetails from "./pages/DoctorDetails";
 import EarlyDetection from "./pages/EarlyDetection";
 import PriPolicy from "./pages/PriPolicy";
 import DoctorsPage from "./pages/DoctorsPage";
+import ForPatients from "./pages/ForPatients";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,10 @@ function App() {
         {
           path: "/doctors/:doctorId",
           element: <DoctorDetails />,
+        },
+        {
+          path: "/for-patients",
+          element: <ForPatients />,
         },
         {
           path: "/hdmc-plus",

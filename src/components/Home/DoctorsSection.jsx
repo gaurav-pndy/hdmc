@@ -227,12 +227,9 @@ const DoctorsSection = () => {
                   {doc.langs}
                 </div>
               </div>
-              <Link
-                to={`/doctors/${doc.id}`}
-                className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center"
-              >
+              <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
                 {t("doctors.viewProfile")}
-              </Link>
+              </button>
             </Link>
           </SwiperSlide>
         ))}
