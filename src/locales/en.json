@@ -701,7 +701,12 @@
     "bic": "BIC",
     "addInfoTitle": "Additional Information",
     "addInfoText": "For all contract-related questions, please contact the reception desk."
-  }
+  },
+  "footer": {
+  "title": "Still have questions?",
+  "subtitle": "Contact us in any convenient way"
+}
+
 },
 
 "forPatients": {
