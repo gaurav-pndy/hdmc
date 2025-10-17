@@ -542,13 +542,6 @@ const Header = () => {
             {" "}
             {t("header.reviews")}{" "}
           </button>{" "}
-          <Link
-            to="/"
-            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
-          >
-            {" "}
-            {t("header.offers")}
-          </Link>{" "}
           <button
             onClick={() => handleScrollToSection("#contact")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
@@ -580,11 +573,11 @@ const Header = () => {
         <div className="hidden max-w-[90rem] px-4  mx-auto md:flex gap-3 xl:gap-6  justify-end items-center flex-1 text-sm xl:text-base font-medium">
           {" "}
           <Link
-            to="/"
+            to="/telemedicine-consultation"
             className="  hover:text-brand2 transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             {" "}
-            IMETC{" "}
+            {t("header.telemedicine")}{" "}
           </Link>{" "}
           <Link
             to="/early-detection-program"
@@ -847,9 +840,12 @@ const Header = () => {
                   {" "}
                   {t("header.contact")}
                 </button>{" "}
-                <Link to="/" className="  hover:underline whitespace-nowrap">
+                <Link
+                  to="/telemedicine-consultation"
+                  className="  hover:underline whitespace-nowrap"
+                >
                   {" "}
-                  IMETC
+                  {t("header.telemedicine")}
                 </Link>{" "}
                 <Link
                   to="/early-detection-program"

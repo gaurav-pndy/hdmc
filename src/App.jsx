@@ -11,6 +11,7 @@ import PriPolicy from "./pages/PriPolicy";
 import DoctorsPage from "./pages/DoctorsPage";
 import ForPatients from "./pages/ForPatients";
 import AboutPage from "./pages/AboutPage";
+import Telemedicine from "./pages/Telemedicine";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +37,10 @@ function App() {
         {
           path: "/about",
           element: <AboutPage />,
+        },
+        {
+          path: "/telemedicine-consultation",
+          element: <Telemedicine />,
         },
         {
           path: "/hdmc-plus",
