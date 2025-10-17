@@ -766,7 +766,10 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link to="/doctors" className="text-left  whitespace-nowrap">
+                <Link
+                  to="/about#doctors"
+                  className="text-left  whitespace-nowrap"
+                >
                   {" "}
                   {t("header.doctors")}{" "}
                 </Link>{" "}
@@ -806,7 +809,7 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
                 <Link
-                  to="/for-patients"
+                  to="/about#patients"
                   className="  hover:underline whitespace-nowrap"
                 >
                   {" "}
