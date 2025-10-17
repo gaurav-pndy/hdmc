@@ -427,12 +427,12 @@ const Header = () => {
             onMouseLeave={() => setShowAboutDropdown(false)}
             className="relative   whitespace-nowrap cursor-pointer"
           >
-            <button
-              onClick={() => handleScrollToSection("#about")}
+            <Link
+              to="/about"
               className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
             >
               {t("header.about")} <FaChevronDown className="text-sm mt-1" />
-            </button>
+            </Link>
 
             {/* Animated dropdown */}
             <AnimatePresence>
