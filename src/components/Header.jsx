@@ -463,7 +463,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
           <Link
-            to="/doctors"
+            to="/about#doctors"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
@@ -515,7 +515,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
           <Link
-            to="/for-patients"
+            to="/about#patients"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}

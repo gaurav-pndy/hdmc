@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom"; // ✅ important
 import { FaHospital, FaPhoneAlt, FaLock, FaUserFriends } from "react-icons/fa";
-
-// Import your tab content components
-import AboutInfo from "./AboutInfo";
-import AboutContacts from "./AboutContacts";
-import AboutLicenses from "./AboutLicenses";
-
-import AboutPrivacyPolicy from "./AboutPrivacyPolicy";
-import AboutOfferContract from "./AboutOfferContract";
-import ForPatients from "../../pages/ForPatients";
-import DoctorsPage from "../../pages/DoctorsPage";
 import { TbLicense } from "react-icons/tb";
 import { FaUserDoctor } from "react-icons/fa6";
 import { LuShield } from "react-icons/lu";
 import { MdOutlineLocalOffer } from "react-icons/md";
+
+// Components
+import AboutInfo from "./AboutInfo";
+import AboutContacts from "./AboutContacts";
+import AboutLicenses from "./AboutLicenses";
+import AboutPrivacyPolicy from "./AboutPrivacyPolicy";
+import AboutOfferContract from "./AboutOfferContract";
+import ForPatients from "../../pages/ForPatients";
+import DoctorsPage from "../../pages/DoctorsPage";
 import PatientsInfo from "../ForPatients/PatientsInfo";
 import PatientsAccordion from "../ForPatients/PatientsAccordion";
 
@@ -37,7 +37,6 @@ const TABS = [
     icon: <FaPhoneAlt />,
     component: AboutContacts,
   },
-
   {
     key: "patients",
     labelKey: "about.tabs.patients",
@@ -66,21 +65,31 @@ const TABS = [
 
 const AboutTabs = () => {
   const { t } = useTranslation();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState(TABS[0].key);
 
+  // ✅ Detect active tab from URL hash (#patients or #doctors)
+  useEffect(() => {
+    if (location.hash) {
+      const hashKey = location.hash.replace("#", "");
+      const tabExists = TABS.some((tab) => tab.key === hashKey);
+      if (tabExists) setActiveTab(hashKey);
+    }
+  }, [location.hash]);
+
   return (
-    <section className="max-w-7xl mx-auto px-2 py-12">
+    <section id="about-tabs" className="max-w-7xl mx-auto px-2 py-12">
       {/* Tabs header */}
       <nav className="mb-6 grid grid-cols-2 md:grid-cols-3 lg:flex justify-between gap-4 flex-wrap">
         {TABS.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`flex items-center gap-2 px-4 py-2  font-semibold rounded-xl cursor-pointer  transition-all 
+            className={`flex items-center gap-2 px-4 py-2 font-semibold rounded-xl cursor-pointer transition-all 
               ${
                 activeTab === tab.key
                   ? "bg-brand1 text-white"
-                  : " text-brand1/70 bg-brand4/20 hover:text-brand1"
+                  : "text-brand1/70 bg-brand4/20 hover:text-brand1"
               }
             `}
           >
