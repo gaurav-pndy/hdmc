@@ -63,13 +63,13 @@ const YandexMap = ({ center, zoom, placemarks, language }) => {
                 <p style="margin: 5px 0;"><strong>📞 Телефон:</strong> <a href="tel:${place.phone}" style="color: #2563eb; text-decoration: none;">${place.phone}</a></p>
               </div>
             `,
-            hintContent: "HDMC",
+            hintContent: place.hintContent,
           },
           {
             // Custom icon - you can use your own SVG or create one
             iconLayout: "default#image",
-            iconImageHref: "/plus.png",
-            iconImageSize: [62, 62],
+            iconImageHref: "/map-marker.png",
+            iconImageSize: [70, 70],
             iconImageOffset: [-29, -73],
           }
         );
@@ -95,6 +95,7 @@ const AddressSection = () => {
       phone: "+7 (495) 514-20-58",
       coords: [55.707299, 37.456828],
       zoom: 17,
+      hintContent: "HDMC",
     },
     {
       title: t("address.clinic2.title"),
@@ -103,6 +104,7 @@ const AddressSection = () => {
       phone: "+7 (988) 204-55-75",
       coords: [42.982315, 47.467977],
       zoom: 17,
+      hintContent: "LA clinica",
     },
   ];
 

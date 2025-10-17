@@ -16,6 +16,7 @@ import {
   FaHospital,
   FaUsers,
   FaHandshake,
+  FaArrowRight,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -448,14 +449,17 @@ const Header = () => {
                     <Link
                       key={idx}
                       to={a.path}
-                      className="block  group  text-wrap   transition-all duration-300 rounded-lg"
+                      className="block  group  text-wrap   transition-all relative duration-300 rounded-lg"
                     >
-                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
+                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300 mb-1">
                         {a.icon}
                       </div>
                       <p className="group-hover:text-brand2 text-sm xl:text-base">
                         {a.label}
                       </p>
+                      <div className="absolute right-2 top-3 overflow-hidden w-6">
+                        <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
+                      </div>
                     </Link>
                   ))}
                 </motion.div>
@@ -490,24 +494,34 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
                 >
                   {services.map((s, idx) => (
                     <Link
                       key={idx}
                       to={s.path}
-                      className="block  group  text-wrap   transition-all duration-300 rounded-lg"
+                      className="block group text-wrap transition-all duration-300 rounded-lg relative"
                     >
-                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300  xl:mb-2">
-                        <img
-                          src={s.icon}
-                          alt={s.label}
-                          className="w-4 xl:w-6 h-4 xl:h-6 object-contain brightness-0 invert"
-                        />
+                      <div className="flex flex-col items-start gap-1">
+                        <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-12 group-hover:scale-110 flex items-center justify-center shrink-0 transition-all duration-300 ">
+                          <img
+                            src={s.icon}
+                            alt={s.label}
+                            className="w-4 xl:w-6 h-4 xl:h-6 object-contain brightness-0 invert"
+                          />
+                        </div>
+
+                        <div className=" ">
+                          <p className="group-hover:text-brand2 text-sm xl:text-base transition-colors duration-300">
+                            {s.label}
+                          </p>
+                        </div>
+
+                        {/* Animated Arrow - appears from left on hover */}
+                        <div className="absolute right-2 top-3 overflow-hidden w-6">
+                          <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
+                        </div>
                       </div>
-                      <p className="group-hover:text-brand2 text-sm xl:text-base">
-                        {s.label}
-                      </p>
                     </Link>
                   ))}
                 </motion.div>
