@@ -7,6 +7,7 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor1.langs",
     desc: "doctors.doctorsList.doctor1.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
   },
   {
     id: "doctor2",
@@ -16,6 +17,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor2.langs",
     desc: "doctors.doctorsList.doctor2.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor3",
@@ -25,6 +28,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor3.langs",
     desc: "doctors.doctorsList.doctor3.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor4",
@@ -34,6 +39,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor4.langs",
     desc: "doctors.doctorsList.doctor4.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor5",
@@ -43,6 +50,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor5.langs",
     desc: "doctors.doctorsList.doctor5.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor6",
@@ -52,6 +61,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor6.langs",
     desc: "doctors.doctorsList.doctor6.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "therapy",
+
   },
   {
     id: "doctor7",
@@ -61,6 +72,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor7.langs",
     desc: "doctors.doctorsList.doctor7.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "neurology",
+
   },
   {
     id: "doctor8",
@@ -70,6 +83,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor8.langs",
     desc: "doctors.doctorsList.doctor8.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "therapy",
+
   },
   {
     id: "doctor9",
@@ -79,6 +94,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor9.langs",
     desc: "doctors.doctorsList.doctor9.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "orthopedics",
+
   },
   {
     id: "doctor10",
@@ -88,6 +105,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor10.langs",
     desc: "doctors.doctorsList.doctor10.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor11",
@@ -97,6 +116,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor11.langs",
     desc: "doctors.doctorsList.doctor11.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "cardiology",
+
   },
   {
     id: "doctor12",
@@ -106,6 +127,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor12.langs",
     desc: "doctors.doctorsList.doctor12.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor13",
@@ -115,6 +138,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor13.langs",
     desc: "doctors.doctorsList.doctor13.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor14",
@@ -124,6 +149,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor14.langs",
     desc: "doctors.doctorsList.doctor14.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor15",
@@ -133,6 +160,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor15.langs",
     desc: "doctors.doctorsList.doctor15.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor16",
@@ -142,6 +171,8 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor16.langs",
     desc: "doctors.doctorsList.doctor16.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
   {
     id: "doctor17",
@@ -151,5 +182,7 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor17.langs",
     desc: "doctors.doctorsList.doctor17.desc",
     image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    specialty: "oncology",
+
   },
 ];

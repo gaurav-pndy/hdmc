@@ -18,11 +18,9 @@
     "service10": "Expert review of CT, MRI, PET-CT",
     "service11": "Medical Assistance",
     "service12": "Voluntary Follow-up",
-
     "doctors": "Doctors",
     "bookAppointment": "Book an Appointment",
-        "personalAccount": "Personal Account",
-
+    "personalAccount": "Personal Account",
     "login": "Login",
     "earlyDiagnosis": "Early Diagnosis of Diseases",
     "cancerTherapy": "Antitumor drug therapy",
@@ -39,55 +37,74 @@
     "offers": "Offers",
     "reviews": "Reviews",
     "expertise": "Center Of Expertise",
-  
-    
     "cityConfirm": {
       "question": "Is your city Moscow ?",
       "yes": "Yes",
       "no": "No"
     },
-    "citySelect":  "Please select your city",
-      "moscow": "Moscow",
-      "makhachkala": "Makhachkala",
-      "moscowAddress": "Moscow, Aminyevskoye Highway 6, <br />подъезд 1",
-      "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7, <br />Makhachkala",
-      "search": "Search...",
-      
-  "about1": "Information about the medical organization",
-  "about2": "Licenses and certificates",
-  "about3": "Contacts of regulatory authorities",
-  "about4": "Information for patients",
-  "about5": "Information about the organization's medical staff",
-  "about6": "Personal Data Processing Policy",
-  "about7": "The Offer Agreement"
+    "citySelect": "Please select your city",
+    "moscow": "Moscow",
+    "makhachkala": "Makhachkala",
+    "moscowAddress": "Moscow, Aminyevskoye Highway 6, <br />подъезд 1",
+    "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7, <br />Makhachkala",
+    "search": "Search...",
+    "about1": "Information about the medical organization",
+    "about2": "Licenses and certificates",
+    "about3": "Contacts of regulatory authorities",
+    "about4": "Information for patients",
+    "about5": "Information about the organization's medical staff",
+    "about6": "Personal Data Processing Policy",
+    "about7": "The Offer Agreement"
   },
-   "hero": {
-   
+  "hero": {
     "slide1": {
       "title": "HDMC+ Premium Membership",
       "subtitle": "Priority scheduling, discounted checkups, personal care coordinator",
       "button": "Join HDMC+"
     },
-     "slide2": {
+    "slide2": {
       "title": "International Multispecialty Expert Telemedicine",
       "subtitle": "Expert consultations with leading world specialists",
       "button": "Book IMETC"
     }
   },
-   "aboutClinic": {
+  "aboutClinic": {
     "title": "About Clinic",
     "subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.",
-    "feature1": { "title": "Moscow & Makhachkala", "desc": "Modern clinics in two cities" },
-    "feature2": { "title": "International Standards", "desc": "World-class quality" },
-    "feature3": { "title": "Multidisciplinary Team", "desc": "Top category doctors" },
-    "feature4": { "title": "24/7 Diagnosis", "desc": "CT available around the clock" },
-    "stat1": { "value": "15+", "label": "Years of experience" },
-    "stat2": { "value": "50+", "label": "Specialists" },
-    "stat3": { "value": "24/7", "label": "Diagnosis" },
-    "stat4": { "value": "10k+", "label": "Patients" },
+    "feature1": {
+      "title": "Moscow & Makhachkala",
+      "desc": "Modern clinics in two cities"
+    },
+    "feature2": {
+      "title": "International Standards",
+      "desc": "World-class quality"
+    },
+    "feature3": {
+      "title": "Multidisciplinary Team",
+      "desc": "Top category doctors"
+    },
+    "feature4": {
+      "title": "24/7 Diagnosis",
+      "desc": "CT available around the clock"
+    },
+    "stat1": {
+      "value": "15+",
+      "label": "Years of experience"
+    },
+    "stat2": {
+      "value": "50+",
+      "label": "Specialists"
+    },
+    "stat3": {
+      "value": "24/7",
+      "label": "Diagnosis"
+    },
+    "stat4": {
+      "value": "10k+",
+      "label": "Patients"
+    },
     "moreBtn": "Learn More"
   },
- 
   "doctors": {
     "title": "Our Doctors",
     "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. </div> <br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. </div> <br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
@@ -101,7 +118,6 @@
       "personal": "Personal",
       "remote": "Remote",
       "specialization": "Doctor Specialization"
-
     },
     "languages": "Languages known",
     "location": "Location",
@@ -110,12 +126,15 @@
     "onlineConsult": "Online Consultation",
     "viewProfile": "View Profile",
     "reviews": "reviews",
-
     "doctorsList": {
       "doctor1": {
         "name": "Subramanian Somasundaram (Dr. Soma)",
         "location": "Moscow, Russia",
-        "tags": ["Surgeon", "Oncologist", "Oncoplastic Surgeon"],
+        "tags": [
+          "Surgeon",
+          "Oncologist",
+          "Oncoplastic Surgeon"
+        ],
         "langs": "Russian, English, Tamil, Hindi",
         "desc": "A doctor who takes on the most complex cases. Dr. Soma is not only a brilliant surgeon specializing in head and neck tumors but also the founder of the Eurasian Oncology Program (EAFO), which brings together doctors from different countries to exchange experience. In the operating room, he is precise; in conversation — open; in life — inspiring.<br/> &nbsp; &nbsp; • Oncologist, surgeon, maxillofacial surgeon, ENT specialist, plastic surgeon<br/> &nbsp; &nbsp; • Specialization: tumors of the head and neck, skin, thyroid and breast, lymph node dissection, oncoplasty<br/> &nbsp; &nbsp; • President and founder of the Scientific and Educational Center \"Eurasian Oncology Program\" (EAFO)<br/> &nbsp; &nbsp; • Head of reconstructive and oncoplastic surgery projects"
       },
@@ -129,7 +148,10 @@
       "doctor3": {
         "name": "Nechushkina Valentina Mikhailovna",
         "location": "Moscow, Russia",
-        "tags": ["Surgeon", "Oncogynecologist"],
+        "tags": [
+          "Surgeon",
+          "Oncogynecologist"
+        ],
         "langs": "Russian, English",
         "desc": "Experience, strength, and science — all describe Valentina Mikhailovna. She performs complex surgeries, teaches, and leads oncogynecology projects at EAFO. Her style: precision, thoughtfulness, and mastery. With her, patients know they’re in safe hands.<br/> &nbsp; &nbsp; • Doctor of Medical Sciences, Professor, Oncogynecologist<br/> &nbsp; &nbsp; • Head of the Eurasian Working Group on Oncogynecology<br/> &nbsp; &nbsp; • Specialization: cervical and ovarian cancer, HIPEC, cytoreduction<br/> &nbsp; &nbsp; • Expert and lecturer at PIMU, scientific leader at EAFO"
       },
@@ -199,14 +221,18 @@
       "doctor13": {
         "name": "Prikhodchenko Alexey Olegovich",
         "location": "Moscow, Russia",
-        "tags": ["Anesthesiologist-Resuscitator"],
+        "tags": [
+          "Anesthesiologist-Resuscitator"
+        ],
         "langs": "Russian, English",
         "desc": "A doctor with over 10 years of experience specializing in intensive care for oncology patients after complex surgeries. Alexey Olegovich combines deep clinical knowledge with a scientific approach, enabling him to provide high-quality perioperative care.<br/> &nbsp; &nbsp; • Anesthesiologist-Resuscitator<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • 10 years of experience<br/> &nbsp; &nbsp; • Head of Anesthesiology and Intensive Care at 'Health-Direct' Medical Center<br/> &nbsp; &nbsp; • Member of the Russian Society of Clinical Oncology (RUSSCO)<br/> &nbsp; &nbsp; • Member of the National Association of Specialists in Thrombosis and Hemostasis (NATG)<br/> &nbsp; &nbsp; • Member of the Russian Association of Supportive Care in Oncology (RASSC)"
       },
       "doctor14": {
         "name": "Snegovoy Anton Vladimirovich",
         "location": "Moscow, Russia",
-        "tags": ["Chemotherapist"],
+        "tags": [
+          "Chemotherapist"
+        ],
         "langs": "Russian, English",
         "desc": "An experienced oncologist-chemotherapist who applies modern methods of treating malignant tumors, considering the individual characteristics of each patient. <br/>Anton Vladimirovich is actively engaged in research, serves as the Chairman of the Russian Association of Supportive Care in Oncology (RASSC), and is the author of numerous scientific publications.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • Professor, Doctor of Medical Sciences<br/> &nbsp; &nbsp; • Specialization: chemotherapy for various cancers, supportive therapy, personalized treatment<br/> &nbsp; &nbsp; • Participant in international oncology consiliums<br/> &nbsp; &nbsp; • Head of the Department of Drug Treatment of Tumors, N.A. Lopatkin Research Institute of Urology and Interventional Radiology"
       },
@@ -220,7 +246,9 @@
       "doctor16": {
         "name": "Kononenko Inessa Borisovna",
         "location": "Moscow, Russia",
-        "tags": ["Chemotherapist"],
+        "tags": [
+          "Chemotherapist"
+        ],
         "langs": "Russian, English, French",
         "desc": "For over 25 years, Inessa Borisovna has been developing and implementing personalized chemo- and immunotherapy regimens, emphasizing both effectiveness and treatment tolerability.<br/>Her approach is never random — each therapeutic strategy is built considering the tumor’s molecular features, comorbidities, and patient’s real quality of life.<br/>Patients value her thoughtful approach, clear explanations, and constant support throughout treatment.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Highest qualification category<br/> &nbsp; &nbsp; • 25 years of experience<br/> &nbsp; &nbsp; • Specialization: cancer drug therapy, supportive care, immunotherapy, and targeted therapy<br/> &nbsp; &nbsp; • Executive Director of the Russian Association of Supportive Care in Oncology (RASSC)<br/> &nbsp; &nbsp; • Member of the European Society for Medical Oncology (ESMO) and the Russian Society of Clinical Oncology (RUSSCO)"
       },
@@ -240,229 +268,250 @@
       "tab5": "Video"
     }
   },
-
-"services": {
-   "title": "Our Services",
-"subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.</div> <br/> Our medical centers bring together professionals from various fields to provide comprehensive care under one roof. From initial consultations and preventive screenings to complex diagnostic procedures, every patient receives personalized attention and evidence-based treatment recommendations.</div> <br/>Equipped with cutting-edge technology, our clinics ensure early and accurate detection of diseases, allowing patients to begin treatment without delay.",
-"moreBtn": "Learn More",
-"askBtn": "Ask a Question",
-"referralBtn": "Submit a Request",
-    "s1": { "title": "Specialist consultation", "desc": "Get direct access to top medical experts who will carefully review your case and guide you toward the best treatment options. Every consultation is personalized, ensuring your concerns are heard and your care plan is tailored specifically to you." },
-    "s2": { "title": "Individual Early diagnosis of Diseases", "desc": "Stay ahead of illness with advanced check-ups designed to detect health problems at the very earliest stage — when they’re easiest to treat. Our goal is to give you peace of mind through proactive, precise health screening." },
-    "s3": { "title": "International Multispecialty Expert Telemedicine Consultation (IMETC)", "desc": "Our specialists analyze tissue samples with the highest precision to ensure your diagnosis is accurate and reliable. This detailed examination helps doctors create the most effective treatment plan for you." },
-    "s4": { "title": "Chemotherapy", "desc": "A team of leading experts works together to study your cancer at the genetic level, creating a treatment plan that is truly personalized." },
-    "s5": { "title": "Installation of a venous port system for Chemotherapy", "desc": "Your case is reviewed by world-class oncologists from around the globe, giving you access to international expertise without leaving home. This ensures you benefit from the latest knowledge and treatment approaches worldwide." },
-    "s6": { "title": "CT Scan ", "desc": "A second opinion you can trust — our radiology experts re-examine your scans to confirm results and provide accurate, reliable insights for your treatment plan. Every image is carefully analyzed to ensure nothing is overlooked in your diagnosis." },
-    "s7": { "title": "Pathomorphological studies at PathoLogica Service", "desc": "Cutting-edge imaging that not only shows the structure of organs but also reveals how they function — crucial for early and accurate cancer detection. This technology helps your doctors monitor treatment progress with unparalleled precision." },
-    "s8": { "title": "Digital diagnosis of skin tumors (Dermatoscopy using artificial intelligence)", "desc": "We offer the latest in cancer treatment: chemotherapy, targeted therapy, and immunotherapy — all tailored to your unique diagnosis." },
-    "s9": { "title": "Molecular consultation", "desc": "Our surgeons use advanced techniques to remove tumors safely and effectively, focusing on both cure and quality of life. We combine skill and care to ensure recovery is as smooth and comfortable as possible." },
-    "s10": { "title": "Expert review of CT, MRI, PET-CT", "desc": "From your first visit to every step of treatment, our team is by your side to support, guide, and care for you. We provide continuous attention so you never feel alone on your health journey." },
-    "s11": { "title": "Medical Assistance", "desc": "State-of-the-art radiation technology that targets tumors with precision, protecting healthy tissue while fighting cancer. Our specialists design treatments that are effective yet gentle, helping you maintain your quality of life." },
-    "s12": { "title": "Voluntary Follow-up", "desc": "Expert care for bones, joints, and the musculoskeletal system — whether you’ve suffered an injury or need long-term orthopedic treatment. We use modern surgical and non-surgical methods to restore mobility and reduce pain." }
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.</div> <br/> Our medical centers bring together professionals from various fields to provide comprehensive care under one roof. From initial consultations and preventive screenings to complex diagnostic procedures, every patient receives personalized attention and evidence-based treatment recommendations.</div> <br/>Equipped with cutting-edge technology, our clinics ensure early and accurate detection of diseases, allowing patients to begin treatment without delay.",
+    "moreBtn": "Learn More",
+    "askBtn": "Ask a Question",
+    "referralBtn": "Submit a Request",
+    "s1": {
+      "title": "Specialist consultation",
+      "desc": "Get direct access to top medical experts who will carefully review your case and guide you toward the best treatment options. Every consultation is personalized, ensuring your concerns are heard and your care plan is tailored specifically to you."
+    },
+    "s2": {
+      "title": "Individual Early diagnosis of Diseases",
+      "desc": "Stay ahead of illness with advanced check-ups designed to detect health problems at the very earliest stage — when they’re easiest to treat. Our goal is to give you peace of mind through proactive, precise health screening."
+    },
+    "s3": {
+      "title": "International Multispecialty Expert Telemedicine Consultation (IMETC)",
+      "desc": "Our specialists analyze tissue samples with the highest precision to ensure your diagnosis is accurate and reliable. This detailed examination helps doctors create the most effective treatment plan for you."
+    },
+    "s4": {
+      "title": "Chemotherapy",
+      "desc": "A team of leading experts works together to study your cancer at the genetic level, creating a treatment plan that is truly personalized."
+    },
+    "s5": {
+      "title": "Installation of a venous port system for Chemotherapy",
+      "desc": "Your case is reviewed by world-class oncologists from around the globe, giving you access to international expertise without leaving home. This ensures you benefit from the latest knowledge and treatment approaches worldwide."
+    },
+    "s6": {
+      "title": "CT Scan ",
+      "desc": "A second opinion you can trust — our radiology experts re-examine your scans to confirm results and provide accurate, reliable insights for your treatment plan. Every image is carefully analyzed to ensure nothing is overlooked in your diagnosis."
+    },
+    "s7": {
+      "title": "Pathomorphological studies at PathoLogica Service",
+      "desc": "Cutting-edge imaging that not only shows the structure of organs but also reveals how they function — crucial for early and accurate cancer detection. This technology helps your doctors monitor treatment progress with unparalleled precision."
+    },
+    "s8": {
+      "title": "Digital diagnosis of skin tumors (Dermatoscopy using artificial intelligence)",
+      "desc": "We offer the latest in cancer treatment: chemotherapy, targeted therapy, and immunotherapy — all tailored to your unique diagnosis."
+    },
+    "s9": {
+      "title": "Molecular consultation",
+      "desc": "Our surgeons use advanced techniques to remove tumors safely and effectively, focusing on both cure and quality of life. We combine skill and care to ensure recovery is as smooth and comfortable as possible."
+    },
+    "s10": {
+      "title": "Expert review of CT, MRI, PET-CT",
+      "desc": "From your first visit to every step of treatment, our team is by your side to support, guide, and care for you. We provide continuous attention so you never feel alone on your health journey."
+    },
+    "s11": {
+      "title": "Medical Assistance",
+      "desc": "State-of-the-art radiation technology that targets tumors with precision, protecting healthy tissue while fighting cancer. Our specialists design treatments that are effective yet gentle, helping you maintain your quality of life."
+    },
+    "s12": {
+      "title": "Voluntary Follow-up",
+      "desc": "Expert care for bones, joints, and the musculoskeletal system — whether you’ve suffered an injury or need long-term orthopedic treatment. We use modern surgical and non-surgical methods to restore mobility and reduce pain."
+    }
   },
   "patientMap": {
-   "title": "We Help Patients from All Over the World",
-"subtitle": "International telemedicine consultations and treatment for patients from more than 50 countries worldwide",
-"russia" : "Russia",
-"india": "India",
-"usa": "USA",
-"poland": "Poland",
-"hungary": "Hungary",
-"uk": "UK",
-"switzerland": "Switzerland",
-"patients": "Patients"
-
+    "title": "We Help Patients from All Over the World",
+    "subtitle": "International telemedicine consultations and treatment for patients from more than 50 countries worldwide",
+    "russia": "Russia",
+    "india": "India",
+    "usa": "USA",
+    "poland": "Poland",
+    "hungary": "Hungary",
+    "uk": "UK",
+    "switzerland": "Switzerland",
+    "patients": "Patients"
   },
-"membership": {
-  "badge": "HDMC+ Membership",
-  "title": "Premium Medical Care",
-  "subtitle": "An exclusive membership program for those who value quality healthcare and a personalized approach",
-  "features": {
-    "feature1": {
-      "title": "Priority Booking",
-      "desc": "Appointment with the desired specialist or surgery at convenient times"
+  "membership": {
+    "badge": "HDMC+ Membership",
+    "title": "Premium Medical Care",
+    "subtitle": "An exclusive membership program for those who value quality healthcare and a personalized approach",
+    "features": {
+      "feature1": {
+        "title": "Priority Booking",
+        "desc": "Appointment with the desired specialist or surgery at convenient times"
+      },
+      "feature2": {
+        "title": "Discounts on Examinations",
+        "desc": "Up to 20% off on diagnostic procedures and check-ups"
+      },
+      "feature3": {
+        "title": "Personal Coordinator",
+        "desc": "Dedicated assistant to handle all medical matters"
+      },
+      "feature4": {
+        "title": "Annual Check-up",
+        "desc": "Comprehensive medical examination once a year"
+      },
+      "feature5": {
+        "title": "IMETC Consultations",
+        "desc": "Remote international consultations"
+      },
+      "feature6": {
+        "title": "Electronic Medical Record",
+        "desc": "Unlimited access to your personal electronic record 24/7"
+      }
     },
-    "feature2": {
-      "title": "Discounts on Examinations",
-      "desc": "Up to 20% off on diagnostic procedures and check-ups"
-    },
-    "feature3": {
-      "title": "Personal Coordinator",
-      "desc": "Dedicated assistant to handle all medical matters"
-    },
-    "feature4": {
-      "title": "Annual Check-up",
-      "desc": "Comprehensive medical examination once a year"
-    },
-    "feature5": {
-      "title": "IMETC Consultations",
-      "desc": "Remote international consultations"
-    },
-    "feature6": {
-      "title": "Electronic Medical Record",
-      "desc": "Unlimited access to your personal electronic record 24/7"
+    "button": "Join HDMC+",
+    "contactText": "Or contact us for a personalized consultation",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faq1": {
+        "question": "How does priority booking work?",
+        "answer": "HDMC+ members can book appointments with the desired doctor with reduced waiting time and can also schedule emergency visits if new complaints or symptoms arise."
+      },
+      "faq2": {
+        "question": "What do IMETC consultations include?",
+        "answer": "IMETC consultations provide the opportunity to receive remote expert opinions from international specialists regarding your medical case."
+      },
+      "faq3": {
+        "question": "Can membership be paused?",
+        "answer": "Yes, membership can be paused for up to 6 months while retaining all benefits for the remaining period."
+      }
     }
   },
-"button": "Join HDMC+",
-"contactText": "Or contact us for a personalized consultation",
-
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "faq1": {
-      "question": "How does priority booking work?",
-      "answer": "HDMC+ members can book appointments with the desired doctor with reduced waiting time and can also schedule emergency visits if new complaints or symptoms arise."
-    },
-    "faq2": {
-      "question": "What do IMETC consultations include?",
-      "answer": "IMETC consultations provide the opportunity to receive remote expert opinions from international specialists regarding your medical case."
-    },
-    "faq3": {
-      "question": "Can membership be paused?",
-      "answer": "Yes, membership can be paused for up to 6 months while retaining all benefits for the remaining period."
-    }
-  }
-},
   "testimonials": {
     "title": "Feedback from our Patients",
     "allBtn": "All reviews"
   },
   "contact": {
-  "title": "Contact Us",
-  "subtitle": "Get in touch with us in any convenient way. We work for your health and are ready to answer all your questions.",
-  "heading": "Send a Message",
-  "name": "Name",
-  "email": "Email",
-  "phone": "Phone",
-  "city": "City",
-  "chooseCity": "Select a city",
-  "moscow": "Moscow",
-  "makhachkala": "Makhachkala",
-  "another": "Another city",
-  "message": "Message",
-  "checkbox1" : "I agree with the <a href='/privacy-policy' target='_blank' class='text-blue-500 underline'> Privacy Policy </a> and the processing of personal data",
-    "checkbox2" : "I give my consent to receive informational messages, advertising and promotional offer",
-  "button": "Send"
-},
-
-   "address": {
-  "title": "Our Addresses",
-  "subtitle": "Two modern clinics in Moscow and Makhachkala for your convenience",
-  "route": "Set a route",
-  "clinic1": {
-    "title": "HDMC",
-    "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1",
-    "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us in any convenient way. We work for your health and are ready to answer all your questions.",
+    "heading": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "city": "City",
+    "chooseCity": "Select a city",
+    "moscow": "Moscow",
+    "makhachkala": "Makhachkala",
+    "another": "Another city",
+    "message": "Message",
+    "checkbox1": "I agree with the <a href='/privacy-policy' target='_blank' class='text-blue-500 underline'> Privacy Policy </a> and the processing of personal data",
+    "checkbox2": "I give my consent to receive informational messages, advertising and promotional offer",
+    "button": "Send"
   },
-  "clinic2": {
-    "title": "Ali-Gadzhi Akushinskogo Avenue",
-    "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala",
-    "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+  "address": {
+    "title": "Our Addresses",
+    "subtitle": "Two modern clinics in Moscow and Makhachkala for your convenience",
+    "route": "Set a route",
+    "clinic1": {
+      "title": "HDMC",
+      "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1",
+      "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+    },
+    "clinic2": {
+      "title": "Ali-Gadzhi Akushinskogo Avenue",
+      "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala",
+      "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+    },
+    "button": "Enroll in this clinic"
   },
-  "button": "Enroll in this clinic"
-},
-"actionBtns": {
-  "btn1": "Book an Appointment",
-  "btn2": "Hotline / Leave Feedback",
-  "btn3": "Thank You HDMC"
-},
-
-
-    "footer": {
-  "desc": "International project \"Health-Direct\" <br />Autonomous Non-Profit Organization <br />\"Scientific and Educational Center\" <br />\"Eurasian Oncology Program 'EAFO'\"",
-  "navigation": "Navigation",
-  "documents": "Documents",
-  "priceList": "Service Price List",
-  "agreement": "Offer Agreement",
-  "privacy": "Privacy Policy",
-  "contact": "Contacts",
-  "address": "Kvartal West, Moscow, Aminyevskoye Highway, 6",
-  "time": "From 10:00 to 18:00 | Open daily",
-  "copyright": "© 2025. All rights reserved by Health-Direct"
-},
-
-"feedback": {
-  "title": "Unified HDMC Hotline",
-  "subtitle": "You can leave feedback about a doctor, file a complaint about service quality, or report fraud or corruption.",
-  "boxes": {
-    "box1": {
-      "title": "Leave a Thank You",
-      "point1": "If you are completely satisfied with the quality of medical or other services provided by the Medsi Group, you can leave positive feedback about our work.",
-       "point2": "To express your gratitude, please use the feedback form."
-      ,
-      "button": "Leave a Thank You"
+  "actionBtns": {
+    "btn1": "Book an Appointment",
+    "btn2": "Hotline / Leave Feedback",
+    "btn3": "Thank You HDMC"
+  },
+  "footer": {
+    "desc": "International project \"Health-Direct\" <br />Autonomous Non-Profit Organization <br />\"Scientific and Educational Center\" <br />\"Eurasian Oncology Program 'EAFO'\"",
+    "navigation": "Navigation",
+    "documents": "Documents",
+    "priceList": "Service Price List",
+    "agreement": "Offer Agreement",
+    "privacy": "Privacy Policy",
+    "contact": "Contacts",
+    "address": "Kvartal West, Moscow, Aminyevskoye Highway, 6",
+    "time": "From 10:00 to 18:00 | Open daily",
+    "copyright": "© 2025. All rights reserved by Health-Direct"
+  },
+  "feedback": {
+    "title": "Unified HDMC Hotline",
+    "subtitle": "You can leave feedback about a doctor, file a complaint about service quality, or report fraud or corruption.",
+    "boxes": {
+      "box1": {
+        "title": "Leave a Thank You",
+        "point1": "If you are completely satisfied with the quality of medical or other services provided by the Medsi Group, you can leave positive feedback about our work.",
+        "point2": "To express your gratitude, please use the feedback form.",
+        "button": "Leave a Thank You"
+      },
+      "box2": {
+        "title": "Submit a Complaint",
+        "point1": "If you are dissatisfied with the quality of medical or other services provided by the Medsi Group, you can write to us about it.",
+        "point2": "Use the feedback form to file a complaint about poor service received at the Medsi Group.",
+        "button": "Submit a Complaint"
+      },
+      "box3": {
+        "title": "Anti-Corruption",
+        "point1": "If you notice any unlawful, fraudulent, or corrupt actions by Medsi Group employees, please report it.",
+        "point2": "Use the feedback form to report violations during procurement procedures or actions of suppliers/contractors.",
+        "button": "Report Corruption"
+      },
+      "box4": {
+        "title": "Suggestion",
+        "point1": "If you have suggestions for improving service, opening a new clinic near your home, etc., please send them to us.",
+        "point2": "Use the feedback form to submit your business proposal.",
+        "button": "Send Suggestion"
+      }
     },
-    "box2": {
-      "title": "Submit a Complaint",
-      "point1": "If you are dissatisfied with the quality of medical or other services provided by the Medsi Group, you can write to us about it.",
-       "point2": "Use the feedback form to file a complaint about poor service received at the Medsi Group."
-      ,
-      "button": "Submit a Complaint"
-    },
-    "box3": {
-      "title": "Anti-Corruption",
-      "point1": "If you notice any unlawful, fraudulent, or corrupt actions by Medsi Group employees, please report it.",
-       "point2": "Use the feedback form to report violations during procurement procedures or actions of suppliers/contractors."
-      ,
-      "button": "Report Corruption"
-    },
-    "box4": {
-      "title": "Suggestion",
-      "point1": "If you have suggestions for improving service, opening a new clinic near your home, etc., please send them to us.",
-       "point2": "Use the feedback form to submit your business proposal."
-      ,
-      "button": "Send Suggestion"
+    "descText": [
+      "One of the tools for maintaining business ethics standards is the 'Unified Hotline.' This communication channel aims to enhance the Medsi Group’s efforts in combating potential misconduct, fraud, corruption, violations, and shortcomings.",
+      "If you did not find a suitable form, you can send your inquiry to the email address claim@medsigroup.ru. The request will be reviewed within 30 days. To process the request, please include your contact details (full name, date of birth, and phone number). Requests submitted without contact details will not be reviewed.",
+      "All messages are recorded by an authorized Medsi Group employee for further analysis and verification. The confidentiality of message senders is guaranteed. Reports on the operation of the 'Unified Hotline' and the results of investigations are submitted to the President of the Medsi Group for appropriate action."
+    ],
+    "form": {
+      "heading": "Feedback Form",
+      "select": "Select Type of Request",
+      "gratitude": "Gratitude",
+      "complaint": "Complaint",
+      "corruption": "Report Corruption",
+      "proposition": "Suggestion",
+      "email": "Email",
+      "surname": "Last Name",
+      "firstName": "First Name",
+      "patronymic": "Middle Name",
+      "message": "Message",
+      "attach": "Attach File",
+      "agree": "I agree to the terms of the Personal Data Processing Policy and give my consent to the processing of my personal data.",
+      "button": "Submit"
     }
   },
-  "descText": [
-    "One of the tools for maintaining business ethics standards is the 'Unified Hotline.' This communication channel aims to enhance the Medsi Group’s efforts in combating potential misconduct, fraud, corruption, violations, and shortcomings.",
-    "If you did not find a suitable form, you can send your inquiry to the email address claim@medsigroup.ru. The request will be reviewed within 30 days. To process the request, please include your contact details (full name, date of birth, and phone number). Requests submitted without contact details will not be reviewed.",
-    "All messages are recorded by an authorized Medsi Group employee for further analysis and verification. The confidentiality of message senders is guaranteed. Reports on the operation of the 'Unified Hotline' and the results of investigations are submitted to the President of the Medsi Group for appropriate action."
-  ],
-  "form": {
-    "heading": "Feedback Form",
-    "select": "Select Type of Request",
-    "gratitude": "Gratitude",
-    "complaint": "Complaint",
-    "corruption": "Report Corruption",
-    "proposition": "Suggestion",
-    "email": "Email",
-    "surname": "Last Name",
-    "firstName": "First Name",
-    "patronymic": "Middle Name",
+  "thankyou": {
+    "title": "PROJECT «THANK YOU",
+    "transferBtn": "Transfer funds",
+    "para1": "The world's leading medical organizations share one common secret of success — good relationship between patient and clinic.",
+    "para2": " When the interests of the patient are most important, he benefits both from the latest achievements of the industry and well-defined working conditions.",
+    "para3": "This science of interaction between the patient and the clinic must form — to exceed the patient's expectations, which will be even longer, and who decides to stay. now you.",
+    "para4": "MEDSI involves its patients in improving its activities, the clinic's design, doctors and nurses, and donations for the launch of funds and charitable programs, the development of clinics, the introduction of new services and the implementation of socially significant projects.",
+    "para5": " The funds collected in \"Thank you, MEDSI!\" will be used for specific goals — with the patient's consent — in accordance with his wishes and ideas that are important for him personally, his family members, and his healthcare provider.",
+    "formHeading": "Transfer Funds Form",
+    "lastName": "Last name of the donor",
+    "firstName": "First name of the donor",
+    "patronymic": "Patronymic of the donor",
+    "phone": "Phone",
+    "fundPurpose": "Please direct the transferred funds to:",
+    "developmentGoals": "Development goals of Medical Group of Companies",
+    "facility": "Full name/Clinic team",
+    "amount": "Amount, rub.",
     "message": "Message",
-    "attach": "Attach File",
-    "agree": "I agree to the terms of the Personal Data Processing Policy and give my consent to the processing of my personal data.",
-    "button": "Submit"
-  }
-},
-
-"thankyou": {
-  "title": "PROJECT «THANK YOU",
-  "transferBtn": "Transfer funds",
-  "para1": "The world's leading medical organizations share one common secret of success — good relationship between patient and clinic.",
-  "para2": " When the interests of the patient are most important, he benefits both from the latest achievements of the industry and well-defined working conditions.",
-  "para3": "This science of interaction between the patient and the clinic must form — to exceed the patient's expectations, which will be even longer, and who decides to stay. now you.",
-  "para4": "MEDSI involves its patients in improving its activities, the clinic's design, doctors and nurses, and donations for the launch of funds and charitable programs, the development of clinics, the introduction of new services and the implementation of socially significant projects.",
-  "para5": " The funds collected in \"Thank you, MEDSI!\" will be used for specific goals — with the patient's consent — in accordance with his wishes and ideas that are important for him personally, his family members, and his healthcare provider.",
-  "formHeading": "Transfer Funds Form",
-  "lastName": "Last name of the donor",
-  "firstName": "First name of the donor",
-  "patronymic": "Patronymic of the donor",
-  "phone": "Phone",
-  "fundPurpose": "Please direct the transferred funds to:",
-  "developmentGoals": "Development goals of Medical Group of Companies",
-  "facility": "Full name/Clinic team",
-  "amount": "Amount, rub.",
-  "message": "Message",
-  "agree": "I agree to the service Personal data processing policies and I give a Consent to the processing of my personal data",
-  "downloadGifts": "Download catalog of gifts 'Thank you'",
-  "supportNote": "For questions regarding the funds raised or ideas that can be used in the improvement of clinics, please contact us by email"
-}
-,
-
-
-"earlyDetection": {
-  "hero": {
+    "agree": "I agree to the service Personal data processing policies and I give a Consent to the processing of my personal data",
+    "downloadGifts": "Download catalog of gifts 'Thank you'",
+    "supportNote": "For questions regarding the funds raised or ideas that can be used in the improvement of clinics, please contact us by email"
+  },
+  "earlyDetection": {
+    "hero": {
       "programBadge": "HDMC Program",
       "title": "Early Detection",
       "subtitle": "Affordable diagnostics for socially significant diseases",
@@ -472,354 +521,416 @@
       "benefit3": "Personalized approach",
       "programButton": "Choose a program",
       "moreButton": "Learn More"
-  },
-   "about": {
-    "heading": "About the Program",
-    "topText": "“Early Detection” is a project to improve access to high-quality diagnostics for major chronic diseases: cancer, cardiovascular diseases, diabetes, and widespread infectious diseases.",
-    "missionTitle": "Our mission",
-    "missionText": "Many people spend significant money on car service or unhealthy habits, forgetting the main value – their health. Early diagnostics and prevention are a way of timely problem detection; it’s a chance to save time, money and quality of life.",
-    "missionHighlight": "Early detection is an alternative for those who value their health, time, and budget.",
-    "evidenceTitle": "Evidence-based medicine",
-    "evidenceDesc": "The program is based on international recommendations and up-to-date screening protocols.",
-    "teamTitle": "Expert team",
-    "teamDesc": "Developed by leading specialists from various medical fields.",
-    "personalTitle": "Personalized approach",
-    "personalDesc": "Reliable assessment of your condition, taking individual factors into account.",
-    "experienceTitle": "Many years’ experience",
-    "experienceDesc": "Confirmed by years of successful practice in diagnosis and prevention.",
-    "bottomText": "Thanks to this approach, you get a reliable, effective and personalized assessment of your health status, which allows you to assess risks, detect problems in time and have a more efficient and less invasive treatment with better outcomes."
-  },
-  "why": {
-    "heading": "Why is early detection important?",
-    "preamble": "We believe diagnosis should be accessible and thorough, and early disease detection — a priority.",
-    "statText": "years of experience in diagnostics and prevention",
-    "timeTitle": "Saves time",
-    "timeDesc": "Timely detection of disease at early stages reduces treatment time.",
-    "moneyTitle": "Saves money",
-    "moneyDesc": "Treatment at early stages is much cheaper and more effective.",
-    "qualityTitle": "Quality of life",
-    "qualityDesc": "Prevention and early detection help preserve your quality of life.",
-    "prognosisTitle": "Better prognosis",
-    "prognosisDesc": "Early detection ensures the best outcome for treatment.",
-    "important": "Important: Early detection allows for more effective and less intensive treatment with the best outcomes."
-  },
-  "insurance": {
-    "title": "Oncoinsurance",
-    "desc": "A long-term agreement with our Center for regular follow-up, regular examinations and necessary treatment. Protect your health for years to come.",
-    "button": "Learn about the program",
-        "appointmentBtn": "Make an Appointment"
-
-  }
-},
-
-"privacy": {
-  "title": "Privacy Policy"
-},
-
-"about": {
-  "hero": {
-    "title": "About Our Clinic",
-    "subtitle": "A multidisciplinary medical organization with international quality standards"
-  },
-  "tabs": {
-    "info": "Information",
-    "licenses": "Licenses",
-    "contacts": "Contacts",
-    "patients": "For Patients",
-    "doctors": "Doctors",
-    "privacy": "Privacy Policy",
-    "offer": "Contract"
-  },
-  "info": {
-    "title": "Information about the Medical Organization",
-    "subtitle": "Comprehensive information about our organization and its activities",
-    "fullName": "Full Name",
-    "companyName": "Limited Liability Company “Multidisciplinary Medical Center HealthDirect”",
-    "locations": "Locations",
-    "moscow": "Moscow",
-    "moscowAddress": "Moscow, Aminyevskoye Highway, Building 6, Entrance 1",
-    "makhachka": "Makhachkala",
-    "makhachkalaAddress": "Republic of Dagestan, Makhachkala, Ali-Gadji Akushinsky Avenue, Building 7",
-    "ogrn": "OGRN",
-    "tax": "INN (Tax ID)",
-    "checkpoint": "KPP",
-    "owners": "Founders",
-    "ownersDesc": "Ivanov Ivan Ivanovich, Petrov Petr Petrovich",
-    "management": "Structure and Management Bodies",
-    "point1": "General Director: Sidorov Alexey Viktorovich",
-    "point2": "Chief Doctor: Kuznetsova Elena Nikolaevna",
-    "point3": "Medical Council",
-    "point4": "Administrative and Economic Department",
-    "schedule": "Working Hours",
-    "scheduleDesc": "Monday - Friday: 8:00 AM - 8:00 PM <br/>Saturday: 9:00 AM - 6:00 PM <br/>Sunday: 9:00 AM - 3:00 PM <br/>CT Diagnostics: 24/7",
-    "serviceContacts": "Information Service Contacts",
-    "chiefReception": "Management Reception Schedule",
-    "receptionDesc": "Reception by the Chief Doctor: Every Tuesday from 3:00 PM to 5:00 PM <br/> Appointment by phone: +7 (495) 123-45-67 ext. 101 <br/> Email: chief@healthdirect.ru"
-  },
-  "licenses": {
-    "title": "Licenses and Certificates",
-    "subtitle": "Documents confirming the right to carry out medical activities",
-    "medLicense": "License for Medical Activities",
-    "number": "License Number",
-    "numberDesc": "LO-77-01-012345",
-    "issueDate": "Date of Issue",
-    "issuedBy": "Issued By",
-    "issuedByDesc": "Roszdravnadzor (Federal Service for Surveillance in Healthcare)",
-    "medLicenseDesc": "Authorized activities: therapy, surgery, diagnostics, CT, MRI, laboratory tests",
-    "isoTitle": "ISO 9001:2015 Certificate",
-    "validUntil": "Valid Until",
-    "isoDesc": "Quality management system for medical services",
-    "ministryAccr": "Ministry of Health Accreditation",
-    "category": "Category",
-    "ministryAccrDesc": "Accreditation of the multidisciplinary medical center",
-    "jciTitle": "JCI International Accreditation",
-    "jciDesc": "Joint Commission International – world-class standards",
-    "documentsAvailable": "Documents Available for Review",
-    "copyInfo": "All original documents are available for review at the clinic’s reception. Copies of licenses and certificates are displayed on the information boards in the clinic lobby. For certified copies, please contact the administrative department."
-  },
-  "contacts": {
-    "title": "Contacts of Supervisory Authorities",
-    "subtitle": "Information about supervisory bodies in the field of healthcare",
-    "phone": "Phone",
-    "address": "Address",
-    "roszdravnadzor": "Roszdravnadzor",
-    "roszdravnadzorDesc": "Federal Service for Surveillance in Healthcare",
-    "roszdravnadzorAddr": "109074, Moscow, Slavyanskaya Square, Building 4, Structure 1",
-    "minzdrav": "Ministry of Health of the Russian Federation",
-    "minzdravDesc": "Federal Executive Authority",
-    "minzdravAddr": "127994, Moscow, Rakhmanovsky Lane, Building 3",
-    "rospotrebnadzor": "Rospotrebnadzor",
-    "rospotrebnadzorDesc": "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing",
-    "rospotrebnadzorAddr": "127994, Moscow, Vadkovsky Lane, Buildings 18, Structures 5 and 7",
-    "appealOrderTitle": "Procedure for Filing Complaints",
-    "appealOrderText": "If you have questions or complaints related to the quality of medical services, you can contact the above supervisory authorities in writing or electronically. We recommend first contacting the clinic’s management to resolve the issue in a pre-trial manner."
-  },
-  "privacy": {
-    "title": "Personal Data Processing Policy",
-    "subtitle": "Information on the protection and processing of patients’ personal data",
-    "section1Title": "General Provisions",
-    "section1Text": "This Personal Data Processing Policy is developed in accordance with Federal Law No. 152-FZ of July 27, 2006 “On Personal Data” and defines the procedure for processing and ensuring the security of personal data at LLC “HealthDirect.”",
-    "section2Title": "Purposes of Personal Data Processing",
-    "purpose1": "Provision of medical services to patients",
-    "purpose2": "Maintenance of medical records",
-    "purpose3": "Appointment scheduling",
-    "purpose4": "Informing patients about medical services",
-    "purpose5": "Conducting statistical research",
-    "purpose6": "Fulfilling obligations to supervisory authorities",
-    "section3Title": "Categories of Processed Personal Data",
-    "cat1": "Full name, date of birth, gender",
-    "cat2": "Passport details",
-    "cat3": "Registration and residential address",
-    "cat4": "Contact information (phone, email)",
-    "cat5": "Health data (medical records)",
-    "cat6": "Compulsory/Voluntary health insurance policy data",
-    "cat7": "SNILS, INN (if applicable)",
-    "section4Title": "Legal Grounds for Processing",
-    "section4Desc": "Personal data processing is carried out on the following legal grounds:",
-    "law1": "Consent of the data subject",
-    "law2": "Medical services contract",
-    "law3": "Federal Law No. 323-FZ of November 21, 2011 “On the Basics of Health Protection of Citizens in the Russian Federation”",
-    "law4": "Other legal acts in the field of healthcare",
-    "section5Title": "Procedure and Periods of Processing",
-    "section5Desc": "Personal data is processed both with and without the use of automation tools.",
-    "storagePeriods": "Storage Periods",
-    "storage1": "Inpatient medical records – 25 years",
-    "storage2": "Outpatient medical records – 5 years",
-    "storage3": "X-ray images – 5 years",
-    "storage4": "Service contracts – 5 years",
-    "section6Title": "Rights of Personal Data Subjects",
-    "section6Desc": "You have the right to:",
-    "rights1": "Receive information about the processing of your personal data",
-    "rights2": "Request correction, blocking, or deletion of personal data",
-    "rights3": "Withdraw consent for data processing",
-    "rights4": "Appeal actions or omissions to Roskomnadzor",
-    "rights5": "Protect your rights in court",
-    "section7Title": "Personal Data Protection Measures",
-    "security1": "Access restriction to personal data",
-    "security2": "Use of information protection tools",
-    "security3": "Data encryption during transmission",
-    "security4": "Access control to databases",
-    "security5": "Staff training on data handling rules",
-    "security6": "Signing confidentiality agreements",
-    "contactsTitle": "Contact Information",
-    "contactsInfo": "For questions regarding personal data processing, please contact:",
-    "footer": "Last updated: October 15, 2025"
-  },
-  "contract": {
-    "title": "Public Offer Agreement",
-    "subtitle": "Terms of Paid Medical Services",
-    "section1Title": "General Provisions",
-    "section1Text": "This Agreement is a public offer in accordance with Article 437 of the Civil Code of the Russian Federation. <br/>Acceptance of this offer is considered the fact of payment for medical services or signing the paid services contract.",
-    "section2Title": "Subject of the Agreement",
-    "section2Text": "The Contractor undertakes to provide medical services as requested by the Customer, and the Customer agrees to pay for these services. <br/>Medical services are provided according to the price list valid at the time of service.",
-    "section3Title": "Rights and Obligations of the Contractor",
-    "responsibleRights": "The Contractor has the right to:",
-    "contractor1": "Request information necessary to provide services",
-    "contractor2": "Refuse service if medical contraindications exist",
-    "contractor3": "Amend the price list with notice to the Customer",
-    "prohibited": "The Contractor is obliged to:",
-    "prohibited1": "Provide medical services of proper quality",
-    "prohibited2": "Ensure confidentiality of Customer information",
-    "prohibited3": "Provide information about specialists’ qualifications",
-    "prohibited4": "Meet service delivery deadlines",
-    "section4Title": "Rights and Obligations of the Customer",
-    "customerRights": "The Customer has the right to:",
-    "customer1": "Receive full information about the provided services",
-    "customer2": "Receive information about their health condition",
-    "customer3": "Refuse medical intervention",
-    "customer4": "Claim compensation for improper service",
-    "obliged": "The Customer is obliged to:",
-    "obliged1": "Pay for services in due time",
-    "obliged2": "Provide accurate health information",
-    "obliged3": "Follow medical recommendations",
-    "obliged4": "Comply with the clinic’s internal regulations",
-    "section5Title": "Service Cost and Payment Procedure",
-    "section5Text": "The cost of services is determined according to the current price list.",
-    "payment": "Payment methods:",
-    "payment1": "Cash at the clinic cashier",
-    "payment2": "By bank card via payment terminal",
-    "payment3": "Bank transfer to the account",
-    "payment4": "Online payments through the clinic website",
-    "paymentDesc": "Payment is made before or immediately after the service, unless otherwise agreed.",
-    "section6Title": "Liability of the Parties",
-    "section6Text": "The parties are liable for failure or improper fulfillment of obligations under this Agreement in accordance with the laws of the Russian Federation. <br/>The Contractor is not liable for service results if the Customer fails to follow medical recommendations.",
-    "section7Title": "Dispute Resolution Procedure",
-    "section7Text": "All disputes and disagreements are resolved through negotiations. <br/>If no agreement is reached, disputes are resolved in court at the Contractor’s location.",
-    "section8Title": "Term of the Agreement",
-    "section8Text": "The Agreement enters into force upon acceptance of the offer and remains valid until all obligations are fulfilled.",
-    "section9Title": "Contractor Details",
-    "orgName": "Name",
-    "orgDetails": "LLC “Multidisciplinary Medical Center HealthDirect”",
-    "legalAddress": "Legal Address",
-    "legalAddressValue": "119333, Moscow, Aminyevskoye Highway, Building 6, Entrance 1",
-    "taxId": "INN (Tax ID)",
-    "checkpoint": "KPP",
-    "ogrn": "OGRN",
-    "bankName": "Bank",
-    "bank": "Sberbank PJSC",
-    "accountNo": "Account No.",
-    "cAccount": "Corr. Account",
-    "bic": "BIC",
-    "addInfoTitle": "Additional Information",
-    "addInfoText": "For all contract-related questions, please contact the reception desk."
-  },
-  "footer": {
-  "title": "Still have questions?",
-  "subtitle": "Contact us in any convenient way"
-}
-
-},
-
-"forPatients": {
-  "hero": {
-    "title": "For Patients",
-    "subtitle": "All the necessary information about receiving medical care, your rights, and obligations.",
-    "address": "Moscow, Example Street, Building 1"
-  },
-  "info": {
-    "title": "Information for Patients",
-    "subtitle": "Comprehensive information about your rights, the procedure for receiving medical care, and the services of our clinic.",
-    "contactHeading": "Contact Information",
-    "contactSubheading": "Addresses and phone numbers of healthcare authorities",
-    "heading1": "Regional government authority in the field of healthcare:",
-    "contact1": "Ministry of Health of the Russian Federation",
-    "address": "Address",
-    "moscowAddress1": "127994, Moscow, Rakhmanovsky Lane, Building 3",
-    "phone": "Phone",
-    "heading2": "Territorial body of Roszdravnadzor:",
-    "contact2": "Federal Service for Surveillance in Healthcare",
-    "hotline": "Hotline phone number",
-    "heading3": "Territorial body of Rospotrebnadzor:",
-    "contact3": "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing",
-    "consulting": "Unified Consultation Center",
-    "rightsTitle": "Patients’ Rights and Obligations",
-    "rightsSubtitle": "Information about citizens’ rights in the field of healthcare",
-    "rights": {
-      "heading1": "Right to Information:",
-      "rti1": "About their state of health",
-      "rti2": "About the results of examinations",
-      "rti3": "About the presence of a disease",
-      "rti4": "About the established diagnosis",
-      "rti5": "About the prognosis of disease development",
-      "rti6": "About the methods of medical care",
-      "rti7": "About associated risks",
-      "rti8": "About possible types of medical intervention",
-      "rti9": "About the consequences of medical intervention",
-      "rti10": "About the results of medical care provided",
-      "heading2": "Right to Choose:",
-      "rtc1": "Choice of doctor and medical organization",
-      "rtc2": "Choice of individuals who may be informed about their health condition",
-      "rtc3": "Refusal of medical intervention",
-      "heading3": "Patient Obligations:",
-      "res1": "Follow the prescribed treatment regimen",
-      "res2": "Comply with the internal rules of the medical organization",
-      "res3": "Treat the property of the medical organization with care",
-      "res4": "Show respect towards medical staff and other patients"
     },
-    "careTitle": "Types of Medical Care",
-    "careSubtitle": "Information about methods of providing medical care",
-    "care": {
-      "heading1": "Types of Medical Care:",
-      "type1": "Primary healthcare",
-      "type2": "Specialized, including high-tech, medical care",
-      "type3": "Emergency, including specialized emergency medical care",
-      "type4": "Palliative medical care",
-      "heading2": "Forms of Medical Care:",
-      "form1": "Emergency — for sudden acute illnesses, conditions, or exacerbations of chronic diseases",
-      "form2": "Urgent — for sudden acute illnesses, conditions, or exacerbations of chronic diseases without obvious signs of life-threatening conditions",
-      "form3": "Planned — for preventive measures, diseases, and conditions not accompanied by a threat to life",
-      "heading3": "Information about Risks:",
-      "riskInfo": "Medical intervention may involve certain risks. Before any medical procedure, the doctor is obliged to inform the patient about possible complications and consequences."
+    "about": {
+      "heading": "About the Program",
+      "topText": "“Early Detection” is a project to improve access to high-quality diagnostics for major chronic diseases: cancer, cardiovascular diseases, diabetes, and widespread infectious diseases.",
+      "missionTitle": "Our mission",
+      "missionText": "Many people spend significant money on car service or unhealthy habits, forgetting the main value – their health. Early diagnostics and prevention are a way of timely problem detection; it’s a chance to save time, money and quality of life.",
+      "missionHighlight": "Early detection is an alternative for those who value their health, time, and budget.",
+      "evidenceTitle": "Evidence-based medicine",
+      "evidenceDesc": "The program is based on international recommendations and up-to-date screening protocols.",
+      "teamTitle": "Expert team",
+      "teamDesc": "Developed by leading specialists from various medical fields.",
+      "personalTitle": "Personalized approach",
+      "personalDesc": "Reliable assessment of your condition, taking individual factors into account.",
+      "experienceTitle": "Many years’ experience",
+      "experienceDesc": "Confirmed by years of successful practice in diagnosis and prevention.",
+      "bottomText": "Thanks to this approach, you get a reliable, effective and personalized assessment of your health status, which allows you to assess risks, detect problems in time and have a more efficient and less invasive treatment with better outcomes."
+    },
+    "why": {
+      "heading": "Why is early detection important?",
+      "preamble": "We believe diagnosis should be accessible and thorough, and early disease detection — a priority.",
+      "statText": "years of experience in diagnostics and prevention",
+      "timeTitle": "Saves time",
+      "timeDesc": "Timely detection of disease at early stages reduces treatment time.",
+      "moneyTitle": "Saves money",
+      "moneyDesc": "Treatment at early stages is much cheaper and more effective.",
+      "qualityTitle": "Quality of life",
+      "qualityDesc": "Prevention and early detection help preserve your quality of life.",
+      "prognosisTitle": "Better prognosis",
+      "prognosisDesc": "Early detection ensures the best outcome for treatment.",
+      "important": "Important: Early detection allows for more effective and less intensive treatment with the best outcomes."
+    },
+    "insurance": {
+      "title": "Oncoinsurance",
+      "desc": "A long-term agreement with our Center for regular follow-up, regular examinations and necessary treatment. Protect your health for years to come.",
+      "button": "Learn about the program",
+      "appointmentBtn": "Make an Appointment"
     }
   },
-  "accordion": {
-    "freeCareTitle": "Free Medical Care",
-    "freeCareSubtitle": "State Guarantee Program",
-    "freeCareContent": "<p class='font-semibold text-black'>State Guarantee Program:</p>Citizens of the Russian Federation have the right to receive free medical care under the state guarantee program of free medical services. </div><br/>  <br/> <p class='font-semibold text-black'>Provided free of charge:</p> <div class='ml-4'>• Primary healthcare<br/>• Specialized medical care<br/>• Emergency medical care<br/>• Palliative medical care</div> <br/> <p class='font-semibold text-black'>Territorial program:</p>Under the territorial program of state guarantees, the types of medical care established in the territory of the subject of the Russian Federation are provided free of charge." ,
-
-    "careConditionsTitle": "Procedure and Conditions for Care",
-    "careConditionsSubtitle": "Scope and conditions of medical care",
-    "careConditionsContent": "<p class='font-semibold text-black'>Procedure for providing medical care:</p>Medical care is provided in accordance with the procedures for providing medical care approved by the Ministry of Health of the Russian Federation. </div> <br/><br/> <p class='font-semibold text-black'>Conditions of provision:</p> <div class='ml-4'>• Outside the medical organization (at the location of the ambulance call, as well as in the transport vehicle during medical evacuation)<br/>• Outpatient (in conditions that do not provide round-the-clock medical supervision and treatment)<br/>• Day hospital (in conditions providing medical supervision and treatment during daytime)<br/>• Inpatient (in conditions providing round-the-clock medical supervision and treatment) </div> <br/> <p class='font-semibold text-black'>Scope of medical care:</p>The scope of medical care is determined in accordance with the territorial program of state guarantees and medical indications.",
-
-    "careQualityTitle": "Quality Indicators",
-    "careQualitySubtitle": "Accessibility and quality of medical care",
-    "careQualityContent": "<p class='font-semibold text-black'>Indicators of accessibility of medical care:</p><div class='ml-4'>• Population satisfaction with medical care (percentage)<br/>• Average waiting time to see a doctor from the moment of request (days)<br/>• Share of patients who received specialized medical care in inpatient conditions no later than 30 days from referral</div></div> <br/><p class='font-semibold text-black'>Indicators of quality of medical care:</p><div class='ml-4'>• Mortality from major socially significant diseases<br/>• Share of patients with myocardial infarction hospitalized within the first 12 hours from onset<br/>• Share of patients with acute myocardial infarction who underwent coronary artery stenting<br/>• Mortality of the working-age population</div>",
-
-    "appointmentTitle": "Rules for Scheduling Appointments",
-    "appointmentSubtitle": "Procedure for consultation and examination",
-    "appointmentContent": "<p class='font-semibold text-black'>Ways to make an appointment:</p><div class='ml-4'>• In person at the medical organization's registration desk<br/>• By phone to the registration desk<br/>• Through the Unified Portal of State and Municipal Services (Gosuslugi.ru)<br/>• Through a self-service kiosk at the medical organization</div></div> <br/><p class='font-semibold text-black'>Required documents:</p><div class='ml-4'>• Passport of a citizen of the Russian Federation<br/>• Compulsory medical insurance policy<br/>• SNILS (if available)</div></div> <br/><p class='font-semibold text-black'>Waiting times for appointments:</p>The waiting time to see specialist doctors for primary specialized medical care should not exceed 14 working days from the date of the patient’s request.",
-
-    "diagnosticsTitle": "Preparation for Diagnostics",
-    "diagnosticsSubtitle": "Rules for preparing for examinations",
-    "diagnosticsContent": "<p class='font-semibold text-black'>General preparation rules:</p><div class='ml-4'>• Blood tests should be taken on an empty stomach (fasting for at least 8 hours)<br/>• Exclude fatty foods and alcohol 1–2 days before the test<br/>• Avoid physical activity before tests<br/>• Do not smoke at least 1 hour before the test</div></div> <br/><p class='font-semibold text-black'>Abdominal ultrasound:</p><div class='ml-4'>• The examination is performed on an empty stomach<br/>• Last meal 8–12 hours before the examination<br/>• Exclude foods that cause gas 2–3 days before the examination</div></div> <br/><p class='font-semibold text-black'>Radiological examinations:</p>Preparation depends on the type of examination. Detailed recommendations are provided when scheduling the test.",
-
-    "hospitalizationTitle": "Hospitalization Rules",
-    "hospitalizationSubtitle": "Procedure and timing of hospitalization",
-    "hospitalizationContent": "<p class='font-semibold text-black'>Types of hospitalization:</p><div class='ml-4'>• Emergency: For conditions requiring urgent medical intervention<br/>• Planned: For conditions not requiring urgent care</div></div> <br/><p class='font-semibold text-black'>Documents for hospitalization:</p><div class='ml-4'>• Passport<br/>• Medical insurance policy<br/>• SNILS<br/>• Referral for hospitalization (for planned hospitalization)<br/>• Examination results (according to the medical organization's list)</div></div> <br/><p class='font-semibold text-black'>Waiting times for planned hospitalization:</p>No more than 30 calendar days from the date of referral (for specialized medical care).",
-
-    "paidServicesTitle": "Paid Medical Services",
-    "paidServicesSubtitle": "Rules for providing paid services",
-    "paidServicesContent": "<p class='font-semibold text-black'>Conditions for providing paid services:</p><div class='ml-4'>• Paid medical services are provided on the basis of a contract<br/>• The contract is concluded in writing<br/>• The patient has the right to refuse a paid medical service</div></div> <br/><p class='font-semibold text-black'>Pricing information:</p>The price list for paid medical services is posted on the information boards of the medical organization and on the official website.</div> <br/><br/> <p class='font-semibold text-black'>Patient rights:</p><div class='ml-4'>• Receiving full information about the service and its cost<br/>• Receiving a receipt and a service contract<br/>• Refusing the service before it is provided</div>",
-
-    "vacanciesTitle": "Vacancies",
-    "vacanciesSubtitle": "Information about open positions",
-    "vacanciesContent": "<p class='font-semibold text-black'>Current vacancies:</p>Information about open positions is posted on the official website of the medical organization in the \"Vacancies\" section and is updated regularly.</div><br/>  <br/><p class='font-semibold text-black'>Candidate requirements:</p><div class='ml-4'>• Higher or secondary medical education<br/>• Valid specialist certificate or accreditation<br/>• Work experience (depending on the position)</div></div> <br/><p class='font-semibold text-black'>Contact for applicants:</p>For employment inquiries, contact the HR department by phone or email listed on the website.",
-
-    "medListTitle": "Lists of Medications",
-    "medListSubtitle": "Information about drug lists",
-    "medListContent": "<p class='font-semibold text-black'>Essential and vital medicines (EVM):</p>The list is approved by the order of the Government of the Russian Federation dated October 12, 2019, No. 2406-r. </div> <br/>The list includes medicines for treating major diseases and conditions.</div><br/>  <br/><p class='font-semibold text-black'>Specialized medicines:</p>List of drugs for patients with:<div class='ml-4'>• Hemophilia<br/>• Cystic fibrosis<br/>• Pituitary dwarfism<br/>• Gaucher disease<br/>• Malignant neoplasms of lymphoid and hematopoietic tissues<br/>• Multiple sclerosis<br/>• Juvenile arthritis with systemic onset<br/>• Mucopolysaccharidosis types I, II, and VI<br/>• Other diseases, as well as for patients after organ transplantation</div></div> <br/><p class='font-semibold text-black'>Additional medicines:</p>List of drugs prescribed by the decision of medical organization commissions.",
-
-    "standardsTitle": "Standards and Guidelines",
-    "standardsSubtitle": "Medical care standards",
-    "standardsContent": "<p class='font-semibold text-black'>Medical care standards:</p>Medical care is provided in accordance with the standards of medical care approved by the Ministry of Health of the Russian Federation.</div><br/>  <br/><p class='font-semibold text-black'>Clinical guidelines:</p>Clinical guidelines are developed by medical professional non-profit organizations and include information about:<div class='ml-4'>• Diagnosis of disease or condition<br/>• Medical services provided for the disease or condition<br/>• Sequence of drug use<br/>• Medical devices and specialized nutrition</div></div> <br/><p class='font-semibold text-black'>Access to information:</p>Standards of medical care and clinical guidelines are posted on the official website of the Ministry of Health of the Russian Federation."
-}
-
-}
-
-
-
-
-
-
-
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "about": {
+    "hero": {
+      "title": "About Our Clinic",
+      "subtitle": "A multidisciplinary medical organization with international quality standards"
+    },
+    "tabs": {
+      "info": "Information",
+      "licenses": "Licenses",
+      "contacts": "Contacts",
+      "patients": "For Patients",
+      "doctors": "Doctors",
+      "privacy": "Privacy Policy",
+      "offer": "Contract"
+    },
+    "info": {
+      "title": "Information about the Medical Organization",
+      "subtitle": "Comprehensive information about our organization and its activities",
+      "fullName": "Full Name",
+      "companyName": "Limited Liability Company “Multidisciplinary Medical Center HealthDirect”",
+      "locations": "Locations",
+      "moscow": "Moscow",
+      "moscowAddress": "Moscow, Aminyevskoye Highway, Building 6, Entrance 1",
+      "makhachka": "Makhachkala",
+      "makhachkalaAddress": "Republic of Dagestan, Makhachkala, Ali-Gadji Akushinsky Avenue, Building 7",
+      "ogrn": "OGRN",
+      "tax": "INN (Tax ID)",
+      "checkpoint": "KPP",
+      "owners": "Founders",
+      "ownersDesc": "Ivanov Ivan Ivanovich, Petrov Petr Petrovich",
+      "management": "Structure and Management Bodies",
+      "point1": "General Director: Sidorov Alexey Viktorovich",
+      "point2": "Chief Doctor: Kuznetsova Elena Nikolaevna",
+      "point3": "Medical Council",
+      "point4": "Administrative and Economic Department",
+      "schedule": "Working Hours",
+      "scheduleDesc": "Monday - Friday: 8:00 AM - 8:00 PM <br/>Saturday: 9:00 AM - 6:00 PM <br/>Sunday: 9:00 AM - 3:00 PM <br/>CT Diagnostics: 24/7",
+      "serviceContacts": "Information Service Contacts",
+      "chiefReception": "Management Reception Schedule",
+      "receptionDesc": "Reception by the Chief Doctor: Every Tuesday from 3:00 PM to 5:00 PM <br/> Appointment by phone: +7 (495) 123-45-67 ext. 101 <br/> Email: chief@healthdirect.ru"
+    },
+    "licenses": {
+      "title": "Licenses and Certificates",
+      "subtitle": "Documents confirming the right to carry out medical activities",
+      "medLicense": "License for Medical Activities",
+      "number": "License Number",
+      "numberDesc": "LO-77-01-012345",
+      "issueDate": "Date of Issue",
+      "issuedBy": "Issued By",
+      "issuedByDesc": "Roszdravnadzor (Federal Service for Surveillance in Healthcare)",
+      "medLicenseDesc": "Authorized activities: therapy, surgery, diagnostics, CT, MRI, laboratory tests",
+      "isoTitle": "ISO 9001:2015 Certificate",
+      "validUntil": "Valid Until",
+      "isoDesc": "Quality management system for medical services",
+      "ministryAccr": "Ministry of Health Accreditation",
+      "category": "Category",
+      "ministryAccrDesc": "Accreditation of the multidisciplinary medical center",
+      "jciTitle": "JCI International Accreditation",
+      "jciDesc": "Joint Commission International – world-class standards",
+      "documentsAvailable": "Documents Available for Review",
+      "copyInfo": "All original documents are available for review at the clinic’s reception. Copies of licenses and certificates are displayed on the information boards in the clinic lobby. For certified copies, please contact the administrative department."
+    },
+    "contacts": {
+      "title": "Contacts of Supervisory Authorities",
+      "subtitle": "Information about supervisory bodies in the field of healthcare",
+      "phone": "Phone",
+      "address": "Address",
+      "roszdravnadzor": "Roszdravnadzor",
+      "roszdravnadzorDesc": "Federal Service for Surveillance in Healthcare",
+      "roszdravnadzorAddr": "109074, Moscow, Slavyanskaya Square, Building 4, Structure 1",
+      "minzdrav": "Ministry of Health of the Russian Federation",
+      "minzdravDesc": "Federal Executive Authority",
+      "minzdravAddr": "127994, Moscow, Rakhmanovsky Lane, Building 3",
+      "rospotrebnadzor": "Rospotrebnadzor",
+      "rospotrebnadzorDesc": "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing",
+      "rospotrebnadzorAddr": "127994, Moscow, Vadkovsky Lane, Buildings 18, Structures 5 and 7",
+      "appealOrderTitle": "Procedure for Filing Complaints",
+      "appealOrderText": "If you have questions or complaints related to the quality of medical services, you can contact the above supervisory authorities in writing or electronically. We recommend first contacting the clinic’s management to resolve the issue in a pre-trial manner."
+    },
+    "privacy": {
+      "title": "Personal Data Processing Policy",
+      "subtitle": "Information on the protection and processing of patients’ personal data",
+      "section1Title": "General Provisions",
+      "section1Text": "This Personal Data Processing Policy is developed in accordance with Federal Law No. 152-FZ of July 27, 2006 “On Personal Data” and defines the procedure for processing and ensuring the security of personal data at LLC “HealthDirect.”",
+      "section2Title": "Purposes of Personal Data Processing",
+      "purpose1": "Provision of medical services to patients",
+      "purpose2": "Maintenance of medical records",
+      "purpose3": "Appointment scheduling",
+      "purpose4": "Informing patients about medical services",
+      "purpose5": "Conducting statistical research",
+      "purpose6": "Fulfilling obligations to supervisory authorities",
+      "section3Title": "Categories of Processed Personal Data",
+      "cat1": "Full name, date of birth, gender",
+      "cat2": "Passport details",
+      "cat3": "Registration and residential address",
+      "cat4": "Contact information (phone, email)",
+      "cat5": "Health data (medical records)",
+      "cat6": "Compulsory/Voluntary health insurance policy data",
+      "cat7": "SNILS, INN (if applicable)",
+      "section4Title": "Legal Grounds for Processing",
+      "section4Desc": "Personal data processing is carried out on the following legal grounds:",
+      "law1": "Consent of the data subject",
+      "law2": "Medical services contract",
+      "law3": "Federal Law No. 323-FZ of November 21, 2011 “On the Basics of Health Protection of Citizens in the Russian Federation”",
+      "law4": "Other legal acts in the field of healthcare",
+      "section5Title": "Procedure and Periods of Processing",
+      "section5Desc": "Personal data is processed both with and without the use of automation tools.",
+      "storagePeriods": "Storage Periods",
+      "storage1": "Inpatient medical records – 25 years",
+      "storage2": "Outpatient medical records – 5 years",
+      "storage3": "X-ray images – 5 years",
+      "storage4": "Service contracts – 5 years",
+      "section6Title": "Rights of Personal Data Subjects",
+      "section6Desc": "You have the right to:",
+      "rights1": "Receive information about the processing of your personal data",
+      "rights2": "Request correction, blocking, or deletion of personal data",
+      "rights3": "Withdraw consent for data processing",
+      "rights4": "Appeal actions or omissions to Roskomnadzor",
+      "rights5": "Protect your rights in court",
+      "section7Title": "Personal Data Protection Measures",
+      "security1": "Access restriction to personal data",
+      "security2": "Use of information protection tools",
+      "security3": "Data encryption during transmission",
+      "security4": "Access control to databases",
+      "security5": "Staff training on data handling rules",
+      "security6": "Signing confidentiality agreements",
+      "contactsTitle": "Contact Information",
+      "contactsInfo": "For questions regarding personal data processing, please contact:",
+      "footer": "Last updated: October 15, 2025"
+    },
+    "contract": {
+      "title": "Public Offer Agreement",
+      "subtitle": "Terms of Paid Medical Services",
+      "section1Title": "General Provisions",
+      "section1Text": "This Agreement is a public offer in accordance with Article 437 of the Civil Code of the Russian Federation. <br/>Acceptance of this offer is considered the fact of payment for medical services or signing the paid services contract.",
+      "section2Title": "Subject of the Agreement",
+      "section2Text": "The Contractor undertakes to provide medical services as requested by the Customer, and the Customer agrees to pay for these services. <br/>Medical services are provided according to the price list valid at the time of service.",
+      "section3Title": "Rights and Obligations of the Contractor",
+      "responsibleRights": "The Contractor has the right to:",
+      "contractor1": "Request information necessary to provide services",
+      "contractor2": "Refuse service if medical contraindications exist",
+      "contractor3": "Amend the price list with notice to the Customer",
+      "prohibited": "The Contractor is obliged to:",
+      "prohibited1": "Provide medical services of proper quality",
+      "prohibited2": "Ensure confidentiality of Customer information",
+      "prohibited3": "Provide information about specialists’ qualifications",
+      "prohibited4": "Meet service delivery deadlines",
+      "section4Title": "Rights and Obligations of the Customer",
+      "customerRights": "The Customer has the right to:",
+      "customer1": "Receive full information about the provided services",
+      "customer2": "Receive information about their health condition",
+      "customer3": "Refuse medical intervention",
+      "customer4": "Claim compensation for improper service",
+      "obliged": "The Customer is obliged to:",
+      "obliged1": "Pay for services in due time",
+      "obliged2": "Provide accurate health information",
+      "obliged3": "Follow medical recommendations",
+      "obliged4": "Comply with the clinic’s internal regulations",
+      "section5Title": "Service Cost and Payment Procedure",
+      "section5Text": "The cost of services is determined according to the current price list.",
+      "payment": "Payment methods:",
+      "payment1": "Cash at the clinic cashier",
+      "payment2": "By bank card via payment terminal",
+      "payment3": "Bank transfer to the account",
+      "payment4": "Online payments through the clinic website",
+      "paymentDesc": "Payment is made before or immediately after the service, unless otherwise agreed.",
+      "section6Title": "Liability of the Parties",
+      "section6Text": "The parties are liable for failure or improper fulfillment of obligations under this Agreement in accordance with the laws of the Russian Federation. <br/>The Contractor is not liable for service results if the Customer fails to follow medical recommendations.",
+      "section7Title": "Dispute Resolution Procedure",
+      "section7Text": "All disputes and disagreements are resolved through negotiations. <br/>If no agreement is reached, disputes are resolved in court at the Contractor’s location.",
+      "section8Title": "Term of the Agreement",
+      "section8Text": "The Agreement enters into force upon acceptance of the offer and remains valid until all obligations are fulfilled.",
+      "section9Title": "Contractor Details",
+      "orgName": "Name",
+      "orgDetails": "LLC “Multidisciplinary Medical Center HealthDirect”",
+      "legalAddress": "Legal Address",
+      "legalAddressValue": "119333, Moscow, Aminyevskoye Highway, Building 6, Entrance 1",
+      "taxId": "INN (Tax ID)",
+      "checkpoint": "KPP",
+      "ogrn": "OGRN",
+      "bankName": "Bank",
+      "bank": "Sberbank PJSC",
+      "accountNo": "Account No.",
+      "cAccount": "Corr. Account",
+      "bic": "BIC",
+      "addInfoTitle": "Additional Information",
+      "addInfoText": "For all contract-related questions, please contact the reception desk."
+    },
+    "footer": {
+      "title": "Still have questions?",
+      "subtitle": "Contact us in any convenient way"
+    }
+  },
+  "forPatients": {
+    "hero": {
+      "title": "For Patients",
+      "subtitle": "All the necessary information about receiving medical care, your rights, and obligations.",
+      "address": "Moscow, Example Street, Building 1"
+    },
+    "info": {
+      "title": "Information for Patients",
+      "subtitle": "Comprehensive information about your rights, the procedure for receiving medical care, and the services of our clinic.",
+      "contactHeading": "Contact Information",
+      "contactSubheading": "Addresses and phone numbers of healthcare authorities",
+      "heading1": "Regional government authority in the field of healthcare:",
+      "contact1": "Ministry of Health of the Russian Federation",
+      "address": "Address",
+      "moscowAddress1": "127994, Moscow, Rakhmanovsky Lane, Building 3",
+      "phone": "Phone",
+      "heading2": "Territorial body of Roszdravnadzor:",
+      "contact2": "Federal Service for Surveillance in Healthcare",
+      "hotline": "Hotline phone number",
+      "heading3": "Territorial body of Rospotrebnadzor:",
+      "contact3": "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing",
+      "consulting": "Unified Consultation Center",
+      "rightsTitle": "Patients’ Rights and Obligations",
+      "rightsSubtitle": "Information about citizens’ rights in the field of healthcare",
+      "rights": {
+        "heading1": "Right to Information:",
+        "rti1": "About their state of health",
+        "rti2": "About the results of examinations",
+        "rti3": "About the presence of a disease",
+        "rti4": "About the established diagnosis",
+        "rti5": "About the prognosis of disease development",
+        "rti6": "About the methods of medical care",
+        "rti7": "About associated risks",
+        "rti8": "About possible types of medical intervention",
+        "rti9": "About the consequences of medical intervention",
+        "rti10": "About the results of medical care provided",
+        "heading2": "Right to Choose:",
+        "rtc1": "Choice of doctor and medical organization",
+        "rtc2": "Choice of individuals who may be informed about their health condition",
+        "rtc3": "Refusal of medical intervention",
+        "heading3": "Patient Obligations:",
+        "res1": "Follow the prescribed treatment regimen",
+        "res2": "Comply with the internal rules of the medical organization",
+        "res3": "Treat the property of the medical organization with care",
+        "res4": "Show respect towards medical staff and other patients"
+      },
+      "careTitle": "Types of Medical Care",
+      "careSubtitle": "Information about methods of providing medical care",
+      "care": {
+        "heading1": "Types of Medical Care:",
+        "type1": "Primary healthcare",
+        "type2": "Specialized, including high-tech, medical care",
+        "type3": "Emergency, including specialized emergency medical care",
+        "type4": "Palliative medical care",
+        "heading2": "Forms of Medical Care:",
+        "form1": "Emergency — for sudden acute illnesses, conditions, or exacerbations of chronic diseases",
+        "form2": "Urgent — for sudden acute illnesses, conditions, or exacerbations of chronic diseases without obvious signs of life-threatening conditions",
+        "form3": "Planned — for preventive measures, diseases, and conditions not accompanied by a threat to life",
+        "heading3": "Information about Risks:",
+        "riskInfo": "Medical intervention may involve certain risks. Before any medical procedure, the doctor is obliged to inform the patient about possible complications and consequences."
+      }
+    },
+    "accordion": {
+      "freeCareTitle": "Free Medical Care",
+      "freeCareSubtitle": "State Guarantee Program",
+      "freeCareContent": "<p class='font-semibold text-black'>State Guarantee Program:</p>Citizens of the Russian Federation have the right to receive free medical care under the state guarantee program of free medical services. </div><br/>  <br/> <p class='font-semibold text-black'>Provided free of charge:</p> <div class='ml-4'>• Primary healthcare<br/>• Specialized medical care<br/>• Emergency medical care<br/>• Palliative medical care</div> <br/> <p class='font-semibold text-black'>Territorial program:</p>Under the territorial program of state guarantees, the types of medical care established in the territory of the subject of the Russian Federation are provided free of charge.",
+      "careConditionsTitle": "Procedure and Conditions for Care",
+      "careConditionsSubtitle": "Scope and conditions of medical care",
+      "careConditionsContent": "<p class='font-semibold text-black'>Procedure for providing medical care:</p>Medical care is provided in accordance with the procedures for providing medical care approved by the Ministry of Health of the Russian Federation. </div> <br/><br/> <p class='font-semibold text-black'>Conditions of provision:</p> <div class='ml-4'>• Outside the medical organization (at the location of the ambulance call, as well as in the transport vehicle during medical evacuation)<br/>• Outpatient (in conditions that do not provide round-the-clock medical supervision and treatment)<br/>• Day hospital (in conditions providing medical supervision and treatment during daytime)<br/>• Inpatient (in conditions providing round-the-clock medical supervision and treatment) </div> <br/> <p class='font-semibold text-black'>Scope of medical care:</p>The scope of medical care is determined in accordance with the territorial program of state guarantees and medical indications.",
+      "careQualityTitle": "Quality Indicators",
+      "careQualitySubtitle": "Accessibility and quality of medical care",
+      "careQualityContent": "<p class='font-semibold text-black'>Indicators of accessibility of medical care:</p><div class='ml-4'>• Population satisfaction with medical care (percentage)<br/>• Average waiting time to see a doctor from the moment of request (days)<br/>• Share of patients who received specialized medical care in inpatient conditions no later than 30 days from referral</div></div> <br/><p class='font-semibold text-black'>Indicators of quality of medical care:</p><div class='ml-4'>• Mortality from major socially significant diseases<br/>• Share of patients with myocardial infarction hospitalized within the first 12 hours from onset<br/>• Share of patients with acute myocardial infarction who underwent coronary artery stenting<br/>• Mortality of the working-age population</div>",
+      "appointmentTitle": "Rules for Scheduling Appointments",
+      "appointmentSubtitle": "Procedure for consultation and examination",
+      "appointmentContent": "<p class='font-semibold text-black'>Ways to make an appointment:</p><div class='ml-4'>• In person at the medical organization's registration desk<br/>• By phone to the registration desk<br/>• Through the Unified Portal of State and Municipal Services (Gosuslugi.ru)<br/>• Through a self-service kiosk at the medical organization</div></div> <br/><p class='font-semibold text-black'>Required documents:</p><div class='ml-4'>• Passport of a citizen of the Russian Federation<br/>• Compulsory medical insurance policy<br/>• SNILS (if available)</div></div> <br/><p class='font-semibold text-black'>Waiting times for appointments:</p>The waiting time to see specialist doctors for primary specialized medical care should not exceed 14 working days from the date of the patient’s request.",
+      "diagnosticsTitle": "Preparation for Diagnostics",
+      "diagnosticsSubtitle": "Rules for preparing for examinations",
+      "diagnosticsContent": "<p class='font-semibold text-black'>General preparation rules:</p><div class='ml-4'>• Blood tests should be taken on an empty stomach (fasting for at least 8 hours)<br/>• Exclude fatty foods and alcohol 1–2 days before the test<br/>• Avoid physical activity before tests<br/>• Do not smoke at least 1 hour before the test</div></div> <br/><p class='font-semibold text-black'>Abdominal ultrasound:</p><div class='ml-4'>• The examination is performed on an empty stomach<br/>• Last meal 8–12 hours before the examination<br/>• Exclude foods that cause gas 2–3 days before the examination</div></div> <br/><p class='font-semibold text-black'>Radiological examinations:</p>Preparation depends on the type of examination. Detailed recommendations are provided when scheduling the test.",
+      "hospitalizationTitle": "Hospitalization Rules",
+      "hospitalizationSubtitle": "Procedure and timing of hospitalization",
+      "hospitalizationContent": "<p class='font-semibold text-black'>Types of hospitalization:</p><div class='ml-4'>• Emergency: For conditions requiring urgent medical intervention<br/>• Planned: For conditions not requiring urgent care</div></div> <br/><p class='font-semibold text-black'>Documents for hospitalization:</p><div class='ml-4'>• Passport<br/>• Medical insurance policy<br/>• SNILS<br/>• Referral for hospitalization (for planned hospitalization)<br/>• Examination results (according to the medical organization's list)</div></div> <br/><p class='font-semibold text-black'>Waiting times for planned hospitalization:</p>No more than 30 calendar days from the date of referral (for specialized medical care).",
+      "paidServicesTitle": "Paid Medical Services",
+      "paidServicesSubtitle": "Rules for providing paid services",
+      "paidServicesContent": "<p class='font-semibold text-black'>Conditions for providing paid services:</p><div class='ml-4'>• Paid medical services are provided on the basis of a contract<br/>• The contract is concluded in writing<br/>• The patient has the right to refuse a paid medical service</div></div> <br/><p class='font-semibold text-black'>Pricing information:</p>The price list for paid medical services is posted on the information boards of the medical organization and on the official website.</div> <br/><br/> <p class='font-semibold text-black'>Patient rights:</p><div class='ml-4'>• Receiving full information about the service and its cost<br/>• Receiving a receipt and a service contract<br/>• Refusing the service before it is provided</div>",
+      "vacanciesTitle": "Vacancies",
+      "vacanciesSubtitle": "Information about open positions",
+      "vacanciesContent": "<p class='font-semibold text-black'>Current vacancies:</p>Information about open positions is posted on the official website of the medical organization in the \"Vacancies\" section and is updated regularly.</div><br/>  <br/><p class='font-semibold text-black'>Candidate requirements:</p><div class='ml-4'>• Higher or secondary medical education<br/>• Valid specialist certificate or accreditation<br/>• Work experience (depending on the position)</div></div> <br/><p class='font-semibold text-black'>Contact for applicants:</p>For employment inquiries, contact the HR department by phone or email listed on the website.",
+      "medListTitle": "Lists of Medications",
+      "medListSubtitle": "Information about drug lists",
+      "medListContent": "<p class='font-semibold text-black'>Essential and vital medicines (EVM):</p>The list is approved by the order of the Government of the Russian Federation dated October 12, 2019, No. 2406-r. </div> <br/>The list includes medicines for treating major diseases and conditions.</div><br/>  <br/><p class='font-semibold text-black'>Specialized medicines:</p>List of drugs for patients with:<div class='ml-4'>• Hemophilia<br/>• Cystic fibrosis<br/>• Pituitary dwarfism<br/>• Gaucher disease<br/>• Malignant neoplasms of lymphoid and hematopoietic tissues<br/>• Multiple sclerosis<br/>• Juvenile arthritis with systemic onset<br/>• Mucopolysaccharidosis types I, II, and VI<br/>• Other diseases, as well as for patients after organ transplantation</div></div> <br/><p class='font-semibold text-black'>Additional medicines:</p>List of drugs prescribed by the decision of medical organization commissions.",
+      "standardsTitle": "Standards and Guidelines",
+      "standardsSubtitle": "Medical care standards",
+      "standardsContent": "<p class='font-semibold text-black'>Medical care standards:</p>Medical care is provided in accordance with the standards of medical care approved by the Ministry of Health of the Russian Federation.</div><br/>  <br/><p class='font-semibold text-black'>Clinical guidelines:</p>Clinical guidelines are developed by medical professional non-profit organizations and include information about:<div class='ml-4'>• Diagnosis of disease or condition<br/>• Medical services provided for the disease or condition<br/>• Sequence of drug use<br/>• Medical devices and specialized nutrition</div></div> <br/><p class='font-semibold text-black'>Access to information:</p>Standards of medical care and clinical guidelines are posted on the official website of the Ministry of Health of the Russian Federation."
+    }
+  },
+  "telemedicine": {
+    "hero": {
+      "pill": "IMETS — International Telemedicine Consultations",
+      "titleLine1": "Expert consultations",
+      "titleLine2": "from leading specialists worldwide",
+      "subtitle": "Get a second opinion from international experts without leaving your home",
+      "ctaConsult": "Book a consultation",
+      "ctaMore": "Learn more about the service",
+      "stats": {
+        "experts": "experts",
+        "specialties": "specialties",
+        "time": "Consultation within 24–48 hours"
+      }
+    },
+    "advantages": {
+      "header": "Advantages of IMETS",
+      "intlExperts": {
+        "title": "International experts",
+        "desc": "Leading specialists from the USA, Europe, and Israel"
+      },
+      "onlineConsult": {
+        "title": "Online consultations",
+        "desc": "No need to travel abroad"
+      },
+      "fastBooking": {
+        "title": "Fast booking",
+        "desc": "Consultation within 24–48 hours"
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "desc": "Full protection of medical data"
+      }
+    },
+    "specialties": {
+      "header": "Our specialties",
+      "subtitle": "Over 15 medical fields with international experts",
+      "cardiology": "Cardiology",
+      "cardiologyDesc": "Heart and vascular diseases",
+      "neurology": "Neurology",
+      "neurologyDesc": "Nervous system",
+      "ophthalmology": "Ophthalmology",
+      "ophthalmologyDesc": "Eye diseases",
+      "orthopedics": "Orthopedics",
+      "orthopedicsDesc": "Musculoskeletal system",
+      "therapy": "Therapy",
+      "therapyDesc": "Common diseases",
+      "oncology": "Oncology",
+      "oncologyDesc": "Diagnosis and treatment of cancer"
+    },
+    "doctors": {
+      "header": "Our international experts",
+      "subtitle": "Top doctors from leading clinics around the world",
+      "viewAll": "View all experts",
+      "noDoctors": "There are currently no specialists available in this field."
+    },
+    "howitworks": {
+      "header": "How it works",
+      "subtitle": "A simple process for getting an international consultation",
+      "step1": {
+        "title": "Application",
+        "desc": "Submit a request for a consultation"
+      },
+      "step2": {
+        "title": "Expert selection",
+        "desc": "We will select the best specialist for you"
+      },
+      "step3": {
+        "title": "Consultation",
+        "desc": "Video consultation with the expert"
+      },
+      "step4": {
+        "title": "Recommendations",
+        "desc": "Receive your treatment plan"
+      }
+    },
+    "cta": {
+      "title": "Ready to get an expert opinion?",
+      "subtitle": "Book a consultation with an international expert today",
+      "cta1": "Book now",
+      "cta2": "Contact us",
+      "feature1": "Response within 2 hours",
+      "feature2": "100% confidential"
+    }
+  }
 }

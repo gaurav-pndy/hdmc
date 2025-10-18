@@ -5,175 +5,194 @@ import {
   FaBrain,
   FaEye,
   FaBone,
-  FaUserMd,
-  FaShieldVirus,
-  FaStethoscope,
+  FaHandHoldingMedical,
+  FaHeartbeat,
+  FaStar,
+  FaGlobe,
+  FaArrowRight,
 } from "react-icons/fa";
-import { doctorsData } from "../../data/doctors";
+import { doctorsData } from "../../data/doctors.js";
+import { Link } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
 
-// List of specialties for grid
-const SPECIALTY_OPTIONS = [
+const specialties = [
   {
-    key: "cardiology",
-    icon: <FaHeart className="text-brand4 text-2xl" />,
-    label: "Cardiology",
-    desc: "Diseases of the heart and blood vessels",
-    filterTags: ["Cardiologist"],
+    id: "cardiology",
+    icon: FaHeart,
+    title: "telemedicine.specialties.cardiology",
+    subtitle: "telemedicine.specialties.cardiologyDesc",
   },
   {
-    key: "neurology",
-    icon: <FaBrain className="text-brand4 text-2xl" />,
-    label: "Neurology",
-    desc: "Nervous system",
-    filterTags: ["Neurologist"],
+    id: "neurology",
+    icon: FaBrain,
+    title: "telemedicine.specialties.neurology",
+    subtitle: "telemedicine.specialties.neurologyDesc",
   },
   {
-    key: "ophthalmology",
-    icon: <FaEye className="text-brand4 text-2xl" />,
-    label: "Ophthalmology",
-    desc: "Eye diseases",
-    filterTags: ["Ophthalmologist"],
+    id: "ophthalmology",
+    icon: FaEye,
+    title: "telemedicine.specialties.ophthalmology",
+    subtitle: "telemedicine.specialties.ophthalmologyDesc",
   },
   {
-    key: "orthopedics",
-    icon: <FaBone className="text-brand4 text-2xl" />,
-    label: "Orthopedics",
-    desc: "Musculoskeletal system",
-    filterTags: ["Orthopedist"],
+    id: "orthopedics",
+    icon: FaBone,
+    title: "telemedicine.specialties.orthopedics",
+    subtitle: "telemedicine.specialties.orthopedicsDesc",
   },
   {
-    key: "therapy",
-    icon: <FaStethoscope className="text-brand4 text-2xl" />,
-    label: "Therapy",
-    desc: "General diseases",
-    filterTags: ["Therapist"],
+    id: "therapy",
+    icon: FaHandHoldingMedical,
+    title: "telemedicine.specialties.therapy",
+    subtitle: "telemedicine.specialties.therapyDesc",
   },
   {
-    key: "oncology",
-    icon: <FaShieldVirus className="text-brand4 text-2xl" />,
-    label: "Oncology",
-    desc: "Diagnosis and treatment of cancer",
-    filterTags: ["Oncologist"],
+    id: "oncology",
+    icon: FaHeartbeat,
+    title: "telemedicine.specialties.oncology",
+    subtitle: "telemedicine.specialties.oncologyDesc",
   },
 ];
 
 const TelemedicineExperts = () => {
   const { t } = useTranslation();
-  const [selectedSpecialty, setSelectedSpecialty] = useState(
-    SPECIALTY_OPTIONS[0].key
-  );
+  const [selectedSpecialty, setSelectedSpecialty] = useState("cardiology");
 
-  // Find active specialty object by key
-  const activeSpecialty = SPECIALTY_OPTIONS.find(
-    (item) => item.key === selectedSpecialty
-  );
-
-  // Filter doctors by tag(s) for selected specialty
-  const filteredDoctors = doctorsData.filter((doc) => {
-    // Grab array from i18n, fallback to []
-    const tags = t(doc.tags, { returnObjects: true }) || [];
-    return (
-      tags &&
-      activeSpecialty.filterTags.some((tag) =>
-        tags.some(
-          (doctorTag) => doctorTag.trim().toLowerCase() === tag.toLowerCase()
-        )
-      )
-    );
-  });
+  // Filter doctors by selected specialty
+  const filteredDoctors = selectedSpecialty
+    ? doctorsData.filter((doc) => doc.specialty === selectedSpecialty)
+    : [];
 
   return (
-    <section className="w-full bg-white py-12 px-2">
-      {/* Specialties selection */}
-      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-brand1 mb-2">
-        {t("telemedicine.specialties.header")}
-      </h2>
-      <div className="text-center text-brand1/70 mb-10">
-        {t("telemedicine.specialties.subtitle")}
-      </div>
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto mb-14">
-        {SPECIALTY_OPTIONS.map((spec) => (
-          <button
-            key={spec.key}
-            className={`flex items-start gap-4 p-6 rounded-2xl border-2 shadow text-left transition-all duration-200 cursor-pointer h-full bg-white ${
-              spec.key === selectedSpecialty
-                ? "border-brand1 ring-2 ring-brand1/30 bg-brand4/5"
-                : "border-brand4/10 hover:border-brand1"
-            }`}
-            onClick={() => setSelectedSpecialty(spec.key)}
-            aria-pressed={spec.key === selectedSpecialty}
-          >
-            <div className="mt-0.5">{spec.icon}</div>
-            <div>
-              <div className="font-semibold text-brand1 text-lg">
-                {spec.label}
-              </div>
-              <div className="text-brand1/60 text-sm">{spec.desc}</div>
-            </div>
-          </button>
-        ))}
-      </div>
-      {/* Doctors for selected specialty */}
-      <div className="bg-[#f6fcfd] py-16 px-4 mt-0">
-        <h3 className="text-center text-3xl md:text-4xl font-extrabold text-brand1 mb-2">
-          {t("telemedicine.doctors.header")}
-        </h3>
-        <div className="text-center text-brand1/70 mb-10">
-          {t("telemedicine.doctors.subtitle")}
+    <div className="py-16">
+      <div className="max-w-[87rem] mx-auto px-4">
+        {/* Specialties Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-brand1 mx-auto text-4xl md:text-5xl font-bold mb-6">
+            {t("telemedicine.specialties.header")}
+          </h2>
+          <p className="md:text-lg text-brand1/80 mb-8 max-w-3xl mx-auto">
+          {t("telemedicine.specialties.subtitle")}
+          </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 mb-6">
-          {filteredDoctors.length === 0 ? (
-            <div className="text-brand1/70 text-lg py-10">
-              {t("telemedicine.doctors.noDoctors")}
-            </div>
-          ) : (
-            filteredDoctors.map((doc) => (
+
+        {/* Styled Tabs */}
+        <div className="grid md:flex flex-wrap justify-between  gap-2 mb-16">
+          {specialties.map((specialty) => {
+            const Icon = specialty.icon;
+            const isSelected = selectedSpecialty === specialty.id;
+
+            return (
               <div
-                key={doc.id}
-                className="bg-white rounded-2xl border border-brand4/20 shadow p-6 w-full max-w-xs flex flex-col items-start"
+                key={specialty.id}
+                onClick={() =>
+                  setSelectedSpecialty(isSelected ? null : specialty.id)
+                }
+                className={`flex items-center gap-3 px-4 py-3 font-semibold rounded-xl cursor-pointer transition-all 
+              ${
+                isSelected
+                  ? "bg-brand1 text-white"
+                  : "text-brand1/70 bg-brand4/20 hover:text-brand1"
+              }
+            `}
               >
-                <div className="flex gap-4 items-center mb-2">
-                  <div className="bg-brand4/20 text-brand1 font-bold text-lg rounded-full w-14 h-14 flex items-center justify-center uppercase">
-                    {doc.id.slice(0, 3)}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-brand1 text-base">
-                      {t(doc.name)}
-                    </div>
-                    <div className="text-brand4 text-sm">{t(doc.location)}</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-1">
-                  {t(doc.tags, { returnObjects: true }).map((tag, i) => (
-                    <span
-                      key={i}
-                      className="bg-brand4/10 rounded-full px-3 py-1 text-xs text-brand1 font-semibold"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="text-brand4/80 text-xs mb-2">
-                  {t(doc.langs)}
-                </div>
-                <div
-                  className="text-brand1/90 text-sm mb-2"
-                  dangerouslySetInnerHTML={{ __html: t(doc.desc) }}
+                <Icon
+                  className={`text-2xl lg:text-3xl ${
+                    isSelected ? "text-white" : "text-[#63cacc]"
+                  }`}
                 />
-                {/* Optionally: Add rating stars or "View profile" button here */}
+                <div>
+                  <h5>{t(specialty.title)}</h5>
+                  <p className="text-xs font-normal">{t(specialty.subtitle)}</p>
+                </div>
               </div>
-            ))
-          )}
+            );
+          })}
         </div>
-        {/* View all experts button */}
-        <div className="text-center">
-          <button className="inline-flex items-center gap-2 px-6 py-2 rounded-xl border border-brand1 bg-white text-brand1 font-semibold text-base shadow hover:bg-brand1/10">
-            {t("telemedicine.doctors.viewAll")}
-            <FaUserMd />
-          </button>
-        </div>
+
+        {/* Doctors Section - Shows when specialty is selected */}
+        {selectedSpecialty && (
+          <div className="animate-fadeIn">
+            <div className="text-center mb-8">
+            <h2 className="text-brand1 mx-auto text-4xl md:text-5xl font-bold mb-6">
+            {t("telemedicine.doctors.header")}
+
+              </h2>
+              <p className="md:text-lg text-brand1/80 mb-8 max-w-3xl mx-auto">
+              {t("telemedicine.doctors.subtitle")}
+
+              </p>
+            </div>
+
+            {filteredDoctors.length > 0 ? (
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
+                {filteredDoctors.map((doc) => (
+                   <Link
+                   key={doc.id}
+                   to={`/doctors/${doc.id}`}
+                   className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem]"
+                 >
+                   <div className="flex-1 flex flex-col">
+                     {/* Add avatar or doctor photo here if you have */}
+                     <img
+                       src={doc.image}
+                       alt={t(doc.name)}
+                       className="w-full h-52 object-cover rounded-lg"
+                     />
+                     <div className="font-bold text-black text-xl mt-4 mb-3">
+                       {t(doc.name)}
+                     </div>
+                     {/* <div className="flex flex-wrap gap-1 mb-3">
+                       {doc.tags.map((tag, i) => (
+                         <span
+                           key={i}
+                           className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
+                         >
+                           {tag}
+                         </span>
+                       ))}
+                     </div> */}
+                     <div className="text-brand1 text-sm mb-3 line-clamp-2">
+                       {t(doc.desc)}
+                     </div>
+                     <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
+                       <span className="flex items-center">
+                         <FaLocationDot className="mr-1" /> {t(doc.location)}
+                       </span>
+                     </div>
+                     <div className="text-brand1/60 text-xs">
+                       {t("doctors.languages")}:
+                     </div>
+                     <div className="text-brand1 text-sm font-medium">{t(doc.langs)}</div>
+                   </div>
+                   <button
+                     className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center"
+                   >
+                     {t("doctors.viewProfile")}
+                   </button>
+                 </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12 bg-white rounded-2xl border border-[#63cacc]/20">
+                <p className="text-[#125e84]/60">
+                {t("telemedicine.doctors.noDoctors")}
+
+                </p>
+              </div>
+            )}
+
+            <div className="text-center mt-8">
+              <Link to={"/doctors"} className="px-6 py-3 border-2 border-brand1 w-fit text-brand1 rounded-lg font-medium hover:bg-brand1 hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto">
+              {t("telemedicine.doctors.viewAll")}
+
+                <FaArrowRight />
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
-    </section>
+    </div>
   );
 };
 
