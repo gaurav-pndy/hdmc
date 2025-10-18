@@ -542,6 +542,13 @@ const Header = () => {
             {" "}
             {t("header.reviews")}{" "}
           </button>{" "}
+          <Link
+            to="/hdmc-plus"
+            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
+          >
+            {" "}
+           HDMC+
+          </Link>{" "}
           <button
             onClick={() => handleScrollToSection("#contact")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
@@ -600,13 +607,7 @@ const Header = () => {
             {" "}
             Pathologica
           </Link>{" "}
-          <Link
-            to="/hdmc-plus"
-            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
-          >
-            {" "}
-            HDMC+
-          </Link>{" "}
+         
           <button className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
@@ -829,10 +830,14 @@ const Header = () => {
                   {" "}
                   {t("header.reviews")}
                 </button>{" "}
-                <Link to="/" className="  hover:underline whitespace-nowrap">
+                <Link
+                  to="/hdmc-plus"
+                  className="  hover:underline whitespace-nowrap"
+                >
                   {" "}
-                  {t("header.offers")}
+                  HDMC+
                 </Link>{" "}
+              
                 <button
                   onClick={() => handleScrollToSection("#contact")}
                   className="text-left   hover:underline whitespace-nowrap"
@@ -862,13 +867,7 @@ const Header = () => {
                   {" "}
                   Pathologica
                 </Link>{" "}
-                <Link
-                  to="/hdmc-plus"
-                  className="  hover:underline whitespace-nowrap"
-                >
-                  {" "}
-                  HDMC+
-                </Link>{" "}
+                
               </nav>
             </motion.aside>
           </>
