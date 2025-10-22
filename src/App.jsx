@@ -12,6 +12,7 @@ import DoctorsPage from "./pages/DoctorsPage";
 import ForPatients from "./pages/ForPatients";
 import AboutPage from "./pages/AboutPage";
 import Telemedicine from "./pages/Telemedicine";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -45,6 +46,10 @@ function App() {
         {
           path: "/hdmc-plus",
           element: <HDMCPlus />,
+        },
+        {
+          path: "/services/:serviceId",
+          element: <ServiceDetails />,
         },
         {
           path: "/early-detection-program",

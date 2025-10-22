@@ -30,6 +30,7 @@ const Home = () => {
       }, 400);
     }
   }, [location]);
+
   return (
     <div>
       <HeroSection />
