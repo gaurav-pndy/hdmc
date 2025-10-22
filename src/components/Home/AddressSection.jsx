@@ -128,7 +128,10 @@ const AddressSection = () => {
                   <FaMapMarkerAlt className="mt-1.5 text-brand1" />
                   <div>
                     <h4 className="font-medium">{clinic.title}</h4>
-                    <p className="text-brand1 text-sm">{clinic.address}</p>
+                    <p
+                      className="text-brand1 text-sm"
+                      dangerouslySetInnerHTML={{ __html: clinic.address }}
+                    ></p>
                     <p className="text-brand1 text-sm">{clinic.schedule}</p>
                   </div>
                 </div>
