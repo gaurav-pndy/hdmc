@@ -89,62 +89,62 @@ const Header = () => {
   // Services list
   const services = [
     {
-      path: "/services/diagnostics",
+      path: "/services/service1",
       label: t("header.service1"),
       icon: "/services/1.svg",
     },
     {
-      path: "/early-detection-program",
+      path: "/services/service2",
       label: t("header.service2"),
       icon: "/services/2.svg",
     },
     {
-      path: "/services/consultation",
+      path: "/services/service3",
       label: t("header.service3"),
       icon: "/services/3.svg",
     },
     {
-      path: "/services/ct",
+      path: "/services/service4",
       label: t("header.service4"),
       icon: "/services/4.svg",
     },
     {
-      path: "/services/observation",
+      path: "/services/service5",
       label: t("header.service5"),
       icon: "/services/5.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service6",
       label: t("header.service6"),
       icon: "/services/6.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service7",
       label: t("header.service7"),
       icon: "/services/7.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service8",
       label: t("header.service8"),
       icon: "/services/8.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service9",
       label: t("header.service9"),
       icon: "/services/9.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service10",
       label: t("header.service10"),
       icon: "/services/10.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service11",
       label: t("header.service11"),
       icon: "/services/11.svg",
     },
     {
-      path: "/services/international",
+      path: "/services/service12",
       label: t("header.service12"),
       icon: "/services/12.svg",
     },
@@ -547,7 +547,7 @@ const Header = () => {
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
-           HDMC+
+            HDMC+
           </Link>{" "}
           <button
             onClick={() => handleScrollToSection("#contact")}
@@ -607,7 +607,6 @@ const Header = () => {
             {" "}
             Pathologica
           </Link>{" "}
-         
           <button className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
@@ -837,7 +836,6 @@ const Header = () => {
                   {" "}
                   HDMC+
                 </Link>{" "}
-              
                 <button
                   onClick={() => handleScrollToSection("#contact")}
                   className="text-left   hover:underline whitespace-nowrap"
@@ -867,7 +865,6 @@ const Header = () => {
                   {" "}
                   Pathologica
                 </Link>{" "}
-                
               </nav>
             </motion.aside>
           </>
