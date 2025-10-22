@@ -98,7 +98,7 @@ const AddressSection = () => {
       hintContent: "HDMC",
     },
     {
-      title: t("address.clinic2.title"),
+      title: "La clinica",
       address: t("address.clinic2.address"),
       schedule: t("address.clinic2.schedule"),
       phone: "+7 (988) 204-55-75",
