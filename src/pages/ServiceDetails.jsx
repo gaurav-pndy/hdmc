@@ -123,7 +123,7 @@ const ServiceDetailsExpertAssessment = () => {
             <div className="text-brand1 font-bold text-xl mb-3">
               Стоимость консультации
             </div>
-            <table className="w-full mt-4 border">
+            {/* <table className="w-full mt-4 border">
               <thead>
                 <tr className="bg-brand4/20 text-left">
                   <th className="px-4 py-2">Наименование</th>
@@ -138,7 +138,7 @@ const ServiceDetailsExpertAssessment = () => {
                   <td className="border-t px-4 py-2">15 000 ₽</td>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
           </div>
         )}
       </div>
