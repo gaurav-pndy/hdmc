@@ -36,7 +36,7 @@ const ServiceDetailsExpertAssessment = () => {
   };
 
   return (
-    <div className="bg-[#f6fcfd] min-h-screen pb-16 mt-52 max-w-[87rem] mx-auto px-4">
+    <div className="bg-[#f6fcfd] min-h-screen pb-16 mt-20 lg:mt-52 max-w-[87rem] mx-auto px-4">
       <div className="mb-4 text-brand1 flex gap-2 font-semibold items-center">
         {" "}
         <button
@@ -49,24 +49,34 @@ const ServiceDetailsExpertAssessment = () => {
         {t(service.title)}
       </div>
       {/* HERO */}
-      <section className=" rounded-xl mx-auto p-4 md:p-6 lg:p-10 xl:p-12 flex flex-col md:flex-row gap-8 items-center bg-gradient-to-br from-brand5 to-brand1">
+      <section className="relative rounded-xl mx-auto   flex flex-col md:flex-row  items-center  overflow-hidden md:min-h-96">
         {/* Left: Title and CTA */}
-        <div className="flex-1 min-w-0">
-          <h1 className="text-white text-4xl md:text-5xl  font-bold mb-6">
+        <div className="flex-1 w-full md:min-h-96 flex flex-col justify-center h-full z-10 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-brand1 ">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
             {t(service.title)}
           </h1>
-          <p className="text-white text-lg md:text-2xl  mb-6 drop-shadow">
+          <p className="text-white text-lg md:text-2xl mb-6 drop-shadow">
             {service.subtitle && t(service.subtitle)}
           </p>
-          <button className="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white">
+          <button className="flex items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white">
             {service.btn ? t(service.btn) : t("services.s1.btn")}
           </button>
         </div>
+
         {/* Right: Video */}
         {service.video && (
-          <div className="flex-1 w-full max-w-lg">
-            <div className="aspect-w-16 aspect-h-9 rounded-xl shadow-lg border-4 border-white overflow-hidden bg-black min-h-[230px]">
-              <video autoPlay loop src="/chemo.mp4" className=" h-full"></video>
+          <div className=" w-full md:max-w-2xl    z-0">
+            <div className="relative w-full h-full">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src={service.video}
+                className="max-w-2xl w-full  md:min-h-96 h-full   object-cover  "
+              ></video>
+              {/* Gradient overlay to blend with background */}
+              <div className="absolute inset-0 bg-gradient-to-b from-brand1 via-brand1/30 to-transparent md:bg-gradient-to-r md:from-brand1 md:via-brand1/30 md:to-transparent "></div>
             </div>
           </div>
         )}
