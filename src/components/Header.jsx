@@ -17,14 +17,18 @@ import {
   FaUsers,
   FaHandshake,
   FaArrowRight,
+  FaUserPlus,
+  FaUserFriends,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaUserDoctor } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbLicense } from "react-icons/tb";
 import { BiSolidContact } from "react-icons/bi";
 import { IoInformation } from "react-icons/io5";
+import { LuShield } from "react-icons/lu";
+import { MdOutlineLocalOffer } from "react-icons/md";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -152,39 +156,44 @@ const Header = () => {
 
   const aboutItems = [
     {
-      path: "/",
+      path: "/about#info",
       label: t("header.about1"),
       icon: <FaHospital className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#licenses",
       label: t("header.about2"),
       icon: <TbLicense className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#contacts",
       label: t("header.about3"),
       icon: <BiSolidContact className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#patients",
       label: t("header.about4"),
-      icon: <IoInformation className="text-xl text-white" />,
+      icon: <FaUserFriends className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#doctors",
       label: t("header.about5"),
-      icon: <FaUsers className="text-xl text-white" />,
+      icon: <FaUserDoctor className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#privacy",
       label: t("header.about6"),
-      icon: <FaUser className="text-xl text-white" />,
+      icon: <LuShield className="text-xl text-white" />,
     },
     {
-      path: "/",
+      path: "/about#offer",
       label: t("header.about7"),
-      icon: <FaHandshake className="text-xl text-white" />,
+      icon: <MdOutlineLocalOffer className="text-xl text-white" />,
+    },
+    {
+      path: "/about#vacancies",
+      label: t("header.about8"),
+      icon: <FaUserPlus className="text-xl text-white" />,
     },
   ];
 
@@ -342,6 +351,15 @@ const Header = () => {
 
           {/* Socials & Language Switch */}
           <div className="hidden lg:flex items-center gap-2 justify-end min-w-0">
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 text-lg xl:text-2xl hover:scale-125 transition-all duration-300"
+              aria-label="WhatsApp"
+            >
+              <img src="/max.png" alt="" className="w-6" />
+            </a>
             <a
               href="https://wa.me/74951234567"
               target="_blank"
@@ -529,7 +547,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
           <Link
-            to="/about#patients"
+            to="/"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
@@ -692,6 +710,15 @@ const Header = () => {
                 </div>
                 <div className="flex gap-4">
                   <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-500 text-lg xl:text-2xl hover:scale-125 transition-all duration-300"
+                    aria-label="WhatsApp"
+                  >
+                    <img src="/max.png" alt="" className="w-7" />
+                  </a>
+                  <a
                     href="https://wa.me/74951234567"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -815,10 +842,7 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link
-                  to="/about#patients"
-                  className="  hover:underline whitespace-nowrap"
-                >
+                <Link to="/" className="  hover:underline whitespace-nowrap">
                   {" "}
                   {t("header.forPatients")}
                 </Link>{" "}

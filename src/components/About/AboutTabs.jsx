@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom"; // ✅ important
-import { FaHospital, FaPhoneAlt, FaLock, FaUserFriends } from "react-icons/fa";
+import {
+  FaHospital,
+  FaPhoneAlt,
+  FaLock,
+  FaUserFriends,
+  FaUserPlus,
+} from "react-icons/fa";
 import { TbLicense } from "react-icons/tb";
 import { FaUserDoctor } from "react-icons/fa6";
 import { LuShield } from "react-icons/lu";
@@ -17,6 +23,8 @@ import ForPatients from "../../pages/ForPatients";
 import DoctorsPage from "../../pages/DoctorsPage";
 import PatientsInfo from "../ForPatients/PatientsInfo";
 import PatientsAccordion from "../ForPatients/PatientsAccordion";
+import AboutVacancies from "./AboutVacancies";
+import { BiSolidContact } from "react-icons/bi";
 
 const TABS = [
   {
@@ -34,7 +42,7 @@ const TABS = [
   {
     key: "contacts",
     labelKey: "about.tabs.contacts",
-    icon: <FaPhoneAlt />,
+    icon: <BiSolidContact />,
     component: AboutContacts,
   },
   {
@@ -61,6 +69,12 @@ const TABS = [
     icon: <MdOutlineLocalOffer />,
     component: AboutOfferContract,
   },
+  {
+    key: "vacancies",
+    labelKey: "about.tabs.vacancies",
+    icon: <FaUserPlus />,
+    component: AboutVacancies,
+  },
 ];
 
 const AboutTabs = () => {
@@ -80,12 +94,12 @@ const AboutTabs = () => {
   return (
     <section id="about-tabs" className="max-w-7xl mx-auto px-2 py-12">
       {/* Tabs header */}
-      <nav className="mb-6 grid grid-cols-2 md:grid-cols-3 lg:flex justify-between gap-4 flex-wrap">
+      <nav className="mb-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-4 flex-wrap">
         {TABS.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`flex items-center gap-2 px-4 py-2 font-semibold rounded-xl cursor-pointer transition-all 
+            className={`flex items-center gap-2 px-4 py-3 font-semibold rounded-xl cursor-pointer transition-all 
               ${
                 activeTab === tab.key
                   ? "bg-brand1 text-white"

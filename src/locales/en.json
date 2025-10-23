@@ -45,8 +45,8 @@
     "citySelect": "Please select your city",
     "moscow": "Moscow",
     "makhachkala": "Makhachkala",
-    "moscowAddress": "Moscow, Aminyevskoye Highway 6, <br />подъезд 1",
-    "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7, <br />Makhachkala",
+    "moscowAddress": "Aminyevskoye Highway 6, <br />подъезд 1",
+    "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7",
     "search": "Search...",
     "about1": "Information about the medical organization",
     "about2": "Licenses and certificates",
@@ -54,7 +54,8 @@
     "about4": "Information for patients",
     "about5": "Information about the organization's medical staff",
     "about6": "Personal Data Processing Policy",
-    "about7": "The Offer Agreement"
+    "about7": "The Offer Agreement",
+    "about8": "Vacancies"
   },
   "hero": {
     "slide1": {
@@ -594,7 +595,8 @@
       "patients": "For Patients",
       "doctors": "Doctors",
       "privacy": "Privacy Policy",
-      "offer": "Contract"
+      "offer": "Contract",
+      "vacancies": "Vacancies"
     },
     "info": {
       "title": "Information about the Medical Organization",

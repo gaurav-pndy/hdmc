@@ -45,8 +45,8 @@
     "citySelect": "Пожалуйста, выберите ваш город",
     "moscow": "Москва",
     "makhachkala": "Махачкала",
-    "moscowAddress": "Москва, Аминьевское шоссе 6, <br />подъезд 1",
-    "makhachkalaAddress": "Проспект Али-Гаджи Акушинского 7, <br />Махачкала",
+    "moscowAddress": "Аминьевское шоссе 6, подъезд 1",
+    "makhachkalaAddress": "Проспект Али-Гаджи Акушинского 7",
     "search": "Поиск...",
     "about1": "Информация о медицинской организации",
     "about2": "Лицензии и сертификаты",
@@ -54,7 +54,8 @@
     "about4": "Информация для пациентов",
     "about5": "Информация о медицинских работниках организации",
     "about6": "Политика обработки персональных данных",
-    "about7": "Договор оферты"
+    "about7": "Договор оферты",
+    "about8": "Вакансии"
   },
   "hero": {
     "slide1": {
@@ -587,15 +588,16 @@
       "title": "About Our Clinic",
       "subtitle": "A multidisciplinary medical organization with international quality standards"
     },
-    "tabs": {
-      "info": "Информация",
-      "licenses": "Licenses",
-      "contacts": "Contacts",
-      "patients": "For Patients",
-      "doctors": "Doctors",
-      "privacy": "Конфиденциальность",
-      "offer": "Договор"
-    },
+   "tabs": {
+  "info": "Информация",
+  "licenses": "Лицензии",
+  "contacts": "Контакты",
+  "patients": "Пациентам",
+  "doctors": "Врачам",
+  "privacy": "Политика конфиденциальности",
+  "offer": "Договор оферты",
+  "vacancies": "Вакансии"
+},
     "info": {
       "title": "Информация о медицинской организации",
       "subtitle": "Полная информация о нашей организации и её деятельности",
