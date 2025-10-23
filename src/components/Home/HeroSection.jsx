@@ -23,7 +23,8 @@ const slides = [
     subtitleKey: "hero.slide2.subtitle",
     buttonKey: "hero.slide2.button",
     gradient: "bg-gradient-to-r from-brand5 to-brand1",
-    image: "/hero2.png", // 👈 Unsplash image
+    video:
+      "https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm", // 👈 Unsplash image
   },
 ];
 
@@ -40,48 +41,97 @@ const HeroSection = () => {
         slidesPerView={1}
         className="w-full"
       >
-        {slides.map(
-          (
-            { icon, titleKey, subtitleKey, buttonKey, gradient, image },
-            index
-          ) => (
-            <SwiperSlide key={index}>
-              <div
-                className={`mx-auto w-full xl:min-h-[70vh] h-full flex items-center ${gradient}`}
-              >
-                <div className="flex flex-col md:flex-row max-w-[87rem] w-full px-6 md:px-12 py-6 md:py-10 xl:py-0 mx-auto items-center gap-10">
-                  {/* Left Side (Text) */}
-                  <div className="flex-1 flex flex-col items-start">
-                    <div className="mb-4 md:mb-8 flex items-center">
-                      <div className="bg-white/[0.13] rounded-full p-4 mr-4">
-                        {icon}
-                      </div>
-                      <div className="w-1 h-14 bg-white/40 rounded" />
-                    </div>
-                    <h1 className="text-white font-bold text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
-                      {t(titleKey)}
-                    </h1>
-                    <div className="text-gray-200 text-lg md:text-2xl mb-8">
-                      {t(subtitleKey)}
-                    </div>
-                    <button className="bg-white text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
-                      {t(buttonKey)}
-                    </button>
+        <SwiperSlide>
+          <div
+            className={`mx-auto w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full flex items-center bg-gradient-to-r from-brand1 to-brand5`}
+          >
+            <div className="flex flex-col md:flex-row max-w-[87rem] w-full px-6 md:px-12 py-6 md:py-10 xl:py-0 mx-auto items-center gap-10">
+              {/* Left Side (Text) */}
+              <div className="flex-1 flex flex-col items-start">
+                <div className="mb-4 md:mb-8 flex  items-center">
+                  <div className="bg-white/[0.13] h-16  w-16 flex justify-center items-center rounded-full p-4 mr-4">
+                    <SlBadge className="text-3xl p-0 text-white " />
                   </div>
-
-                  {/* Right Side (Image) */}
-                  <div className="flex-1 h-full  flex justify-center md:justify-end">
-                    <img
-                      src={image}
-                      alt="Hero illustration"
-                      className="rounded-2xl max-h-[36rem]  h-full w-full object-contain"
-                    />
-                  </div>
+                  <div className="w-1 h-14 bg-white/40 rounded" />
                 </div>
+                <h1 className="text-white font-bold text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
+                  {t("hero.slide1.title")}
+                </h1>
+                <div className="text-gray-200 text-lg md:text-2xl mb-8">
+                  {t("hero.slide1.subtitle")}
+                </div>
+                <button className="bg-white text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                  {t("hero.slide1.button")}
+                </button>
               </div>
-            </SwiperSlide>
-          )
-        )}
+
+              {/* Right Side (Image) */}
+              <div className="flex-1 h-full  flex justify-center md:justify-end">
+                <img
+                  src="/hero1.png"
+                  alt="Hero illustration"
+                  className="rounded-2xl max-h-[36rem]  h-full w-full object-contain"
+                />
+
+                {/* <video
+                        loop
+                        autoPlay
+                        muted
+                        playsInline
+                        src={video}
+                        alt="Hero illustration"
+                        className="rounded-2xl max-h-[40rem]  h-full w-full object-cover "
+                      />
+                     */}
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`mx-auto w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full grid md:grid-cols-2 items-center `}
+          >
+            <div className="flex flex-col md:flex-row px-6 md:pl-12 xl:pl-28 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full">
+              {/* Left Side (Text) */}
+              <div className="flex-1 flex flex-col items-start">
+                <div className="mb-4 md:mb-8 flex items-center">
+                  <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-4 mr-4">
+                    <LuUsers className="text-3xl text-white " />
+                  </div>
+                  <div className="w-1 h-14 bg-white/40 rounded" />
+                </div>
+                <h1 className="text-white font-bold text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
+                  {t("hero.slide2.title")}
+                </h1>
+                <div className="text-gray-200 text-lg md:text-2xl mb-8">
+                  {t("hero.slide2.subtitle")}
+                </div>
+                <button className="bg-white text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                  {t("hero.slide2.button")}
+                </button>
+              </div>
+
+              {/* Right Side (Image) */}
+            </div>
+            <div className="w-full  h-full z-30">
+              <div className="relative w-full  h-full">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src="https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm"
+                  alt="Hero illustration"
+                  className=" w-full  md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                ></video>
+                <div
+                  className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
+              from-[#218ba1] via-[#218ba1]/30 to-transparent`}
+                ></div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

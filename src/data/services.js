@@ -30,8 +30,7 @@ export const servicesData = [
     // subtitle: "services.s3.subtitle",
     // btn: "services.s3.btn",
     // about: "services.s3.about",
-    video:
-      "https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm",
+    video: "/imetc.mp4",
     gradient1: "from-[#c9c5bf] to-[#e2dad4]",
     gradient2: "from-[#e2dad4] via-[#e2dad4]/40 to-transparent",
   },
