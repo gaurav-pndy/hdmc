@@ -72,8 +72,12 @@ const DoctorsSection = () => {
 
         {/* Right side: Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
-            src="/doctors2.png"
+          <video
+            autoplay
+            loop
+            muted
+            playsInline
+            src="https://www.shutterstock.com/shutterstock/videos/3441635569/preview/stock-footage-multi-cultural-medical-team-wearing-scrubs-with-digital-tablet-walking-along-corridor-in-modern.webm"
             alt="Doctors illustration"
             className="w-full max-h-96 rounded-lg shadow-lg object-cover"
           />

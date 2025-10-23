@@ -28,7 +28,7 @@
     "ctDiagnosis": "КТ диагностика 24/7",
     "voluntaryObservation": "Добровольное наблюдение",
     "imetc": "IMETC - Международные консультации",
-    "telemedicine": "Телемедицинская",
+    "telemedicine": "Телемедицина",
     "expertise": "Экспертный центр",
     "addresses": "Адреса",
     "contact": "Контакты",
@@ -593,7 +593,7 @@
   "licenses": "Лицензии",
   "contacts": "Контакты",
   "patients": "Пациентам",
-  "doctors": "Врачам",
+  "doctors": "Наши врачи",
   "privacy": "Политика конфиденциальности",
   "offer": "Договор оферты",
   "vacancies": "Вакансии"

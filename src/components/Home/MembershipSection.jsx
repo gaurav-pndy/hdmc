@@ -71,21 +71,32 @@ const MembershipSection = () => {
   return (
     <section className="w-full bg-[#fbfbfb] py-16">
       <div className="max-w-[87rem] text-center mx-auto px-4 ">
-        <div className="flex justify-center">
-          <span className="bg-brand4/30 px-4 py-2 text-brand1  rounded-full font-medium mb-2 flex items-center gap-2">
-            <LuCrown className="text-lg" /> {t("membership.badge")}
-          </span>
+        <div className="flex flex-col md:flex-row items-center  gap-8 md:gap-16">
+          <div className="md:w-1/2 text-left">
+            <div className="flex ">
+              <span className="bg-brand4/30 px-4 py-2 text-brand1  rounded-full font-medium mb-4 flex items-center gap-2">
+                <LuCrown className="text-lg" /> {t("membership.badge")}
+              </span>
+            </div>
+            <h2 className="text-brand1 mx-auto px-4 text-4xl md:text-5xl font-bold mb-6">
+              {" "}
+              {t("membership.title")}
+            </h2>
+            <p className="md:text-lg  px-4  text-brand1/90  max-w-3xl mx-auto mb-10">
+              {t("membership.subtitle")}
+            </p>
+          </div>
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="https://www.shutterstock.com/shutterstock/photos/2554915839/display_1500/stock-photo-healthcare-professional-holds-a-health-card-symbolizing-modern-patient-identification-efficient-2554915839.jpg"
+              alt="Doctors illustration"
+              className="w-full max-h-80 rounded-lg shadow-lg object-cover"
+            />
+          </div>
         </div>
-        <h2 className="text-brand1 mx-auto px-4 text-center text-4xl md:text-5xl font-bold mb-6">
-          {" "}
-          {t("membership.title")}
-        </h2>
-        <p className="md:text-lg  px-4 text-center text-brand1/90  max-w-3xl mx-auto mb-10">
-          {t("membership.subtitle")}
-        </p>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6  mt-10 md:mt-14 mb-14">
           {features.map((f, i) => (
             <div
               key={i}
