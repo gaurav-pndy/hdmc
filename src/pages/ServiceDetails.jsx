@@ -54,8 +54,8 @@ const ServiceDetailsExpertAssessment = () => {
 
         {/* Rest of your content */}
         <div
-          className={` w-full md:min-h-96 flex flex-col justify-center h-full z-30 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-brand5 ${
-            service.video ? "to-brand1" : "to-brand3"
+          className={` w-full md:min-h-96 flex flex-col justify-center h-full z-30 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r  ${
+            service.video ? service.gradient1 : "from-brand5 to-brand3"
           } `}
         >
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
@@ -83,9 +83,7 @@ const ServiceDetailsExpertAssessment = () => {
             )}
             <div
               className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  ${
-                service.video
-                  ? "from-brand1 via-brand1/40 to-transparent md:via-brand1/30 "
-                  : "from-brand3 to-brand1"
+                service.video ? service.gradient2 : "from-brand3 to-brand1"
               } `}
             ></div>
           </div>

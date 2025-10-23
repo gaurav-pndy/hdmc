@@ -114,7 +114,7 @@ const AboutTabs = () => {
             >
               {tab.icon}
             </span>
-            {t(tab.labelKey)}
+            <span className="break-all ">{t(tab.labelKey)}</span>
           </button>
         ))}
       </nav>

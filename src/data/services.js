@@ -23,6 +23,8 @@ export const servicesData = [
     // btn: "services.s3.btn",
     // about: "services.s3.about",
     video: "/imetc.mp4",
+    gradient1: "from-[#c9c5bf] to-[#e2dad4]",
+    gradient2: "from-[#e2dad4] via-[#e2dad4]/40 to-transparent",
   },
   {
     id: "service4",
@@ -32,6 +34,8 @@ export const servicesData = [
     // btn: "services.s4.btn",
     // about: "services.s4.about",
     video: "/chemo.mp4",
+    gradient1: "from-[#698bff] to-[#000039]",
+    gradient2: "from-[#000039] via-[#000039]/40 to-transparent ",
   },
   {
     id: "service5",
