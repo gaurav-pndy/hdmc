@@ -22,6 +22,7 @@ export const servicesData = [
     // subtitle: "services.s3.subtitle",
     // btn: "services.s3.btn",
     // about: "services.s3.about",
+    video: "/imetc.mp4",
   },
   {
     id: "service4",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { servicesData } from "../data/services";
@@ -49,9 +49,15 @@ const ServiceDetailsExpertAssessment = () => {
         {t(service.title)}
       </div>
       {/* HERO */}
-      <section className="relative rounded-xl mx-auto   flex flex-col md:flex-row  items-center  overflow-hidden md:min-h-96">
-        {/* Left: Title and CTA */}
-        <div className="flex-1 w-full md:min-h-96 flex flex-col justify-center h-full z-10 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-brand1 ">
+      <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
+        <WaveBackground />
+
+        {/* Rest of your content */}
+        <div
+          className={` w-full md:min-h-96 flex flex-col justify-center h-full z-30 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-brand5 ${
+            service.video ? "to-brand1" : "to-brand3"
+          } `}
+        >
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
             {t(service.title)}
           </h1>
@@ -63,23 +69,27 @@ const ServiceDetailsExpertAssessment = () => {
           </button>
         </div>
 
-        {/* Right: Video */}
-        {service.video && (
-          <div className=" w-full md:max-w-2xl    z-0">
-            <div className="relative w-full h-full">
+        <div className="w-full  md:max-w-2xl h-full z-30">
+          <div className="relative w-full  h-full">
+            {service.video && (
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 src={service.video}
-                className="max-w-2xl w-full  md:min-h-96 h-full   object-cover  "
+                className="max-w-2xl w-full md:min-h-96 h-full object-cover"
               ></video>
-              {/* Gradient overlay to blend with background */}
-              <div className="absolute inset-0 bg-gradient-to-b from-brand1 via-brand1/30 to-transparent md:bg-gradient-to-r md:from-brand1 md:via-brand1/30 md:to-transparent "></div>
-            </div>
+            )}
+            <div
+              className={`absolute rounded-tr-2xl rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  ${
+                service.video
+                  ? "from-brand1 via-brand1/40 to-transparent md:via-brand1/30 "
+                  : "from-brand3 to-brand1"
+              } `}
+            ></div>
           </div>
-        )}
+        </div>
       </section>
 
       {/* TABS */}
@@ -153,6 +163,90 @@ const ServiceDetailsExpertAssessment = () => {
         )}
       </div>
     </div>
+  );
+};
+
+const WaveBackground = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const waves = [];
+    const spacing = 8; // Space between wave lines
+    const numWaves = Math.floor(canvas.width / spacing);
+
+    // Create uniform wave lines
+    for (let i = 0; i < numWaves; i++) {
+      waves.push({
+        x: i * spacing,
+        amplitude: 20, // Uniform amplitude for all waves
+        frequency: 0.015, // Uniform frequency
+        phase: 0, // Same phase for uniform pattern
+        opacity: 0.15 + (i % 3) * 0.05, // Slight opacity variation for depth
+      });
+    }
+
+    const drawWaves = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      waves.forEach((wave) => {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(51, 186, 189, ${wave.opacity})`;
+        ctx.lineWidth = 1;
+
+        for (let y = 0; y < canvas.height; y += 1) {
+          const x =
+            wave.x + Math.sin(y * wave.frequency + wave.phase) * wave.amplitude;
+          if (y === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+
+        ctx.stroke();
+      });
+    };
+
+    drawWaves();
+
+    // Handle resize
+    const handleResize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+
+      // Recalculate waves for new width
+      waves.length = 0;
+      const newNumWaves = Math.floor(canvas.width / spacing);
+      for (let i = 0; i < newNumWaves; i++) {
+        waves.push({
+          x: i * spacing,
+          amplitude: 20,
+          frequency: 0.015,
+          phase: 0,
+          opacity: 0.15 + (i % 3) * 0.05,
+        });
+      }
+
+      drawWaves();
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 z-40  pointer-events-none w-full h-full"
+      style={{ opacity: 0.3 }}
+    />
   );
 };
 
