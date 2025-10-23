@@ -78,11 +78,11 @@ const ServiceDetailsExpertAssessment = () => {
                 muted
                 playsInline
                 src={service.video}
-                className="max-w-2xl w-full md:min-h-96 h-full object-cover"
+                className="max-w-2xl w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
               ></video>
             )}
             <div
-              className={`absolute rounded-tr-2xl rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  ${
+              className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  ${
                 service.video
                   ? "from-brand1 via-brand1/40 to-transparent md:via-brand1/30 "
                   : "from-brand3 to-brand1"
