@@ -62,7 +62,7 @@ const ThankYou = () => {
         </div>
 
         {/* Transfer Funds Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-full  mb-10 relative overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8 w-full  mb-10 relative overflow-hidden">
           <div className="absolute -top-10 -right-10 opacity-5">
             <FaDove className="text-brand4 text-[200px]" />
           </div>
@@ -176,7 +176,7 @@ const ThankYou = () => {
                 </label>
                 <select
                   required
-                  className="border-2 border-brand1/20 rounded-lg p-3 focus:border-brand4 focus:ring-2 focus:ring-brand4/20 transition-all outline-none bg-white"
+                  className="border-2 border-brand1/20 rounded-lg p-3 focus:border-brand4 focus:ring-2 focus:ring-brand4/20 transition-all outline-none bg-white w-full overflow-hidden text-ellipsis whitespace-nowrap"
                   value={form.fundPurpose}
                   onChange={(e) =>
                     setForm((f) => ({ ...f, fundPurpose: e.target.value }))
