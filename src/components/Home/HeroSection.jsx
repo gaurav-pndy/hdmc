@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SlBadge } from "react-icons/sl";
 import { LuUsers } from "react-icons/lu";
+import WaveBackground from "../WaveBackground";
 
 const slides = [
   {
@@ -45,7 +46,7 @@ const HeroSection = () => {
           <div
             className={`mx-auto w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full flex items-center bg-gradient-to-r from-brand1 to-brand5`}
           >
-            <div className="flex flex-col md:flex-row max-w-[87rem] w-full px-6 md:px-12 py-6 md:py-10 xl:py-0 mx-auto items-center gap-10">
+            <div className="flex flex-col md:flex-row  w-full px-6 md:px-12 xl:px-20 py-6 md:py-10 xl:py-0 mx-auto items-center gap-10">
               {/* Left Side (Text) */}
               <div className="flex-1 flex flex-col items-start">
                 <div className="mb-4 md:mb-8 flex  items-center">
@@ -72,28 +73,21 @@ const HeroSection = () => {
                   alt="Hero illustration"
                   className="rounded-2xl max-h-[36rem]  h-full w-full object-contain"
                 />
-
-                {/* <video
-                        loop
-                        autoPlay
-                        muted
-                        playsInline
-                        src={video}
-                        alt="Hero illustration"
-                        className="rounded-2xl max-h-[40rem]  h-full w-full object-cover "
-                      />
-                     */}
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`mx-auto w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full grid md:grid-cols-2 items-center `}
+            className={`mx-auto relative  w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full grid md:grid-cols-5 items-center `}
           >
-            <div className="flex flex-col md:flex-row px-6 md:pl-12 xl:pl-28 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full">
+            <WaveBackground
+              stroke="rgba(200, 200, 200,"
+              custStyle="md:w-[40%] h-[60%]"
+            />
+            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20 z-20 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full ">
               {/* Left Side (Text) */}
-              <div className="flex-1 flex flex-col items-start">
+              <div className="flex-1 flex flex-col  items-start">
                 <div className="mb-4 md:mb-8 flex items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-4 mr-4">
                     <LuUsers className="text-3xl text-white " />
@@ -113,7 +107,7 @@ const HeroSection = () => {
 
               {/* Right Side (Image) */}
             </div>
-            <div className="w-full  h-full z-30">
+            <div className="w-full h-full md:col-span-3 z-10 -mt-[2px] md:-mt-0 md:-ml-[1px]">
               <div className="relative w-full  h-full">
                 <video
                   autoPlay
@@ -126,7 +120,7 @@ const HeroSection = () => {
                 ></video>
                 <div
                   className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
-              from-[#218ba1] via-[#218ba1]/30 to-transparent`}
+              from-[#218ba1] via-[#218ba1]/30 to-transparent via-20%`}
                 ></div>
               </div>
             </div>

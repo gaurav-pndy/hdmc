@@ -10,6 +10,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3653239365/preview/stock-footage-female-doctor-or-nurse-holds-a-medical-appointment-with-a-patient-in-a-hospital-office-visit-the.webm",
     gradient1: "from-[#4c5165] to-[#c1c7db]",
     gradient2: "from-[#c1c7db] via-[#c1c7db]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service2",
@@ -22,6 +23,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3769370609/preview/stock-footage-meeting-between-doctor-and-patient-to-examine-mri-scan-showing-a-tumor-exploring-treatment-options.webm",
     gradient1: "from-[#304f62] to-[#3c7795]",
     gradient2: "from-[#3c7795] via-[#3c7795]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service3",
@@ -33,6 +35,7 @@ export const servicesData = [
     video: "/imetc.mp4",
     gradient1: "from-[#c9c5bf] to-[#e2dad4]",
     gradient2: "from-[#e2dad4] via-[#e2dad4]/40 to-transparent",
+    stroke: "rgba(116, 143, 122,",
   },
   {
     id: "service4",
@@ -44,6 +47,7 @@ export const servicesData = [
     video: "/chemo.mp4",
     gradient1: "from-[#698bff] to-[#000039]",
     gradient2: "from-[#000039] via-[#000039]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service5",
@@ -56,6 +60,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/1057599388/preview/stock-footage-close-up-shot-of-unrecognizable-man-holding-hand-of-sick-woman-lying-in-hospital-bed.webm",
     gradient1: "from-[#674c40] to-[#d1bcb3]",
     gradient2: "from-[#d1bcb3] via-[#d1bcb3]/40 to-transparent ",
+    stroke: "rgba(45, 115, 64,",
   },
   {
     id: "service6",
@@ -68,18 +73,20 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3823541937/preview/stock-footage-doctor-explaining-ct-scan-results-to-patient-in-hospital-setting.webm",
     gradient1: "from-[#4784b1] to-[#93d1f3]",
     gradient2: "from-[#93d1f3] via-[#93d1f3]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service7",
     image: "/services/7.svg",
     title: "services.s7.title",
-    subtitle: "services.s7.subtitle",
+    // subtitle: "services.s7.subtitle",
     btn: "services.s7.btn",
     about: "services.s7.about",
     video:
       "https://www.shutterstock.com/shutterstock/videos/3788749615/preview/stock-footage-close-up-of-biologist-gloved-hands-using-microscope-in-sterile-laboratory-vibrant-blue-gloves.webm",
     gradient1: "from-[#7c8c89] to-[#bdceca]",
     gradient2: "from-[#bdceca] via-[#bdceca]/40 to-transparent ",
+    stroke: "rgba(89, 107, 94,",
   },
   {
     id: "service8",
@@ -92,6 +99,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3733950387/preview/stock-footage-closeup-doctor-examines-neoplasms-or-moles-on-the-woman-hand-patient-s-skin-using-special.webm",
     gradient1: "from-[#d4c3ae] to-[#75523b]",
     gradient2: "from-[#75523b] via-[#75523b]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service9",
@@ -104,6 +112,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3735515239/preview/stock-footage-medical-consultation-professional-young-female-doctors-in-surgical-suits-discussing-research-and.webm",
     gradient1: "from-[#355159] to-[#9bc2d0]",
     gradient2: "from-[#9bc2d0] via-[#9bc2d0]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service10",
@@ -116,6 +125,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3751868441/preview/stock-footage-a-patient-mri-scan-is-reviewed-by-doctors-and-the-patient-to-assess-brain-health-and-determine-the.webm",
     gradient1: "from-[#7e4a37] to-[#1f1612]",
     gradient2: "from-[#1f1612] via-[#1f1612]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
   {
     id: "service11",
@@ -128,6 +138,7 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3589072203/preview/stock-footage-happy-woman-doctor-and-hug-with-elderly-patient-for-consultation-visit-or-healthcare-support-at.webm",
     gradient1: "from-[#2b4547] to-[#7c969f]",
     gradient2: "from-[#7c969f] via-[#7c969f]/40 to-transparent ",
+    stroke: "rgba(154, 184, 162,",
   },
   {
     id: "service12",
@@ -140,5 +151,6 @@ export const servicesData = [
       "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
     gradient1: "from-[#9c7867] to-[#cac9cb]",
     gradient2: "from-[#cac9cb] via-[#cac9cb]/40 to-transparent ",
+    stroke: "rgba(51, 186, 189,",
   },
 ];
