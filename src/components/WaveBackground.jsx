@@ -78,7 +78,7 @@ const WaveBackground = ({ stroke, custStyle }) => {
   return (
     <canvas
       ref={canvasRef}
-      className={`absolute left-0 top-0 w-full ${custStyle} z-40  pointer-events-none  md:h-full`}
+      className={`absolute   w-full ${custStyle} z-40  pointer-events-none  md:h-full`}
       style={{ opacity: 0.8 }}
     />
   );

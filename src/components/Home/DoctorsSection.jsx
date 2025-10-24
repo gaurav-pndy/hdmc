@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import { FiFilter, FiSearch } from "react-icons/fi";
 import { doctorsData } from "../../data/doctors";
 import { Link } from "react-router-dom";
+import WaveBackground from "../WaveBackground";
 
 const DoctorsSection = () => {
   const { t } = useTranslation();
@@ -58,31 +59,38 @@ const DoctorsSection = () => {
       className="w-full py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto"
     >
       {/* --- Header --- */}
-      <div className="max-w-[87rem] mx-auto px-4 flex flex-col md:flex-row items-center  gap-8 md:gap-16">
-        {/* Left side: Text */}
-        <div className="md:w-1/2 text-left">
-          <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
+        <WaveBackground
+          stroke="rgba(51, 186, 189,"
+          custStyle="md:w-1/2 h-[65%] right-0 bottom-0"
+        />
+
+        <div className="w-full   h-full z-30 -mb-[1px] md:-mb-0">
+          <div className="relative w-full  h-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src="https://www.shutterstock.com/shutterstock/videos/3441635569/preview/stock-footage-multi-cultural-medical-team-wearing-scrubs-with-digital-tablet-walking-along-corridor-in-modern.webm"
+              alt="Doctors video"
+              className="max-w-2xl w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+            />
+            <div
+              className={`absolute   inset-0 bg-gradient-to-t via-30%  md:bg-gradient-to-l from-[#5279be] via-[#5279be]/40 to-transparent  `}
+            ></div>
+          </div>
+        </div>
+        <div className="text-left md:text-right w-full md:min-h-96  h-full z-30 p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
+          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
             {t("doctors.title")}
           </h2>
           <p
-            className="md:text-lg text-brand1/90"
+            className="md:text-lg text-white"
             dangerouslySetInnerHTML={{ __html: t("doctors.subtitle") }}
           ></p>
         </div>
-
-        {/* Right side: Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <video
-            autoplay
-            loop
-            muted
-            playsInline
-            src="https://www.shutterstock.com/shutterstock/videos/3441635569/preview/stock-footage-multi-cultural-medical-team-wearing-scrubs-with-digital-tablet-walking-along-corridor-in-modern.webm"
-            alt="Doctors illustration"
-            className="w-full max-h-96 rounded-lg shadow-lg object-cover"
-          />
-        </div>
-      </div>
+      </section>
 
       {/* --- Filter Bar --- */}
       <div className="w-full bg-white border border-brand4/30 rounded-xl shadow-sm mt-10 md:mt-12">

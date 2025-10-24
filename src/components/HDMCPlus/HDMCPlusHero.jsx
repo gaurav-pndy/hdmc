@@ -2,7 +2,7 @@ import React from "react";
 import { FaCrown, FaPhoneAlt } from "react-icons/fa";
 
 const HDMCPlusHero = () => (
-  <section className="w-full  px-2 bg-gradient-to-b from-[#e8f1f4] to-[#e9f7f7] flex flex-col items-center justify-center min-h-[70vh] h-full py-10">
+  <section className="w-full  px-2 bg-gradient-to-b from-[#e8f1f4] to-[#e9f7f7] flex flex-col items-center justify-center min-h-[60vh] h-full py-10">
     <div className="flex justify-center mb-6">
       <span className="flex items-center gap-2 px-7 py-3 text-lg font-semibold rounded-full bg-brand1/20 text-brand1 ">
         <FaCrown className="text-brand1/80 text-xl" />

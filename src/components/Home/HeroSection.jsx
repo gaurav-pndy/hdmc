@@ -83,7 +83,7 @@ const HeroSection = () => {
           >
             <WaveBackground
               stroke="rgba(200, 200, 200,"
-              custStyle="md:w-[40%] h-[60%]"
+              custStyle="md:w-[40%] h-[60%] left-0 top-0"
             />
             <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20 z-20 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full ">
               {/* Left Side (Text) */}

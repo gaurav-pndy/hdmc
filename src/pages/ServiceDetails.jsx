@@ -51,7 +51,10 @@ const ServiceDetailsExpertAssessment = () => {
       </div>
       {/* HERO */}
       <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
-        <WaveBackground stroke={service.stroke} custStyle="md:w-1/2 h-1/2" />
+        <WaveBackground
+          stroke={service.stroke}
+          custStyle="md:w-1/2 h-1/2 left-0 top-0"
+        />
 
         {/* Rest of your content */}
         <div
@@ -59,12 +62,12 @@ const ServiceDetailsExpertAssessment = () => {
             service.video ? service.gradient1 : "from-brand5 to-brand3"
           } `}
         >
-          <h1 className="text-white break-all text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-white  text-3xl md:text-[2.5rem] font-bold mb-8">
             {t(service.title)}
           </h1>
-          <p className="text-white text-lg md:text-2xl mb-6 drop-shadow">
+          {/* <p className="text-white text-lg md:text-2xl mb-6 drop-shadow">
             {service.subtitle && t(service.subtitle)}
-          </p>
+          </p> */}
           <button className="flex items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white ">
             {service.btn ? t(service.btn) : t("services.s1.btn")}
           </button>
