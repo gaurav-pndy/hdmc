@@ -81,12 +81,12 @@ const DoctorsSection = () => {
             ></div>
           </div>
         </div>
-        <div className="text-left md:text-right w-full md:min-h-96  h-full z-30 p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-left md:text-right w-full md:min-h-96  h-full  p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
+          <h2 className="text-white z-40 text-4xl md:text-5xl font-bold mb-6">
             {t("doctors.title")}
           </h2>
           <p
-            className="md:text-lg text-white"
+            className="md:text-lg z-40 text-white"
             dangerouslySetInnerHTML={{ __html: t("doctors.subtitle") }}
           ></p>
         </div>

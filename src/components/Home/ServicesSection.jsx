@@ -18,12 +18,12 @@ const ServicesSection = () => {
             stroke="rgba(251, 186, 189,"
             custStyle="md:w-1/2 h-[65%] left-0 top-0"
           />
-          <div className="text-left  w-full md:min-h-96  h-full z-30 p-6 pb-16 md:p-6 lg:pl-10 xl:pl-12 bg-gradient-to-b md:bg-gradient-to-r from-[#012135] to-[#4378a0]">
-            <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-left  w-full md:min-h-96  h-full  p-6 pb-16 md:p-6 lg:pl-10 xl:pl-12 bg-gradient-to-b md:bg-gradient-to-r from-[#012135] to-[#4378a0]">
+            <h2 className="text-white z-40 text-4xl md:text-5xl font-bold mb-6">
               {t("services.title")}
             </h2>
             <p
-              className="md:text-lg text-white"
+              className="md:text-lg z-40 text-white"
               dangerouslySetInnerHTML={{ __html: t("services.subtitle") }}
             ></p>
           </div>

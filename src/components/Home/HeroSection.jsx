@@ -85,29 +85,29 @@ const HeroSection = () => {
               stroke="rgba(200, 200, 200,"
               custStyle="md:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20 z-20 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full ">
+            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20  w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full ">
               {/* Left Side (Text) */}
               <div className="flex-1 flex flex-col  items-start">
-                <div className="mb-4 md:mb-8 flex items-center">
+                <div className="mb-4 md:mb-8 flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-4 mr-4">
                     <LuUsers className="text-3xl text-white " />
                   </div>
                   <div className="w-1 h-14 bg-white/40 rounded" />
                 </div>
-                <h1 className="text-white font-bold text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
+                <h1 className="text-white font-bold z-40 text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
                   {t("hero.slide2.title")}
                 </h1>
-                <div className="text-gray-200 text-lg md:text-2xl mb-8">
+                <div className="text-gray-200 text-lg z-40 md:text-2xl mb-8">
                   {t("hero.slide2.subtitle")}
                 </div>
-                <button className="bg-white text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                <button className="bg-white relative z-40 text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
                   {t("hero.slide2.button")}
                 </button>
               </div>
 
               {/* Right Side (Image) */}
             </div>
-            <div className="w-full h-full md:col-span-3 z-10 -mt-[2px] md:-mt-0 md:-ml-[1px]">
+            <div className="w-full h-full md:col-span-3 -z-10 -mt-[2px] md:-mt-0 md:-ml-[1px]">
               <div className="relative w-full  h-full">
                 <video
                   autoPlay

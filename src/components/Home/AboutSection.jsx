@@ -49,11 +49,11 @@ const AboutSection = () => {
             custStyle="md:w-1/2 h-[80%] left-0 top-0"
           />
           {/* Left - Text & Features */}
-          <div className="text-left  w-full md:min-h-96  h-full z-30 p-6 pb-16 md:p-6 lg:pl-10 xl:pl-12 bg-gradient-to-t md:bg-gradient-to-l from-[#c6bf78] to-[#5b6838]">
-            <h2 className="text-white text-4xl font-bold mb-4">
+          <div className="text-left  w-full md:min-h-96  h-full p-6 pb-16 md:p-6 lg:pl-10 xl:pl-12 bg-gradient-to-t md:bg-gradient-to-l from-[#c6bf78] to-[#5b6838]">
+            <h2 className="text-white text-4xl z-40 font-bold mb-4">
               {t("aboutClinic.title")}
             </h2>
-            <p className="text-lg text-white mb-4 max-w-3xl">
+            <p className="text-lg text-white mb-4 z-40 max-w-3xl">
               {t("aboutClinic.subtitle")}
             </p>
 
@@ -61,14 +61,14 @@ const AboutSection = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {features.map((f, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
+                  <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1 z-40">
                     {f.icon}
                   </div>
                   <div>
-                    <div className="font-medium text-white leading-snug mb-1">
+                    <div className="font-medium text-white z-40 leading-snug mb-1">
                       {t(f.title)}
                     </div>
-                    <div className="text-gray-200 text-sm leading-tight">
+                    <div className="text-gray-200 text-sm z-40 leading-tight">
                       {t(f.desc)}
                     </div>
                   </div>
@@ -77,11 +77,11 @@ const AboutSection = () => {
             </div>
 
             {/* Stats - 4 Boxes */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-2  md:grid-cols-4 gap-4 mb-6">
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer  transition-all duration-300 p-4 flex flex-col items-center text-center"
+                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer  transition-all duration-300 p-4 flex flex-col z-40 items-center text-center"
                 >
                   <span className="text-brand1 text-2xl md:text-3xl font-bold ">
                     {t(s.value)}
@@ -94,7 +94,7 @@ const AboutSection = () => {
             </div>
 
             {/* Button */}
-            <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit">
+            <button className="bg-brand1 relative text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit !z-40">
               {t("aboutClinic.moreBtn")}
             </button>
           </div>

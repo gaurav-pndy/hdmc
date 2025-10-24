@@ -58,17 +58,17 @@ const ServiceDetailsExpertAssessment = () => {
 
         {/* Rest of your content */}
         <div
-          className={` w-full md:min-h-96 flex flex-col justify-center h-full z-30 p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r  ${
+          className={` w-full md:min-h-96 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r  ${
             service.video ? service.gradient1 : "from-brand5 to-brand3"
           } `}
         >
-          <h1 className="text-white  text-3xl md:text-[2.5rem] font-bold mb-8">
+          <h1 className="text-white z-40 text-3xl md:text-[2.5rem] font-bold mb-8">
             {t(service.title)}
           </h1>
           {/* <p className="text-white text-lg md:text-2xl mb-6 drop-shadow">
             {service.subtitle && t(service.subtitle)}
           </p> */}
-          <button className="flex items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white ">
+          <button className="flex relative z-40 items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white ">
             {service.btn ? t(service.btn) : t("services.s1.btn")}
           </button>
         </div>

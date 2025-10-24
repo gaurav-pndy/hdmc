@@ -90,17 +90,17 @@ const MembershipSection = () => {
               ></div>
             </div>
           </div>
-          <div className="text-left md:text-right w-full md:min-h-96  h-full z-30 p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#b2c3d2] flex flex-col justify-center to-[#708b9c]">
-            <div className="flex md:justify-end">
-              <span className="bg-brand1/50 px-4 py-2 text-white  rounded-full font-medium mb-4 flex items-center gap-2">
+          <div className="text-left md:text-right w-full md:min-h-96  h-full  p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#b2c3d2] flex flex-col justify-center to-[#708b9c]">
+            <div className="flex md:justify-end z-40">
+              <span className="bg-brand3 px-4 py-2 text-white  rounded-full font-medium mb-4 flex items-center gap-2">
                 <LuCrown className="text-lg" /> {t("membership.badge")}
               </span>
             </div>
-            <h2 className="text-white mx-auto  text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-white mx-auto z-40 text-4xl md:text-5xl font-bold mb-6">
               {" "}
               {t("membership.title")}
             </h2>
-            <p className="md:text-lg   text-white  max-w-3xl mx-auto ">
+            <p className="md:text-lg z-40  text-white  max-w-3xl mx-auto ">
               {t("membership.subtitle")}
             </p>
           </div>
