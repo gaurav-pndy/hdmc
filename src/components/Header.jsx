@@ -612,7 +612,7 @@ const Header = () => {
             {t("header.earlyDiagnosis")}{" "}
           </Link>{" "}
           <Link
-            to="/doctors"
+            to="/center-of-expertise"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
@@ -881,7 +881,10 @@ const Header = () => {
                   {" "}
                   {t("header.earlyDiagnosis")}
                 </Link>{" "}
-                <Link to="/" className="  hover:underline whitespace-nowrap">
+                <Link
+                  to="/center-of-expertise"
+                  className="  hover:underline whitespace-nowrap"
+                >
                   {" "}
                   {t("header.expertise")}
                 </Link>{" "}

@@ -954,5 +954,25 @@
       "feature1": "Response within 2 hours",
       "feature2": "100% confidential"
     }
+  },
+  "expertise": {
+  "title": "Expert Center",
+  "subtitle": "Our areas of expertise are represented by leading specialists from Russia and abroad",
+  "area1": "Oncogynecology",
+  "area2": "Gynecology",
+  "area3": "Traumatology and Orthopedics",
+  "area4": "Head and Neck Surgery and Oncology",
+  "area5": "Oncomammology",
+  "area6": "Oncoplastic Surgery",
+  "area7": "Antitumor Drug Therapy",
+  "area8": "Radiotherapy",
+  "area9": "Early Disease Diagnosis",
+  "area10": "Neuro-Oncology",
+  "cta": {
+    "title": "Need a consultation?",
+    "subtitle": "Make an appointment with our specialists",
+    "btn": "Book an appointment"
   }
+}
+
 }

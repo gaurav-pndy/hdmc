@@ -13,6 +13,7 @@ import ForPatients from "./pages/ForPatients";
 import AboutPage from "./pages/AboutPage";
 import Telemedicine from "./pages/Telemedicine";
 import ServiceDetails from "./pages/ServiceDetails";
+import ExpertiseCenter from "./pages/ExpertiseCenter";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,6 +43,10 @@ function App() {
         {
           path: "/telemedicine-consultation",
           element: <Telemedicine />,
+        },
+        {
+          path: "/center-of-expertise",
+          element: <ExpertiseCenter />,
         },
         {
           path: "/hdmc-plus",
