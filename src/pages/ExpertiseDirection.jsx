@@ -21,7 +21,7 @@ const ExpertiseDirection = () => {
       {/* Featured doctor */}
       <div className="max-w-[87rem] mx-auto px-4 py-8">
         <h2 className="text-brand1 text-xl md:text-2xl xl:text-4xl font-semibold mb-6">
-          Онкологи
+          {t("expertise.oncology")}
         </h2>
 
         <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-8 flex flex-col md:flex-row gap-8">
@@ -44,21 +44,21 @@ const ExpertiseDirection = () => {
                 <div className="text-3xl font-bold text-brand3">
                   {t(doctors[0].years)}
                 </div>
-                <div className="text-sm text-gray-600">Опыт работы</div>
+                <div className="text-sm text-gray-600">
+                  {t("expertise.experience")}
+                </div>
               </div>
               <div className="">
                 <div className="text-brand3 text-3xl font-bold">
-                  с {t(doctors[0].memberSince)}
+                  {"expertise.since"} {t(doctors[0].memberSince)}
                 </div>
-                <div className="text-sm text-gray-600">Работа в НДЦ</div>
+                <div className="text-sm text-gray-600">
+                  {t("expertise.workAtHDMC")}
+                </div>
               </div>
             </div>
 
             <div className=" text-gray-700 mb-6">
-              <div className="mb-2">
-                Специализируется в области хирургии, лечении генетик и
-                наркозаторийата, также
-              </div>
               <ul className="list-disc pl-5 space-y-1">
                 {doctors[0].shortInfo &&
                   doctors[0].shortInfo.map((info, i) => (
@@ -68,7 +68,7 @@ const ExpertiseDirection = () => {
             </div>
 
             <button className="bg-brand3 hover:bg-brand1 text-white px-6 py-2 rounded-lg  font-medium transition-all duration-300 cursor-pointer">
-              Узнать больше о докторе
+              {t("expertise.btn")}
             </button>
           </div>
 
@@ -104,7 +104,8 @@ const ExpertiseDirection = () => {
                   {t(doc.position)}
                 </div>
                 <div className="text-xs text-brand3">
-                  Work Experience: {t(doc.experience)} years
+                  {t("expertise.experience")}: {t(doc.experience)}{" "}
+                  {t("expertise.years")}
                 </div>
               </div>
             </div>
@@ -116,7 +117,7 @@ const ExpertiseDirection = () => {
       <div className="bg-white py-12">
         <div className="max-w-[87rem] mx-auto px-4">
           <h2 className="text-brand1 text-xl md:text-2xl xl:text-4xl font-semibold mb-6">
-            Направления
+            {t("expertise.directions")}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
