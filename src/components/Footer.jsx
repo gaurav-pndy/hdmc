@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaTelegramPlane,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -66,12 +67,12 @@ const Footer = () => {
               {t("footer.priceList")}
             </a>
 
-            <a href="#" className="hover:underline">
+            <Link to="/about#privacy" className="hover:underline">
               {t("footer.agreement")}
-            </a>
-            <a href="#" className="hover:underline">
+            </Link>
+            <Link to="/about#offer" className="hover:underline">
               {t("footer.privacy")}
-            </a>
+            </Link>
           </div>
         </div>
 
