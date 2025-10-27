@@ -67,10 +67,10 @@ const Footer = () => {
               {t("footer.priceList")}
             </a>
 
-            <Link to="/about#privacy" className="hover:underline">
+            <Link to="/about#offer" className="hover:underline">
               {t("footer.agreement")}
             </Link>
-            <Link to="/about#offer" className="hover:underline">
+            <Link to="/about#privacy" className="hover:underline">
               {t("footer.privacy")}
             </Link>
           </div>
