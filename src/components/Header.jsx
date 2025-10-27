@@ -19,6 +19,9 @@ import {
   FaArrowRight,
   FaUserPlus,
   FaUserFriends,
+  FaClipboardList,
+  FaTag,
+  FaMoneyBillAlt,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -26,20 +29,20 @@ import { FaLocationDot, FaUserDoctor } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbLicense } from "react-icons/tb";
 import { BiSolidContact } from "react-icons/bi";
-import { IoInformation } from "react-icons/io5";
+import { IoDocumentText, IoInformation } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
-import { MdOutlineLocalOffer } from "react-icons/md";
+import { MdMedicalServices, MdOutlineLocalOffer } from "react-icons/md";
+import { ImUsers } from "react-icons/im";
 
 const Header = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
   const [isAboutOpen, setIsAboutOpen] = useState(false); // mobile dropdown
+  const [isPatientsOpen, setIsPatientsOpen] = useState(false); // mobile dropdown
   const [city, setCity] = useState("Moscow");
   const dropdownRef = useRef(null);
-  const aboutDropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [aboutDropdownOpen, setaboutDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language);
 
   const [showCityInit, setShowCityInit] = useState(false);
@@ -47,6 +50,7 @@ const Header = () => {
 
   const [showServices, setShowServices] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
+  const [showPatientsDropdown, setShowPatientsDropdown] = useState(false);
 
   useEffect(() => {
     const cityConfirmed = localStorage.getItem("cityConfirmed");
@@ -197,6 +201,39 @@ const Header = () => {
     },
   ];
 
+  const patientItems = [
+    {
+      path: "#appointment",
+      label: t("header.patient1"),
+      icon: <ImUsers className="text-xl text-white" />,
+    },
+    {
+      path: "#preparation",
+      label: t("header.patient2"),
+      icon: <FaClipboardList className="text-xl text-white" />,
+    },
+    {
+      path: "#offers",
+      label: t("header.patient3"),
+      icon: <FaTag className="text-xl text-white" />,
+    },
+    {
+      path: "#insurance",
+      label: t("header.patient4"),
+      icon: <MdMedicalServices className="text-xl text-white" />,
+    },
+    {
+      path: "#blog",
+      label: t("header.patient5"),
+      icon: <IoDocumentText className="text-xl text-white" />,
+    },
+    {
+      path: "#price",
+      label: t("header.patient6"),
+      icon: <FaMoneyBillAlt className="text-xl text-white" />,
+    },
+  ];
+
   const scrollToSection = (sectionId) => {
     const target = document.querySelector(sectionId);
     if (target) {
@@ -208,6 +245,17 @@ const Header = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+
+  const handleScrollToPatientsSection = (sectionId) => {
+    if (isOpen) setIsOpen(false);
+    if (location.pathname === "/for-patients") {
+      // Already on homepage → just scroll
+      scrollToSection(sectionId);
+    } else {
+      // Go to homepage first, then scroll
+      navigate("/for-patients", { state: { scrollTo: sectionId } });
+    }
+  };
 
   const handleScrollToSection = (sectionId) => {
     if (location.pathname === "/") {
@@ -546,13 +594,50 @@ const Header = () => {
               )}
             </AnimatePresence>
           </div>
-          <Link
-            to="/"
-            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
+          <div
+            onMouseEnter={() => setShowPatientsDropdown(true)}
+            onMouseLeave={() => setShowPatientsDropdown(false)}
+            className="relative   whitespace-nowrap cursor-pointer"
           >
-            {" "}
-            {t("header.forPatients")}
-          </Link>{" "}
+            <Link
+              to="/about#patients"
+              className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
+            >
+              {t("header.forPatients")}{" "}
+              <FaChevronDown className="text-sm mt-1" />
+            </Link>
+
+            {/* Animated dropdown */}
+            <AnimatePresence>
+              {showPatientsDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-3 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-2xl xl:w-4xl"
+                >
+                  {patientItems.map((p, idx) => (
+                    <button
+                      onClick={() => handleScrollToPatientsSection(p.path)}
+                      key={idx}
+                      className="block  group  text-wrap   transition-all relative duration-300 rounded-lg"
+                    >
+                      <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300 mb-1">
+                        {p.icon}
+                      </div>
+                      <p className="group-hover:text-brand2 text-sm xl:text-base text-left">
+                        {p.label}
+                      </p>
+                      <div className="absolute right-2 top-3 overflow-hidden w-6">
+                        <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
+                      </div>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <button
             onClick={() => handleScrollToSection("#reviews")}
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
@@ -842,10 +927,41 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link to="/" className="  hover:underline whitespace-nowrap">
-                  {" "}
-                  {t("header.forPatients")}
-                </Link>{" "}
+                <div>
+                  <button
+                    onClick={() => setIsPatientsOpen(!isPatientsOpen)}
+                    className="flex items-center justify-between w-full"
+                  >
+                    {t("header.forPatients")}
+                    <FaChevronDown
+                      className={`ml-2 transform transition ${
+                        isAboutOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {isPatientsOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="ml-4 mt-2 max-h-80 py-2  overflow-y-auto text-sm font-normal flex flex-col gap-4"
+                      >
+                        {patientItems.map((p, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() =>
+                              handleScrollToPatientsSection(p.path)
+                            }
+                            className="block text-left"
+                          >
+                            {p.label}
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
                 <button
                   onClick={() => handleScrollToSection("#reviews")}
                   className="text-left  whitespace-nowrap"

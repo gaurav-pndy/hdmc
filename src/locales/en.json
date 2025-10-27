@@ -55,7 +55,14 @@
     "about5": "Information about the organization's medical staff",
     "about6": "Personal Data Processing Policy",
     "about7": "The Offer Agreement",
-    "about8": "Vacancies"
+    "about8": "Vacancies",
+    "patient1": "Appointment Booking",
+"patient2": "Preparing for Appointment",
+"patient3": "Special Offers",
+"patient4": "VHI Services",
+"patient5": "HDMC Blog",
+"patient6": "Price List"
+
   },
   "hero": {
     "slide1": {
@@ -955,6 +962,28 @@
       "feature2": "100% confidential"
     }
   },
+  "forPatientsPage": {
+  "title": "For Patients",
+  "subtitle": "All the necessary information for a comfortable medical experience at HDMC",
+  "heading1": "Appointment Booking",
+  "text1": "Convenient online booking with our clinic specialists. Choose a doctor, select a time, and confirm your visit in just a few clicks. Our booking system operates 24/7, allowing you to schedule your visit at any convenient time.",
+  "btn1": "Book Online",
+  "heading2": "Preparing for Your Visit",
+  "text2": "Learn how to properly prepare for your appointment, which documents to bring, and what you should know before your visit. Proper preparation helps the doctor perform a more accurate diagnosis and prescribe effective treatment.",
+  "btn2": "Instructions",
+  "heading3": "Special Offers",
+  "text3": "Promotions, discounts, and special programs for our patients. Quality healthcare made more affordable. Regularly updated offers help you get the care you need at great prices.",
+  "btn3": "View Offers",
+  "heading4": "Insurance Services",
+  "text4": "We work with all major insurance companies. Full range of services covered by health insurance. Our specialists will help you understand your insurance program and use its benefits as effectively as possible.",
+  "btn4": "Learn More About Insurance",
+  "heading5": "HDMC Blog",
+  "text5": "Helpful articles about health, disease prevention, and clinic news from our experts. Stay informed about modern treatment methods and recommendations for maintaining your health.",
+  "btn5": "Read the Blog",
+  "heading6": "Price List",
+  "text6": "Transparent prices for all clinic services. Up-to-date price list with descriptions of medical procedures. We maintain an honest pricing policy with no hidden fees.",
+  "btn6": "View Prices"
+},
   "expertise": {
   "title": "Expert Center",
   "subtitle": "Our areas of expertise are represented by leading specialists from Russia and abroad",
