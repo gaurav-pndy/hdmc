@@ -14,6 +14,7 @@ import AboutPage from "./pages/AboutPage";
 import Telemedicine from "./pages/Telemedicine";
 import ServiceDetails from "./pages/ServiceDetails";
 import ExpertiseCenter from "./pages/ExpertiseCenter";
+import ExpertiseDirection from "./pages/ExpertiseDirection";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +48,10 @@ function App() {
         {
           path: "/center-of-expertise",
           element: <ExpertiseCenter />,
+        },
+        {
+          path: "/center-of-expertise/:direction",
+          element: <ExpertiseDirection />,
         },
         {
           path: "/hdmc-plus",

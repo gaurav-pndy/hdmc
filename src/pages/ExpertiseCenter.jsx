@@ -23,53 +23,53 @@ const ExpertiseCenter = () => {
 
   const EXPERTISE_LIST = [
     {
-      key: "onco-gynecology",
-      label: t("expertise.area1"),
+      key: "oncogynecology",
+      label: t("expertise.oncogynecology.title"),
       icon: <FaHeart className="text-brand4 text-2xl" />,
     },
     {
       key: "gynecology",
-      label: t("expertise.area2"),
+      label: t("expertise.gynecology.title"),
       icon: <FaStethoscope className="text-brand4 text-2xl" />,
     },
     {
       key: "traumatology",
-      label: t("expertise.area3"),
+      label: t("expertise.traumatology.title"),
       icon: <FaWrench className="text-brand4 text-2xl" />,
     },
     {
-      key: "head-neck-surgery",
-      label: t("expertise.area4"),
+      key: "surgery",
+      label: t("expertise.surgery.title"),
       icon: <FaUserMd className="text-brand4 text-2xl" />,
     },
     {
-      key: "onco-mammology",
-      label: t("expertise.area5"),
+      key: "oncomammology",
+      label: t("expertise.oncomammoology.title"),
       icon: <FaNotesMedical className="text-brand4 text-2xl" />,
     },
     {
-      key: "onco-plastic",
-      label: t("expertise.area6"),
+      key: "oncoplastic",
+      label: t("expertise.oncoplastic.title"),
       icon: <FaCut className="text-brand4 text-2xl" />,
     },
     {
-      key: "chemo-therapy",
-      label: t("expertise.area7"),
+      key: "antineoplastic",
+      label: t("expertise.antineoplastic.title"),
       icon: <FaFlask className="text-brand4 text-2xl" />,
     },
     {
       key: "radiotherapy",
-      label: t("expertise.area8"),
+      label: t("expertise.radiotherapy.title"),
       icon: <FaBolt className="text-brand4 text-2xl" />,
     },
     {
-      key: "early-diagnosis",
-      label: t("expertise.area9"),
+      key: "earlydiagnosis",
+      label: t("expertise.earlydiagnosis.title"),
       icon: <FaSearch className="text-brand4 text-2xl" />,
     },
     {
-      key: "neuro-oncology",
-      label: t("expertise.area10"),
+      key: "neurooncology",
+      label: t("expertise.neurooncology.title"),
       icon: <FaBrain className="text-brand4 text-2xl" />,
     },
   ];
@@ -90,8 +90,8 @@ const ExpertiseCenter = () => {
         {EXPERTISE_LIST.map((item) => (
           <button
             key={item.key}
-            onClick={() => navigate(`/expertise/${item.key}`)}
-            className="flex items-center gap-4 bg-white border border-brand4/10 rounded-2xl shadow-md hover:shadow-lg px-6 py-5 text-left transition ring-brand4/20 hover:ring-2"
+            onClick={() => navigate(`/center-of-expertise/${item.key}`)}
+            className="flex items-center gap-4 bg-white border border-brand4/10 rounded-2xl shadow-md hover:shadow-lg px-6 py-5 text-left transition ring-brand4/20 hover:ring-2 cursor-pointer"
           >
             <span className="bg-brand4/10 p-4 rounded-xl">{item.icon}</span>
             <span className="font-semibold text-brand1 text-lg">
