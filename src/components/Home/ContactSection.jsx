@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IoPaperPlaneOutline } from "react-icons/io5";
+import WaveBackground from "../WaveBackground";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -36,12 +37,16 @@ const ContactSection = () => {
                   "url('https://www.shutterstock.com/shutterstock/photos/2560601181/display_1500/stock-photo-businessman-interacting-with-a-glowing-paper-plane-icon-on-a-virtual-interface-symbolizing-message-2560601181.jpg')", // replace with actual image
               }}
             ></div>
+            <WaveBackground
+              stroke="rgb(33, 139, 161,"
+              custStyle="w-full h-full left-0 top-0"
+            />
 
             {/* Left-to-right overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-r to-transparent from-brand4"></div>
 
             {/* Foreground content */}
-            <div className="relative z-10 p-4 md:p-10">
+            <div className="relative z-40 p-4 md:p-10">
               <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-brand1">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}

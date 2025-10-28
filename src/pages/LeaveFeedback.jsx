@@ -103,10 +103,10 @@ const LeaveFeedback = () => {
           <div
             className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#45556f] to-[#9c969f]  `}
           >
-            <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-white z-40 text-4xl md:text-5xl font-bold mb-6">
               {t("feedback.title")}
             </h2>
-            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto ">
+            <p className="text-lg md:text-xl z-40 text-gray-100 max-w-3xl mx-auto ">
               {t("feedback.subtitle")}
             </p>
           </div>

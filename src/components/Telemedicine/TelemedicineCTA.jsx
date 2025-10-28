@@ -27,13 +27,13 @@ const TelemedicineCTA = () => {
           </div>
         </div>
         <div className="text-left md:text-right w-full md:min-h-96  h-full  p-6  md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#024879] flex flex-col justify-center to-[#94bfe9]">
-          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow">
+          <h2 className="text-white z-40 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow">
             {t("telemedicine.cta.title")}
           </h2>
-          <p className="text-white/90 text-lg lg:text-xl font-medium mb-9">
+          <p className="text-white/90 text-lg z-40 lg:text-xl font-medium mb-9">
             {t("telemedicine.cta.subtitle")}
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-10">
+          <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-end z-40 mb-6">
             <button className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl  text-brand1  font-semibold hover:bg-transparent border border-white transition-all  duration-300 cursor-pointer hover:text-white">
               {t("telemedicine.cta.cta1")}
               <FaArrowRight className="ml-2" />
@@ -42,7 +42,7 @@ const TelemedicineCTA = () => {
               {t("telemedicine.cta.cta2")}
             </button>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-2">
+          <div className="flex flex-col md:flex-row gap-8 justify-center md:justify-end z-40 items-center mt-2">
             <div className="flex items-center gap-2 text-white  ">
               <FaClock className="text-white text-2xl" />
               {t("telemedicine.cta.feature1")}

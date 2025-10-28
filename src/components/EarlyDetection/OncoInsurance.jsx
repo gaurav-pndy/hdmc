@@ -28,16 +28,16 @@ const OncoInsurance = () => {
         </div>
         <div className="text-left md:text-right w-full md:min-h-80  h-full  p-6  md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#303b4b] flex flex-col justify-center to-[#a4b5bf]">
           <div className="flex flex-col gap-5 items-start md:items-end text-white  w-full">
-            <div className="flex items-center gap-3 ">
+            <div className="flex items-center z-40 gap-3 ">
               <FaUserShield className="text-3xl" />
               <span className="text-2xl md:text-5xl font-bold">
                 {t("earlyDetection.insurance.title")}
               </span>
             </div>
-            <div className="md:text-xl font-normal mb-3">
+            <div className="md:text-xl relative z-40 font-normal mb-3">
               {t("earlyDetection.insurance.desc")}
             </div>
-            <button className=" bg-white text-brand1 font-semibold text-base px-7 py-3 rounded-lg shadow hover:bg-transparent border border-white transition-all duration-300 cursor-pointer hover:text-white">
+            <button className=" bg-white relative z-40 text-brand1 font-semibold text-base px-7 py-3 rounded-lg shadow hover:bg-transparent border border-white transition-all duration-300 cursor-pointer hover:text-white">
               {t("earlyDetection.insurance.button")}
             </button>
           </div>

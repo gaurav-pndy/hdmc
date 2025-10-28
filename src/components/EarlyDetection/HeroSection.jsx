@@ -32,19 +32,19 @@ const HeroSection = () => {
       <div
         className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#0d7431] to-[#e2cfc8]  `}
       >
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center z-40 md:justify-start">
           <span className="flex items-center gap-2 px-6 py-2 text-base rounded-full bg-brand3 border border-brand5 text-white shadow">
             {t("earlyDetection.hero.programBadge")}
           </span>
         </div>
 
         {/* Title */}
-        <h1 className="text-white text-3xl md:text-6xl font-bold mb-4">
+        <h1 className="text-white text-3xl relative z-40 md:text-6xl font-bold mb-4">
           {t("earlyDetection.hero.title")}
         </h1>
 
         {/* ✨ Animated feature slideshow */}
-        <div className="relative h-8 w-full  text-center md:h-10 mb-4">
+        <div className="relative h-8 w-full z-40 text-center md:h-10 mb-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -60,19 +60,19 @@ const HeroSection = () => {
         </div>
 
         {/* Subtitle + Description */}
-        <div className="text-white text-lg md:text-2xl font-medium mb-2 drop-shadow">
+        <div className="text-white text-lg z-40 md:text-2xl font-medium mb-2 drop-shadow">
           {t("earlyDetection.hero.subtitle")}
         </div>
-        <div className="text-white/90 text-lg font-normal max-w-2xl mx-auto mb-6 drop-shadow">
+        <div className="text-white/90 text-lg z-40 font-normal max-w-2xl mx-auto mb-6 drop-shadow">
           {t("earlyDetection.hero.description")}
         </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6  justify-center md:justify-start">
-          <button className="bg-white text-brand1 font-semibold px-8 py-3  rounded-lg hover:bg-transparent hover:text-white transition shadow cursor-pointer border border-white">
+          <button className="bg-white text-brand1 z-40 font-semibold px-8 py-3  rounded-lg hover:bg-transparent hover:text-white transition shadow cursor-pointer border border-white">
             {t("earlyDetection.hero.programButton")}
           </button>
-          <button className="bg-transparent text-white font-semibold px-8 py-3  rounded-lg hover:bg-white hover:text-brand1 transition shadow cursor-pointer border border-white">
+          <button className="bg-transparent text-white z-40 font-semibold px-8 py-3  rounded-lg hover:bg-white hover:text-brand1 transition shadow cursor-pointer border border-white">
             {t("earlyDetection.hero.moreButton")}
           </button>
         </div>

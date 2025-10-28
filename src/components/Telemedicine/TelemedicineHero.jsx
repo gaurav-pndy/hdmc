@@ -24,27 +24,27 @@ const TelemedicineHero = () => {
         </span>
       </div> */}
         {/* Main Heading */}
-        <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">
+        <h1 className="text-white relative z-40 text-3xl md:text-5xl font-bold mb-4">
           {t("telemedicine.hero.titleLine1")}
           <br />
           <span>{t("telemedicine.hero.titleLine2")}</span>
         </h1>
         {/* Subtitle */}
-        <p className="text-white text-lg md:text-xl font-medium mb-6 drop-shadow">
+        <p className="text-white relative z-40 text-lg md:text-xl font-medium mb-6 drop-shadow">
           {t("telemedicine.hero.subtitle")}
         </p>
         {/* CTA Buttons */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-4 ">
-          <button className="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg bg-white text-brand1 font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white">
+        <div className="flex flex-col md:flex-row md:justify-start gap-4 ">
+          <button className="flex relative z-40 items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg bg-white text-brand1 font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white">
             {t("telemedicine.hero.ctaConsult")}
             <FaArrowRight className="ml-2" />
           </button>
-          <button className="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg border border-white text-white font-medium bg-transparent hover:bg-white hover:text-brand1 transition-all duration-300 cursor-pointer">
+          <button className="flex relative z-40 items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg border border-white text-white font-medium bg-transparent hover:bg-white hover:text-brand1 transition-all duration-300 cursor-pointer">
             {t("telemedicine.hero.ctaMore")}
           </button>
         </div>
         {/* Stats */}
-        {/* <div className="flex flex-col md:flex-row gap-10 justify-center mt-2">
+        <div className="flex flex-col md:flex-row gap-10 justify-center mt-2">
           <div className="flex items-center gap-2 text-white/90 text-lg font-semibold">
             <FaUserMd className="text-white text-2xl" />
             50+ {t("telemedicine.hero.stats.experts")}
@@ -57,7 +57,7 @@ const TelemedicineHero = () => {
             <FaClock className="text-white text-2xl" />
             {t("telemedicine.hero.stats.time")}
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className="w-full   h-full z-30 -mt-[3px] md:-mt-0">
