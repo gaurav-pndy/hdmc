@@ -41,34 +41,34 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="w-full py-16 ">
-      <div className="max-w-[87rem] mx-auto w-full">
+      <div className="max-w-[87rem] relative bg-gradient-to-r from-gray-300  to-gray-100 mx-auto px-4 md:p-10 rounded-xl w-full">
+        <WaveBackground
+          stroke="rgba(340, 340, 340,"
+          custStyle="md:w-1/2 h-1/2 left-0 top-0"
+        />
         {/* Top Section - Text + Image */}
-        <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
-          <WaveBackground
-            stroke="rgba(251, 186, 189,"
-            custStyle="md:w-1/2 h-[80%] left-0 top-0"
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left - Text & Features */}
-          <div className="text-left  w-full md:min-h-96  h-full p-6 pb-16 md:p-6 lg:pl-10 xl:pl-12 bg-gradient-to-t md:bg-gradient-to-l from-[#c6bf78] to-[#5b6838]">
-            <h2 className="text-white text-4xl z-40 font-bold mb-4">
+          <div>
+            <h2 className="text-brand1 text-4xl font-bold relative z-40 mb-6">
               {t("aboutClinic.title")}
             </h2>
-            <p className="text-lg text-white mb-4 z-40 max-w-3xl">
+            <p className="text-lg text-brand1/80 mb-8 relative z-40 max-w-3xl">
               {t("aboutClinic.subtitle")}
             </p>
 
             {/* Features */}
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
               {features.map((f, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1 z-40">
+                  <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br z-40 from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
                     {f.icon}
                   </div>
                   <div>
-                    <div className="font-medium text-white z-40 leading-snug mb-1">
+                    <div className="font-medium z-40 text-black leading-snug mb-1">
                       {t(f.title)}
                     </div>
-                    <div className="text-gray-200 text-sm z-40 leading-tight">
+                    <div className="text-brand1/80 z-40 text-sm leading-tight">
                       {t(f.desc)}
                     </div>
                   </div>
@@ -77,16 +77,16 @@ const AboutSection = () => {
             </div>
 
             {/* Stats - 4 Boxes */}
-            <div className="grid grid-cols-2  md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer  transition-all duration-300 p-4 flex flex-col z-40 items-center text-center"
+                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer z-40  transition-all duration-300 p-4 flex flex-col items-center text-center"
                 >
-                  <span className="text-brand1 text-2xl md:text-3xl font-bold ">
+                  <span className="text-brand1 text-2xl md:text-3xl font-bold mb-1">
                     {t(s.value)}
                   </span>
-                  <span className="text-brand1/80 text-sm md:text-base font-normal leading-5">
+                  <span className="text-brand1/80 text-sm md:text-base font-normal">
                     {t(s.label)}
                   </span>
                 </div>
@@ -94,25 +94,20 @@ const AboutSection = () => {
             </div>
 
             {/* Button */}
-            <button className="bg-brand1 relative text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit !z-40">
+            <button className="bg-brand1 relative z-40 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit">
               {t("aboutClinic.moreBtn")}
             </button>
           </div>
 
           {/* Right - Image */}
-          <div className="w-full   h-full z-30 -mt-[2px] md:-mt-0">
-            <div className="relative w-full  h-full">
-              <img
-                src="/about-color.jpg" // Replace with your image
-                alt="About Clinic"
-                className="max-w-2xl w-full md:min-h-96  h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
-              />
-              <div
-                className={`absolute   inset-0 bg-gradient-to-b via-20%  md:bg-gradient-to-r from-[#c6bf78] via-[#c6bf78]/40 to-transparent  `}
-              ></div>
-            </div>
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src="/about3.png" // Replace with your image
+              alt="About Clinic"
+              className="w-full max-w-2xl  object-cover"
+            />
           </div>
-        </section>
+        </div>
       </div>
     </section>
   );

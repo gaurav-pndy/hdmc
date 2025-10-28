@@ -92,7 +92,7 @@ const AboutTabs = () => {
   }, [location.hash]);
 
   return (
-    <section id="about-tabs" className="max-w-7xl mx-auto px-2 py-12">
+    <section id="about-tabs" className="max-w-[87rem] mx-auto  py-12">
       {/* Tabs header */}
       <nav className="mb-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-4 flex-wrap">
         {TABS.map((tab) => (

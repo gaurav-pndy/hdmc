@@ -9,7 +9,7 @@ const HDMCPlus = () => {
   return (
     <div>
       <HDMCPlusHero />
-      <HDMCPlusBenefits />
+      {/* <HDMCPlusBenefits /> */}
       <MembershipSection />
       <HDMCPlusFAQ />
       <HDMCPlusCTA />

@@ -5,7 +5,7 @@ import AboutFooter from "../components/About/AboutFooter";
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className="px-4 mb-10">
       <AboutHero />
       <AboutTabs />
       <AboutFooter />

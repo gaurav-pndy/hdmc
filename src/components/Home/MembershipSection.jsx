@@ -19,32 +19,32 @@ const MembershipSection = () => {
   // FEATURES
   const features = [
     {
-      icon: <CiCalendar className="text-[#125e84] text-4xl" />,
+      icon: <CiCalendar className="text-white text-4xl" />,
       title: t("membership.features.feature1.title"),
       text: t("membership.features.feature1.desc"),
     },
     {
-      icon: <IoShieldOutline className="text-[#125e84] text-4xl" />,
+      icon: <IoShieldOutline className="text-white text-4xl" />,
       title: t("membership.features.feature2.title"),
       text: t("membership.features.feature2.desc"),
     },
     {
-      icon: <LuUsers className="text-[#125e84] text-4xl" />,
+      icon: <LuUsers className="text-white text-4xl" />,
       title: t("membership.features.feature3.title"),
       text: t("membership.features.feature3.desc"),
     },
     {
-      icon: <RiStethoscopeFill className="text-[#125e84] text-4xl" />,
+      icon: <RiStethoscopeFill className="text-white text-4xl" />,
       title: t("membership.features.feature4.title"),
       text: t("membership.features.feature4.desc"),
     },
     {
-      icon: <IoDocumentTextOutline className="text-[#125e84] text-4xl" />,
+      icon: <IoDocumentTextOutline className="text-white text-4xl" />,
       title: t("membership.features.feature5.title"),
       text: t("membership.features.feature5.desc"),
     },
     {
-      icon: <FiCheckCircle className="text-[#125e84] text-4xl" />,
+      icon: <FiCheckCircle className="text-white text-4xl" />,
       title: t("membership.features.feature6.title"),
       text: t("membership.features.feature6.desc"),
     },
@@ -72,12 +72,12 @@ const MembershipSection = () => {
   return (
     <section className="w-full bg-[#fbfbfb] py-16">
       <div className="max-w-[87rem] text-center mx-auto px-4 ">
-        <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
-          <WaveBackground
+        <section className="relative rounded-xl  mx-auto  items-center overflow-hidden ">
+          {/* <WaveBackground
             stroke="rgba(151, 186, 189,"
             custStyle="md:w-1/2 h-1/2 right-0 bottom-0"
-          />
-          <div className="w-full   h-full z-30 -mb-[1px] md:-mb-0">
+          /> */}
+          {/* <div className="w-full   h-full z-30 -mb-[1px] md:-mb-0">
             <div className="relative w-full  h-full">
               {" "}
               <img
@@ -89,18 +89,18 @@ const MembershipSection = () => {
                 className={`absolute   inset-0 bg-gradient-to-t via-30%  md:bg-gradient-to-l from-[#708b9c] via-[#708b9c]/40 to-transparent  `}
               ></div>
             </div>
-          </div>
-          <div className="text-left md:text-right w-full md:min-h-96  h-full  p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#b2c3d2] flex flex-col justify-center to-[#708b9c]">
-            <div className="flex md:justify-end z-40">
+          </div> */}
+          <div className="text-center w-full  h-full   ">
+            <div className="flex justify-center z-40">
               <span className="bg-brand3 px-4 py-2 text-white  rounded-full font-medium mb-4 flex items-center gap-2">
                 <LuCrown className="text-lg" /> {t("membership.badge")}
               </span>
             </div>
-            <h2 className="text-white mx-auto z-40 text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-brand1 mx-auto z-40 text-4xl md:text-5xl font-bold mb-6">
               {" "}
               {t("membership.title")}
             </h2>
-            <p className="md:text-lg z-40  text-white  max-w-3xl mx-auto ">
+            <p className="md:text-lg z-40  text-brand1/80  max-w-3xl mx-auto ">
               {t("membership.subtitle")}
             </p>
           </div>
@@ -113,9 +113,9 @@ const MembershipSection = () => {
               key={i}
               className="bg-white rounded-xl px-8 py-7 flex flex-col items-center text-center hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 group"
             >
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-brand1/30 mb-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300 mb-1">
                 {f.icon}
-              </span>
+              </div>
               <div className="text-black group-hover:text-brand2 transition-all duration-300 font-medium text-xl mb-2">
                 {f.title}
               </div>
