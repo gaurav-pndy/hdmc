@@ -22,6 +22,17 @@ import {
   FaClipboardList,
   FaTag,
   FaMoneyBillAlt,
+  FaFemale,
+  FaDna,
+  FaUserMd,
+  FaHeartbeat,
+  FaBrain,
+  FaEye,
+  FaUserNurse,
+  FaUserTie,
+  FaBone,
+  FaStethoscope,
+  FaChevronUp,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -31,8 +42,25 @@ import { TbLicense } from "react-icons/tb";
 import { BiSolidContact } from "react-icons/bi";
 import { IoDocumentText, IoInformation } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
-import { MdMedicalServices, MdOutlineLocalOffer } from "react-icons/md";
+import {
+  MdFamilyRestroom,
+  MdMedicalServices,
+  MdOutlineLocalOffer,
+  MdPsychology,
+} from "react-icons/md";
 import { ImUsers } from "react-icons/im";
+import {
+  GiBrain,
+  GiHeartOrgan,
+  GiKidneys,
+  GiMedicines,
+  GiNoseFront,
+  GiPsychicWaves,
+  GiScalpel,
+  GiStomach,
+} from "react-icons/gi";
+import { BsThermometerHalf } from "react-icons/bs";
+import { AiOutlineUserSwitch } from "react-icons/ai";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -40,6 +68,8 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
   const [isAboutOpen, setIsAboutOpen] = useState(false); // mobile dropdown
   const [isPatientsOpen, setIsPatientsOpen] = useState(false); // mobile dropdown
+  const [isDoctorsOpen, setIsDoctorsOpen] = useState(false);
+  const [openSubCategory, setOpenSubCategory] = useState(null);
   const [city, setCity] = useState("Moscow");
   const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -51,6 +81,8 @@ const Header = () => {
   const [showServices, setShowServices] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   const [showPatientsDropdown, setShowPatientsDropdown] = useState(false);
+  const [showDoctorsDropdown, setShowDoctorsDropdown] = useState(false);
+  const [activeSub, setActiveSub] = useState();
 
   useEffect(() => {
     const cityConfirmed = localStorage.getItem("cityConfirmed");
@@ -231,6 +263,204 @@ const Header = () => {
       path: "#price",
       label: t("header.patient6"),
       icon: <FaMoneyBillAlt className="text-xl text-white" />,
+    },
+  ];
+
+  const doctorsItems = [
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d1"),
+      icon: <FaFemale className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d2"),
+      icon: <GiStomach className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d3"),
+      icon: <FaDna className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d4"),
+      icon: <GiMedicines className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d5"),
+      icon: <FaUserMd className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d6"),
+      icon: <FaHeartbeat className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d7"),
+      icon: <FaBrain className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d8"),
+      icon: <GiBrain className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d9"),
+      icon: <GiKidneys className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d10"),
+      icon: <MdFamilyRestroom className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d11"),
+      icon: <GiNoseFront className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d12"),
+      icon: <FaEye className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d13"),
+      icon: <FaUserNurse className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d14"),
+      icon: <GiPsychicWaves className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d15"),
+      icon: <MdPsychology className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d16"),
+      icon: <FaUserTie className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d17"),
+      icon: <GiHeartOrgan className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d18"),
+      icon: <BsThermometerHalf className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d19"),
+      icon: <FaUserFriends className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d20"),
+      icon: <FaBone className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d21"),
+      icon: <GiScalpel className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d22"),
+      icon: <FaUserMd className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d23"),
+      icon: <AiOutlineUserSwitch className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d24"),
+      icon: <FaStethoscope className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d25"),
+      icon: <GiScalpel className=" text-white" />,
+    },
+    {
+      label: "Онкологи",
+      icon: <GiMedicines className=" text-white" />,
+      subItems: [
+        {
+          category: "Терапевтические онкологи",
+          items: [
+            {
+              label: "Медицинский онколог",
+              path: "/doctors",
+            },
+            { label: "Онколог-радиотерапевт", path: "/doctors/radiotherapist" },
+          ],
+        },
+        {
+          category: "Хирургические онкологи",
+          items: [
+            {
+              label: "Онколог-абдоминальный хирург",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-гематолог",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-гепатопанкреатобилиарный хирург",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-гинеколог",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог головы и шеи",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-колопроктолог",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-маммолог",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-нейрохирург",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-ортопед",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-офтальмолог",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-пластический хирург",
+              path: "/doctors",
+            },
+            {
+              label: "Онколог-торакальный хирург",
+              path: "/doctors",
+            },
+            { label: "Онколог-уролог", path: "/doctors" },
+          ],
+        },
+      ],
     },
   ];
 
@@ -532,13 +762,97 @@ const Header = () => {
               )}
             </AnimatePresence>
           </div>
-          <Link
-            to="/about#doctors"
-            className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
+          <div
+            onMouseEnter={() => setShowDoctorsDropdown(true)}
+            onMouseLeave={() => {
+              setShowDoctorsDropdown(false);
+              setActiveSub(null);
+            }}
+            className="relative whitespace-nowrap cursor-pointer"
           >
-            {" "}
-            {t("header.doctors")}{" "}
-          </Link>{" "}
+            <Link
+              to="/about#doctors"
+              className="flex items-center gap-1 hover:text-brand2 transition-all duration-300"
+            >
+              {t("header.doctors")} <FaChevronDown className="text-sm mt-1" />
+            </Link>
+
+            <AnimatePresence>
+              {showDoctorsDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6  z-50 w-3xl xl:w-6xl"
+                >
+                  {doctorsItems.map((d, idx) => (
+                    <div
+                      key={idx}
+                      className={`${!d.subItems && "group"} relative`}
+                      onMouseEnter={() => d.subItems && setActiveSub(d.label)}
+                      onMouseLeave={() => d.subItems && setActiveSub(null)}
+                    >
+                      <Link
+                        to={d.path || "#"}
+                        className="flex items-center gap-2 group-hover:text-brand2 text-sm xl:text-base font-medium transition-all duration-300"
+                      >
+                        <div className="w-8  h-8 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300">
+                          {d.icon}
+                        </div>
+                        <p className="group-hover:text-brand2 pr-8 text-sm xl:text-base text-wrap">
+                          {d.label}
+                        </p>
+                        {d.subItems ? (
+                          <FaChevronUp className="text-sm mt-1 " />
+                        ) : (
+                          <div className="absolute right-0 top-2 overflow-hidden w-6">
+                            <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
+                          </div>
+                        )}
+                      </Link>
+
+                      {/* Submenu for oncologists */}
+                      <AnimatePresence>
+                        {activeSub === d.label && d.subItems && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-1/2 -translate-x-1/2 bottom-full ml-4 bg-gray-200 border border-gray-200 rounded-xl shadow-lg shadow-black/30 p-4 w-xl xl:w-3xl z-50 flex flex-col gap-4 justify-between"
+                          >
+                            {d.subItems.map((cat, i) => (
+                              <div key={i} className="mb-2">
+                                <h4 className="text-brand1 font-semibold mb-4 text-xl">
+                                  {cat.category}
+                                </h4>
+                                <ul className="grid grid-cols-2 gap-4">
+                                  {cat.items.map((item, j) => (
+                                    <li key={j}>
+                                      <Link
+                                        to={item.path}
+                                        className="block group text-wrap text-gray-700 hover:text-brand2 transition-all relative pr-8"
+                                      >
+                                        {item.label}
+                                        <div className="absolute right-2 top-2 overflow-hidden w-6">
+                                          <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
+                                        </div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           {/* Services Dropdown - Desktop */}{" "}
           <div
             onMouseEnter={() => setShowServices(true)}
@@ -885,13 +1199,102 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link
-                  to="/about#doctors"
-                  className="text-left  whitespace-nowrap"
-                >
-                  {" "}
-                  {t("header.doctors")}{" "}
-                </Link>{" "}
+                <div>
+                  {/* Button to toggle main Doctors section */}
+                  <button
+                    onClick={() => setIsDoctorsOpen(!isDoctorsOpen)}
+                    className="flex items-center justify-between w-full"
+                  >
+                    {t("header.doctors")}
+                    <FaChevronDown
+                      className={`ml-2 transform transition ${
+                        isDoctorsOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {/* Expandable Section */}
+                  <AnimatePresence>
+                    {isDoctorsOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="ml-4 mt-2 max-h-80 py-2  overflow-y-auto text-sm font-normal flex flex-col gap-4"
+                      >
+                        {doctorsItems.map((item, idx) =>
+                          item.subItems ? (
+                            <div key={idx}>
+                              {/* Button for categories like Онкологи */}
+                              <button
+                                onClick={() =>
+                                  setOpenSubCategory(
+                                    openSubCategory === item.label
+                                      ? null
+                                      : item.label
+                                  )
+                                }
+                                className="flex items-center justify-between w-full"
+                              >
+                                <div className="">
+                                  <span>{item.label}</span>
+                                </div>
+                                <FaChevronDown
+                                  className={`ml-2 transform transition ${
+                                    openSubCategory === item.label
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                />
+                              </button>
+
+                              {/* Sub-category expansion */}
+                              <AnimatePresence>
+                                {openSubCategory === item.label && (
+                                  <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="ml-4 mt-2 flex flex-col gap-3"
+                                  >
+                                    {item.subItems.map((sub, i) => (
+                                      <div key={i}>
+                                        <p className="font-semibold text-[15px] mb-1">
+                                          {sub.category}
+                                        </p>
+                                        <div className="flex ml-2 flex-col gap-2 ">
+                                          {sub.items.map((doctor, j) => (
+                                            <Link
+                                              key={j}
+                                              to={doctor.path}
+                                              onClick={() => setIsOpen(false)}
+                                              className="block hover:underline"
+                                            >
+                                              {doctor.label}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </div>
+                          ) : (
+                            <Link
+                              key={idx}
+                              to={item.path}
+                              onClick={() => setIsOpen(false)}
+                              className=""
+                            >
+                              {item.label}
+                            </Link>
+                          )
+                        )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
                 {/* Services Dropdown - Mobile */}
                 <div>
                   <button
@@ -935,7 +1338,7 @@ const Header = () => {
                     {t("header.forPatients")}
                     <FaChevronDown
                       className={`ml-2 transform transition ${
-                        isAboutOpen ? "rotate-180" : ""
+                        isPatientsOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
