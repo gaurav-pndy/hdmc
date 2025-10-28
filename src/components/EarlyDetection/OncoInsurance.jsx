@@ -7,7 +7,7 @@ const OncoInsurance = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="max-w-[87rem] mt-20 lg:mt-52 text-center mx-auto px-4 ">
+    <section className="max-w-[87rem] mt-16 text-center mx-auto px-4 ">
       <div className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-80">
         <WaveBackground
           stroke="rgba(151, 186, 189,"
