@@ -50,7 +50,7 @@ const ExpertiseDirection = () => {
               </div>
               <div className="">
                 <div className="text-brand3 text-3xl font-bold">
-                  {"expertise.since"} {t(doctors[0].memberSince)}
+                  {t("expertise.since")} {t(doctors[0].memberSince)}
                 </div>
                 <div className="text-sm text-gray-600">
                   {t("expertise.workAtHDMC")}
