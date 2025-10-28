@@ -7,7 +7,7 @@ const ActionButtons = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full  bg-brand2/20 py-5 px-4">
+    <div className="w-full  bg-gray-300 py-5 px-4">
       <div className="flex flex-wrap gap-5 justify-between max-w-7xl mx-auto">
         {/* Book an appointment */}
         <button

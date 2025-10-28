@@ -57,11 +57,55 @@
     "about7": "The Offer Agreement",
     "about8": "Vacancies",
     "patient1": "Appointment Booking",
-"patient2": "Preparing for Appointment",
-"patient3": "Special Offers",
-"patient4": "VHI Services",
-"patient5": "HDMC Blog",
-"patient6": "Price List"
+    "patient2": "Preparing for Appointment",
+    "patient3": "Special Offers",
+    "patient4": "VHI Services",
+    "patient5": "HDMC Blog",
+    "patient6": "Price List",
+    "oncologist": "Oncologists",
+    "doctorsDrop": {
+      "d1": "Gynecologist",
+      "d2": "Gastroenterologist",
+      "d3": "Geneticist",
+      "d4": "Hematologist",
+      "d5": "Dermatovenereologist",
+      "d6": "Cardiologist",
+      "d7": "Neurologist",
+      "d8": "Neurosurgeon",
+      "d9": "Nephrologist",
+      "d10": "Family Medicine Doctor",
+      "d11": "Otolaryngologist (ENT)",
+      "d12": "Ophthalmologist",
+      "d13": "Occupational Pathologist",
+      "d14": "Psychiatrist-Narcologist",
+      "d15": "Psychiatrist",
+      "d16": "Psychotherapist",
+      "d17": "Cardiovascular Surgeon",
+      "d18": "Rheumatologist",
+      "d19": "Therapist",
+      "d20": "Traumatologist and Orthopedist",
+      "d21": "Surgeon",
+      "d22": "Urologist",
+      "d23": "Ultrasound Doctor",
+      "d24": "Functional Diagnostics Doctor",
+      "d25": "Maxillofacial Surgeon",
+      "d26": "Medical Oncologist",
+      "d27": "Radiation Oncologist",
+      "d28": "Abdominal Oncological Surgeon",
+      "d29": "Hematologic Oncologist",
+      "d30": "Hepatopancreatobiliary Oncological Surgeon",
+      "d31": "Gynecologic Oncologist",
+      "d32": "Head and Neck Oncologist",
+      "d33": "Coloproctologic Oncologist",
+      "d34": "Mammologist Oncologist",
+      "d35": "Neurosurgical Oncologist",
+      "d36": "Orthopedic Oncologist",
+      "d37": "Ophthalmologic Oncologist",
+      "d38": "Plastic Oncological Surgeon",
+      "d39": "Thoracic Oncological Surgeon",
+      "d40": "Urologic Oncologist"
+    }
+
 
   },
   "hero": {
@@ -889,7 +933,7 @@
       "stats": {
         "experts": "experts",
         "specialties": "specialties",
-        "time": "Consultation within 24–48 hours"
+        "time": "Instant confirmation"
       }
     },
     "advantages": {
@@ -958,7 +1002,7 @@
       "subtitle": "Book a consultation with an international expert today",
       "cta1": "Book now",
       "cta2": "Contact us",
-      "feature1": "Response within 2 hours",
+      "feature1": "Instant confirmation",
       "feature2": "100% confidential"
     }
   },

@@ -4,22 +4,22 @@ import { FaGlobe, FaVideo, FaClock, FaShieldAlt } from "react-icons/fa";
 
 const ADVANTAGES = [
   {
-    icon: <FaGlobe className="text-brand1 text-3xl" />,
+    icon: <FaGlobe className="text-white text-3xl" />,
     titleKey: "telemedicine.advantages.intlExperts.title",
     descKey: "telemedicine.advantages.intlExperts.desc",
   },
   {
-    icon: <FaVideo className="text-brand1 text-3xl" />,
+    icon: <FaVideo className="text-white text-3xl" />,
     titleKey: "telemedicine.advantages.onlineConsult.title",
     descKey: "telemedicine.advantages.onlineConsult.desc",
   },
   {
-    icon: <FaClock className="text-brand1 text-3xl" />,
+    icon: <FaClock className="text-white text-3xl" />,
     titleKey: "telemedicine.advantages.fastBooking.title",
     descKey: "telemedicine.advantages.fastBooking.desc",
   },
   {
-    icon: <FaShieldAlt className="text-brand1 text-3xl" />,
+    icon: <FaShieldAlt className="text-white text-3xl" />,
     titleKey: "telemedicine.advantages.confidentiality.title",
     descKey: "telemedicine.advantages.confidentiality.desc",
   },
@@ -40,7 +40,7 @@ const TelemedicineAdvantages = () => {
               key={item.titleKey}
               className="bg-white rounded-xl px-8 py-7 flex flex-col hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 group"
             >
-              <span className="flex items-center justify-center w-14 h-14 rounded-lg bg-brand1/30 mb-4">
+              <span className="flex items-center justify-center w-14 h-14 rounded-lg bg-[#255b94] mb-4">
                 {item.icon}
               </span>
               <div className="mt-2 mb-4 text-xl font-semibold text-black group-hover:text-brand2 transition-all duration-300 ">

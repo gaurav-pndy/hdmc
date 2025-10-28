@@ -393,7 +393,7 @@ const Header = () => {
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      label: "Онкологи",
+      label: t("header.oncologist"),
       icon: <GiMedicines className=" text-white" />,
       subItems: [
         {
@@ -609,22 +609,27 @@ const Header = () => {
                 info@medclinic.ru
               </a>
             </div>
-            <div className=" items-center gap-1   whitespace-nowrap">
-              <h6 className="font-semibold "> {t("header.moscow")} </h6>
-              <p
-                className="text-xs text-brand1 leading-4"
-                dangerouslySetInnerHTML={{ __html: t("header.moscowAddress") }}
-              ></p>
-            </div>
-            <div className=" items-center gap-1  whitespace-nowrap">
-              <h6 className="font-semibold"> {t("header.makhachkala")} </h6>
-              <p
-                className="text-xs text-brand1 leading-4"
-                dangerouslySetInnerHTML={{
-                  __html: t("header.makhachkalaAddress"),
-                }}
-              ></p>
-            </div>
+            {city === "Moscow" ? (
+              <div className=" items-center gap-1   whitespace-nowrap">
+                <h6 className="font-semibold "> {t("header.moscow")} </h6>
+                <p
+                  className="text-xs text-brand1 leading-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("header.moscowAddress"),
+                  }}
+                ></p>
+              </div>
+            ) : (
+              <div className=" items-center gap-1  whitespace-nowrap">
+                <h6 className="font-semibold"> {t("header.makhachkala")} </h6>
+                <p
+                  className="text-xs text-brand1 leading-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("header.makhachkalaAddress"),
+                  }}
+                ></p>
+              </div>
+            )}
           </div>
 
           {/* Socials & Language Switch */}

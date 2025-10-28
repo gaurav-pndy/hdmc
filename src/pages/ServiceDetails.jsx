@@ -95,7 +95,7 @@ const ServiceDetailsExpertAssessment = () => {
       </section>
 
       {/* TABS */}
-      <nav className=" mx-auto flex gap-2 bg-[#e9f6f7] rounded-xl  py-1 my-10">
+      <nav className=" mx-auto flex gap-2 bg-[#e9f6f] rounded-xl  py-1 my-10">
         {TABS.map((tab) => (
           <button
             key={tab.key}

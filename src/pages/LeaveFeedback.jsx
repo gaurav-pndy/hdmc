@@ -8,6 +8,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import WaveBackground from "../components/WaveBackground";
 
 const initialForm = {
   type: "",
@@ -92,14 +93,37 @@ const LeaveFeedback = () => {
   return (
     <section className="w-full  min-h-screen py-12">
       <div className="max-w-[87rem] mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-brand1 text-4xl md:text-5xl font-bold mb-6">
-            {t("feedback.title")}
-          </h2>
-          <p className="text-lg md:text-xl text-brand1/90 max-w-3xl mx-auto mb-12">
-            {t("feedback.subtitle")}
-          </p>
-        </div>
+        <section className="relative max-w-[87rem]  rounded-xl mx-auto grid md:grid-cols-2 items-center mb-16 overflow-hidden md:min-h-80">
+          <WaveBackground
+            stroke="rgb(33, 139, 161,"
+            custStyle="md:w-1/2 h-1/2 left-0 top-0"
+          />
+
+          {/* Rest of your content */}
+          <div
+            className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#45556f] to-[#9c969f]  `}
+          >
+            <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+              {t("feedback.title")}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto ">
+              {t("feedback.subtitle")}
+            </p>
+          </div>
+
+          <div className="w-full   h-full z-30 -mt-[3px] md:-mt-0">
+            <div className="relative w-full  h-full">
+              <img
+                src="https://www.shutterstock.com/shutterstock/photos/2306744905/display_1500/stock-photo-businessman-using-smart-phone-with-the-email-call-phone-address-chat-message-icons-customer-2306744905.jpg"
+                alt="Services illustration"
+                className=" w-full md:min-h-80 max-h-96  h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+              />
+              <div
+                className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#9c969f] via-[#9c969f]/40 to-transparent  `}
+              ></div>
+            </div>
+          </div>
+        </section>
 
         <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {CARDS.map((card, index) => (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
+import WaveBackground from "../WaveBackground";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -21,26 +22,24 @@ const HeroSection = () => {
   }, [features.length]);
 
   return (
-    <section className="w-full flex flex-col justify-center items-center text-center relative py-18 px-4 bg-gradient-to-br from-brand5 to-brand1 overflow-hidden">
-      {/* Background watermark */}
-      <img
-        src="/hero1.png"
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-[45rem] left-1/2 top-1/2 -translate-1/2 object-cover object-center pointer-events-none opacity-10 select-none z-0"
+    <section className="relative max-w-[87rem]  rounded-xl mx-auto grid md:grid-cols-2 items-center mt-20 lg:mt-52 overflow-hidden md:min-h-80">
+      <WaveBackground
+        stroke="rgb(33, 139, 161,"
+        custStyle="md:w-1/2 h-1/2 left-0 top-0"
       />
 
-      {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center w-full">
-        {/* Badge */}
-        <div className="flex justify-center">
+      {/* Rest of your content */}
+      <div
+        className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#0d7431] to-[#e2cfc8]  `}
+      >
+        <div className="flex justify-center md:justify-start">
           <span className="flex items-center gap-2 px-6 py-2 text-base rounded-full bg-brand3 border border-brand5 text-white shadow">
             {t("earlyDetection.hero.programBadge")}
           </span>
         </div>
 
         {/* Title */}
-        <h1 className="text-white text-4xl md:text-6xl xl:text-7xl font-bold mb-6">
+        <h1 className="text-white text-3xl md:text-6xl font-bold mb-4">
           {t("earlyDetection.hero.title")}
         </h1>
 
@@ -53,7 +52,7 @@ const HeroSection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute  mx-auto  w-full text-center text-pink-200 drop-shadow-lg drop-shadow-black/30 text-xl md:text-3xl font-semibold"
+              className="absolute  mx-auto  w-full text-center  md:text-left text-pink-200 drop-shadow-lg drop-shadow-black/30 text-xl md:text-3xl font-semibold"
             >
               {features[currentIndex]}
             </motion.div>
@@ -64,18 +63,31 @@ const HeroSection = () => {
         <div className="text-white text-lg md:text-2xl font-medium mb-2 drop-shadow">
           {t("earlyDetection.hero.subtitle")}
         </div>
-        <div className="text-white/90 text-lg font-normal max-w-2xl mx-auto mb-10 drop-shadow">
+        <div className="text-white/90 text-lg font-normal max-w-2xl mx-auto mb-6 drop-shadow">
           {t("earlyDetection.hero.description")}
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mt-6 justify-center">
-          <button className="bg-white text-brand1 font-semibold px-8 py-3 text-lg rounded-lg hover:bg-transparent hover:text-white transition shadow cursor-pointer border border-white">
+        <div className="flex flex-col sm:flex-row gap-6  justify-center md:justify-start">
+          <button className="bg-white text-brand1 font-semibold px-8 py-3  rounded-lg hover:bg-transparent hover:text-white transition shadow cursor-pointer border border-white">
             {t("earlyDetection.hero.programButton")}
           </button>
-          <button className="bg-transparent text-white font-semibold px-8 py-3 text-lg rounded-lg hover:bg-white hover:text-brand1 transition shadow cursor-pointer border border-white">
+          <button className="bg-transparent text-white font-semibold px-8 py-3  rounded-lg hover:bg-white hover:text-brand1 transition shadow cursor-pointer border border-white">
             {t("earlyDetection.hero.moreButton")}
           </button>
+        </div>
+      </div>
+
+      <div className="w-full   h-full z-30 -mt-[3px] md:-mt-0">
+        <div className="relative w-full  h-full">
+          <img
+            src="https://www.shutterstock.com/shutterstock/photos/2056742117/display_1500/stock-photo-hiring-recruitment-design-find-job-hire-medical-doctor-nurse-pharmacist-retirement-hand-2056742117.jpg"
+            alt="Services illustration"
+            className=" w-full md:min-h-80   h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+          />
+          <div
+            className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#e2cfc8] via-[#e2cfc8]/40 to-transparent  `}
+          ></div>
         </div>
       </div>
     </section>
