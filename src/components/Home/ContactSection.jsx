@@ -16,7 +16,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="w-full bg-[#fafbfc] py-16 mb-8">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-[87rem] mx-auto px-4">
         <div className="max-w-[87rem] text-center mx-auto px-4">
           <h2 className="text-brand1 text-center text-4xl font-bold mb-6">
             {t("contact.title")}
@@ -26,35 +26,23 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="gap-8 items-start">
+        <div className="">
           {/* Form Card with Image Background + Gradient Overlay */}
-          <div className="relative rounded-xl overflow-hidden">
-            {/* Background image */}
-            <div
-              className="absolute inset-0 bg-cover bg-bottom"
-              style={{
-                backgroundImage:
-                  "url('https://www.shutterstock.com/shutterstock/photos/2560601181/display_1500/stock-photo-businessman-interacting-with-a-glowing-paper-plane-icon-on-a-virtual-interface-symbolizing-message-2560601181.jpg')", // replace with actual image
-              }}
-            ></div>
+
+          <section className="relative  rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
             <WaveBackground
-              stroke="rgb(33, 139, 161,"
-              custStyle="w-full h-full left-0 top-0"
+              stroke="rgba(251, 186, 189,"
+              custStyle="md:w-1/2 h-[65%] left-0 top-0"
             />
-
-            {/* Left-to-right overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r to-transparent from-brand4"></div>
-
-            {/* Foreground content */}
-            <div className="relative z-40 p-4 md:p-10">
-              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-brand1">
+            <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#582c23] to-[#695751] z-40 p-4 md:p-10">
+              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-white">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-3">
+              <div className="grid grid-cols-2  gap-4 mb-3">
                 <div>
-                  <label className="block font-semibold mb-1">
+                  <label className="block text-white  font-semibold mb-1">
                     {t("contact.name")}
                   </label>
                   <input
@@ -66,7 +54,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block font-semibold mb-1">
+                  <label className="block text-white  font-semibold mb-1">
                     {t("contact.phone")}
                   </label>
                   <input
@@ -80,7 +68,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block font-semibold mb-1">
+                  <label className="block text-white  font-semibold mb-1">
                     {t("contact.email")}
                   </label>
                   <input
@@ -94,7 +82,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block font-semibold mb-1">
+                  <label className="block text-white  font-semibold mb-1">
                     {t("contact.city")}
                   </label>
                   <select
@@ -113,7 +101,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block font-semibold mb-1">
+                <label className="block text-white  font-semibold mb-1">
                   {t("contact.message")}
                 </label>
                 <textarea
@@ -139,7 +127,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree1"
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-white "
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox1") }}
                 ></label>
               </div>
@@ -156,7 +144,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree2"
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-white"
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox2") }}
                 ></label>
               </div>
@@ -170,7 +158,19 @@ const ContactSection = () => {
                 {t("contact.button")}
               </button>
             </div>
-          </div>
+            <div className="w-full   h-full z-30 -mt-[2px] md:-mt-0">
+              <div className="relative w-full  h-full">
+                <img
+                  src="https://www.shutterstock.com/shutterstock/photos/2560601181/display_1500/stock-photo-businessman-interacting-with-a-glowing-paper-plane-icon-on-a-virtual-interface-symbolizing-message-2560601181.jpg"
+                  alt="Services illustration"
+                  className=" w-full md:min-h-96  h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                />
+                <div
+                  className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#695751] via-[#695751]/40 to-transparent  `}
+                ></div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </section>

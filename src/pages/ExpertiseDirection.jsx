@@ -20,9 +20,9 @@ const ExpertiseDirection = () => {
 
       {/* Featured doctor */}
       <div className="max-w-[87rem] mx-auto px-4 py-8">
-        <h2 className="text-brand1 text-xl md:text-2xl xl:text-4xl font-semibold mb-6">
+        {/* <h2 className="text-brand1 text-xl md:text-2xl xl:text-4xl font-semibold mb-6">
           {t("expertise.oncology")}
-        </h2>
+        </h2> */}
 
         <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-8 flex flex-col md:flex-row gap-8">
           {/* Left info */}

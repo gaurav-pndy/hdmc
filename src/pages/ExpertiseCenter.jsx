@@ -47,7 +47,7 @@ const ExpertiseCenter = () => {
     },
     {
       key: "oncomammology",
-      label: t("expertise.oncomammoology.title"),
+      label: t("expertise.oncomammology.title"),
       icon: <FaNotesMedical className="text-brand4 text-2xl" />,
     },
     {

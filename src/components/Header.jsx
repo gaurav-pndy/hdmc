@@ -33,6 +33,7 @@ import {
   FaBone,
   FaStethoscope,
   FaChevronUp,
+  FaChevronLeft,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -755,7 +756,7 @@ const Header = () => {
                       <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300 mb-1">
                         {a.icon}
                       </div>
-                      <p className="group-hover:text-brand2 text-sm xl:text-base">
+                      <p className="group-hover:text-brand2 text-sm xl:text-base font-normal">
                         {a.label}
                       </p>
                       <div className="absolute right-2 top-3 overflow-hidden w-6">
@@ -789,7 +790,7 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6  z-50 w-3xl xl:w-6xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-rows-7  grid-flow-col gap-8  bg-white shadow-lg shadow-black/40 rounded-xl p-6  z-50 w-3xl xl:w-6xl font-normal"
                 >
                   {doctorsItems.map((d, idx) => (
                     <div
@@ -805,11 +806,11 @@ const Header = () => {
                         <div className="w-8  h-8 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300">
                           {d.icon}
                         </div>
-                        <p className="group-hover:text-brand2 pr-8 text-sm xl:text-base text-wrap">
+                        <p className="group-hover:text-brand2 pr-8 text-sm xl:text-base text-wrap font-normal">
                           {d.label}
                         </p>
                         {d.subItems ? (
-                          <FaChevronUp className="text-sm mt-1 " />
+                          <FaChevronLeft className="text-sm mt-1 " />
                         ) : (
                           <div className="absolute right-0 top-2 overflow-hidden w-6">
                             <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
@@ -821,11 +822,11 @@ const Header = () => {
                       <AnimatePresence>
                         {activeSub === d.label && d.subItems && (
                           <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 -translate-x-1/2 bottom-full ml-4 bg-gray-200 border border-gray-200 rounded-xl shadow-lg shadow-black/30 p-4 w-xl xl:w-3xl z-50 flex flex-col gap-4 justify-between"
+                            className="absolute right-full mr-2 -translate-y-2/3 top-1/2 ml-4 bg-[#f3f5f7] border border-gray-400 rounded-xl shadow-lg shadow-black/30 p-4 w-xl xl:w-3xl z-50 flex flex-col gap-4 justify-between"
                           >
                             {d.subItems.map((cat, i) => (
                               <div key={i} className="mb-2">
@@ -897,7 +898,7 @@ const Header = () => {
                         </div>
 
                         <div className=" ">
-                          <p className="group-hover:text-brand2 text-sm xl:text-base transition-colors duration-300">
+                          <p className="group-hover:text-brand2 text-sm xl:text-base transition-colors font-normal duration-300">
                             {s.label}
                           </p>
                         </div>
@@ -945,7 +946,7 @@ const Header = () => {
                       <div className="w-10 xl:w-12 h-10 xl:h-12 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300 mb-1">
                         {p.icon}
                       </div>
-                      <p className="group-hover:text-brand2 text-sm xl:text-base text-left">
+                      <p className="group-hover:text-brand2 text-sm xl:text-base text-left font-normal">
                         {p.label}
                       </p>
                       <div className="absolute right-2 top-3 overflow-hidden w-6">
