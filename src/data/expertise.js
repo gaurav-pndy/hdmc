@@ -198,34 +198,34 @@ export const DOCTOR_LIST = {
     },
   ],
 
-  antineoplastic: [
+  antitumortherapy: [
     {
-      name: "expertise.antineoplastic.doctor1.name",
-      position: "expertise.antineoplastic.doctor1.position",
+      name: "expertise.antitumortherapy.doctor1.name",
+      position: "expertise.antitumortherapy.doctor1.position",
       years: "27",
       memberSince: "2009",
       img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
       shortInfo: [
-        "expertise.antineoplastic.doctor1.point1",
-        "expertise.antineoplastic.doctor1.point2",
-        "expertise.antineoplastic.doctor1.point3",
+        "expertise.antitumortherapy.doctor1.point1",
+        "expertise.antitumortherapy.doctor1.point2",
+        "expertise.antitumortherapy.doctor1.point3",
       ],
     },
     {
-      name: "expertise.antineoplastic.doctor2.name",
-      position: "expertise.antineoplastic.doctor2.position",
+      name: "expertise.antitumortherapy.doctor2.name",
+      position: "expertise.antitumortherapy.doctor2.position",
       experience: "22+",
       img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
     },
     {
-      name: "expertise.antineoplastic.doctor3.name",
-      position: "expertise.antineoplastic.doctor3.position",
+      name: "expertise.antitumortherapy.doctor3.name",
+      position: "expertise.antitumortherapy.doctor3.position",
       experience: "18+",
       img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
     },
     {
-      name: "expertise.antineoplastic.doctor4.name",
-      position: "expertise.antineoplastic.doctor4.position",
+      name: "expertise.antitumortherapy.doctor4.name",
+      position: "expertise.antitumortherapy.doctor4.position",
       experience: "16+",
       img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
     },
@@ -297,6 +297,70 @@ export const DOCTOR_LIST = {
     },
   ],
   neurooncology: [
+    {
+      name: "expertise.neurooncology.doctor1.name",
+      position: "expertise.neurooncology.doctor1.position",
+      years: "31",
+      memberSince: "2007",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+      shortInfo: [
+        "expertise.neurooncology.doctor1.point1",
+        "expertise.neurooncology.doctor1.point2",
+        "expertise.neurooncology.doctor1.point3",
+      ],
+    },
+    {
+      name: "expertise.neurooncology.doctor2.name",
+      position: "expertise.neurooncology.doctor2.position",
+      experience: "25+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor3.name",
+      position: "expertise.neurooncology.doctor3.position",
+      experience: "21+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor4.name",
+      position: "expertise.neurooncology.doctor4.position",
+      experience: "18+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+  ],
+  oncoorthopedics: [
+    {
+      name: "expertise.neurooncology.doctor1.name",
+      position: "expertise.neurooncology.doctor1.position",
+      years: "31",
+      memberSince: "2007",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+      shortInfo: [
+        "expertise.neurooncology.doctor1.point1",
+        "expertise.neurooncology.doctor1.point2",
+        "expertise.neurooncology.doctor1.point3",
+      ],
+    },
+    {
+      name: "expertise.neurooncology.doctor2.name",
+      position: "expertise.neurooncology.doctor2.position",
+      experience: "25+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor3.name",
+      position: "expertise.neurooncology.doctor3.position",
+      experience: "21+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor4.name",
+      position: "expertise.neurooncology.doctor4.position",
+      experience: "18+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+  ],
+  oncocoloproctology: [
     {
       name: "expertise.neurooncology.doctor1.name",
       position: "expertise.neurooncology.doctor1.position",
@@ -513,36 +577,36 @@ export const SUBSECTIONS = {
       desc: "expertise.oncoplastic.directions.dir5.desc",
     },
   ],
-  antineoplastic: [
+  antitumortherapy: [
     {
-      label: "expertise.antineoplastic.directions.dir1.title",
+      label: "expertise.antitumortherapy.directions.dir1.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir1.desc",
+      desc: "expertise.antitumortherapy.directions.dir1.desc",
     },
     {
-      label: "expertise.antineoplastic.directions.dir2.title",
+      label: "expertise.antitumortherapy.directions.dir2.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir2.desc",
+      desc: "expertise.antitumortherapy.directions.dir2.desc",
     },
     {
-      label: "expertise.antineoplastic.directions.dir3.title",
+      label: "expertise.antitumortherapy.directions.dir3.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir3.desc",
+      desc: "expertise.antitumortherapy.directions.dir3.desc",
     },
     {
-      label: "expertise.antineoplastic.directions.dir4.title",
+      label: "expertise.antitumortherapy.directions.dir4.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir4.desc",
+      desc: "expertise.antitumortherapy.directions.dir4.desc",
     },
     {
-      label: "expertise.antineoplastic.directions.dir5.title",
+      label: "expertise.antitumortherapy.directions.dir5.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir5.desc",
+      desc: "expertise.antitumortherapy.directions.dir5.desc",
     },
     {
-      label: "expertise.antineoplastic.directions.dir6.title",
+      label: "expertise.antitumortherapy.directions.dir6.title",
       icon: FaStethoscope,
-      desc: "expertise.antineoplastic.directions.dir6.desc",
+      desc: "expertise.antitumortherapy.directions.dir6.desc",
     },
   ],
 
@@ -611,6 +675,70 @@ export const SUBSECTIONS = {
     },
   ],
   neurooncology: [
+    {
+      label: "expertise.neurooncology.directions.dir1.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir1.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir2.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir2.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir3.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir3.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir4.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir4.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir5.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir5.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir6.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir6.desc",
+    },
+  ],
+  oncoorthopedics: [
+    {
+      label: "expertise.neurooncology.directions.dir1.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir1.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir2.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir2.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir3.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir3.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir4.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir4.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir5.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir5.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir6.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir6.desc",
+    },
+  ],
+  oncocoloproctology: [
     {
       label: "expertise.neurooncology.directions.dir1.title",
       icon: FaStethoscope,

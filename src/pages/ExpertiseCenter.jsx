@@ -16,6 +16,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { FaChild } from "react-icons/fa6";
+import { RiSurgicalMaskFill } from "react-icons/ri";
 
 const ExpertiseCenter = () => {
   const navigate = useNavigate();
@@ -28,10 +30,11 @@ const ExpertiseCenter = () => {
       icon: <FaHeart className="text-brand4 text-2xl" />,
     },
     {
-      key: "gynecology",
-      label: t("expertise.gynecology.title"),
-      icon: <FaStethoscope className="text-brand4 text-2xl" />,
+      key: "earlydiagnosis",
+      label: t("expertise.earlydiagnosis.title"),
+      icon: <FaSearch className="text-brand4 text-2xl" />,
     },
+
     {
       key: "traumatology",
       label: t("expertise.traumatology.title"),
@@ -53,8 +56,8 @@ const ExpertiseCenter = () => {
       icon: <FaCut className="text-brand4 text-2xl" />,
     },
     {
-      key: "antineoplastic",
-      label: t("expertise.antineoplastic.title"),
+      key: "antitumortherapy",
+      label: t("expertise.antitumortherapy.title"),
       icon: <FaFlask className="text-brand4 text-2xl" />,
     },
     {
@@ -62,15 +65,26 @@ const ExpertiseCenter = () => {
       label: t("expertise.radiotherapy.title"),
       icon: <FaBolt className="text-brand4 text-2xl" />,
     },
-    {
-      key: "earlydiagnosis",
-      label: t("expertise.earlydiagnosis.title"),
-      icon: <FaSearch className="text-brand4 text-2xl" />,
-    },
+
     {
       key: "neurooncology",
       label: t("expertise.neurooncology.title"),
       icon: <FaBrain className="text-brand4 text-2xl" />,
+    },
+    {
+      key: "gynecology",
+      label: t("expertise.gynecology.title"),
+      icon: <FaStethoscope className="text-brand4 text-2xl" />,
+    },
+    {
+      key: "oncoorthopedics",
+      label: t("expertise.oncoorthopedics.title"),
+      icon: <FaChild className="text-brand4 text-2xl" />,
+    },
+    {
+      key: "oncocoloproctology",
+      label: t("expertise.oncocoloproctology.title"),
+      icon: <RiSurgicalMaskFill className="text-brand4 text-2xl" />,
     },
   ];
 
