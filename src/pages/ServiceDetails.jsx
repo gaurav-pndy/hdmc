@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { servicesData } from "../data/services";
 import { BiChevronRight } from "react-icons/bi";
 import WaveBackground from "../components/WaveBackground";
+import { useMediaQuery } from "react-responsive";
 
 // Dummy video link (replace with your real one if you have)
 const VIDEO_URL = "/chemo.mp4";
@@ -11,6 +12,8 @@ const VIDEO_URL = "/chemo.mp4";
 const ServiceDetailsExpertAssessment = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("about");
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const TABS = [
     { key: "about", label: t("services.tab1") },
@@ -37,12 +40,17 @@ const ServiceDetailsExpertAssessment = () => {
   };
 
   return (
-    <div className="bg-[#f6fcfd] min-h-screen pb-16 mt-20 lg:mt-52 max-w-[87rem] mx-auto px-4">
-      <div className="mb-4 text-brand1 flex gap-2 font-semibold items-center">
+    <div
+      className=" min-h-screen pb-16 pt-10  mx-auto px-4"
+      style={{
+        background: `linear-gradient(to right, ${service.color1}20, ${service.color2}20)`,
+      }}
+    >
+      <div className="mb-4 max-w-[87rem] mx-auto text-brand1 flex gap-2 font-semibold items-center">
         {" "}
         <button
           onClick={scrollToServices}
-          className="text-brand4 hover:underline font-normal cursor-pointer"
+          className="text-brand3 hover:underline font-normal cursor-pointer"
         >
           {t("services.services")}
         </button>
@@ -50,7 +58,7 @@ const ServiceDetailsExpertAssessment = () => {
         {t(service.title)}
       </div>
       {/* HERO */}
-      <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
+      <section className="relative rounded-xl max-w-[87rem] mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
         <WaveBackground
           stroke={service.stroke}
           custStyle="md:w-1/2 h-1/2 left-0 top-0"
@@ -58,9 +66,12 @@ const ServiceDetailsExpertAssessment = () => {
 
         {/* Rest of your content */}
         <div
-          className={` w-full md:min-h-96 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r  ${
-            service.video ? service.gradient1 : "from-brand5 to-brand3"
-          } `}
+          className="w-full md:min-h-96 flex flex-col justify-center h-full p-6 pb-16 md:p-6 lg:p-10 xl:p-12"
+          style={{
+            background: `linear-gradient(${
+              isMobile ? "to bottom" : "to right"
+            }, ${service.color1}, ${service.color2})`,
+          }}
         >
           <h1 className="text-white z-40 text-3xl md:text-[2.5rem] font-bold mb-8">
             {t(service.title)}
@@ -73,7 +84,7 @@ const ServiceDetailsExpertAssessment = () => {
           </button>
         </div>
 
-        <div className="w-full  md:max-w-2xl h-full z-30 -mt-[1px] md:-mt-0">
+        <div className="w-full   h-full z-30 -mt-[1px] md:-mt-0">
           <div className="relative w-full  h-full">
             {service.video && (
               <video
@@ -82,28 +93,41 @@ const ServiceDetailsExpertAssessment = () => {
                 muted
                 playsInline
                 src={service.video}
-                className="max-w-2xl w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                className=" w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
               ></video>
             )}
             <div
-              className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r  ${
-                service.video ? service.gradient2 : "from-brand3 to-brand1"
-              } `}
+              className="absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0"
+              style={{
+                background: `linear-gradient(${
+                  isMobile ? "to bottom" : "to right"
+                }, ${service.color2}, ${
+                  service.color2
+                }66 30%, transparent 100%)`,
+              }}
             ></div>
           </div>
         </div>
       </section>
 
       {/* TABS */}
-      <nav className=" mx-auto flex gap-2 bg-[#e9f6f] rounded-xl  py-1 my-10">
+      <nav
+        className="max-w-[87rem] mx-auto flex gap-2 bg-[#e9f6f] rounded-xl  p-2 my-10"
+        style={{
+          background: `linear-gradient(to right, ${service.color1}, ${service.color2})`,
+        }}
+      >
         {TABS.map((tab) => (
           <button
             key={tab.key}
-            className={`flex-1 text-lg py-3 rounded-lg font-semibold transition ${
+            className={`flex-1 cursor-pointer text-lg py-3 rounded-lg font-semibold transition ${
               activeTab === tab.key
-                ? "bg-white shadow text-brand1"
-                : "text-brand4 hover:bg-white/80"
+                ? "bg-white shadow"
+                : "text-white hover:bg-white/20"
             }`}
+            style={{
+              color: activeTab === tab.key ? service.color1 : "white",
+            }}
             onClick={() => setActiveTab(tab.key)}
           >
             {tab.label}
@@ -112,11 +136,14 @@ const ServiceDetailsExpertAssessment = () => {
       </nav>
 
       {/* TAB PANES */}
-      <div className=" mx-auto px-5">
+      <div className="max-w-[87rem] mx-auto ">
         {/* О УСЛУГЕ */}
         {activeTab === "about" && (
           <div
-            className="bg-white rounded-2xl shadow p-8 text-lg text-brand1/90"
+            className="bg-white rounded-2xl shadow p-8 text-lg "
+            style={{
+              color: service.color1,
+            }}
             dangerouslySetInnerHTML={{ __html: t(service.about) }}
           ></div>
         )}

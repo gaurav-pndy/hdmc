@@ -87,7 +87,7 @@ const HeroSection = () => {
               stroke="rgba(200, 200, 200,"
               custStyle="md:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20  w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-brand5 to-[#218ba1] h-full ">
+            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20  w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-[#989996] to-[#cbd0ce] h-full ">
               {/* Left Side (Text) */}
               <div className="flex-1 flex flex-col  items-start">
                 <div className="mb-4 md:mb-8 flex z-40 items-center">
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 ></video>
                 <div
                   className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
-              from-[#218ba1] via-[#218ba1]/30 to-transparent via-20%`}
+              from-[#cbd0ce] via-[#cbd0ce]/30 to-transparent via-20%`}
                 ></div>
               </div>
             </div>

@@ -117,7 +117,7 @@
     "slide2": {
       "title": "International Multispecialty Expert Telemedicine",
       "subtitle": "Expert consultations with leading world specialists",
-      "button": "Book IMETC"
+      "button": "Make an appointment"
     }
   },
   "aboutClinic": {
@@ -937,7 +937,7 @@
       }
     },
     "advantages": {
-      "header": "Advantages of IMETS",
+      "header": "Advantages",
       "intlExperts": {
         "title": "International experts",
         "desc": "Leading specialists from the USA, Europe, and Israel"
