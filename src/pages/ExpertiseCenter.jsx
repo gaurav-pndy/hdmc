@@ -88,8 +88,8 @@ const ExpertiseCenter = () => {
       icon: <RiSurgicalMaskFill className="text-brand4 text-2xl" />,
     },
     {
-      key: "oncocohematology",
-      label: t("expertise.oncocohematology.title"),
+      key: "oncohematology",
+      label: t("expertise.oncohematology.title"),
       icon: <MdBloodtype className="text-brand4 text-2xl" />,
     },
   ];
