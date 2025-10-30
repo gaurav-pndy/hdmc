@@ -106,12 +106,12 @@ const ExpertiseCenter = () => {
         </div>
       </section>
       {/* Cards grid */}
-      <div className="max-w-[87rem] mx-auto px-4 py-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-[87rem] mx-auto px-4 py-12 flex flex-wrap gap-6 justify-center ">
         {EXPERTISE_LIST.map((item) => (
           <button
             key={item.key}
             onClick={() => navigate(`/center-of-expertise/${item.key}`)}
-            className="flex items-center gap-4 bg-white border border-brand4/10 rounded-2xl shadow-md hover:shadow-lg px-6 py-5 text-left transition ring-brand4/20 hover:ring-2 cursor-pointer"
+            className={`flex items-center gap-4 bg-white border border-brand4/10 rounded-2xl shadow-md hover:shadow-lg px-6 py-5 text-left transition ring-brand4/20 hover:ring-2 cursor-pointer w-full md:w-[calc(50%-1.5rem)] xl:w-[calc(33.33%-1.5rem)]`}
           >
             <span className="bg-brand4/10 p-4 rounded-xl">{item.icon}</span>
             <span className="font-semibold text-brand1 text-lg">
