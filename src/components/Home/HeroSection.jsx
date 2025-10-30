@@ -46,35 +46,45 @@ const HeroSection = () => {
       >
         <SwiperSlide>
           <div
-            className={`mx-auto w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full flex items-center bg-gradient-to-r from-brand1 to-brand5`}
+            className={`mx-auto relative  w-full min-h-[87vh] md:min-h-[30rem] lg:min-h-[38rem] xl:min-h-[80vh] h-full grid md:grid-cols-5 items-center `}
           >
-            <div className="flex flex-col md:flex-row  w-full px-6 md:px-12 xl:px-20 py-6 md:py-10 xl:py-0 mx-auto items-center gap-10">
+            <WaveBackground
+              stroke="rgba(100, 100, 100,"
+              custStyle="md:w-[40%] h-[60%] left-0 top-0"
+            />
+            <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20  w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-[#002b3e] to-[#016885] h-full ">
               {/* Left Side (Text) */}
-              <div className="flex-1 flex flex-col items-start">
-                <div className="mb-4 md:mb-8 flex  items-center">
-                  <div className="bg-white/[0.13] h-16  w-16 flex justify-center items-center rounded-full p-4 mr-4">
+              <div className="flex-1 flex flex-col  items-start">
+                <div className="mb-4  flex z-40 items-center">
+                  <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-4 mr-4">
                     <SlBadge className="text-3xl p-0 text-white " />
                   </div>
                   <div className="w-1 h-14 bg-white/40 rounded" />
                 </div>
-                <h1 className="text-white font-bold text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
+                <h1 className="text-white font-bold z-40 text-4xl lg:text-6xl leading-16 mb-2 md:mb-4">
                   {t("hero.slide1.title")}
                 </h1>
-                <div className="text-gray-200 text-lg md:text-2xl mb-8">
+                <div className="text-gray-200 text-lg z-40 md:text-2xl mb-6">
                   {t("hero.slide1.subtitle")}
                 </div>
-                <button className="bg-white text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                <button className="bg-white relative z-40 text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
                   {t("hero.slide1.button")}
                 </button>
               </div>
 
               {/* Right Side (Image) */}
-              <div className="flex-1 h-full  flex justify-center md:justify-end">
+            </div>
+            <div className="w-full h-full md:col-span-3 -z-10 -mt-[2px] md:-mt-0 md:-ml-[1px]">
+              <div className="relative w-full  h-full">
                 <img
-                  src="/hero1.png"
+                  src="https://www.shutterstock.com/shutterstock/photos/2656913525/display_1500/stock-photo-person-s-hands-cupping-around-a-glowing-holographic-icon-representing-customer-loyalty-vip-clients-2656913525.jpg"
                   alt="Hero illustration"
-                  className="rounded-2xl max-h-[36rem]  h-full w-full object-contain"
-                />
+                  className=" w-full  md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                ></img>
+                <div
+                  className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
+              from-[#016885] via-[#016885]/40 to-transparent via-40%`}
+                ></div>
               </div>
             </div>
           </div>
@@ -90,16 +100,16 @@ const HeroSection = () => {
             <div className="flex flex-col md:flex-row md:col-span-2 px-6 md:pl-12 xl:pl-20  w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b md:bg-gradient-to-r from-[#989996] to-[#cbd0ce] h-full ">
               {/* Left Side (Text) */}
               <div className="flex-1 flex flex-col  items-start">
-                <div className="mb-4 md:mb-8 flex z-40 items-center">
+                <div className="mb-4  flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-4 mr-4">
                     <LuUsers className="text-3xl text-white " />
                   </div>
                   <div className="w-1 h-14 bg-white/40 rounded" />
                 </div>
-                <h1 className="text-white font-bold z-40 text-4xl lg:text-6xl leading-tight mb-2 md:mb-6">
+                <h1 className="text-white font-bold z-40 text-4xl lg:text-6xl leading-16 mb-2 md:mb-4">
                   {t("hero.slide2.title")}
                 </h1>
-                <div className="text-gray-200 text-lg z-40 md:text-2xl mb-8">
+                <div className="text-gray-200 text-lg z-40 md:text-2xl mb-6">
                   {t("hero.slide2.subtitle")}
                 </div>
                 <button className="bg-white relative z-40 text-teal-900 text-lg font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">

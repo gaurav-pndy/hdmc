@@ -392,6 +392,38 @@ export const DOCTOR_LIST = {
       img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
     },
   ],
+  oncohematology: [
+    {
+      name: "expertise.neurooncology.doctor1.name",
+      position: "expertise.neurooncology.doctor1.position",
+      years: "31",
+      memberSince: "2007",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+      shortInfo: [
+        "expertise.neurooncology.doctor1.point1",
+        "expertise.neurooncology.doctor1.point2",
+        "expertise.neurooncology.doctor1.point3",
+      ],
+    },
+    {
+      name: "expertise.neurooncology.doctor2.name",
+      position: "expertise.neurooncology.doctor2.position",
+      experience: "25+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor3.name",
+      position: "expertise.neurooncology.doctor3.position",
+      experience: "21+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+    {
+      name: "expertise.neurooncology.doctor4.name",
+      position: "expertise.neurooncology.doctor4.position",
+      experience: "18+",
+      img: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    },
+  ],
 };
 
 export const SUBSECTIONS = {
@@ -739,6 +771,38 @@ export const SUBSECTIONS = {
     },
   ],
   oncocoloproctology: [
+    {
+      label: "expertise.neurooncology.directions.dir1.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir1.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir2.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir2.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir3.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir3.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir4.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir4.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir5.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir5.desc",
+    },
+    {
+      label: "expertise.neurooncology.directions.dir6.title",
+      icon: FaStethoscope,
+      desc: "expertise.neurooncology.directions.dir6.desc",
+    },
+  ],
+  oncohematology: [
     {
       label: "expertise.neurooncology.directions.dir1.title",
       icon: FaStethoscope,

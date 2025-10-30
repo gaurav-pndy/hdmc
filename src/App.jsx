@@ -15,15 +15,17 @@ import Telemedicine from "./pages/Telemedicine";
 import ServiceDetails from "./pages/ServiceDetails";
 import ExpertiseCenter from "./pages/ExpertiseCenter";
 import ExpertiseDirection from "./pages/ExpertiseDirection";
+import { useState } from "react";
 
 function App() {
+  const [city, setCity] = useState("Moscow");
   const router = createBrowserRouter([
     {
-      element: <AppLayout />,
+      element: <AppLayout city={city} setCity={setCity} />,
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <Home city={city} />,
         },
         {
           path: "/doctors",

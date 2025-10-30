@@ -12,7 +12,7 @@ import AddressSection from "../components/Home/AddressSection";
 import ActionButtons from "../components/Home/ActionButtons";
 import { useLocation } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ city }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Home = () => {
       <TestimonialsSection />
 
       {/* <BookingForm /> */}
-      <AddressSection />
+      <AddressSection city={city} />
       <ContactSection />
 
       <ActionButtons />

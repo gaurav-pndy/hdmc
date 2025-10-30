@@ -34,6 +34,7 @@ import {
   FaStethoscope,
   FaChevronUp,
   FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -63,7 +64,7 @@ import {
 import { BsThermometerHalf } from "react-icons/bs";
 import { AiOutlineUserSwitch } from "react-icons/ai";
 
-const Header = () => {
+const Header = ({ city, setCity }) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
@@ -71,7 +72,7 @@ const Header = () => {
   const [isPatientsOpen, setIsPatientsOpen] = useState(false); // mobile dropdown
   const [isDoctorsOpen, setIsDoctorsOpen] = useState(false);
   const [openSubCategory, setOpenSubCategory] = useState(null);
-  const [city, setCity] = useState("Moscow");
+
   const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language);
@@ -269,9 +270,77 @@ const Header = () => {
 
   const doctorsItems = [
     {
-      path: "/doctors",
       label: t("header.doctorsDrop.d1"),
       icon: <FaFemale className=" text-white" />,
+      subItems: [
+        {
+          category: t("header.doctorsDrop.subItems.h1"),
+          items: [
+            {
+              label: t("header.doctorsDrop.subItems.s1"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s2"),
+              path: "/doctors/radiotherapist",
+            },
+          ],
+        },
+        {
+          category: t("header.doctorsDrop.subItems.h2"),
+          items: [
+            {
+              label: t("header.doctorsDrop.subItems.s3"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s4"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s5"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s6"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s7"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s8"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s9"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s10"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s11"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s12"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s13"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s14"),
+              path: "/doctors",
+            },
+            { label: t("header.doctorsDrop.subItems.s15"), path: "/doctors" },
+          ],
+        },
+      ],
     },
     {
       path: "/doctors",
@@ -394,74 +463,19 @@ const Header = () => {
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      label: t("header.oncologist"),
-      icon: <GiMedicines className=" text-white" />,
-      subItems: [
-        {
-          category: "Терапевтические онкологи",
-          items: [
-            {
-              label: "Медицинский онколог",
-              path: "/doctors",
-            },
-            { label: "Онколог-радиотерапевт", path: "/doctors/radiotherapist" },
-          ],
-        },
-        {
-          category: "Хирургические онкологи",
-          items: [
-            {
-              label: "Онколог-абдоминальный хирург",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-гематолог",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-гепатопанкреатобилиарный хирург",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-гинеколог",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог головы и шеи",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-колопроктолог",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-маммолог",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-нейрохирург",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-ортопед",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-офтальмолог",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-пластический хирург",
-              path: "/doctors",
-            },
-            {
-              label: "Онколог-торакальный хирург",
-              path: "/doctors",
-            },
-            { label: "Онколог-уролог", path: "/doctors" },
-          ],
-        },
-      ],
+      path: "/doctors",
+      label: t("header.doctorsDrop.d26"),
+      icon: <GiScalpel className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d27"),
+      icon: <GiScalpel className=" text-white" />,
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d28"),
+      icon: <GiScalpel className=" text-white" />,
     },
   ];
 
@@ -810,7 +824,7 @@ const Header = () => {
                           {d.label}
                         </p>
                         {d.subItems ? (
-                          <FaChevronLeft className="text-sm mt-1 " />
+                          <FaChevronRight className="text-sm mt-1 " />
                         ) : (
                           <div className="absolute right-0 top-2 overflow-hidden w-6">
                             <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
@@ -822,11 +836,11 @@ const Header = () => {
                       <AnimatePresence>
                         {activeSub === d.label && d.subItems && (
                           <motion.div
-                            initial={{ opacity: 0, x: 10 }}
+                            initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
+                            exit={{ opacity: 0, x: -10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute right-full mr-2 -translate-y-2/3 top-1/2 ml-4 bg-[#f3f5f7] border border-gray-400 rounded-xl shadow-lg shadow-black/30 p-4 w-xl xl:w-3xl z-50 flex flex-col gap-4 justify-between"
+                            className="absolute left-[90%]   top-0  bg-[#f3f5f7] border border-gray-400 rounded-xl shadow-lg shadow-black/30 p-4 w-xl xl:w-3xl z-50 flex flex-col gap-4 justify-between"
                           >
                             {d.subItems.map((cat, i) => (
                               <div key={i} className="mb-2">

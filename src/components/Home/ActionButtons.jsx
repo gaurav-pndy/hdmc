@@ -54,7 +54,7 @@ const ActionButtons = () => {
         flex items-center gap-2 w-full  md:w-fit
         px-8 py-3 
         bg-brand2
-        border border-white
+        border-none
         text-white
         text-lg font-semibold
         rounded-xl

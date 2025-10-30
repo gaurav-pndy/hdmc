@@ -18,6 +18,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { FaChild } from "react-icons/fa6";
 import { RiSurgicalMaskFill } from "react-icons/ri";
+import { MdBloodtype } from "react-icons/md";
 
 const ExpertiseCenter = () => {
   const navigate = useNavigate();
@@ -85,6 +86,11 @@ const ExpertiseCenter = () => {
       key: "oncocoloproctology",
       label: t("expertise.oncocoloproctology.title"),
       icon: <RiSurgicalMaskFill className="text-brand4 text-2xl" />,
+    },
+    {
+      key: "oncocohematology",
+      label: t("expertise.oncocohematology.title"),
+      icon: <MdBloodtype className="text-brand4 text-2xl" />,
     },
   ];
 

@@ -33,7 +33,7 @@ const HeroSection = () => {
         className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#0d7431] to-[#e2cfc8]  `}
       >
         <div className="flex justify-center z-40 md:justify-start">
-          <span className="flex items-center gap-2 px-6 py-2 text-base rounded-full bg-brand3 border border-brand5 text-white shadow">
+          <span className="flex items-center gap-2 px-6 py-2 text-base rounded-full bg-[#c4c1af] text-white shadow">
             {t("earlyDetection.hero.programBadge")}
           </span>
         </div>
@@ -52,7 +52,7 @@ const HeroSection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute  mx-auto  w-full text-center  md:text-left text-pink-200 drop-shadow-lg drop-shadow-black/30 text-xl md:text-3xl font-semibold"
+              className="absolute  mx-auto  w-full text-center  md:text-left text-[#e8dcda] drop-shadow-lg drop-shadow-black/30 text-xl md:text-3xl font-semibold"
             >
               {features[currentIndex]}
             </motion.div>
