@@ -42,7 +42,7 @@ function App() {
         },
         {
           path: "/about",
-          element: <AboutPage />,
+          element: <AboutPage city={city} />,
         },
         {
           path: "/reviews",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FaHospitalAlt,
@@ -13,8 +13,12 @@ import {
   FaHospital,
 } from "react-icons/fa";
 
-const AboutInfo = () => {
+const AboutInfo = ({ city }) => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    console.log(city);
+  }, [city]);
 
   return (
     <div className="space-y-8">
@@ -46,7 +50,9 @@ const AboutInfo = () => {
               </span>
             </div>
             <p className="text-[#125e84]/80 leading-relaxed ml-9">
-              {t("about.info.companyName")}
+              {city === "Moscow"
+                ? t("about.info.companyName1")
+                : t("about.info.companyName2")}
             </p>
           </div>
 
@@ -60,20 +66,13 @@ const AboutInfo = () => {
             </div>
             <div className="space-y-4 ml-9">
               <div className="flex flex-col gap-2">
-                <span className="bg-[#63cacc]/50 text-[#125e84] font-medium rounded-full text-xs px-3 py-1 w-fit">
+                {/* <span className="bg-[#63cacc]/50 text-[#125e84] font-medium rounded-full text-xs px-3 py-1 w-fit">
                   {t("about.info.moscow")}
-                </span>
+                </span> */}
                 <p className="text-[#125e84]/80 text-sm leading-relaxed">
-                  г. Москва, Аминьевское шоссе, д.6, подъезд 1
-                </p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="bg-[#63cacc]/50 text-[#125e84] font-medium rounded-full text-xs px-3 py-1 w-fit">
-                  {t("about.info.makhachka")}
-                </span>
-                <p className="text-[#125e84]/80 text-sm leading-relaxed">
-                  Республика Дагестан, г. Махачкала, проспект Али-Гаджи
-                  Акушинского, д. 7
+                  {city === "Moscow"
+                    ? t("about.info.moscowAddress")
+                    : t("about.info.makhachkalaAddress")}
                 </p>
               </div>
             </div>
@@ -84,21 +83,29 @@ const AboutInfo = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 border-b border-[#63cacc]/20 pb-8 mb-8">
           <div className="space-y-1">
             <div className="font-bold text-[#63cacc] text-sm uppercase tracking-wide">
-              ОГРН
+              {t("about.info.ogrn")}
             </div>
-            <div className="text-[#125e84]/90 font-medium">1234567898123</div>
+            <div className="text-[#125e84]/90 font-medium">
+              {city === "Moscow"
+                ? "1247700412068, 04.06.2024"
+                : "1190571014545, 11.11.2019"}
+            </div>
           </div>
           <div className="space-y-1">
             <div className="font-bold text-[#63cacc] text-sm uppercase tracking-wide">
-              ИНН
+              {t("about.info.tax")}
             </div>
-            <div className="text-[#125e84]/90 font-medium">7712345678</div>
+            <div className="text-[#125e84]/90 font-medium">
+              {city === "Moscow" ? "774301001" : "0572024746"}
+            </div>
           </div>
           <div className="space-y-1">
             <div className="font-bold text-[#63cacc] text-sm uppercase tracking-wide">
-              КПП
+              {t("about.info.checkpoint")}
             </div>
-            <div className="text-[#125e84]/90 font-medium">771201081</div>
+            <div className="text-[#125e84]/90 font-medium">
+              {city === "Moscow" ? "774301001" : "057201001"}
+            </div>
           </div>
         </div>
 
@@ -113,7 +120,7 @@ const AboutInfo = () => {
               </span>
             </div>
             <p className="text-[#125e84]/80 leading-relaxed ml-8">
-              Иванов Иван Иванович, Петров Петр Петрович
+              {t("about.info.ownersDesc")}
             </p>
           </div>
 
@@ -127,14 +134,14 @@ const AboutInfo = () => {
             </div>
             <ul className="ml-8 text-[#125e84]/80 space-y-2 list-disc list-outside">
               <li className="leading-relaxed">
-                Генеральный директор: Сидоров Алексей Викторович
+                {city === "Moscow"
+                  ? t("about.info.point3")
+                  : t("about.info.point1")}
               </li>
               <li className="leading-relaxed">
-                Главный врач: Кузнецова Елена Николаевна
-              </li>
-              <li className="leading-relaxed">Медицинский совет</li>
-              <li className="leading-relaxed">
-                Административно-хозяйственный отдел
+                {city === "Moscow"
+                  ? t("about.info.point4")
+                  : t("about.info.point2")}
               </li>
             </ul>
           </div>
@@ -150,13 +157,8 @@ const AboutInfo = () => {
                 {t("about.info.schedule")}
               </span>
             </div>
-            <div className="text-[#125e84]/80 leading-relaxed ml-8 space-y-1">
-              <p>Пн-Пт: 8:00 – 20:00</p>
-              <p>Сб: 9:00 – 18:00</p>
-              <p>Вс: 9:00 – 15:00</p>
-              <p className="font-semibold text-[#63cacc] mt-3">
-                КТ диагностика: 24/7
-              </p>
+            <div className="text-[#125e84]/80 leading-relaxed ml-8 ">
+              {t("about.info.scheduleDesc")}
             </div>
           </div>
 
@@ -168,10 +170,10 @@ const AboutInfo = () => {
                 {t("about.info.serviceContacts")}
               </span>
             </div>
-            <div className="text-[#125e84]/80 leading-relaxed ml-8 space-y-1">
-              <p className="font-medium">+7 (495) 123-45-67</p>
-              <p>info@healthdirect.ru</p>
-              <p>www.healthdirect.ru</p>
+            <div className="text-[#125e84]/80 leading-relaxed ml-8 ">
+              <p className="font-medium">
+                {city === "Moscow" ? "+7 (499) 685 3000" : ""}{" "}
+              </p>
             </div>
           </div>
         </div>
@@ -183,12 +185,8 @@ const AboutInfo = () => {
             <div className="font-semibold text-lg text-[#125e84]">
               {t("about.info.chiefReception")}
             </div>
-            <div className="text-[#125e84]/80 leading-relaxed space-y-1">
-              <p>
-                Прием граждан главным врачом: каждый вторник с 15:00 до 17:00
-              </p>
-              <p>Запись по телефону: +7 (495) 123-45-67 доб. 101</p>
-              <p>Email: chief@healthdirect.ru</p>
+            <div className="text-[#125e84]/80 leading-relaxed ">
+              {t("about.info.receptionDesc")}
             </div>
           </div>
         </div>

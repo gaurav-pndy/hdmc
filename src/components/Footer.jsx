@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ city }) => {
   const { t } = useTranslation();
 
   return (
@@ -84,13 +84,19 @@ const Footer = () => {
           </h3>
           <div className="flex items-start gap-2 mb-2">
             <FaMapMarkerAlt className="mt-1.5" />
-            <span>{t("footer.address")}</span>
+            <span>
+              {city === "Makhachkala"
+                ? t("address.clinic2.address")
+                : t("address.clinic1.address")}
+            </span>
           </div>
           <div className="flex items-center gap-2 mb-2">
             <FaClock />{" "}
             <span>
               {}
-              {t("footer.time")}
+              {city === "Makhachkala"
+                ? t("address.clinic2.schedule")
+                : t("address.clinic1.schedule")}
             </span>
           </div>
           <a
@@ -100,21 +106,42 @@ const Footer = () => {
           >
             <FaEnvelope /> <span>office@health-direct.info</span>
           </a>
-          <a
-            href="tel:+74996853000"
-            target="_blank"
-            className="flex items-center gap-2 mb-4"
-          >
-            <FaPhoneAlt /> <span>+7 (499) 685 3000</span>
-          </a>
-          <div className="flex gap-4">
+          {city === "Makhachkala" ? (
             <a
-              href="https://wa.me/74951234567"
+              href="tel:+798820455575"
               target="_blank"
-              className="bg-[#2aa81a] hover:scale-110 transition-all duration-300 cursor-pointer p-2 rounded-full"
+              className="flex items-center gap-2 mb-4"
             >
-              <FaWhatsapp size={24} />
+              <FaPhoneAlt /> <span>+7 (988) 204-55-75</span>
             </a>
+          ) : (
+            <a
+              href="tel:+74996853000"
+              target="_blank"
+              className="flex items-center gap-2 mb-4"
+            >
+              <FaPhoneAlt /> <span>+7 (495) 514-20-58</span>
+            </a>
+          )}
+
+          <div className="flex gap-4">
+            {city === "Makhachkala" ? (
+              <a
+                href="https://wa.me/798820455775"
+                target="_blank"
+                className="bg-[#2aa81a] hover:scale-110 transition-all duration-300 cursor-pointer p-2 rounded-full"
+              >
+                <FaWhatsapp size={24} />
+              </a>
+            ) : (
+              <a
+                href="https://wa.me/74955142058"
+                target="_blank"
+                className="bg-[#2aa81a] hover:scale-110 transition-all duration-300 cursor-pointer p-2 rounded-full"
+              >
+                <FaWhatsapp size={24} />
+              </a>
+            )}
             <a
               href="https://t.me/medclinic"
               target="_blank"

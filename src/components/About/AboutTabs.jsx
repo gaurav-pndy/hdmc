@@ -80,7 +80,7 @@ const TABS = [
   },
 ];
 
-const AboutTabs = () => {
+const AboutTabs = ({ city }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(TABS[0].key);
@@ -133,7 +133,7 @@ const AboutTabs = () => {
                   <PatientsAccordion />
                 </>
               ) : (
-                <tab.component />
+                <tab.component city={city} />
               )}
             </div>
           ) : null
