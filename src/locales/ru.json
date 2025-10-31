@@ -125,6 +125,9 @@
       "title": "Международные Телемедицинские Консультации",
       "subtitle": "Экспертные консультации ведущих специалистов мира",
       "button": "Записаться на консультацию"
+    },
+    "slide3": {
+      "title": "Приведи друга, получи скидку"
     }
   },
   "aboutClinic": {
@@ -643,9 +646,9 @@
     "title": "Политикой конфиденциальности"
   },
   "about": {
-    "hero": {
-      "title": "About Our Clinic",
-      "subtitle": "A multidisciplinary medical organization with international quality standards"
+   "hero": {
+      "title": "О нашей клинике",
+      "subtitle": "Многопрофильная медицинская организация с международными стандартами качества"
     },
    "tabs": {
   "info": "Информация",

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
+import WaveBackground from "../components/WaveBackground";
 
 const ForPatients = () => {
   const { t } = useTranslation();
@@ -65,12 +66,40 @@ const ForPatients = () => {
   return (
     <div className="bg-[#f6fcfd] min-h-screen">
       {/* Hero Section */}
-      <section className="w-full flex flex-col justify-center items-center text-center relative py-18 px-4 bg-gradient-to-br from-brand5 to-brand1 overflow-hidden">
-        <h1 className="text-white text-4xl md:text-6xl xl:text-7xl font-bold mb-6">
-          {t("forPatientsPage.title")}
-        </h1>
-        <div className="text-white text-lg md:text-2xl font-medium mb-2 drop-shadow">
-          {t("forPatientsPage.subtitle")}
+
+      <section className="relative max-w-[87rem]  rounded-xl mx-auto grid md:grid-cols-2 items-center mt-20 lg:mt-52 overflow-hidden md:min-h-80">
+        <WaveBackground
+          stroke="rgb(70, 70, 70,"
+          custStyle="md:w-1/2 h-1/2 left-0 top-0"
+        />
+
+        {/* Rest of your content */}
+        <div
+          className={` w-full md:min-h-80 flex flex-col justify-center h-full  p-6 pb-16 md:p-6 lg:p-10 xl:p-12 bg-gradient-to-b md:bg-gradient-to-r from-[#6f452f] to-[#242a2d]  `}
+        >
+          <h1 className="text-white relative z-40 text-4xl md:text-6xl xl:text-7xl font-bold mb-4 ">
+            {t("forPatientsPage.title")}
+          </h1>
+          <p className="text-white relative z-40 text-lg md:text-2xl font-medium  drop-shadow">
+            {t("forPatientsPage.subtitle")}
+          </p>
+        </div>
+
+        <div className="w-full   h-full z-30 -mt-[3px] md:-mt-0">
+          <div className="relative w-full  h-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src="https://www.shutterstock.com/shutterstock/videos/3761850711/preview/stock-footage-question-hand-and-therapist-with-patient-office-and-counselling-for-mental-health-talking-and.webm"
+              alt="Services illustration"
+              className=" w-full md:min-h-80   h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+            />
+            <div
+              className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#242a2d] via-[#242a2d]/40 to-transparent  `}
+            ></div>
+          </div>
         </div>
       </section>
 

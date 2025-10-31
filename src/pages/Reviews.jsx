@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 const testimonials = [
   {
@@ -66,7 +65,7 @@ const testimonials = [
   },
 ];
 
-const TestimonialsSection = () => {
+const Reviews = () => {
   const { t } = useTranslation();
   const [selectedIdx, setSelectedIdx] = useState(null);
 
@@ -79,73 +78,17 @@ const TestimonialsSection = () => {
 
   return (
     <section id="reviews" className="w-full py-12 bg-white ">
-      <div className="max-w-7xl relative mx-auto px-4">
+      <div className="max-w-[87rem] relative mx-auto px-4">
         <h2 className="text-brand1 text-center text-4xl md:text-5xl font-bold mb-10">
           {t("testimonials.title")}
         </h2>
 
-        {/* Custom arrows */}
-        <div className="absolute top-1/2 left-0 xl:-left-5 transform -translate-y-1/2 z-20 flex">
-          <button
-            ref={prevRef}
-            className="cursor-pointer  text-brand1  transition"
-          >
-            <FaChevronLeft size={32} />
-          </button>
-        </div>
-        <div className="absolute top-1/2 right-0 xl:-right-5 transform -translate-y-1/2 z-20 flex">
-          <button
-            ref={nextRef}
-            className="cursor-pointer text-brand1  transition"
-          >
-            <FaChevronRight size={32} />
-          </button>
-        </div>
-
-        {/* Swiper carousel */}
-        <div className="mb-7">
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={24}
-            slidesPerView={1}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            loop={true}
-            onSwiper={(swiper) => {
-              // Delay assigning refs until after render
-              setTimeout(() => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
-            }}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {testimonials.map((test, idx) => (
-              <SwiperSlide key={idx} className="py-10">
-                <TestimonialCard
-                  test={test}
-                  idx={idx}
-                  handleOpen={handleOpen}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        {/* CTA */}
-        <div className="flex justify-center">
-          <Link to="/reviews">
-            <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 text-lg">
-              {t("testimonials.allBtn")}
-            </button>
-          </Link>
+        <div className="mb-7 grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10">
+          {testimonials.map((test, idx) => (
+            <div key={idx} className="py-10">
+              <TestimonialCard test={test} idx={idx} handleOpen={handleOpen} />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -258,4 +201,4 @@ const TestimonialCard = ({ test, idx, handleOpen }) => {
   );
 };
 
-export default TestimonialsSection;
+export default Reviews;

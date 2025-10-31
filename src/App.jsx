@@ -16,6 +16,7 @@ import ServiceDetails from "./pages/ServiceDetails";
 import ExpertiseCenter from "./pages/ExpertiseCenter";
 import ExpertiseDirection from "./pages/ExpertiseDirection";
 import { useState } from "react";
+import Reviews from "./pages/Reviews";
 
 function App() {
   const [city, setCity] = useState("Moscow");
@@ -42,6 +43,10 @@ function App() {
         {
           path: "/about",
           element: <AboutPage />,
+        },
+        {
+          path: "/reviews",
+          element: <Reviews />,
         },
         {
           path: "/telemedicine-consultation",
