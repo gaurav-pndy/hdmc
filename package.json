@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "@pbe/react-yandex-maps": "^1.2.5",
     "@tailwindcss/vite": "^4.1.13",
     "framer-motion": "^12.23.22",

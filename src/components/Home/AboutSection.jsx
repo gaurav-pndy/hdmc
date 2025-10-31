@@ -5,6 +5,7 @@ import { LuBuilding2 } from "react-icons/lu";
 import { SlBadge } from "react-icons/sl";
 import { FaRegClock } from "react-icons/fa";
 import WaveBackground from "../WaveBackground";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -94,9 +95,12 @@ const AboutSection = () => {
             </div>
 
             {/* Button */}
-            <button className="bg-brand1 relative z-40 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit">
-              {t("aboutClinic.moreBtn")}
-            </button>
+            <Link
+              to={"/about"}
+              className="bg-brand1 relative z-40 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit"
+            >
+              {t("moreBtn")}
+            </Link>
           </div>
 
           {/* Right - Image */}

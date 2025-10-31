@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import WaveBackground from "../WaveBackground";
+import { Link } from "react-router-dom";
 
 const MembershipSection = () => {
   // Which FAQ is open
@@ -50,25 +51,6 @@ const MembershipSection = () => {
     },
   ];
 
-  // FAQ
-  const faq = [
-    {
-      question: t("membership.faq.faq1.question"),
-      answer: t("membership.faq.faq1.answer"),
-    },
-    {
-      question: t("membership.faq.faq2.question"),
-      answer: t("membership.faq.faq2.answer"),
-    },
-    {
-      question: t("membership.faq.faq3.question"),
-      answer: t("membership.faq.faq3.answer"),
-    },
-  ];
-
-  const toggleFAQ = (idx) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
   return (
     <section className="w-full bg-[#fbfbfb] py-16">
       <div className="max-w-[87rem] text-center mx-auto px-4 ">
@@ -126,57 +108,15 @@ const MembershipSection = () => {
           ))}
         </div>
         <div className="flex justify-center mt-10 mb-2">
-          <button className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 block mx-auto">
-            {t("membership.button")}
-          </button>
-        </div>
-        <div className="text-sm text-brand1/80 text-center mt-4">
-          {t("membership.contactText")}{" "}
+          <Link
+            to={"/hdmc-plus"}
+            className="bg-brand1 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 block mx-auto"
+          >
+            {t("moreBtn")}
+          </Link>
         </div>
 
         {/* FAQ Accordion */}
-        <div>
-          <div className="text-center text-brand1 font-bold text-2xl md:text-4xl mb-16 mt-16">
-            {t("membership.faq.title")}{" "}
-          </div>
-          <div className="max-w-3xl mx-auto flex flex-col gap-4 mb-7">
-            {faq.map((item, idx) => (
-              <div
-                key={idx}
-                onClick={() => toggleFAQ(idx)}
-                className="rounded-lg bg-white border border-brand4/20 px-6 py-4 cursor-pointer transition shadow-md"
-              >
-                {/* Question + Icon */}
-                <div className="flex justify-between items-center font-medium text-black text-lg">
-                  <span>{item.question}</span>
-                  <motion.div
-                    animate={{ rotate: openIndex === idx ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <FaChevronDown className="text-brand1" />
-                  </motion.div>
-                </div>
-
-                {/* Answer */}
-                <AnimatePresence>
-                  {openIndex === idx && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-2 text-brand1 text-left">
-                        {item.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

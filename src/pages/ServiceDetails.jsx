@@ -5,6 +5,7 @@ import { servicesData } from "../data/services";
 import { BiChevronRight } from "react-icons/bi";
 import WaveBackground from "../components/WaveBackground";
 import { useMediaQuery } from "react-responsive";
+import OtherServices from "../components/ServiceDetails/OtherServices";
 
 // Dummy video link (replace with your real one if you have)
 const VIDEO_URL = "/chemo.mp4";
@@ -20,6 +21,7 @@ const ServiceDetailsExpertAssessment = () => {
     { key: "doctors", label: t("services.tab2") },
     { key: "reviews", label: t("services.tab3") },
     { key: "prices", label: t("services.tab4") },
+    { key: "other", label: t("services.tab5") },
   ];
 
   const { serviceId } = useParams();
@@ -190,6 +192,8 @@ const ServiceDetailsExpertAssessment = () => {
             </table> */}
           </div>
         )}
+
+        {activeTab === "other" && <OtherServices />}
       </div>
     </div>
   );

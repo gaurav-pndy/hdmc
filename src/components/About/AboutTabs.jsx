@@ -7,6 +7,7 @@ import {
   FaLock,
   FaUserFriends,
   FaUserPlus,
+  FaUsers,
 } from "react-icons/fa";
 import { TbLicense } from "react-icons/tb";
 import { FaUserDoctor } from "react-icons/fa6";
@@ -20,10 +21,11 @@ import AboutLicenses from "./AboutLicenses";
 import AboutPrivacyPolicy from "./AboutPrivacyPolicy";
 import AboutOfferContract from "./AboutOfferContract";
 import ForPatients from "../../pages/ForPatients";
-import DoctorsPage from "../../pages/DoctorsPage";
+
 import PatientsInfo from "../ForPatients/PatientsInfo";
 import PatientsAccordion from "../ForPatients/PatientsAccordion";
 import AboutVacancies from "./AboutVacancies";
+import AboutPartners from "./AboutPartners";
 import { BiSolidContact } from "react-icons/bi";
 
 const TABS = [
@@ -51,12 +53,7 @@ const TABS = [
     icon: <FaUserFriends />,
     component: ForPatients,
   },
-  {
-    key: "doctors",
-    labelKey: "about.tabs.doctors",
-    icon: <FaUserDoctor />,
-    component: DoctorsPage,
-  },
+
   {
     key: "privacy",
     labelKey: "about.tabs.privacy",
@@ -74,6 +71,12 @@ const TABS = [
     labelKey: "about.tabs.vacancies",
     icon: <FaUserPlus />,
     component: AboutVacancies,
+  },
+  {
+    key: "partners",
+    labelKey: "about.tabs.partners",
+    icon: <FaUsers />,
+    component: AboutPartners,
   },
 ];
 

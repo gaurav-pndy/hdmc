@@ -214,24 +214,25 @@ const Header = ({ city, setCity }) => {
       icon: <FaUserFriends className="text-xl text-white" />,
     },
     {
-      path: "/about#doctors",
-      label: t("header.about5"),
-      icon: <FaUserDoctor className="text-xl text-white" />,
-    },
-    {
       path: "/about#privacy",
-      label: t("header.about6"),
+      label: t("header.about5"),
       icon: <LuShield className="text-xl text-white" />,
     },
+
     {
       path: "/about#offer",
-      label: t("header.about7"),
+      label: t("header.about6"),
       icon: <MdOutlineLocalOffer className="text-xl text-white" />,
     },
     {
       path: "/about#vacancies",
-      label: t("header.about8"),
+      label: t("header.about7"),
       icon: <FaUserPlus className="text-xl text-white" />,
+    },
+    {
+      path: "/about#partners",
+      label: t("header.about8"),
+      icon: <FaUsers className="text-xl text-white" />,
     },
   ];
 
@@ -278,11 +279,11 @@ const Header = ({ city, setCity }) => {
           items: [
             {
               label: t("header.doctorsDrop.subItems.s1"),
-              path: "/doctors",
+              path: "/doctors#specialization1",
             },
             {
               label: t("header.doctorsDrop.subItems.s2"),
-              path: "/doctors/radiotherapist",
+              path: "/doctors#specialization2",
             },
           ],
         },
@@ -291,189 +292,187 @@ const Header = ({ city, setCity }) => {
           items: [
             {
               label: t("header.doctorsDrop.subItems.s3"),
-              path: "/doctors",
+              path: "/doctors#specialization3",
             },
             {
               label: t("header.doctorsDrop.subItems.s4"),
-              path: "/doctors",
+              path: "/doctors#specialization4",
             },
             {
               label: t("header.doctorsDrop.subItems.s5"),
-              path: "/doctors",
+              path: "/doctors#specialization5",
             },
             {
               label: t("header.doctorsDrop.subItems.s6"),
-              path: "/doctors",
+              path: "/doctors#specialization6",
             },
             {
               label: t("header.doctorsDrop.subItems.s7"),
-              path: "/doctors",
+              path: "/doctors#specialization7",
             },
             {
               label: t("header.doctorsDrop.subItems.s8"),
-              path: "/doctors",
+              path: "/doctors#specialization8",
             },
             {
               label: t("header.doctorsDrop.subItems.s9"),
-              path: "/doctors",
+              path: "/doctors#specialization9",
             },
             {
               label: t("header.doctorsDrop.subItems.s10"),
-              path: "/doctors",
+              path: "/doctors#specialization10",
             },
             {
               label: t("header.doctorsDrop.subItems.s11"),
-              path: "/doctors",
+              path: "/doctors#specialization11",
             },
             {
               label: t("header.doctorsDrop.subItems.s12"),
-              path: "/doctors",
+              path: "/doctors#specialization12",
             },
             {
               label: t("header.doctorsDrop.subItems.s13"),
-              path: "/doctors",
+              path: "/doctors#specialization13",
             },
             {
               label: t("header.doctorsDrop.subItems.s14"),
-              path: "/doctors",
+              path: "/doctors#specialization14",
             },
-            { label: t("header.doctorsDrop.subItems.s15"), path: "/doctors" },
+            {
+              label: t("header.doctorsDrop.subItems.s15"),
+              path: "/doctors#specialization15",
+            },
           ],
         },
       ],
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization16",
       label: t("header.doctorsDrop.d2"),
       icon: <GiStomach className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization17",
       label: t("header.doctorsDrop.d3"),
       icon: <FaDna className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization18",
       label: t("header.doctorsDrop.d4"),
       icon: <GiMedicines className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization19",
       label: t("header.doctorsDrop.d5"),
       icon: <FaUserMd className=" text-white" />,
     },
     {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d6"),
-      icon: <FaHeartbeat className=" text-white" />,
-    },
-    {
-      path: "/doctors",
+      path: "/doctors#specialization20",
       label: t("header.doctorsDrop.d7"),
       icon: <FaBrain className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization21",
       label: t("header.doctorsDrop.d8"),
       icon: <GiBrain className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization22",
       label: t("header.doctorsDrop.d9"),
       icon: <GiKidneys className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization23",
       label: t("header.doctorsDrop.d10"),
       icon: <MdFamilyRestroom className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization24",
       label: t("header.doctorsDrop.d11"),
       icon: <GiNoseFront className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization25",
       label: t("header.doctorsDrop.d12"),
       icon: <FaEye className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization26",
       label: t("header.doctorsDrop.d13"),
       icon: <FaUserNurse className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization27",
       label: t("header.doctorsDrop.d14"),
       icon: <GiPsychicWaves className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization28",
       label: t("header.doctorsDrop.d15"),
       icon: <MdPsychology className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization29",
       label: t("header.doctorsDrop.d16"),
       icon: <FaUserTie className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization30",
       label: t("header.doctorsDrop.d17"),
       icon: <GiHeartOrgan className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization31",
       label: t("header.doctorsDrop.d18"),
       icon: <BsThermometerHalf className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization32",
       label: t("header.doctorsDrop.d19"),
       icon: <FaUserFriends className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization33",
       label: t("header.doctorsDrop.d20"),
       icon: <FaBone className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization34",
       label: t("header.doctorsDrop.d21"),
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization35",
       label: t("header.doctorsDrop.d22"),
       icon: <FaUserMd className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization36",
       label: t("header.doctorsDrop.d23"),
       icon: <AiOutlineUserSwitch className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization37",
       label: t("header.doctorsDrop.d24"),
       icon: <FaStethoscope className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization38",
       label: t("header.doctorsDrop.d25"),
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization39",
       label: t("header.doctorsDrop.d26"),
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization40",
       label: t("header.doctorsDrop.d27"),
       icon: <GiScalpel className=" text-white" />,
     },
     {
-      path: "/doctors",
+      path: "/doctors#specialization41",
       label: t("header.doctorsDrop.d28"),
       icon: <GiScalpel className=" text-white" />,
     },
@@ -744,12 +743,12 @@ const Header = ({ city, setCity }) => {
             onMouseLeave={() => setShowAboutDropdown(false)}
             className="relative   whitespace-nowrap cursor-pointer"
           >
-            <Link
-              to="/about"
+            <button
+              onClick={() => handleScrollToSection("#about")}
               className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
             >
               {t("header.about")} <FaChevronDown className="text-sm mt-1" />
-            </Link>
+            </button>
 
             {/* Animated dropdown */}
             <AnimatePresence>
@@ -790,12 +789,12 @@ const Header = ({ city, setCity }) => {
             }}
             className="relative whitespace-nowrap cursor-pointer"
           >
-            <Link
-              to="/about#doctors"
-              className="flex items-center gap-1 hover:text-brand2 transition-all duration-300"
+            <button
+              onClick={() => handleScrollToSection("#doctors")}
+              className="flex items-center gap-1 hover:text-brand2 transition-all duration-300 cursor-pointer"
             >
               {t("header.doctors")} <FaChevronDown className="text-sm mt-1" />
-            </Link>
+            </button>
 
             <AnimatePresence>
               {showDoctorsDropdown && (
@@ -820,7 +819,11 @@ const Header = ({ city, setCity }) => {
                         <div className="w-8  h-8 rounded-full bg-gradient-to-br from-[#125e84] to-[#33babd] group-hover:from-brand2 group-hover:to-brand1 group-hover:rotate-15 group-hover:scale-110 flex items-center justify-center shrink-0   transition-all duration-300">
                           {d.icon}
                         </div>
-                        <p className="group-hover:text-brand2 pr-8 text-sm xl:text-base text-wrap font-normal">
+                        <p
+                          className={`${
+                            d.subItems && "text-[#0a3449]"
+                          } group-hover:text-brand2 pr-8 text-sm xl:text-base text-wrap font-normal`}
+                        >
                           {d.label}
                         </p>
                         {d.subItems ? (
@@ -934,7 +937,7 @@ const Header = ({ city, setCity }) => {
             className="relative   whitespace-nowrap cursor-pointer"
           >
             <Link
-              to="/about#patients"
+              to="/for-patients"
               className="flex items-center cursor-pointer gap-1 hover:text-brand2 transition-all duration-300"
             >
               {t("header.forPatients")}{" "}
@@ -1037,13 +1040,15 @@ const Header = ({ city, setCity }) => {
             {" "}
             {t("header.expertise")}{" "}
           </Link>{" "}
-          <Link
-            to="/doctors"
+          <a
+            href="https://pathologica.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
             className=" whitespace-nowrap hover:text-brand2 transition-all duration-300 cursor-pointer"
           >
             {" "}
             Pathologica
-          </Link>{" "}
+          </a>{" "}
           <button className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
             <FaCalendarCheck className="text-lg" />
 
@@ -1427,10 +1432,14 @@ const Header = ({ city, setCity }) => {
                   {" "}
                   {t("header.expertise")}
                 </Link>{" "}
-                <Link to="/" className="  hover:underline whitespace-nowrap">
+                <a
+                  href="https://pathologica.ru/"
+                  target="_blank"
+                  className="  hover:underline whitespace-nowrap"
+                >
                   {" "}
                   Pathologica
-                </Link>{" "}
+                </a>{" "}
               </nav>
             </motion.aside>
           </>

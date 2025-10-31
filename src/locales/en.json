@@ -1,4 +1,5 @@
 {
+  "moreBtn": "Learn More",
   "header": {
     "logoTitle": "MEDICAL CLINIC",
     "location": "Moscow, Makhachkala",
@@ -52,10 +53,10 @@
     "about2": "Licenses and certificates",
     "about3": "Contacts of regulatory authorities",
     "about4": "Information for patients",
-    "about5": "Information about the organization's medical staff",
-    "about6": "Personal Data Processing Policy",
-    "about7": "The Offer Agreement",
-    "about8": "Vacancies",
+    "about5": "Personal Data Processing Policy",
+    "about6": "The Offer Agreement",
+    "about7": "Vacancies",
+    "about8": "Our Partners",
     "patient1": "Appointment Booking",
     "patient2": "Preparing for Appointment",
     "patient3": "Special Offers",
@@ -339,6 +340,7 @@
   "tab2": "Doctors",
   "tab3": "Reviews",
   "tab4": "Prices",
+  "tab5": "Other Services",
     "s1": {
     "title": "Specialist Consultation",
     "subtitle": "In-person and Remote Consultations",
@@ -655,7 +657,7 @@
       "doctors": "Doctors",
       "privacy": "Privacy Policy",
       "offer": "Contract",
-      "vacancies": "Vacancies"
+      "partners": "Partners"
     },
     "info": {
       "title": "Information about the Medical Organization",

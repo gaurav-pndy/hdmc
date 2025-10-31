@@ -246,6 +246,15 @@ const DoctorsSection = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="w-full mt-10 flex justify-center">
+        <Link
+          to={"/doctors"}
+          className="bg-brand1 relative z-40 text-white font-semibold rounded-lg px-8 py-3 shadow hover:bg-brand5/90 cursor-pointer transition-all duration-300 w-fit"
+        >
+          {t("moreBtn")}
+        </Link>
+      </div>
     </section>
   );
 };

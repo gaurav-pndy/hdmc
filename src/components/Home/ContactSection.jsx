@@ -15,7 +15,7 @@ const ContactSection = () => {
   });
 
   return (
-    <section id="contact" className="w-full bg-[#fafbfc] py-16 mb-8">
+    <section className="w-full bg-[#fafbfc] py-16 mb-8">
       <div className="max-w-[87rem] mx-auto px-4">
         <div className="max-w-[87rem] text-center mx-auto px-4">
           <h2 className="text-brand1 text-center text-4xl font-bold mb-6">
@@ -34,15 +34,15 @@ const ContactSection = () => {
               stroke="rgba(251, 186, 189,"
               custStyle="md:w-1/2 h-[65%] left-0 top-0"
             />
-            <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#582c23] to-[#695751] z-40 p-4 md:p-10">
-              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-white">
+            <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#695751] to-[#c9a89d] z-40 p-4 md:p-10">
+              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-black">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}
               </div>
 
               <div className="grid grid-cols-2  gap-4 mb-3">
                 <div>
-                  <label className="block text-white  font-semibold mb-1">
+                  <label className="block   font-semibold mb-1">
                     {t("contact.name")}
                   </label>
                   <input
@@ -54,7 +54,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-white  font-semibold mb-1">
+                  <label className="block   font-semibold mb-1">
                     {t("contact.phone")}
                   </label>
                   <input
@@ -68,7 +68,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-white  font-semibold mb-1">
+                  <label className="block   font-semibold mb-1">
                     {t("contact.email")}
                   </label>
                   <input
@@ -82,7 +82,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-white  font-semibold mb-1">
+                  <label className="block   font-semibold mb-1">
                     {t("contact.city")}
                   </label>
                   <select
@@ -101,7 +101,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-white  font-semibold mb-1">
+                <label className="block   font-semibold mb-1">
                   {t("contact.message")}
                 </label>
                 <textarea
@@ -127,7 +127,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree1"
-                  className="text-sm font-medium text-white "
+                  className="text-sm font-medium  "
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox1") }}
                 ></label>
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree2"
-                  className="text-sm font-medium text-white"
+                  className="text-sm font-medium "
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox2") }}
                 ></label>
               </div>
@@ -152,7 +152,7 @@ const ContactSection = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-brand1 rounded-lg cursor-pointer flex items-center justify-center gap-2 mt-2 px-2 py-3 text-white font-semibold text-base shadow hover:bg-brand5/90 transition-all duration-300"
+                className="w-full bg-[#59302a] rounded-lg cursor-pointer flex items-center justify-center gap-2 mt-2 px-2 py-3 text-white font-semibold text-base shadow hover:bg-[#69372c] transition-all duration-300"
               >
                 <IoPaperPlaneOutline />
                 {t("contact.button")}
@@ -166,7 +166,7 @@ const ContactSection = () => {
                   className=" w-full md:min-h-96  h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
                 />
                 <div
-                  className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#695751] via-[#695751]/40 to-transparent  `}
+                  className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#c9a89d] via-[#c9a89d]/40 to-transparent  `}
                 ></div>
               </div>
             </div>
