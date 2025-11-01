@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaMapMarkerAlt, FaLanguage } from "react-icons/fa";
+import { FaMapMarkerAlt, FaLanguage, FaStar } from "react-icons/fa";
 import { doctorsData } from "../data/doctors";
 
 const DoctorDetails = () => {
@@ -18,11 +18,26 @@ const DoctorDetails = () => {
     );
   }
 
+  const [expanded, setExpanded] = useState();
+
   const name = t(doctor.name);
   const location = t(doctor.location);
   const tags = t(doctor.tags, { returnObjects: true });
   const langs = t(doctor.langs);
   const descHtml = t(doctor.desc);
+  const aboutText = t(doctor.aboutText);
+  let membershipInt;
+  let membershipRus;
+  if (doctor.membershipInt && doctor.membershipRus) {
+    membershipInt = t(doctor.membershipInt, { returnObjects: true });
+    membershipRus = t(doctor.membershipRus, { returnObjects: true });
+  }
+  const awards = t(doctor.awards, { returnObjects: true });
+  const education = t(doctor.education, { returnObjects: true });
+  const experience = t(doctor.experience, { returnObjects: true });
+  const skills = t(doctor.skills, { returnObjects: true });
+  const reviews = t(doctor.reviews, { returnObjects: true });
+  const videos = doctor.videos;
 
   const TAB_LIST = [
     { key: "about", labelKey: "doctors.tabs.tab1" },
@@ -151,9 +166,62 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab1")}
               </h2>
-              {/* <p className="text-brand1/80">
-                [ {t("doctors.noSpecialization")} ]
-              </p> */}
+              <div className="text-gray-700">
+                <div
+                  className=""
+                  dangerouslySetInnerHTML={{ __html: aboutText }}
+                ></div>
+
+                {membershipInt && membershipRus && (
+                  <div className="mt-6">
+                    <h2 className="font-bold text-2xl mb-3 text-brand1">
+                      Memberships
+                    </h2>
+                    <h3 className="text-lg md:text-xl text-black font-semibold  mb-2">
+                      International
+                    </h3>
+                    <ul className="space-y-2">
+                      {membershipInt.map((item, i) => (
+                        <li key={i} className="">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <h3 className="text-lg text-black md:text-xl font-semibold  mb-2 mt-4">
+                      Russian
+                    </h3>
+                    <ul className="space-y-2">
+                      {membershipRus.map((item, i) => (
+                        <li key={i} className="">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {awards && (
+                  <div>
+                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                      Awards
+                    </h3>
+                    <ul>
+                      {awards.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div>
+                  <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                    Langauges
+                  </h3>
+                  <p>{langs}</p>
+                </div>
+              </div>
             </section>
             <section
               ref={sectionRefs.experience}
@@ -162,9 +230,51 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab2")}
               </h2>
-              {/* <p className="text-brand1/80">
-                [ {t("doctors.noPublications")} ]
-              </p> */}
+              <div className="text-gray-700">
+                {experience && (
+                  <div>
+                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                      Experience
+                    </h3>
+                    <ul>
+                      {experience.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {education && (
+                  <div>
+                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                      Education
+                    </h3>
+                    <ul>
+                      {education.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {skills && (
+                  <div>
+                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                      Skills
+                    </h3>
+                    <ul>
+                      {skills.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </section>
             <section
               ref={sectionRefs.activities}
@@ -182,13 +292,72 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab4")}
               </h2>
-              {/* <p className="text-brand1/80">[ {t("doctors.noReviews")} ]</p> */}
+              <div className="space-y-6 mt-6">
+                {reviews.map((review, i) => {
+                  const isExpanded = expanded === i;
+                  return (
+                    <div
+                      key={i}
+                      className="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-semibold text-lg text-brand1">
+                          {review.name}
+                        </h3>
+                        <p className="text-sm text-gray-500">{review.date}</p>
+                      </div>
+
+                      <div className="flex items-center gap-1 mb-3">
+                        {Array(5)
+                          .fill(0)
+                          .map((_, index) => (
+                            <FaStar
+                              key={index}
+                              className="text-yellow-400 text-lg"
+                            />
+                          ))}
+                      </div>
+
+                      <p
+                        className={`text-gray-700 leading-relaxed transition-all duration-300 ${
+                          isExpanded ? "line-clamp-none" : "line-clamp-4"
+                        }`}
+                      >
+                        {review.text}
+                      </p>
+
+                      {review.text.length > 200 && (
+                        <button
+                          onClick={() => setExpanded(isExpanded ? null : i)}
+                          className="mt-2  font-medium hover:underline focus:outline-none"
+                        >
+                          {isExpanded ? "Show less" : "Read more"}
+                        </button>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </section>
             <section ref={sectionRefs.video} className="pt-2 pb-2 scroll-mt-28">
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab5")}
               </h2>
-              {/* <p className="text-brand1/80">[ {t("doctors.noFaq")} ]</p> */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                {videos.map((video, i) => (
+                  <div
+                    key={i}
+                    className="aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                  >
+                    <iframe
+                      src={video}
+                      title={`Video ${i + 1}`}
+                      allowFullScreen
+                      className="w-full h-full border-none"
+                    ></iframe>
+                  </div>
+                ))}
+              </div>
             </section>
           </div>
         </main>

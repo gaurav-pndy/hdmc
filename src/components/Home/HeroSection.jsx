@@ -80,10 +80,10 @@ const HeroSection = () => {
                 <img
                   src="https://www.shutterstock.com/shutterstock/photos/2656913525/display_1500/stock-photo-person-s-hands-cupping-around-a-glowing-holographic-icon-representing-customer-loyalty-vip-clients-2656913525.jpg"
                   alt="Hero illustration"
-                  className=" w-full  md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                  className=" w-full  md:min-h-96 h-full object-cover "
                 ></img>
                 <div
-                  className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
+                  className={`absolute  inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
               from-[#016885] via-[#016885]/40 to-transparent via-40%`}
                 ></div>
               </div>
@@ -129,10 +129,10 @@ const HeroSection = () => {
                   playsInline
                   src="https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm"
                   alt="Hero illustration"
-                  className=" w-full  md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                  className=" w-full  md:min-h-96 h-full object-cover "
                 ></video>
                 <div
-                  className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
+                  className={`absolute inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
               from-[#cbd0ce] via-[#cbd0ce]/30 to-transparent via-20%`}
                 ></div>
               </div>
@@ -172,10 +172,10 @@ const HeroSection = () => {
                   playsInline
                   src="https://www.shutterstock.com/shutterstock/videos/1067598875/preview/stock-footage-joyful-young-couple-friends-african-american-man-woman-s-in-t-shirts-isolated-on-yellow.webm"
                   alt="Hero illustration"
-                  className=" w-full  md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                  className=" w-full  md:min-h-96 h-full object-cover "
                 ></video>
                 <div
-                  className={`absolute md:rounded-tr-2xl md:rounded-br-2xl inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
+                  className={`absolute inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
               from-[#df952f] via-[#df952f]/30 to-transparent via-20%`}
                 ></div>
               </div>
