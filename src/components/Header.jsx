@@ -190,16 +190,6 @@ const Header = ({ city, setCity }) => {
       label: t("header.service12"),
       icon: "/services/12.svg",
     },
-    {
-      path: "/services/service13",
-      label: t("header.service13"),
-      icon: "/services/13.png",
-    },
-    {
-      path: "/services/service14",
-      label: t("header.service14"),
-      icon: "/services/14.png",
-    },
   ];
 
   const aboutItems = [
