@@ -159,7 +159,7 @@ export const servicesData = [
     title: "services.s13.title",
     // subtitle: "services.s13.subtitle",
     // btn: "services.s12.btn",
-    // about: "services.s12.about",
+    about: "services.s13.about",
     video:
       "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
     color1: "#9c7867",
@@ -172,7 +172,7 @@ export const servicesData = [
     title: "services.s14.title",
     // subtitle: "services.s12.subtitle",
     // btn: "services.s12.btn",
-    // about: "services.s12.about",
+    about: "services.s14.about",
     video:
       "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
     color1: "#9c7867",

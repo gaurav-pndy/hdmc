@@ -26,7 +26,7 @@ export const doctorsData = [
     tags: "doctors.doctorsList.doctor3.tags",
     langs: "doctors.doctorsList.doctor3.langs",
     desc: "doctors.doctorsList.doctor3.desc",
-    image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2",
+    image: "/doctors/3.jpg",
     specialty: "oncology",
     aboutText: "doctors.doctorsList.doctor3.aboutText",
     membershipInt: "doctors.doctorsList.doctor3.memberships.international",
