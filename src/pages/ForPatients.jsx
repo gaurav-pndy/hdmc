@@ -9,14 +9,6 @@ import {
   FaBlog,
   FaDollarSign,
   FaFileAlt,
-  FaXRay,
-  FaMicroscope,
-  FaIdCard,
-  FaPhone,
-  FaBuilding,
-  FaGlobe,
-  FaClock,
-  FaExclamationTriangle,
 } from "react-icons/fa";
 import { MdHealthAndSafety } from "react-icons/md";
 import AppointmentTab from "../components/ForPatients/AppointmentTab";

@@ -238,32 +238,32 @@ const Header = ({ city, setCity }) => {
 
   const patientItems = [
     {
-      path: "#appointment",
+      path: "/for-patients#appointment",
       label: t("header.patient1"),
       icon: <ImUsers className="text-xl text-white" />,
     },
     {
-      path: "#preparation",
+      path: "/for-patients#preparation",
       label: t("header.patient2"),
       icon: <FaClipboardList className="text-xl text-white" />,
     },
     {
-      path: "#offers",
+      path: "/for-patients#offers",
       label: t("header.patient3"),
       icon: <FaTag className="text-xl text-white" />,
     },
     {
-      path: "#insurance",
+      path: "/for-patients#insurance",
       label: t("header.patient4"),
       icon: <MdMedicalServices className="text-xl text-white" />,
     },
     {
-      path: "#blog",
+      path: "/for-patients#blog",
       label: t("header.patient5"),
       icon: <IoDocumentText className="text-xl text-white" />,
     },
     {
-      path: "#price",
+      path: "/for-patients#documents",
       label: t("header.patient6"),
       icon: <FaMoneyBillAlt className="text-xl text-white" />,
     },
@@ -955,8 +955,8 @@ const Header = ({ city, setCity }) => {
                   className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-3 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-2xl xl:w-4xl"
                 >
                   {patientItems.map((p, idx) => (
-                    <button
-                      onClick={() => handleScrollToPatientsSection(p.path)}
+                    <Link
+                      to={p.path}
                       key={idx}
                       className="block  group  text-wrap   transition-all relative duration-300 rounded-lg"
                     >
@@ -969,7 +969,7 @@ const Header = ({ city, setCity }) => {
                       <div className="absolute right-2 top-3 overflow-hidden w-6">
                         <FaArrowRight className="text-lg text-brand2 transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out" />
                       </div>
-                    </button>
+                    </Link>
                   ))}
                 </motion.div>
               )}
