@@ -35,6 +35,7 @@ import {
   FaChevronUp,
   FaChevronLeft,
   FaChevronRight,
+  FaFileAlt,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import i18n from "../utils/i18n";
@@ -265,7 +266,7 @@ const Header = ({ city, setCity }) => {
     {
       path: "/for-patients#documents",
       label: t("header.patient6"),
-      icon: <FaMoneyBillAlt className="text-xl text-white" />,
+      icon: <FaFileAlt className="text-xl text-white" />,
     },
   ];
 
