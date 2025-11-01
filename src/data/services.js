@@ -149,8 +149,34 @@ export const servicesData = [
     // about: "services.s12.about",
     video:
       "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
-    color1: "from-[#9c7867] to-[#cac9cb]",
-    color2: "from-[#cac9cb] via-[#cac9cb]/40 to-transparent ",
+    color1: "#9c7867",
+    color2: "#cac9cb",
+    stroke: "rgba(51, 186, 189,",
+  },
+  {
+    id: "service13",
+    image: "/services/13.png",
+    title: "services.s13.title",
+    // subtitle: "services.s13.subtitle",
+    // btn: "services.s12.btn",
+    // about: "services.s12.about",
+    video:
+      "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
+    color1: "#9c7867",
+    color2: "#cac9cb",
+    stroke: "rgba(51, 186, 189,",
+  },
+  {
+    id: "service14",
+    image: "/services/14.png",
+    title: "services.s14.title",
+    // subtitle: "services.s12.subtitle",
+    // btn: "services.s12.btn",
+    // about: "services.s12.about",
+    video:
+      "https://www.shutterstock.com/shutterstock/videos/3674029407/preview/stock-footage-patient-and-doctor-shaking-hands.webm",
+    color1: "#9c7867",
+    color2: "#cac9cb",
     stroke: "rgba(51, 186, 189,",
   },
 ];

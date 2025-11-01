@@ -190,6 +190,16 @@ const Header = ({ city, setCity }) => {
       label: t("header.service12"),
       icon: "/services/12.svg",
     },
+    {
+      path: "/services/service13",
+      label: t("header.service13"),
+      icon: "/services/13.png",
+    },
+    {
+      path: "/services/service14",
+      label: t("header.service14"),
+      icon: "/services/14.png",
+    },
   ];
 
   const aboutItems = [
@@ -897,7 +907,7 @@ const Header = ({ city, setCity }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-5 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
                 >
                   {services.map((s, idx) => (
                     <Link
