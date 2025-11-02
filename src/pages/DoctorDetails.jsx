@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaMapMarkerAlt, FaLanguage, FaStar } from "react-icons/fa";
 import { doctorsData } from "../data/doctors";
+import { i } from "framer-motion/client";
 
 const DoctorDetails = () => {
   const { doctorId } = useParams();
@@ -25,19 +26,44 @@ const DoctorDetails = () => {
   const tags = t(doctor.tags, { returnObjects: true });
   const langs = t(doctor.langs);
   const descHtml = t(doctor.desc);
-  const aboutText = t(doctor.aboutText);
+  let aboutText;
+  if (doctor.aboutText) {
+    aboutText = t(doctor.aboutText);
+  }
   let membershipInt;
   let membershipRus;
   if (doctor.membershipInt && doctor.membershipRus) {
     membershipInt = t(doctor.membershipInt, { returnObjects: true });
     membershipRus = t(doctor.membershipRus, { returnObjects: true });
   }
-  const awards = t(doctor.awards, { returnObjects: true });
-  const education = t(doctor.education, { returnObjects: true });
-  const experience = t(doctor.experience, { returnObjects: true });
-  const skills = t(doctor.skills, { returnObjects: true });
-  const reviews = t(doctor.reviews, { returnObjects: true });
-  const videos = doctor.videos;
+  let awards;
+  if (doctor.awards) {
+    awards = t(doctor.awards, { returnObjects: true });
+  }
+  let education;
+  let experience;
+  if (doctor.education) {
+    education = t(doctor.education, { returnObjects: true });
+  }
+  if (doctor.experience) {
+    experience = t(doctor.experience, { returnObjects: true });
+  }
+  let skills;
+  if (doctor.skills) {
+    skills = t(doctor.skills, { returnObjects: true });
+  }
+  let qualifications;
+  if (doctor.qualifications) {
+    qualifications = t(doctor.qualifications, { returnObjects: true });
+  }
+  let reviews;
+  if (doctor.reviews) {
+    reviews = t(doctor.reviews, { returnObjects: true });
+  }
+  let videos;
+  if (doctor.videos) {
+    videos = doctor.videos;
+  }
 
   const TAB_LIST = [
     { key: "about", labelKey: "doctors.tabs.tab1" },
@@ -260,6 +286,20 @@ const DoctorDetails = () => {
                     </ul>
                   </div>
                 )}
+                {qualifications && (
+                  <div>
+                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
+                      Qualifications
+                    </h3>
+                    <ul>
+                      {qualifications.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {skills && (
                   <div>
                     <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
@@ -292,72 +332,76 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab4")}
               </h2>
-              <div className="space-y-6 mt-6">
-                {reviews.map((review, i) => {
-                  const isExpanded = expanded === i;
-                  return (
-                    <div
-                      key={i}
-                      className="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-semibold text-lg text-brand1">
-                          {review.name}
-                        </h3>
-                        <p className="text-sm text-gray-500">{review.date}</p>
-                      </div>
-
-                      <div className="flex items-center gap-1 mb-3">
-                        {Array(5)
-                          .fill(0)
-                          .map((_, index) => (
-                            <FaStar
-                              key={index}
-                              className="text-yellow-400 text-lg"
-                            />
-                          ))}
-                      </div>
-
-                      <p
-                        className={`text-gray-700 leading-relaxed transition-all duration-300 ${
-                          isExpanded ? "line-clamp-none" : "line-clamp-4"
-                        }`}
+              {reviews && (
+                <div className="space-y-6 mt-6">
+                  {reviews.map((review, i) => {
+                    const isExpanded = expanded === i;
+                    return (
+                      <div
+                        key={i}
+                        className="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
                       >
-                        {review.text}
-                      </p>
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="font-semibold text-lg text-brand1">
+                            {review.name}
+                          </h3>
+                          <p className="text-sm text-gray-500">{review.date}</p>
+                        </div>
 
-                      {review.text.length > 200 && (
-                        <button
-                          onClick={() => setExpanded(isExpanded ? null : i)}
-                          className="mt-2  font-medium hover:underline focus:outline-none"
+                        <div className="flex items-center gap-1 mb-3">
+                          {Array(5)
+                            .fill(0)
+                            .map((_, index) => (
+                              <FaStar
+                                key={index}
+                                className="text-yellow-400 text-lg"
+                              />
+                            ))}
+                        </div>
+
+                        <p
+                          className={`text-gray-700 leading-relaxed transition-all duration-300 ${
+                            isExpanded ? "line-clamp-none" : "line-clamp-4"
+                          }`}
                         >
-                          {isExpanded ? "Show less" : "Read more"}
-                        </button>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+                          {review.text}
+                        </p>
+
+                        {review.text.length > 200 && (
+                          <button
+                            onClick={() => setExpanded(isExpanded ? null : i)}
+                            className="mt-2  font-medium hover:underline focus:outline-none"
+                          >
+                            {isExpanded ? "Show less" : "Read more"}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </section>
             <section ref={sectionRefs.video} className="pt-2 pb-2 scroll-mt-28">
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab5")}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                {videos.map((video, i) => (
-                  <div
-                    key={i}
-                    className="aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
-                  >
-                    <iframe
-                      src={video}
-                      title={`Video ${i + 1}`}
-                      allowFullScreen
-                      className="w-full h-full border-none"
-                    ></iframe>
-                  </div>
-                ))}
-              </div>
+              {videos && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                  {videos.map((video, i) => (
+                    <div
+                      key={i}
+                      className="aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                    >
+                      <iframe
+                        src={video}
+                        title={`Video ${i + 1}`}
+                        allowFullScreen
+                        className="w-full h-full border-none"
+                      ></iframe>
+                    </div>
+                  ))}
+                </div>
+              )}
             </section>
           </div>
         </main>

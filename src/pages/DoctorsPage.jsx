@@ -381,7 +381,7 @@ const DoctorsPage = () => {
               <img
                 src={doc.image}
                 alt={doc.name}
-                className="w-full h-52 object-cover rounded-lg"
+                className="w-full h-60 object-top object-cover rounded-lg"
               />
               <div className="font-bold text-black text-xl mt-4 mb-3">
                 {doc.name}
