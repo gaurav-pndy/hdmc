@@ -234,7 +234,7 @@ export const doctorsData = [
     langs: "doctors.doctorsList.doctor18.langs",
     desc: "doctors.doctorsList.doctor18.desc",
     image: "/doctors/18.jpg",
-    specialty: "oncology",
+    specialty: "chemotherapist",
 
     medExp: "doctors.doctorsList.doctor18.medExp",
     services: "doctors.doctorsList.doctor18.services",

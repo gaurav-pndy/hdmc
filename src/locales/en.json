@@ -64,18 +64,18 @@
     "patient5": "HDMC Blog",
     "patient6": "Documents",
     "oncologist": "Oncologists",
-   "doctorsDrop": {
+  "doctorsDrop": {
   "d1": "Oncologists",
   "d2": "Pathologist",
   "d3": "Family Medicine Doctor",
   "d4": "Ultrasound Specialist",
-  "d5": "Functional",
-  "d6": "Diagnostics Doctor",
+  "d5": "Functional Diagnostics Doctor",
+  "d6": "Diagnostics",
   "d7": "Gastroenterologist",
   "d8": "Hematologist",
   "d9": "Geneticist",
   "d10": "Gynecologist",
-  "d11": "Dermatovenereologist",
+  "d11": "Dermatovenerologist",
   "d12": "Cardiologist",
   "d13": "Neurologist",
   "d14": "Neurosurgeon",
@@ -84,7 +84,7 @@
   "d17": "Ophthalmologist",
   "d18": "Occupational Pathologist",
   "d19": "Psychiatrist",
-  "d20": "Psychiatrist – Narcologist",
+  "d20": "Addiction Psychiatrist",
   "d21": "Psychotherapist",
   "d22": "Rheumatologist",
   "d23": "Cardiovascular Surgeon",
@@ -98,21 +98,22 @@
     "s1": "Medical Oncologist (Chemotherapist)",
     "s2": "Radiation Oncologist",
     "h2": "Surgical Oncologists",
-    "s3": "Abdominal Oncologist Surgeon",
-    "s4": "Oncologist Hematologist",
-    "s5": "Hepatopancreatobiliary Oncologist Surgeon",
+    "s3": "Abdominal Surgical Oncologist",
+    "s4": "Hematologic Oncologist",
+    "s5": "Hepatopancreatobiliary Oncologic Surgeon",
     "s6": "Gynecologic Oncologist",
-    "s7": "Head and Neck Oncologist (Surgeon, ENT, or Maxillofacial Surgeon)",
-    "s8": "Coloproctologist Oncologist",
-    "s9": "Mammologist Oncologist",
-    "s10": "Neurosurgeon Oncologist",
+    "s7": "Head and Neck Oncologist",
+    "s8": "Colorectal Oncologist",
+    "s9": "Breast Oncologist (Mammologist)",
+    "s10": "Neurosurgical Oncologist",
     "s11": "Orthopedic Oncologist",
-    "s12": "Ophthalmologic Oncologist",
+    "s12": "Ophthalmic Oncologist",
     "s13": "Plastic Oncologic Surgeon",
     "s14": "Thoracic Oncologic Surgeon",
     "s15": "Urologic Oncologist"
   }
 }
+
 
 
 
