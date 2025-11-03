@@ -56,7 +56,7 @@ const DoctorDetails = () => {
   if (doctor.qualifications) {
     qualifications = t(doctor.qualifications, { returnObjects: true });
   }
-  let reviews;
+  let reviews = [];
   if (doctor.reviews) {
     reviews = t(doctor.reviews, { returnObjects: true });
   }
@@ -127,9 +127,9 @@ const DoctorDetails = () => {
               <h1 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand1 mb-4">
                 {name}
               </h1>
-              <p className="flex-1 whitespace-nowrap text-brand1/80 text-lg font-semibold">
+              <p className="flex-1 text-right whitespace-nowrap text-brand1/80 text-lg font-semibold">
                 {" "}
-                0 {t("doctors.reviews")}
+                {reviews.length} {t("doctors.reviews")}
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -341,7 +341,7 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab4")}
               </h2>
-              {reviews && (
+              {reviews.length > 0 && (
                 <div className="space-y-6 mt-6">
                   {reviews.map((review, i) => {
                     const isExpanded = expanded === i;
