@@ -6,7 +6,7 @@ export const doctorsData = [
     tags: "doctors.doctorsList.doctor1.tags",
     langs: "doctors.doctorsList.doctor1.langs",
     desc: "doctors.doctorsList.doctor1.desc",
-    image: "doctors/1.jpg",
+    image: "/doctors/1.jpg",
     specialty: "oncology",
     medExp: "doctors.doctorsList.doctor1.medExp",
     services: "doctors.doctorsList.doctor1.services",
