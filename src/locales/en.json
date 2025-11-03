@@ -188,6 +188,16 @@
     "onlineConsult": "Online Consultation",
     "viewProfile": "View Profile",
     "reviews": "reviews",
+  "membershipsTitle": "Membership in Professional Organizations",
+  "awardsTitle": "Awards",
+  "langsTitle": "Languages",
+  "expTitle": "Work Experience",
+  "eduTitle": "Education",
+  "qualTitle": "Professional Development",
+  "skillsTitle": "Advanced Training",
+  "internTitle": "Internships and Additional Education",
+  "international": "INTERNATIONAL",
+  "russian": "RUSSIAN",
     "doctorsList": {
      "doctor1": {
   "name": "Subramanian Somasundaram (Dr. Soma)",

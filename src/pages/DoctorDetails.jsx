@@ -1,9 +1,19 @@
 import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaMapMarkerAlt, FaLanguage, FaStar } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaLanguage,
+  FaStar,
+  FaUserTie,
+  FaAward,
+  FaGraduationCap,
+  FaChalkboardTeacher,
+} from "react-icons/fa";
 import { doctorsData } from "../data/doctors";
 import { i } from "framer-motion/client";
+import { MdWork } from "react-icons/md";
+import { GiDiploma } from "react-icons/gi";
 
 const DoctorDetails = () => {
   const { doctorId } = useParams();
@@ -29,6 +39,10 @@ const DoctorDetails = () => {
   let aboutText;
   if (doctor.aboutText) {
     aboutText = t(doctor.aboutText);
+  }
+  let memberships;
+  if (doctor.memberships) {
+    memberships = t(doctor.memberships, { returnObjects: true });
   }
   let membershipInt;
   let membershipRus;
@@ -193,7 +207,7 @@ const DoctorDetails = () => {
             </nav>
             {/* Tab sections (IDs/refs for scroll target) */}
             <section ref={sectionRefs.about} className="pt-2 pb-6 scroll-mt-28">
-              <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
+              <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab1")}
               </h2>
               <div className="text-gray-700">
@@ -203,12 +217,15 @@ const DoctorDetails = () => {
                 ></div>
 
                 {membershipInt && membershipRus && (
-                  <div className="mt-6">
-                    <h2 className="font-bold text-2xl mb-3 text-brand1">
-                      Memberships
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <FaUserTie className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.membershipsTitle")}
                     </h2>
-                    <h3 className="text-lg md:text-xl text-black font-semibold  mb-2">
-                      International
+                    <h3 className="text-lg  text-black font-semibold  mb-2">
+                      {t("doctors.international")}
                     </h3>
                     <ul className="space-y-2">
                       {membershipInt.map((item, i) => (
@@ -217,8 +234,8 @@ const DoctorDetails = () => {
                         </li>
                       ))}
                     </ul>
-                    <h3 className="text-lg text-black md:text-xl font-semibold  mb-2 mt-4">
-                      Russian
+                    <h3 className="text-lg text-black  font-semibold  mb-2 mt-6">
+                      {t("doctors.russian")}
                     </h3>
                     <ul className="space-y-2">
                       {membershipRus.map((item, i) => (
@@ -230,11 +247,33 @@ const DoctorDetails = () => {
                   </div>
                 )}
 
+                {memberships && (
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <FaUserTie className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.membershipsTitle")}
+                    </h2>
+
+                    <ul className="space-y-2">
+                      {memberships.map((item, i) => (
+                        <li key={i} className="">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {awards && (
-                  <div>
-                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                      Awards
-                    </h3>
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <FaAward className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.awardsTitle")}
+                    </h2>
                     <ul>
                       {awards.map((item, i) => (
                         <li key={i} className="mb-2">
@@ -245,27 +284,33 @@ const DoctorDetails = () => {
                   </div>
                 )}
 
-                <div>
-                  <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                    Langauges
-                  </h3>
+                <div className="mt-8">
+                  <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                    <span className="bg-brand3 p-2.5 rounded-lg">
+                      <FaLanguage className="shrink-0 text-2xl text-white" />
+                    </span>{" "}
+                    {t("doctors.langsTitle")}
+                  </h2>
                   <p>{langs}</p>
                 </div>
               </div>
             </section>
             <section
               ref={sectionRefs.experience}
-              className="pt-2 pb-6 scroll-mt-28"
+              className="pt-2 pb-6 scroll-mt-28 mt-16"
             >
-              <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
+              <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab2")}
               </h2>
-              <div className="text-gray-700">
+              <div className="text-gray-700 ">
                 {experience && (
-                  <div>
-                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                      Experience
-                    </h3>
+                  <div className="">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <MdWork className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.expTitle")}
+                    </h2>
                     <ul>
                       {experience.map((item, i) => (
                         <li key={i} className="mb-2">
@@ -277,10 +322,13 @@ const DoctorDetails = () => {
                 )}
 
                 {education && (
-                  <div>
-                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                      Education
-                    </h3>
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <FaGraduationCap className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.eduTitle")}
+                    </h2>
                     <ul>
                       {education.map((item, i) => (
                         <li key={i} className="mb-2">
@@ -291,10 +339,13 @@ const DoctorDetails = () => {
                   </div>
                 )}
                 {qualifications && (
-                  <div>
-                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                      Qualifications
-                    </h3>
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <GiDiploma className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.qualTitle")}
+                    </h2>
                     <ul>
                       {qualifications.map((item, i) => (
                         <li key={i} className="mb-2">
@@ -305,10 +356,13 @@ const DoctorDetails = () => {
                   </div>
                 )}
                 {skills && (
-                  <div>
-                    <h3 className="mt-6 text-2xl font-bold text-brand1 mb-2">
-                      Skills
-                    </h3>
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <FaChalkboardTeacher className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.skillsTitle")}
+                    </h2>
                     <ul>
                       {skills.map((item, i) => (
                         <li key={i} className="mb-2">
@@ -322,9 +376,9 @@ const DoctorDetails = () => {
             </section>
             <section
               ref={sectionRefs.activities}
-              className="pt-2 pb-6 scroll-mt-28"
+              className="pt-2 pb-6 scroll-mt-28 mt-16"
             >
-              <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
+              <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab3")}
               </h2>
               {scientific && (
@@ -336,9 +390,9 @@ const DoctorDetails = () => {
             </section>
             <section
               ref={sectionRefs.reviews}
-              className="pt-2 pb-6 scroll-mt-28"
+              className="pt-2 pb-6 scroll-mt-28 mt-16"
             >
-              <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
+              <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab4")}
               </h2>
               {reviews.length > 0 && (
@@ -390,8 +444,11 @@ const DoctorDetails = () => {
                 </div>
               )}
             </section>
-            <section ref={sectionRefs.video} className="pt-2 pb-2 scroll-mt-28">
-              <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
+            <section
+              ref={sectionRefs.video}
+              className="pt-2 pb-2 scroll-mt-28 mt-16"
+            >
+              <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab5")}
               </h2>
               {videos && (

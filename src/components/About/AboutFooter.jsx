@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-const AboutFooter = () => {
+const AboutFooter = ({ city }) => {
   const { t } = useTranslation();
 
   return (
@@ -19,7 +19,12 @@ const AboutFooter = () => {
           className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl  text-brand1  font-semibold hover:bg-transparent border border-white transition-all  duration-300 cursor-pointer hover:text-white"
         >
           <FaPhoneAlt className="text-2xl text-brand4" />
-          <span>+7 (495) 123-45-67</span>
+          <span>
+            {" "}
+            {city === "Makhachkala"
+              ? "+7 (495) 123-45-67"
+              : "+7 (499) 685-30-00"}
+          </span>
         </a>
         <a
           href="mailto:info@hdmc.info"

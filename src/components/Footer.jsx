@@ -84,11 +84,19 @@ const Footer = ({ city }) => {
           </h3>
           <div className="flex items-start gap-2 mb-2">
             <FaMapMarkerAlt className="mt-1.5" />
-            <span>
-              {city === "Makhachkala"
-                ? t("address.clinic2.address")
-                : t("address.clinic1.address")}
-            </span>
+            {city === "Makhachkala" ? (
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t("address.clinic2.address"),
+                }}
+              ></span>
+            ) : (
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t("address.clinic1.address"),
+                }}
+              ></span>
+            )}
           </div>
           <div className="flex items-center gap-2 mb-2">
             <FaClock />{" "}
@@ -108,11 +116,11 @@ const Footer = ({ city }) => {
           </a>
           {city === "Makhachkala" ? (
             <a
-              href="tel:+798820455575"
+              href="tel:+74951234567"
               target="_blank"
               className="flex items-center gap-2 mb-4"
             >
-              <FaPhoneAlt /> <span>+7 (988) 204-55-75</span>
+              <FaPhoneAlt /> <span>+7 (495) 123-45-67</span>
             </a>
           ) : (
             <a
@@ -120,7 +128,7 @@ const Footer = ({ city }) => {
               target="_blank"
               className="flex items-center gap-2 mb-4"
             >
-              <FaPhoneAlt /> <span>+7 (495) 514-20-58</span>
+              <FaPhoneAlt /> <span>+7 (499) 685-30-00</span>
             </a>
           )}
 

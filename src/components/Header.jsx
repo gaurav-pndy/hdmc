@@ -614,7 +614,10 @@ const Header = ({ city, setCity }) => {
           <div className="hidden lg:flex mx-4 xl:mx-8 items-center gap-3 xl:gap-5  w-fit justify-center lg:justify-end">
             <div className="flex flex-col  text-xs xl:text-sm">
               <span className="whitespace-nowrap flex items-center gap-1  mb-1">
-                <FaPhoneAlt /> +7 (495) 123-45-67
+                <FaPhoneAlt />{" "}
+                {city === "Makhachkala"
+                  ? "+7 (495) 123-45-67"
+                  : "+7 (499) 685-30-00"}
               </span>
               <a
                 href="mailto:info@hdmc.info"

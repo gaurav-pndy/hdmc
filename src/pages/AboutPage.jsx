@@ -10,7 +10,7 @@ const AboutPage = ({ city }) => {
     <div className="px-4 mb-10">
       <AboutHero />
       <AboutTabs city={city} />
-      <AboutFooter />
+      <AboutFooter city={city} />
     </div>
   );
 };
