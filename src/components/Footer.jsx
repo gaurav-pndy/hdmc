@@ -100,11 +100,11 @@ const Footer = ({ city }) => {
             </span>
           </div>
           <a
-            href="mailto:office@health-direct.info"
+            href="mailto:info@hdmc.info"
             target="_blank"
             className="flex items-center gap-2 mb-2"
           >
-            <FaEnvelope /> <span>office@health-direct.info</span>
+            <FaEnvelope /> <span>info@hdmc.info</span>
           </a>
           {city === "Makhachkala" ? (
             <a

@@ -1706,10 +1706,636 @@
   "area9": "Early Disease Diagnosis",
   "area10": "Neuro-Oncology",
   "cta": {
-    "title": "Need a consultation?",
-    "subtitle": "Make an appointment with our specialists",
-    "btn": "Book an appointment"
+  "title": "Need a consultation?",
+  "subtitle": "Make an appointment with our specialists",
+  "btn": "Make an appointment"
+},
+"oncology": "Oncology",
+"years": "years",
+"experience": "Work experience",
+"since": "since",
+"workAtHDMC": "Work at HDMC",
+"directions": "Directions",
+"btn": "Learn more about the doctor",
+"oncogynecology": {
+  "title": "Oncogynecology",
+  "doctor1": {
+    "name": "Salim Nidal",
+    "location": "Israel",
+    "position": "Director of the Oncology Department",
+    "point1": "Specialization in surgery, radiation therapy, and chemotherapy, kidney",
+    "point2": "Director of Oncology and Radiation Therapy Department at Hadassah Hospital, Jerusalem",
+    "point3": "Head of the Oncology Department at Golani Medical Center, Jerusalem",
+    "btn": "Learn more about the doctor"
+  },
+  "doctor2": {
+    "name": "Pavel Kozodoev",
+    "position": "Oncologist, Chemotherapist, Doctor of Medicine, Professor"
+  },
+  "doctor3": {
+    "name": "Evgeny Lyubkin",
+    "position": "Oncologist, Specialist at HDC National Medical System"
+  },
+  "doctor4": {
+    "name": "Yulia Maksimova",
+    "position": "Oncogynecologist, Specialist at HDC National Medical System"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Oncological Consultations",
+      "desc": "Oncological consultations, treatment of cancer patients at all stages."
+    },
+    "dir2": {
+      "title": "Diagnostics",
+      "desc": "Conducting and detailed analysis of high-level and innovative cancer diagnostic methods to determine disease stage and type."
+    },
+    "dir3": {
+      "title": "Effectiveness Assessment",
+      "desc": "Determining the most effective comprehensive therapy methods considering disease stage and tumor histological structure."
+    },
+    "dir4": {
+      "title": "Radiation Therapy",
+      "desc": "Therapeutic medical cancer treatment. Treatment may include chemotherapy, hormone therapy, and targeted therapy; biomarkers are widely used."
+    },
+    "dir5": {
+      "title": "Oncosurgery of Any Complexity",
+      "desc": "Cancer surgery in cases of tumor regrowth. Radical or reconstructive surgery combined with intraoperative radiation therapy."
+    },
+    "dir6": {
+      "title": "Chemotherapy",
+      "desc": "Multicomponent cancer therapy according to modern protocols of specialized biological laboratories based on molecular tumor analysis."
+    },
+    "dir7": {
+      "title": "Immunotherapy, Hormone Therapy",
+      "desc": "Use of biological agents, monoclonal antibodies, oncolytic viruses, vaccines, angiogenesis inhibitors."
+    }
   }
+},
+"gynecology": {
+  "title": "Gynecology",
+  "doctor1": {
+    "name": "Doctor of Medical Sciences",
+    "position": "Gynecologist, Specialist of the Highest Category",
+    "point1": "Gynecological surgery and endoscopy",
+    "point2": "Infertility treatment and reproductive technologies",
+    "point3": "Management of high-risk pregnancies"
+  },
+  "doctor2": {
+    "name": "Specialist",
+    "position": "Gynecologist-Endocrinologist"
+  },
+  "doctor3": {
+    "name": "Doctor",
+    "position": "Gynecologist"
+  },
+  "doctor4": {
+    "name": "Consultant",
+    "position": "Reproductologist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Consultations and Diagnostics",
+      "desc": "Complete gynecological examination using modern equipment."
+    },
+    "dir2": {
+      "title": "Disease Treatment",
+      "desc": "Conservative and surgical treatment of gynecological diseases."
+    },
+    "dir3": {
+      "title": "Reproductive Health",
+      "desc": "Family planning, infertility treatment, IVF."
+    },
+    "dir4": {
+      "title": "Endoscopic Surgery",
+      "desc": "Minimally invasive procedures: laparoscopy, hysteroscopy."
+    },
+    "dir5": {
+      "title": "Pregnancy Management",
+      "desc": "Complete medical support throughout all stages of pregnancy."
+    }
+  }
+},
+"traumatology": {
+  "title": "Traumatology and Orthopedics",
+  "doctor1": {
+    "position": "Leading Specialist",
+    "desc": "Traumatologist-Orthopedist, Doctor of Medical Sciences",
+    "point1": "Endoprosthetics of large joints",
+    "point2": "Arthroscopic surgery",
+    "point3": "Treatment of spine injuries and diseases"
+  },
+  "doctor2": {
+    "name": "Orthopedic Surgeon",
+    "position": "Specialist in Sports Traumatology"
+  },
+  "doctor3": {
+    "name": "Traumatologist",
+    "position": "Orthopedist-Traumatologist"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Pediatric Traumatologist-Orthopedist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Trauma Diagnostics",
+      "desc": "Comprehensive diagnostics of musculoskeletal injuries and diseases."
+    },
+    "dir2": {
+      "title": "Conservative Treatment",
+      "desc": "Medication therapy, physiotherapy, rehabilitation."
+    },
+    "dir3": {
+      "title": "Surgical Treatment",
+      "desc": "Operations on joints, bones, and soft tissues."
+    },
+    "dir4": {
+      "title": "Endoprosthetics",
+      "desc": "Replacement of large joints with modern implants."
+    },
+    "dir5": {
+      "title": "Arthroscopy",
+      "desc": "Minimally invasive joint surgeries."
+    },
+    "dir6": {
+      "title": "Sports Medicine",
+      "desc": "Treatment and recovery from sports injuries."
+    }
+  }
+},
+"surgery": {
+  "title": "Head and Neck Surgery and Oncology",
+  "doctor1": {
+    "name": "Professor",
+    "position": "Head and Neck Oncologic Surgeon",
+    "point1": "Head and neck oncologic surgery",
+    "point2": "Reconstructive surgery",
+    "point3": "Microsurgery"
+  },
+  "doctor2": {
+    "name": "Surgeon",
+    "position": "Oncologist, Head and Neck Tumor Specialist"
+  },
+  "doctor3": {
+    "name": "Oncologist",
+    "position": "Chemotherapist"
+  },
+  "doctor4": {
+    "name": "Radiologist",
+    "position": "Radiation Therapy Specialist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Tumor Diagnostics",
+      "desc": "Comprehensive diagnosis of head and neck neoplasms."
+    },
+    "dir2": {
+      "title": "Surgical Treatment",
+      "desc": "Radical tumor removal while preserving function."
+    },
+    "dir3": {
+      "title": "Reconstructive Surgery",
+      "desc": "Restoration of anatomy and function after tumor removal."
+    },
+    "dir4": {
+      "title": "Combined Treatment",
+      "desc": "Combining surgery, chemotherapy, and radiotherapy."
+    },
+    "dir5": {
+      "title": "Palliative Care",
+      "desc": "Improving quality of life at all stages."
+    }
+  }
+},
+"oncomammology": {
+  "title": "Oncomammology",
+  "doctor1": {
+    "name": "Leading Oncologist-Mammologist",
+    "position": "Professor, Doctor of Medical Sciences",
+    "point1": "Diagnosis and treatment of breast cancer",
+    "point2": "Breast-conserving surgeries",
+    "point3": "Reconstructive mammoplasty"
+  },
+  "doctor2": {
+    "name": "Oncologist",
+    "position": "Mammologist-Surgeon"
+  },
+  "doctor3": {
+    "name": "Specialist",
+    "position": "Oncologist-Chemotherapist"
+  },
+  "doctor4": {
+    "name": "Doctor",
+    "position": "Mammologist-Diagnostician"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Early Diagnosis",
+      "desc": "Mammography, ultrasound, MRI of breasts, biopsy."
+    },
+    "dir2": {
+      "title": "Surgical Treatment",
+      "desc": "Breast-conserving and radical surgeries."
+    },
+    "dir3": {
+      "title": "Reconstruction",
+      "desc": "Restoration of breast shape post-surgery."
+    },
+    "dir4": {
+      "title": "Chemotherapy",
+      "desc": "Modern antitumor therapy protocols."
+    },
+    "dir5": {
+      "title": "Targeted Therapy",
+      "desc": "Treatment based on molecular tumor profiles."
+    },
+    "dir6": {
+      "title": "Hormonal Therapy",
+      "desc": "Treatment of hormone-dependent breast cancer."
+    }
+  }
+},
+"oncoplastic": {
+  "title": "Oncoplastic Surgery",
+  "doctor1": {
+    "name": "Plastic Oncologic Surgeon",
+    "position": "Doctor of Medical Sciences, Professor",
+    "point1": "Oncoplastic surgeries",
+    "point2": "Reconstructive surgery after oncology",
+    "point3": "Microsurgery"
+  },
+  "doctor2": {
+    "name": "Surgeon",
+    "position": "Oncologic Reconstructor"
+  },
+  "doctor3": {
+    "name": "Specialist",
+    "position": "Plastic Surgeon"
+  },
+  "doctor4": {
+    "name": "Doctor",
+    "position": "Oncologic Surgeon"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Oncoplastic Surgeries",
+      "desc": "Tumor removal with simultaneous reconstruction."
+    },
+    "dir2": {
+      "title": "Breast Reconstruction",
+      "desc": "Restoration of breast shape and volume after mastectomy."
+    },
+    "dir3": {
+      "title": "Microsurgical Operations",
+      "desc": "Complex reconstructions with tissue transplantation."
+    },
+    "dir4": {
+      "title": "Aesthetic Correction",
+      "desc": "Elimination of cosmetic defects post-oncologic surgery."
+    },
+    "dir5": {
+      "title": "Rehabilitation",
+      "desc": "Comprehensive recovery post-oncoplastic surgeries."
+    }
+  }
+},
+"antitumortherapy": {
+  "title": "Antitumor Drug Therapy",
+  "doctor1": {
+    "name": "Chief Chemotherapist",
+    "position": "Oncologist, Doctor of Medical Sciences",
+    "point1": "Antitumor drug therapy",
+    "point2": "Targeted therapy",
+    "point3": "Immunotherapy"
+  },
+  "doctor2": {
+    "name": "Oncologist",
+    "position": "Chemotherapist"
+  },
+  "doctor3": {
+    "name": "Specialist",
+    "position": "Clinical Pharmacologist"
+  },
+  "doctor4": {
+    "name": "Doctor",
+    "position": "Oncologist-Chemotherapist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Chemotherapy",
+      "desc": "Modern chemotherapy treatment protocols."
+    },
+    "dir2": {
+      "title": "Targeted Therapy",
+      "desc": "Targeted action on molecular tumor targets."
+    },
+    "dir3": {
+      "title": "Immunotherapy",
+      "desc": "Activation of the immune system to fight cancer."
+    },
+    "dir4": {
+      "title": "Hormonal Therapy",
+      "desc": "Treatment of hormone-dependent tumors."
+    },
+    "dir5": {
+      "title": "Biotherapy",
+      "desc": "Use of biological agents in oncology."
+    },
+    "dir6": {
+      "title": "Combined Therapy",
+      "desc": "Combination of various antitumor therapy types."
+    }
+  }
+},
+"radiotherapy": {
+  "title": "Radiotherapy",
+  "doctor1": {
+    "name": "Chief Radiologist",
+    "position": "Radiation Therapy Specialist, Professor",
+    "point1": "Radiation therapy for oncological diseases",
+    "point2": "Stereotactic radiosurgery",
+    "point3": "IMRT and IGRT technologies"
+  },
+  "doctor2": {
+    "name": "Radiologist",
+    "position": "Oncologic Radiotherapist"
+  },
+  "doctor3": {
+    "name": "Specialist",
+    "position": "Medical Physicist"
+  },
+  "doctor4": {
+    "name": "Doctor",
+    "position": "Radiotherapist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "3D-Conformal Radiation Therapy",
+      "desc": "Precise tumor irradiation with maximum healthy tissue protection."
+    },
+    "dir2": {
+      "title": "IMRT",
+      "desc": "Intensity-modulated radiation therapy."
+    },
+    "dir3": {
+      "title": "IGRT",
+      "desc": "Image-guided radiation therapy."
+    },
+    "dir4": {
+      "title": "Stereotactic Radiosurgery",
+      "desc": "High precision single-dose irradiation of small tumors."
+    },
+    "dir5": {
+      "title": "Brachytherapy",
+      "desc": "Contact radiation therapy with source implantation."
+    },
+    "dir6": {
+      "title": "Palliative Radiotherapy",
+      "desc": "Irradiation to relieve symptoms and improve quality of life."
+    }
+  }
+},
+"earlydiagnosis": {
+  "title": "Early Disease Diagnosis",
+  "doctor1": {
+    "name": "Chief Diagnostician",
+    "position": "Early Diagnosis Specialist, Professor",
+    "point1": "Early detection of oncological diseases",
+    "point2": "Screening programs",
+    "point3": "Genetic diagnostics"
+  },
+  "doctor2": {
+    "name": "Oncologist",
+    "position": "Diagnostics Specialist"
+  },
+  "doctor3": {
+    "name": "Diagnostician",
+    "position": "Radiology Physician"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Laboratory Diagnostics"
+  },
+  "directions": {
+    "dir1": {
+      "title": "Screening Programs",
+      "desc": "Comprehensive programs for early cancer detection."
+    },
+    "dir2": {
+      "title": "Tumor Markers",
+      "desc": "Determination of specific markers of various cancers."
+    },
+    "dir3": {
+      "title": "Genetic Diagnostics",
+      "desc": "Identification of hereditary cancer predisposition."
+    },
+    "dir4": {
+      "title": "Instrumental Diagnostics",
+      "desc": "CT, MRI, PET-CT, ultrasound for early tumor detection."
+    },
+    "dir5": {
+      "title": "Endoscopic Diagnostics",
+      "desc": "Early detection of gastrointestinal tumors."
+    },
+    "dir6": {
+      "title": "Biopsy and Morphology",
+      "desc": "Accurate diagnosis at the cellular level."
+    }
+  }
+},
+"neurooncology": {
+  "title": "Neurooncology",
+  "doctor1": {
+    "name": "Chief Neurosurgeon",
+    "position": "Neurooncologist, Doctor of Medical Sciences",
+    "point1": "Brain tumor surgery",
+    "point2": "Stereotactic neurosurgery",
+    "point3": "Microsurgery of spinal cord tumors"
+  },
+  "doctor2": {
+    "name": "Neurosurgeon",
+    "position": "Oncologist"
+  },
+  "doctor3": {
+    "name": "Neurologist",
+    "position": "Neurooncologist"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Neuroradiologist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "CNS Tumor Diagnostics",
+      "desc": "MRI, CT, PET-CT of brain and spinal cord."
+    },
+    "dir2": {
+      "title": "Neurosurgical Treatment",
+      "desc": "Removal of brain and spinal cord tumors."
+    },
+    "dir3": {
+      "title": "Stereotactic Radiosurgery",
+      "desc": "CyberKnife, Gamma Knife treatment of brain tumors."
+    },
+    "dir4": {
+      "title": "Chemotherapy",
+      "desc": "Specialized protocols for CNS tumor treatment."
+    },
+    "dir5": {
+      "title": "Rehabilitation",
+      "desc": "Restoration of neurological functions after treatment."
+    },
+    "dir6": {
+      "title": "Palliative Care",
+      "desc": "Improving life quality in inoperable tumors."
+    }
+  }
+},
+"oncoorthopedics": {
+  "title": "Oncoorthopedics",
+  "doctor1": {
+    "name": "Chief Neurosurgeon",
+    "position": "Neurooncologist, Doctor of Medical Sciences",
+    "point1": "Brain tumor surgery",
+    "point2": "Stereotactic neurosurgery",
+    "point3": "Microsurgery of spinal cord tumors"
+  },
+  "doctor2": {
+    "name": "Neurosurgeon",
+    "position": "Oncologist"
+  },
+  "doctor3": {
+    "name": "Neurologist",
+    "position": "Neurooncologist"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Neuroradiologist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "CNS Tumor Diagnostics",
+      "desc": "MRI, CT, PET-CT of brain and spinal cord."
+    },
+    "dir2": {
+      "title": "Neurosurgical Treatment",
+      "desc": "Removal of brain and spinal cord tumors."
+    },
+    "dir3": {
+      "title": "Stereotactic Radiosurgery",
+      "desc": "CyberKnife, Gamma Knife treatment of brain tumors."
+    },
+    "dir4": {
+      "title": "Chemotherapy",
+      "desc": "Specialized protocols for CNS tumor treatment."
+    },
+    "dir5": {
+      "title": "Rehabilitation",
+      "desc": "Restoration of neurological functions after treatment."
+    },
+    "dir6": {
+      "title": "Palliative Care",
+      "desc": "Improving life quality in inoperable tumors."
+    }
+  }
+},
+"oncocoloproctology": {
+  "title": "Oncocoloproctology",
+  "doctor1": {
+    "name": "Chief Neurosurgeon",
+    "position": "Neurooncologist, Doctor of Medical Sciences",
+    "point1": "Brain tumor surgery",
+    "point2": "Stereotactic neurosurgery",
+    "point3": "Microsurgery of spinal cord tumors"
+  },
+  "doctor2": {
+    "name": "Neurosurgeon",
+    "position": "Oncologist"
+  },
+  "doctor3": {
+    "name": "Neurologist",
+    "position": "Neurooncologist"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Neuroradiologist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "CNS Tumor Diagnostics",
+      "desc": "MRI, CT, PET-CT of brain and spinal cord."
+    },
+    "dir2": {
+      "title": "Neurosurgical Treatment",
+      "desc": "Removal of brain and spinal cord tumors."
+    },
+    "dir3": {
+      "title": "Stereotactic Radiosurgery",
+      "desc": "CyberKnife, Gamma Knife treatment of brain tumors."
+    },
+    "dir4": {
+      "title": "Chemotherapy",
+      "desc": "Specialized protocols for CNS tumor treatment."
+    },
+    "dir5": {
+      "title": "Rehabilitation",
+      "desc": "Restoration of neurological functions after treatment."
+    },
+    "dir6": {
+      "title": "Palliative Care",
+      "desc": "Improving life quality in inoperable tumors."
+    }
+  }
+},
+"oncohematology": {
+  "title": "Oncohematology",
+  "doctor1": {
+    "name": "Chief Neurosurgeon",
+    "position": "Neurooncologist, Doctor of Medical Sciences",
+    "point1": "Brain tumor surgery",
+    "point2": "Stereotactic neurosurgery",
+    "point3": "Microsurgery of spinal cord tumors"
+  },
+  "doctor2": {
+    "name": "Neurosurgeon",
+    "position": "Oncologist"
+  },
+  "doctor3": {
+    "name": "Neurologist",
+    "position": "Neurooncologist"
+  },
+  "doctor4": {
+    "name": "Specialist",
+    "position": "Neuroradiologist"
+  },
+  "directions": {
+    "dir1": {
+      "title": "CNS Tumor Diagnostics",
+      "desc": "MRI, CT, PET-CT of brain and spinal cord."
+    },
+    "dir2": {
+      "title": "Neurosurgical Treatment",
+      "desc": "Removal of brain and spinal cord tumors."
+    },
+    "dir3": {
+      "title": "Stereotactic Radiosurgery",
+      "desc": "CyberKnife, Gamma Knife treatment of brain tumors."
+    },
+    "dir4": {
+      "title": "Chemotherapy",
+      "desc": "Specialized protocols for CNS tumor treatment."
+    },
+    "dir5": {
+      "title": "Rehabilitation",
+      "desc": "Restoration of neurological functions after treatment."
+    },
+    "dir6": {
+      "title": "Palliative Care",
+      "desc": "Improving life quality in inoperable tumors."
+    }
+  }
+}
+
 }
 
 }

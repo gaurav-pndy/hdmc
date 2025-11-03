@@ -617,11 +617,11 @@ const Header = ({ city, setCity }) => {
                 <FaPhoneAlt /> +7 (495) 123-45-67
               </span>
               <a
-                href="mailto:info@medclinic.ru"
+                href="mailto:info@hdmc.info"
                 className="underline  flex items-center gap-1 whitespace-nowrap"
               >
                 <FaEnvelope />
-                info@medclinic.ru
+                info@hdmc.info
               </a>
             </div>
             {city === "Moscow" ? (

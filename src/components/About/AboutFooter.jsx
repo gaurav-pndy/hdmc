@@ -22,11 +22,11 @@ const AboutFooter = () => {
           <span>+7 (495) 123-45-67</span>
         </a>
         <a
-          href="mailto:info@healthdirect.ru"
+          href="mailto:info@hdmc.info"
           className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl shadow text-brand1  font-semibold hover:bg-transparent border border-white transition-all  duration-300 cursor-pointer hover:text-white"
         >
           <FaEnvelope className="text-2xl text-brand4" />
-          <span>info@healthdirect.ru</span>
+          <span>info@hdmc.info</span>
         </a>
       </div>
     </section>

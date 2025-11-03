@@ -20,7 +20,7 @@ const PatientsHero = () => {
         </div>
         <div className="flex items-center gap-3 px-8 py-4 bg-white/15 border border-white/40 rounded-2xl text-white text-lg font-normal backdrop-blur shadow transition">
           <FaEnvelope className="text-2xl text-white" />
-          <span>info@medclinic.ru</span>
+          <span>info@hdmc.info</span>
         </div>
         <div className="flex items-center gap-3 px-8 py-4 bg-white/15 border border-white/40 rounded-2xl text-white text-lg font-normal backdrop-blur shadow transition">
           <FaMapMarkerAlt className="text-2xl text-white" />
