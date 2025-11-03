@@ -18,6 +18,7 @@ export const doctorsData = [
     education: "doctors.doctorsList.doctor1.education",
     qualifications: "doctors.doctorsList.doctor1.qualifications",
     reviews: "doctors.doctorsList.doctor1.reviews",
+    scientific: "doctors.doctorsList.doctor1.scientific",
   },
   {
     id: "doctor2",
@@ -45,6 +46,8 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor3.experience",
     education: "doctors.doctorsList.doctor3.education",
     skills: "doctors.doctorsList.doctor3.skills",
+    scientific: "doctors.doctorsList.doctor3.scientific",
+
     reviews: "doctors.doctorsList.doctor3.reviews",
     videos: [
       "https://vk.com/video_ext.php?oid=-220639958&id=456239028&hash=2e155e876c4e6b33",
@@ -150,6 +153,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor12.experience",
     education: "doctors.doctorsList.doctor12.education",
     internships: "doctors.doctorsList.doctor12.internships",
+    scientific: "doctors.doctorsList.doctor12.scientific",
   },
   {
     id: "doctor13",
@@ -169,6 +173,7 @@ export const doctorsData = [
     education: "doctors.doctorsList.doctor13.education",
     internships: "doctors.doctorsList.doctor13.internships",
     reviews: "doctors.doctorsList.doctor13.reviews",
+    scientific: "doctors.doctorsList.doctor13.scientific",
   },
   {
     id: "doctor14",
@@ -187,6 +192,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor14.experience",
     education: "doctors.doctorsList.doctor14.education",
     internships: "doctors.doctorsList.doctor14.internships",
+    scientific: "doctors.doctorsList.doctor14.scientific",
   },
   {
     id: "doctor15",
@@ -215,6 +221,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor16.experience",
     education: "doctors.doctorsList.doctor16.education",
     internships: "doctors.doctorsList.doctor16.internships",
+    scientific: "doctors.doctorsList.doctor16.scientific",
   },
   {
     id: "doctor17",
@@ -244,6 +251,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor18.experience",
     education: "doctors.doctorsList.doctor18.education",
     reviews: "doctors.doctorsList.doctor18.reviews",
+    scientific: "doctors.doctorsList.doctor18.scientific",
   },
   {
     id: "doctor19",
@@ -262,7 +270,8 @@ export const doctorsData = [
     memberships: "doctors.doctorsList.doctor19.memberships",
     experience: "doctors.doctorsList.doctor19.experience",
     education: "doctors.doctorsList.doctor19.education",
-    internships: "doctors.doctorsList.doctor18.internships",
+    internships: "doctors.doctorsList.doctor19.internships",
+    scientific: "doctors.doctorsList.doctor19.scientific",
   },
   {
     id: "doctor20",
@@ -281,6 +290,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor20.experience",
     education: "doctors.doctorsList.doctor20.education",
     internships: "doctors.doctorsList.doctor20.internships",
+    scientific: "doctors.doctorsList.doctor20.scientific",
   },
   {
     id: "doctor21",
@@ -300,6 +310,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor21.experience",
     education: "doctors.doctorsList.doctor21.education",
     internships: "doctors.doctorsList.doctor21.internships",
+    scientific: "doctors.doctorsList.doctor21.scientific",
   },
   {
     id: "doctor22",
@@ -318,6 +329,7 @@ export const doctorsData = [
     memberships: "doctors.doctorsList.doctor22.memberships",
     experience: "doctors.doctorsList.doctor22.experience",
     education: "doctors.doctorsList.doctor22.education",
+    scientific: "doctors.doctorsList.doctor22.scientific",
   },
   {
     id: "doctor23",
@@ -337,6 +349,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor23.experience",
     education: "doctors.doctorsList.doctor23.education",
     reviews: "doctors.doctorsList.doctor23.reviews",
+    scientific: "doctors.doctorsList.doctor23.scientific",
   },
   {
     id: "doctor24",
@@ -356,6 +369,7 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor24.experience",
     education: "doctors.doctorsList.doctor24.education",
     internships: "doctors.doctorsList.doctor24.internships",
+    scientific: "doctors.doctorsList.doctor24.scientific",
   },
   {
     id: "doctor25",
@@ -376,5 +390,6 @@ export const doctorsData = [
     experience: "doctors.doctorsList.doctor25.experience",
     education: "doctors.doctorsList.doctor25.education",
     internships: "doctors.doctorsList.doctor25.internships",
+    scientific: "doctors.doctorsList.doctor25.scientific",
   },
 ];

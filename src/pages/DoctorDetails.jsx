@@ -64,6 +64,10 @@ const DoctorDetails = () => {
   if (doctor.videos) {
     videos = doctor.videos;
   }
+  let scientific;
+  if (doctor.scientific) {
+    scientific = t(doctor.scientific);
+  }
 
   const TAB_LIST = [
     { key: "about", labelKey: "doctors.tabs.tab1" },
@@ -323,7 +327,12 @@ const DoctorDetails = () => {
               <h2 className="text-xl md:text-3xl font-semibold text-brand1 mb-2">
                 {t("doctors.tabs.tab3")}
               </h2>
-              {/* <p className="text-brand1/80">[ {t("doctors.noCases")} ]</p> */}
+              {scientific && (
+                <div
+                  className="text-gray-700"
+                  dangerouslySetInnerHTML={{ __html: scientific }}
+                ></div>
+              )}
             </section>
             <section
               ref={sectionRefs.reviews}
