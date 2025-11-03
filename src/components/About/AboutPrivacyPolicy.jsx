@@ -39,9 +39,12 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section1Title")}
           </h3>
-          <p className="text-[#125e84]/80  leading-relaxed ml-9">
-            {t("about.privacy.section1Text")}
-          </p>
+          <ul className="ml-9  text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
+            <li className="leading-relaxed">{t("about.privacy.point1")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point2")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point3")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point4")}</li>
+          </ul>
         </div>
 
         <div>
@@ -51,13 +54,17 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section2Title")}
           </h3>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section2Subtitle")}
+          </p>
           <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.purpose1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.purpose2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.purpose3")}</li>
-            <li className="leading-relaxed">{t("about.privacy.purpose4")}</li>
-            <li className="leading-relaxed">{t("about.privacy.purpose5")}</li>
-            <li className="leading-relaxed">{t("about.privacy.purpose6")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point21")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point22")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point23")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point24")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point25")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point26")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point27")}</li>
           </ul>
         </div>
 
@@ -68,14 +75,23 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section3Title")}
           </h3>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section3Subtitle")}
+          </p>
           <ul className="ml-9 list-disc text-[#125e84]/80 space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.cat1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.cat2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.cat3")}</li>
-            <li className="leading-relaxed">{t("about.privacy.cat4")}</li>
-            <li className="leading-relaxed">{t("about.privacy.cat5")}</li>
-            <li className="leading-relaxed">{t("about.privacy.cat6")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point31")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point32")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point33")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point34")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point35")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point36")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point37")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point38")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point39")}</li>
           </ul>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section3Text")}
+          </p>
         </div>
 
         <div>
@@ -85,14 +101,12 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section4Title")}
           </h3>
-          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
-            {t("about.privacy.section4Desc")}
-          </p>
-          <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.law1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.law2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.law3")}</li>
-          </ul>
+          <p
+            className="text-[#125e84]/80  leading-relaxed ml-9 "
+            dangerouslySetInnerHTML={{
+              __html: t("about.privacy.section4Desc"),
+            }}
+          ></p>
         </div>
 
         <div>
@@ -103,17 +117,26 @@ const AboutPrivacyPolicy = () => {
             {t("about.privacy.section5Title")}
           </h3>
           <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
-            {t("about.privacy.section5Desc")}
+            {t("about.privacy.section5Subtitle")}
           </p>
-          <h4 className="text-[#125e84]  font-semibold ml-9 mb-2">
-            {t("about.privacy.storagePeriods")}:
-          </h4>
           <ul className="ml-9 list-disc text-[#125e84]/80 space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.storage1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.storage2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.storage3")}</li>
-            <li className="leading-relaxed">{t("about.privacy.storage4")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point51")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point52")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point53")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point54")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point55")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point56")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point57")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point58")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point59")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point510")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point511")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point512")}</li>
           </ul>
+
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 ">
+            {t("about.privacy.section5Text")}
+          </p>
         </div>
 
         <div>
@@ -123,15 +146,16 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section6Title")}
           </h3>
-          <h4 className="text-[#125e84]  font-semibold ml-9 mb-2">
-            {t("about.privacy.section6Desc")}:
-          </h4>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section6Subtitle")}
+          </p>
           <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.rights1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.rights2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.rights3")}</li>
-            <li className="leading-relaxed">{t("about.privacy.rights4")}</li>
-            <li className="leading-relaxed">{t("about.privacy.rights5")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point61")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point62")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point63")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point64")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point65")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point66")}</li>
           </ul>
         </div>
 
@@ -142,17 +166,107 @@ const AboutPrivacyPolicy = () => {
             </span>
             {t("about.privacy.section7Title")}
           </h3>
+          <p
+            className="text-[#125e84]/80  leading-relaxed ml-9 mb-3"
+            dangerouslySetInnerHTML={{
+              __html: t("about.privacy.section7Text"),
+            }}
+          ></p>
+          <h6 className="font-bold ml-9">
+            {t("about.privacy.section7Heading")}
+          </h6>
           <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.security1")}</li>
-            <li className="leading-relaxed">{t("about.privacy.security2")}</li>
-            <li className="leading-relaxed">{t("about.privacy.security3")}</li>
-            <li className="leading-relaxed">{t("about.privacy.security4")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point71")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point72")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point73")}</li>
           </ul>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
+              7
+            </span>
+            {t("about.privacy.section8Title")}
+          </h3>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section8Subtitle")}
+          </p>
+
+          <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
+            <li className="leading-relaxed">{t("about.privacy.point81")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point82")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point83")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point84")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point85")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point86")}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
+              7
+            </span>
+            {t("about.privacy.section9Title")}
+          </h3>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section9Subtitle")}
+          </p>
+          <h6 className="font-bold">{t("about.privacy.section7Heading")}</h6>
+          <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
+            <li className="leading-relaxed">{t("about.privacy.point91")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point92")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point93")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point94")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point95")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point96")}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
+              7
+            </span>
+            {t("about.privacy.section10Title")}
+          </h3>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section10Subtitle")}
+          </p>
+
+          <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
+            <li className="leading-relaxed">{t("about.privacy.point101")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point102")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point103")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point104")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point105")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point106")}</li>
+            <li className="leading-relaxed">{t("about.privacy.point107")}</li>
+          </ul>
+          <p className="text-[#125e84]/80  leading-relaxed ml-9 mb-3">
+            {t("about.privacy.section10Text")}
+          </p>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
+              7
+            </span>
+            {t("about.privacy.section11Title")}
+          </h3>
+          <p
+            className="text-[#125e84]/80  leading-relaxed ml-9 mb-3"
+            dangerouslySetInnerHTML={{
+              __html: t("about.privacy.section11Subtitle"),
+            }}
+          ></p>
         </div>
       </div>
 
       {/* Appeal Contacts */}
-      <div className="bg-[#63cacc]/10 rounded-2xl p-6 border border-[#63cacc]/30">
+      {/* <div className="bg-[#63cacc]/10 rounded-2xl p-6 border border-[#63cacc]/30">
         <div className="flex items-start gap-4 mb-4">
           <div className="flex h-10 w-10 items-center justify-center bg-[#63cacc]/20 rounded-full shrink-0">
             <FaInfoCircle className="text-[#63cacc] text-xl" />
@@ -194,7 +308,7 @@ const AboutPrivacyPolicy = () => {
         <p className="text-[#125e84]/70  italic leading-relaxed">
           {t("about.privacy.footer")}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
