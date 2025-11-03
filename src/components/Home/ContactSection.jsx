@@ -34,7 +34,7 @@ const ContactSection = () => {
               stroke="rgba(251, 186, 189,"
               custStyle="md:w-1/2 h-[65%] left-0 top-0"
             />
-            <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#695751] to-[#c9a89d] z-40 p-4 md:p-10">
+            <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#816c65] to-[#c9a89d] z-40 p-4 md:p-10">
               <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-black">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}

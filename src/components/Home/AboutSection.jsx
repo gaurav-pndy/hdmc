@@ -25,7 +25,7 @@ const features = [
   },
   {
     icon: <FaRegClock className="text-white text-xl" />,
-    title: "aboutClinic.feature4.title",
+    // title: "aboutClinic.feature4.title",
     desc: "aboutClinic.feature4.desc",
   },
 ];
@@ -33,8 +33,8 @@ const features = [
 const stats = [
   { value: "aboutClinic.stat1.value", label: "aboutClinic.stat1.label" },
   { value: "aboutClinic.stat2.value", label: "aboutClinic.stat2.label" },
-  { value: "aboutClinic.stat3.value", label: "aboutClinic.stat3.label" },
-  { value: "aboutClinic.stat4.value", label: "aboutClinic.stat4.label" },
+  { label: "aboutClinic.stat3.label" },
+  { label: "aboutClinic.stat4.label" },
 ];
 
 const AboutSection = () => {
@@ -61,14 +61,17 @@ const AboutSection = () => {
             {/* Features */}
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               {features.map((f, i) => (
-                <div key={i} className="flex items-start gap-4">
+                <div key={i} className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center bg-gradient-to-br z-40 from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
                     {f.icon}
                   </div>
                   <div>
-                    <div className="font-medium z-40 text-black leading-snug mb-1">
-                      {t(f.title)}
-                    </div>
+                    {f.title && (
+                      <div className="font-medium z-40 text-black leading-snug mb-1">
+                        {t(f.title)}
+                      </div>
+                    )}
+
                     <div className="text-brand1/80 z-40 text-sm leading-tight">
                       {t(f.desc)}
                     </div>
@@ -82,11 +85,14 @@ const AboutSection = () => {
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer z-40  transition-all duration-300 p-4 flex flex-col items-center text-center"
+                  className="bg-white rounded-xl hover:scale-105  hover:shadow-lg cursor-pointer z-40  transition-all duration-300 p-4 flex flex-col items-center justify-center text-center"
                 >
-                  <span className="text-brand1 text-2xl md:text-3xl font-bold mb-1">
-                    {t(s.value)}
-                  </span>
+                  {s.value && (
+                    <span className="text-brand1 text-2xl md:text-3xl font-bold mb-1">
+                      {t(s.value)}
+                    </span>
+                  )}
+
                   <span className="text-brand1/80 text-sm md:text-base font-normal">
                     {t(s.label)}
                   </span>

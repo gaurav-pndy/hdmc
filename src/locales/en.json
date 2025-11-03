@@ -147,24 +147,24 @@
     },
     "feature4": {
       "title": "24/7 Diagnosis",
-      "desc": "CT available around the clock"
+      "desc": "Early diagnosis of diseases is a personalized approach"
     },
-    "stat1": {
-      "value": "15+",
-      "label": "Years of experience"
-    },
-    "stat2": {
-      "value": "50+",
-      "label": "Specialists"
-    },
-    "stat3": {
-      "value": "24/7",
-      "label": "Diagnosis"
-    },
-    "stat4": {
-      "value": "10k+",
-      "label": "Patients"
-    },
+   "stat1": {
+  "value": "40+",
+  "label": "specialties"
+},
+"stat2": {
+  "value": "50+",
+  "label": "experts"
+},
+"stat3": {
+  "value": "24/7",
+  "label": "Oncological board"
+},
+"stat4": {
+  "value": "10k+",
+  "label": "Telemedicine"
+},
     "moreBtn": "Learn More"
   },
   "doctors": {
