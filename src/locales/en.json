@@ -189,17 +189,129 @@
     "viewProfile": "View Profile",
     "reviews": "reviews",
     "doctorsList": {
-      "doctor1": {
-        "name": "Subramanian Somasundaram (Dr. Soma)",
-        "location": "Moscow, Russia",
-        "tags": [
-          "Surgeon",
-          "Oncologist",
-          "Oncoplastic Surgeon"
-        ],
-        "langs": "Russian, English, Tamil, Hindi",
-        "desc": "A doctor who takes on the most complex cases. Dr. Soma is not only a brilliant surgeon specializing in head and neck tumors but also the founder of the Eurasian Oncology Program (EAFO), which brings together doctors from different countries to exchange experience. In the operating room, he is precise; in conversation — open; in life — inspiring.<br/> &nbsp; &nbsp; • Oncologist, surgeon, maxillofacial surgeon, ENT specialist, plastic surgeon<br/> &nbsp; &nbsp; • Specialization: tumors of the head and neck, skin, thyroid and breast, lymph node dissection, oncoplasty<br/> &nbsp; &nbsp; • President and founder of the Scientific and Educational Center \"Eurasian Oncology Program\" (EAFO)<br/> &nbsp; &nbsp; • Head of reconstructive and oncoplastic surgery projects"
-      },
+     "doctor1": {
+  "name": "Subramanian Somasundaram (Dr. Soma)",
+  "location": "Moscow, Russia",
+  "tags": [
+    "Surgeon",
+    "Oncologist",
+    "Oncoplastic Surgeon"
+  ],
+  "medExp": "over 25 years",
+  "services": "In-person and remote consultations, international oncological board, high-tech surgical treatment",
+  "cost": "30,000 rubles",
+  "langs": "Russian, English, Tamil, Hindi",
+  "desc": "A doctor who takes on the most complex cases. Dr. Soma is not only a brilliant surgeon specializing in head and neck tumors, but also the founder of the Eurasian Oncology Program (EAFO), which unites doctors from different countries for experience exchange. In the operating room he is precise, in conversation — open, and in life — inspiring.<br/> &nbsp; &nbsp; • Oncologist, surgeon, maxillofacial surgeon, ENT specialist, plastic surgeon<br/> &nbsp; &nbsp; • Specialization: head and neck tumors, skin, thyroid and breast cancer, lymph node dissection, oncoplasty<br/> &nbsp; &nbsp; • President and founder of the Scientific and Educational Center “Eurasian Oncology Program” EAFO<br/> &nbsp; &nbsp; • Head of reconstructive and oncoplastic surgery projects",
+  "aboutText": "Oncologist, surgeon, maxillofacial surgeon, otorhinolaryngologist, plastic surgeon, healthcare organizer <br/><br/>Professional interests include: surgery for salivary gland tumors, including nerve-sparing procedures; surgery for parotid gland tumors; thyroid tumor surgery; surgical treatment for skin, melanoma, and soft tissue tumors of any localization and complexity with reconstruction; surgery for oral cavity and oropharyngeal tumors; sentinel lymph node biopsy for melanoma and breast cancer; surgeries for hypopharyngeal and laryngeal tumors, including tracheoesophageal shunting; skull base surgeries; reconstructive and oncoplastic operations; all types of lymph node dissections for metastases in cervical, axillary, and inguinal regions; breast cancer surgery and breast reconstruction.",
+  "memberships": [
+    "American Head and Neck Society (AHNS)",
+    "Eurasian Head and Neck Oncology Society (EASHNO)",
+    "Foundation for Head and Neck Oncology (FHNO)",
+    "European Society of Surgical Oncology (ESSO)",
+    "European Society for Medical Oncology (ESMO)",
+    "European Association for Cancer Research (EACR)",
+    "American Association for Cancer Research (AACR)",
+    "American Society of Clinical Oncology (ASCO)",
+    "Moscow Oncological Society",
+    "Student Scientific Society of the Moscow State University of Medicine and Dentistry",
+    "Global Association of Physicians of Indian Origin (GAPIO)",
+    "Pirogov Surgical Society",
+    "Honorary Member of the Taiwan Society of Oncogynecology"
+  ],
+  "awards": [
+    "1995 – Medal of the Russian Academy of Medical Sciences for the best student research paper 'Enzymatic and ultrastructural changes in facial skin in keratopapilloma.'",
+    "1995 – Best presentation (First Degree Diploma) 'Changes in enzyme activity in cells infected with human papillomavirus,' 43rd Annual Student Conference, Moscow Medical Stomatological Institute.",
+    "1996 – Best presentation (Second Degree Diploma) 'Comparative characteristics of morbidity in multinational states,' 44th Annual Student Conference, Moscow Medical Stomatological Institute.",
+    "1996 – Best presentation (Third Degree Diploma) 'Localization of human papillomavirus in skin papillomas and related changes,' 45th Annual Student Conference, Moscow Medical Stomatological Institute.",
+    "1997 – Grant, 8th European Student Conference, Charité Clinic, Berlin, Germany.",
+    "1997 – Best presentation 'On common trends in public health change across countries,' Moscow Medical Stomatological Institute.",
+    "1997 – Poster presentation and grant, 17th International Congress of Biochemistry and Molecular Biology, San Francisco, USA.",
+    "2002 – Poster presentation and grant, 18th International Anti-Cancer Congress (UICC), Oslo, Norway.",
+    "2004 – Poster presentation and grant, 1st Milan Thyroid Cancer Conference, Milan, Italy.",
+    "2005 – Poster presentation and grant, 10th International Congress on Oral Oncology, Hersonissos, Crete, Greece.",
+    "2005 – Poster presentation and grant, European Cancer Congress (ECCO), Paris, France.",
+    "2006 – Poster presentation and grant, 3rd World Congress of IFHNOS, Prague, Czech Republic.",
+    "2006 – Poster presentation and grant, 19th World Cancer Congress UICC and World Conference 'Tobacco and Health', Washington, D.C., USA.",
+    "2010 – Poster presentation and grant, 4th World Congress of IFHNOS, Seoul, South Korea.",
+    "2011 – Award for 'Outstanding Contribution to the Science and Art of Surgery,' Association of Surgeons of India (ASICON 2011), Kochi, India.",
+    "2012 – 'Strategy of Success' Award for effective media cooperation, Union of Journalists of Russia, Moscow, Russia.",
+    "2013 – Best poster, 20th World Congress of Family Doctors (WONCA), Prague, Czech Republic.",
+    "2015 – Award for 'Global Leadership in Preventive Oncology,' Vellore Institute of Technology, India.",
+    "2016 – GAPIO Award for Distinguished Service.",
+    "2016 – Award 'Best Russian Doctor of Indian Origin,' Eurasian Economic Forum, Moscow.",
+    "2017 – Award 'Healthcare Achievement,' Eurasian Economic Forum, Moscow.",
+    "2018 – Honorary Expert, International Conference on Laryngeal Cancer (Joint event of Delhi University and University of Chicago).",
+    "2018 – 'We Will Live' Award for outstanding contribution to anti-tobacco initiatives, 'Zdravstvuy' Association of Cancer Patients, Kremlin Palace, Moscow, Russia.",
+    "2019 – 'Life' Award in the category 'With Kindness Through Life,' Charity Ball 'Hurry to Do Good.'",
+    "2019 – Award 'For Distinguished Support and Personal Contribution to Hanuman Prasad Poddar Oncology Hospital,' Gorakhpur, India.",
+    "2019 – Professor Subramanian Memorial Lecture, 3rd International Conference of Foreign Medical Graduates, Madurai, India.",
+    "2020 – Recognition as Foreign Expert, 2nd Surgical Workshop on Oncoplastic Breast Surgery, Dhaka, Bangladesh."
+  ],
+  "experience": [
+    "1998–2012 – Lecturer, Department of Oncology, I.M. Sechenov Medical Academy.",
+    "1998–2012 – Lecturer, Department of Oncology, Moscow State University of Medicine and Dentistry.",
+    "1998–2012 – Lecturer, N.N. Blokhin Russian Cancer Research Center, RAMS.",
+    "2008–2009 – Senior Researcher, Department of Head and Neck Tumors and Biotherapy of Tumors, N.N. Blokhin Cancer Research Center, RAMS.",
+    "2009 – Visiting Professor, Amrita Institute of Medical Sciences, Kochi, India.",
+    "2012 – Visiting Professor, S.D. Asfendiyarov Kazakh National Medical University, Almaty, Kazakhstan.",
+    "2010–2012 – Senior Researcher, Department of Tumor Biotherapy (now Oncodermatology), N.N. Blokhin Cancer Research Center, RAMS (now N.N. Blokhin National Medical Research Center of Oncology).",
+    "2005–2012 – Publishing Editor and Editorial Board Member, Bulletin of the Russian Oncological Scientific Center, N.N. Blokhin RAMS.",
+    "2012–present – Founder and Director, Scientific and Educational Center 'Eurasian Oncology Program' (EAFO), Moscow, Russia.",
+    "2012–present – Founder and Director, Eurasian Federation of Oncology (EAFO), Scotland, United Kingdom.",
+    "2012–2018 – Surgical Oncologist, Diveevo Central District Hospital named after Academician N.N. Blokhin, Diveevo, Nizhny Novgorod Region.",
+    "2012–2014 – Senior Researcher, Surgical Oncologist (Head-Neck, Melanoma), Federal Scientific and Clinical Center of Otorhinolaryngology, FMBA, Moscow, Russia.",
+    "2017–2020 – Head of Research Projects and Surgical Oncologist, Republic Oncology Clinical Dispensary, Cheboksary, Chuvash Republic.",
+    "2017–present – Founder and Chairman, Eurasian Council for Cancer Research (ECRC), Mumbai, India.",
+    "2015–present – Consultant Surgical Oncologist, 'MedikaMente' Clinic, Korolyov, Moscow Region, Russia.",
+    "2019 – Chief Oncology Consultant and Plastic Surgeon, MEDINCENTER, Diplomatic Corps Service, Ministry of Foreign Affairs of the Russian Federation.",
+    "2017–present – Consultant Surgical Oncologist, 'SOYUZ' Multidisciplinary Clinic, Moscow, Russia."
+  ],
+  "education": [
+    "1997 – Graduated with honors from Moscow Medical Stomatological Institute (now Moscow State University of Medicine and Dentistry named after A.I. Evdokimov), Moscow, Russia.",
+    "1997–1998 – Rotational internship (international model), Moscow Medical Stomatological Institute, Moscow, Russia.",
+    "1998–2007 – Residency in Oncology, Surgery, and Maxillofacial Surgery, I.M. Sechenov Medical Academy (now Sechenov University), Moscow, Russia.",
+    "2003 – CME 'Modern Concepts in Head and Neck Surgery and Oncology,' Memorial Sloan Kettering Cancer Center, New York, USA.",
+    "2007 – Advanced training 'Diagnosis and treatment of malignant head and neck tumors,' Russian Medical Academy of Postgraduate Education, Moscow, Russia.",
+    "2010–2011 – Internship in Otorhinolaryngology, Peoples' Friendship University of Russia, Moscow, Russia.",
+    "2011 – European Qualification Exam in Surgical Oncology – European Board of Surgery (EBS), European Union of Medical Specialists (UEMS).",
+    "2013 – Professional retraining in 'Healthcare Organization and Public Health,' Moscow Medical Stomatological Institute, Moscow, Russia.",
+    "2015 – Professional retraining in 'Plastic Surgery,' Moscow Regional Research and Clinical Institute named after M.F. Vladimirsky, Moscow, Russia.",
+    "2017 – Re-certification in Oncology.",
+    "2018 – Re-certification in Healthcare Organization and Public Health.",
+    "2020 – Re-certification in Surgery.",
+    "2020 – Re-certification in Plastic Surgery."
+  ],
+  "qualifications": [
+    "2000 – Practical course 'Operative Surgery for Head and Neck Tumors,' Aintree University Hospital, Liverpool, United Kingdom.",
+    "2001 – Advanced Training for Young Oncologists in Central and Eastern Europe, Project HOPE, Krakow, Poland.",
+    "2002 – Clinical Oncology Masterclass, European School of Oncology, Pistoia, Italy.",
+    "2003 – Masterclass in Head and Neck Surgical Oncology, Motol University Hospital, Charles University, Prague, Czech Republic.",
+    "2004 – Masterclass 'Clinical Trials Methodology in Oncology,' 6th FECS/AACR/ASCO Joint Workshop, Federation of European Cancer Societies, Flims, Switzerland.",
+    "2005 – Research internship on cancer care organization and clinical trials at US National Cancer Institute (NCI), Bethesda and affiliated cancer centers and leading anti-cancer organizations (ACS, SCBCF, Fogarty International Center, NIH), USA.",
+    "2007 – Fellowship in Isolated Limb Perfusion (Melanoma and Sarcoma), Erasmus University Medical Center, Rotterdam, Netherlands.",
+    "2013 – Fellowship in Head and Neck Oncology, Memorial Sloan Kettering Cancer Center, New York, USA.",
+    "2013–2014 – Fellowships in Onco-Mammology and Oncogynecology, St. Stephen’s Hospital, Budapest, Hungary.",
+    "2019 – Fellowship, Department of Otorhinolaryngology – Head and Neck Surgery, Toronto General Hospital, Toronto, Canada."
+  ],
+  "reviews": [
+    {
+      "name": "Semyon (Moscow)",
+      "text": "I was looking for a remote consultation option as a second opinion for relatives. Since there are many such services, it’s hard to choose! I was advised to contact Dr. Soma. The administrator was attentive and didn’t give the impression of trying to sell the service. She explained everything clearly. I was told what documents to send and what data to include. The result of the consultation came in a few days. As a result, the relatives decided to come for further examination and treatment under Dr. Soma’s supervision. The administrator even helped with accommodation options, which was unexpected.",
+      "date": "31.01.2023"
+    },
+    {
+      "name": "Anna (Saint Petersburg)",
+      "text": "I want to share my impression of Dr. Soma! I was looking for a good specialist who could answer all my questions clearly, leaving no doubts about further actions. After reviewing all my documents, Dr. Soma ordered an additional test, after which I understood exactly what I needed to do next. Most importantly, I felt that there’s a doctor who takes responsibility and monitors my condition, which brings peace of mind. He explains everything clearly and objectively, without loud or empty words. His team is organized, responsive, and attentive to detail. I’ve contacted Dr. Soma’s team several times — their professionalism inspires trust.",
+      "date": "10.10.2022"
+    },
+    {
+      "name": "Mikhail (Barnaul)",
+      "text": "Dr. Soma is a very experienced specialist with over 25 years of professional practice. He spends a lot of time consulting patients and is very patient despite his busy schedule. His vast experience allows him to make accurate diagnoses and provide expert conclusions.",
+      "date": "09.09.2022"
+    }
+  ],
+  "scientific": "<b>Scientific and Practical Interests</b><br/><br/>Research interests:<br/> <ul class='list-disc mt-2 list-outside ml-4 space-y-2'><li>Head and neck cancers</li><li>Thyroid cancer</li><li>Salivary gland tumors</li><li>Breast cancer</li><li>Melanoma and skin tumors</li><li>Oncoplastic surgery</li><li>Robot-assisted surgery</li><li>Radiation and nuclear medical technologies</li><li>Sentinel lymph node biopsy</li><li>Transplantology</li></ul><br/><br/>Clinical research experience:<br/><ul class='list-disc mt-2 list-outside ml-4 space-y-2'><li>Melanoma</li><li>Head and neck cancer</li><li>Breast cancer</li><li>Lung cancer</li><li>Pancreatic cancer</li><li>Esophageal and gastroesophageal junction cancer</li><li>Colorectal cancer</li></ul><br/><br/>Other research projects:<ul class='list-disc list-outside ml-4 space-y-2'><li>Behavioral studies among smokers (oncology patients and oncologists): supported by grants from the US National Cancer Institute</li><li>Assessment of morphological (cyto- and histological) diagnostics of lung cancer in Russian oncology institutions</li></ul>"
+},
       "doctor2": {
         "name": "Hasanbekova Zarema Medzhidovna",
         "location": "Makhachkala, Russia",
@@ -208,242 +320,87 @@
         "desc": "A specialist with whom it’s easy to discuss even the most delicate topics. Zarema Medzhidovna helps women cope with gynecological and mammological problems, combining evidence-based medicine with genuine care and empathy. Her goal is not only to heal but to preserve quality of life.<br/> &nbsp; &nbsp; • PhD in Medicine, Oncogynecologist, Mammologist<br/> &nbsp; &nbsp; • Senior Research Fellow at EAFO Scientific and Educational Center<br/> &nbsp; &nbsp; • Specialization: cervical, ovarian, and breast diseases, aesthetic gynecology<br/> &nbsp; &nbsp; • Participant in educational and scientific projects in oncogynecology"
       },
       "doctor3": {
-        "name": "Нечушкина Валентина Михайловна",
-        "location": "Москва, Россия",
-        "tags": [
-          "Хирург",
-          "онкогинеколог"
-        ],
-        "langs": "Русский, английский",
-        "desc": "Опыт, сила, наука — всё это про Валентину Михайловну. Она ведет сложные операции, преподаёт, руководит проектами по онкогинекологии в ЕАФО. Её стиль — продуманность, точность, мастерство. С этим специалистом пациентки понимают, что они в надёжных руках.<br/> &nbsp; &nbsp; • Доктор медицинских наук, профессор, онкогинеколог<br/> &nbsp; &nbsp; • Руководитель Евразийской рабочей группы по онкогинекологии<br/> &nbsp; &nbsp; • Специализация: рак шейки матки, яичников, HIPEC, циторедукция<br/> &nbsp; &nbsp; • Эксперт и преподаватель ПИМУ, научный лидер ЕАФО",
-        "aboutText": "Нечушкина В. М. — высококвалифицированный хирург-онкогинеколог, владеет комплексом современных диагностических и лечебных методик, всеми объемами хирургических вмешательств, применяемых в современной онкогинекологии и выполняемых как абдоминальным, так и лапароскопическим доступом. <br /> Руководитель направления онкогинекология Health-Direct. <br /> Председатель международного онкологического консилиума Health-Direct. <br />Заместитель директора по научной работе и главный научный сотрудник Автономной некоммерческой организации «Научно-образовательный центр «Евразийская онкологическая программа» ЕАФО». Москва, Российская Федерация. <br /> Председатель Евразийской рабочей группы по онкогинекологии и член совета экспертов Евразийской федерации онкологии (ЕАФО).   <br />   Профессор кафедры онкологии, лучевой терапии и лучевой диагностики, Приволжский исследовательский медицинский университет, Нижний Новгород.. <br />В сферу ее профессиональных интересов входят: <ul class='list-disc list-inside space-y-2 mt-2'> <li> хирургическое лечение больных раком шейки матки I—II стадий,     в том числе с применением неоадъювантной и адъювантной химиотерапии;</li><li> органосохраняющее лечение больных раком шейки матки I—II стадий, в том числе при размере первичной опухоли более 2 см  (расширенная трахелэктомия); </li> <li>ультраконсервативное лечение больных раком шейки матки стадии при размере первичной опухоли до 2 см;  </li> <li> хирургическое лечение больных раком тела матки, в том числе выполнение тазовой и поясничной лимфодиссекции; </li> <li>  циторедуктивные операции при диссеминированном раке тела     матки;  </li> <li>хирургическое лечение больных диссеминированными пограничными опухолями яичников, в том числе органосохраняющее; </li><li> хирургическое лечение рецидивов пограничных опухолей  яичников; </li> <li> хирургическое лечение больных раком яичников, выполнение полного хирургического стадирования при ранних стадиях заболевания; </li><li> выполнение расширенных и комбинированных хирургических вмешательств у больных раком яичников III—IV стадий; </li><li>хирургическое лечение рецидивов рака яичников;</li><li> установка портов для проведения внутрибрюшинной химиотерапии; </li><li>тазовая экзентерация.</li></ul> <br />Подходы к лечению, которые использует В.М. Нечушкина, основаны на результатах последних международных рандомизированнных исследований и мета-анализов, согласуются с европейскими и американскими рекомендациями по лечению онкогинекологических заболеваний. ",
-        "memberships": {
-          "heading1": "МЕЖДУНАРОДНЫЕ",
-          "international": [
-            "Председатель Евразийской рабочей группы по онкогинекологии (Eurasian Working Group on Gynecologic Oncology).",
-            "Член Совета экспертов Евразийской федерации онкологии (EAFO — Eurasian Federation of Oncology).",
-            "Член Европейского общества онкогинекологов (ESGO — European Society of Gynecologic Oncology).",
-
-            "Член Международного общества по изучению опухолей женских половых органов (IGCS — International Gynecologic Cancer Society).",
-
-            "Член Комитета по обучению специалистов Европейского общества хирургической онкологии (ESSO — European Society of Surgical Oncology).",
-
-            "Член Всемирной ассоциации лапароскопических хирургов (WALS — World Association of Laparoscopic Surgeons).",
-
-            "Почетный член Тайваньского общества по онкогинекологии (TAGO – Taiwan Association of Gynecologic Oncologists)"
-          ],
-          "title2": "​РОССИЙСКИЕ",
-          "russian": [
-            "Председатель рабочей группы по разработке рекомендаций по лекарственному лечению рака тела матки Российского общества по клинической онкологии (RUSSCO).",
-
-            "Член рабочих групп по разработке рекомендаций по лекарственному лечению рака шейки матки и рака яичников Российского общества по клинической онкологии (RUSSCO).",
-
-            "Член Российского общества клинической онкологии (RUSSCO).",
-
-            "Член Междисциплинарной ассоциации специалистов репродуктивной медицины (МАРС).",
-
-            "Член Российского общества онкогинекологов (RSGO).",
-
-            "Член Общества специалистов по опухолям репродуктивной системы (ОСОРС)."
-          ]
-        },
-        "awards": [
-          "Премия «Будем жить» 2019 г. – победитель в номинации «Династия в онкологии».",
-
-          "Премия «Будем жить» 2021 г. – победитель в номинации «Лучшее отделение».",
-
-          "Почетная грамота Министерства здравоохранения РФ.",
-
-          "Нагрудный знак «Отличник здравоохранения»."
-        ],
-        "experience": [
-         "1999—2018 гг. — научный, затем старший научный сотрудник гинекологического отделения НИИ клинической онкологии «РОНЦ им. Н. Н. Блохина» РАМН.",
-
-        "2003—2014 гг. — ответственный секретарь журнала «Вестник Российского онкологического центра имени Н. Н. Блохина» Российской академии медицинских наук».",
-
-        "2011—2015 гг. — доцент кафедры онкологии и лучевой терапии лечебного факультета Российского национального исследовательского медицинского университета им. Н.И. Пирогова.",
-
-        "С 2015 г. по 2020 гг. — профессор кафедры онкологии и лучевой терапии лечебного факультета Российского национального исследовательского медицинского университета им. Н.И. Пирогова.",
-
-        "2018—2019 г. — заместитель главного редактора журнала «Вестник Российского онкологического центра имени Н. Н. Блохина».",
-
-        "2018—2019 гг. — ведущий научный сотрудник отделения комбинированных и лучевых методов лечения онкогинекологических заболеваний НИИ клинической онкологии ФГБУ «НМИЦ онкологии им. Н. Н. Блохина» Минздрава РФ.",
-
-        "2019—2022 гг. — консультант по онкогинекологии, МЕДИНЦЕНТР Главного управления по обслуживанию дипломатического корпуса Министерства иностранных дел РФ (МЕДИНЦЕНТР ГлавУпДК МИД РФ).",
-
-        "С 2019 г. по настоящее время — главный научный сотрудник Автономной некоммерческой организации «Научно-образовательный центр «Евразийская онкологическая программа» ЕАФО».",
-
-        "С 2019 г. по настоящее время — Консультант по онкогинекологии, Многопрофильный медицинский центр Банка России, Москва",
-
-        "2020—2021 гг. — заместитель директора по науке Института онкогинекологии и маммологии ФГБУ «НМИЦ акушерства, гинекологии и перинатологии им. академика В.И.Кулакова» Минздрава РФ.",
-
-        "2020—2021 гг. — заведующая онкологическим отделением хирургических методов лечения Института онкогинекологии и маммологии ФГБУ «НМИЦ акушерства, гинекологии и перинатологии им. академика В.И.Кулакова» Минздрава РФ.",
-
-        "С 2020 г. по настоящее время — профессор кафедры онкологии, лучевой терапии и лучевой диагностики, Приволжский исследовательский медицинский университет,        Нижний Новгород. ",
-
-       " С 2021 г. по настоящее время — консультант, онкогинеколог, Многопрофильная клиника «СОЮЗ».",
-
-        "С 2021 г. по настоящее время — заместитель директора по научной работе Автономной некоммерческой организации «Научно-образовательный центр «Евразийская онкологическая программа» ЕАФО».",
-
-        "С 2024 г. по настоящее время — Генеральный директор, ООО \"ЭЙЧДИ КЛИНИК\" (HDMC: Health-Direct Medical Center)"
-        ],
-        "education": [
-          "В 1997 году с отличием окончила факультет подготовки научных и научно-педагогических кадров «Московской медицинской академии им. И. М. Сеченова».",
-
-              "В 1999 году окончила ординатуру по специальности «онкология» в Российском онкологическом научном центре им. Н. Н. Блохина РАМН.",
-
-              "В 2002 году защитила диссертацию на соискание ученой степени кандидата медицинских наук на тему «Клиническая оценка параметров ДНК-проточной цитофлуорометрии при раке тела матки».",
-
-              "2005 г. — стажировка по организации онкологической помощи и проведению клинических исследований в National Cancer Institute, Бетесда (США).",
-
-              "2008, 2009 гг.  — стажировки по хирургической онкогинекологии в National Cancer Institute, Будапешт (Венгрия).",
-
-              "2008, 2009, 2010, 2011, 2012 гг.  — стажировки по хирургической онкогинекологии в St. Stephen Hospital, Будапешт (Венгрия).",
-
-              "В 2014 году защитила диссертацию на соискание ученой степени доктора медицинских наук на тему «Рак тела матки (факторы прогноза и тактика лечения)».",
-
-              "2015 г. — профессиональная переподготовка по хирургии на базе Московского государственного медико-стоматологического университета им. А. И. Евдокимова.",
-
-              "2015—2016 гг. — интернатура по акушерству и гинекологии Института медико-социальных технологий.",
-
-              "2016 г.  — стажировка по робот-ассистированной хирургии в онкогинекологии и хирургическому лечению диссеминированного рака яичников в New-Castle Surgical Training Center, Нью-Касл (Великобритания).",
-
-              "2018 г.  — профессиональная переподготовка по специальности «организация здравоохранения и общественное здоровье» на базе Московского государственного медико-стоматологического университета им. А. И. Евдокимова.",
-
-              "2020 г.  — курс по робот-ассистированной хирургии, International College of Robotic Surgeons, World Laparoscopy Hospital, Гуруграм (Индия).",
-
-              "2020 г. — диплом по лапароскопической хирургии (Diploma in Minimal Access Surgery (D.MAS) & Fellowship in Minimal Access Surgery (F.MAS), World Association of Robotic Surgeons, World Laparoscopy Hospital, Гуруграм (Индия)."
-        ],
-        "skills": [
-          "Повышение квалификации по дополнительной профессиональной программе «Химио-гормонотерапия злокачественных опухолей», Российская медицинская академия последипломного образования, Москва, 2016 г.",
-
-          "Повышение квалификации по дополнительной профессиональной программе «Диагностика и лечение злокачественных опухолей женской репродуктивной системы», Российская медицинская академия последипломного образования, Москва, 2016 г.",
-
-          "Повышение квалификации по дополнительной профессиональной программе «Химио-гормонотерапия злокачественных опухолей», Российская медицинская академия последипломного образования, Москва, 2016 г.",
-
-          "Повышение квалификации по дополнительной профессиональной программе «Опухоли женской репродуктивной системы», ФДПО МГМСУ им. А. И. Евдокимова Минздрава России, Москва, 2018 г.",
-
-          "Повышение квалификации по дополнительной профессиональной программе «Эндоскопическая хирургия в гинекологии», МГМСУ им. А. И. Евдокимова Минздрава России, Москва, 2018 г.",
-
-          "Сертификационный курс по специальности «акушерство и гинекология», АНО ДПО «Академия медицинского образования», Москва, 2020 г. (срок действия сертификата 2000—2025).",
-
-          "Сертификационный курс по специальности «онкология», Медицинский институт непрерывного образования, Москва, 2020 г. (срок действия сертификата 2000—2025).",
-
-          "Сертификационный курс по специальности «хирургия», АНО ДПО «Академия медицинского образования», Москва, 2020 г. (срок действия сертификата 2000—2025).",
-
-          "Неоднократно проходила стажировку в ведущих онкогинекологических клиниках за рубежом, в том числе по робот-ассистированным онкогинекологическим вмешательствам в Великобритании и Индии"
-        ],
-        "reviews": [
-          {
-            "name": "Екатерина (Нижний Новгород)",
-            "text": "Я очень довольна , что нам порекомендовали в Нижнем Новгороде Нечушкину Валентину Михайловну и многие знакомые врачи  сказали, что лучше ее нет . Я ужасно боялась операции и готова была отказаться от лечения , но пообщавшись с Валентиной Михайловной , сразу ей доверилась . Оперативно собрала все обследования и приехала на личную встречу . После общения успокоилась и легла на госпитализацию . Операция длилась 9,5 часов и после нее весь персонал был рядом . Каждый день я общалась с командой отделения и удивлялась , на сколько внимательные и позитивные врачи и милые , заботливые медсестры . Я потихоньку пришла в себя на 6 день и готовлюсь к выписке . О клинике Союз и ее работе у меня самые позитивные впечатления . Огромное спасибо за мое спасение . Я Благодарю Бога , что попала сюда. В клинике работают настоящие профессионалы и просто душевные люди , для которых важно , чтобы пациенты выздоравливали .Операцию провели ювелирного качества . Благодарю за мое спасение .",
-            "date": "07.04.2025"
-
-          },
-          {
-            "name": "Екатерина (Новомосковск)",
-            "text": "Обратилась за помощью к Нечушкиной Валентине Михайловне. Рак яичников 4 стадии. Выполнена интервальная циторедукция. Операция длилась более 8 часов! Ей удалось максимально качественно прооперировать, убрать всю опухоль и метастазы! Это не просто врач, а ангел, который борется за спасение пациента. Низкий поклон ей и долгих лет счастливой жизни! Я ни разу не пожалела, что обратилась именно к ней. Она и ее команда это самые лучшие врачи! В настоящий момент восстанавливаюсь после операции и начну следующий курс химии. Восстановление идет успешно! После операции из реанимации сама дошла до палаты! В палате и в реанимации постоянно наблюдали врачи. Перевязки каждый день, совсем не больно! Валентина Михайловна сама лично меня посещала и отвечала на все мои вопросы! Теперь надеюсь на удачное лечение и длительную ремиссию!",
-            "date": "28.10.2024"
-
-          },
-          {
-            "name": "Светлана (Москва)",
-            "text": "Благодарю за золотые руки хирурга Нечушкиной Валентины Михайловны. Низкий поклон ей и всей бригаде, которая принимала участие в моей операции. Понравилось внимательное и бережное отношение к пациентам",
-            "date": "11.08.2024"
-
-          },
-          {
-            "name": "Елена (Москва)",
-            "text": "Еще раз выражаю благодарность Валентине Михайловне! Спустя 4 года после проведенной ею операции. Онкология, сложная. Тем более благодарна Богу и ей, что именно она занималась мною (операцию делали 23.07.2020 в институте Кулакова). Перед операцией другой врач сказал мне страшные цифры статистики: в моем случае пятилетняя выживаемость составляет 20%. Но прошло четыре года. Правильно проведенная операция имеет существенное значение (это я поняла еще тогда, проходя уже химиотерапию в Блохина). Я очень и очень благодарна! В институте Блохина все врачи, с которыми пришлось столкнуться (Узи, химиотерапия, лаборатория) сразу с гордостью говорили, что имели счастье работать с Вами и что Вы лучший профессионал в хирургии в данной сфере. Если Вы читаете мой отзыв - я бесконечно благодарна Вам и Алексею Сергеевичу, который рекомендовал в этой сфере только Вас, как лучшего профессионала!",
-            "date": "06.08.2024"
-
-          },
-          {
-            "name": "Ирина (Москва)",
-            "text": "Валентина Михайловна - замечательный врач и человек, она оказала большую профессиональную, моральную, информационную поддержку. Поражает неравнодушие и сопереживание пациенту. Замечательная, слаженная работы команды",
-            "date": "22.07.2024"
-
-          },
-          {
-            "name": "Яна (Раменское)",
-            "text": "Все врачи профессионалы, чуткое, внимательное отношение, ощущаешь себя в надёжных руках, спасибо вам большое!",
-            "date": "24.06.2024"
-
-          },
-          {
-            "name": "Карина (Москва)",
-            "text": "Отличная команда- квалифицированные специалисты, внимательные, отзывчивые. Блестящий хирург, выполнивший операцию- Валентина Михайловна Нечушкина. Очень внимательный хирург, наблюдавший меня после операции- Тимур Равшанович. Лечение полностью оправдало мои ожидания.",
-            "date": "14.05.2024"
-
-          },
-          {
-            "name": "Светлана (Москва)",
-            "text": "Пишу отзыв спустя год после операции и ликую от счастья. Я жива и здорова! Этот шанс родиться второй раз мне подарила замечательный врач Нечушкина Валентина Михайловна и ее команда. Началась моя история осенью 2022 г. Был приступ острой боли в животе, стало трудно дышать, отдавало в лопатку, увеличивался живот в размерах. Обследование принесло неутешительный результат – рак яичников 3 ст. высокой степени злокачественности, асцит. В онкодиспансере мне предложили химию, а затем операцию. Я стала искать врача-хирурга. Благодарю Бога за встречу со знакомой, которая посоветовала мне обратиться в Международный проект \"Health-Direct\", научно-образовательный центр «Евразийская онкологическая программа «ЕАФО», где консультируют лучшие онкологи. Так я попала на прием к Валентине Михайловне Нечушкиной. Она все очень подробно рассказала (со схематичными рисунками) о данном диагнозе, его последствиях и дальнейшем лечении. Причем залогом успешности лечения, как выяснилось, является именно первичная полная циторедуктивная операция и только потом показано прохождение химиотерапии. Из кабинета я вылетела как на крыльях) После подписания договора я попала в надежные руки профессионалов из слаженной команды, работающей на результат. Хочется отметить внимательность и доброжелательность врачей, возможность быть с ними на связи на всех этапах лечения. Сложнейшая операция длилась 11 часов. Была удалена круглая связка печени, матка с придатками, дессиминаты с прямой кишки, большой сальник, селезенка, дессиминаты с поджелудочной железы, стенок желудка, желчный пузырь, аппендикс, итого 14 пунктов. Уже позже я узнала, что подобные операции проводят с привлечением смежных специалистов: врачей абдоминальной хирургии, урологов и др. Высочайший уровень хирургов мирового уровня Нечушкиной Валентины Михайловны и Шемятовского Кирилла Александровича позволил провести циторедуктивную операцию в полном объеме. Выражаю искреннюю благодарность врачам-хирургам, руководителю международного проекта доктору Соме, анестезиологу Приходченко Алексею Олеговичу, реаниматологам Байдал Олегу Владиславовичу, Вяткину Павлу Викторовичу, медсестрам, секретарям. Желаю всем участникам команды благополучия, удачи, здоровья и всего самого наилучшего!",
-            "date": "20.03.2024"
-
-          },
-          {
-            "name": "Анна (Киров)",
-            "text": "Три года лечилась в своём городе, неправильно поставили диагноз, неправильно лечили, тем временем заболевание прогрессировало... Как только обратилась в Health-Direct, сразу поставили верный диагноз,предложили операцию и дальнейшее лечение. Назначили обследования, и куратора, которая следила, за тем, правильно ли я всё делаю, и если нужно подсказывала... После этого я легла в клинику, меня подготовили к операции, прооперировали, после чего я лежала неделю в стационаре, с прекрасными условиями, перед выпиской мне прописали дальнейшее лечение. Хочется поблагодарить от всего сердца,всю сплоченную команду врачей, каждый из них профессионал от Бога, а так-же добрый, отзывчивый, внимательный человек, который переживает всей душой, за своего пациента. Я счастлива, что судьба меня свела с этими золотыми людьми! Хочется отдельно поблагодарить каждого Нечушкину Валентину Михайловну, Шемятовского Кирилла Александровича, Приходченко Алексея Олеговича, Байдал Олега Владиславовича, Синявина Дмитрия Юрьевича, Сафарова Тимура Равшановича, всех медсестёр с золотыми ручками, и всех остальных, кто хоть как- то причастен, к моему лечению! Низкий поклон!!!!!!! С Уважением! Анна.",
-            "date": "27.11.2023"
-
-          },
-          {
-            "name": "Анастасия (Калининград)",
-            "text": "Подозрение рак шейки матки мне поставили в частной клинике. Я сдавала бесконечные анализы, переделывала несколько раз узи, но врач не могла поставить точный диагноз. Знакомая , пережившая онкологию, дала контакты Валентины Михайловны. Я живу в другом регионе и вырваться на очную консультацию большая проблема, но и жить в ожидании невозможно. Очень удобно, что есть дистанционные консультации. Я заранее отправила все документы, менеджер отправила все врачу, мне сказали какие исследования ещё пройти и какие заключения взять в больнице, где делали раньше конизацию. К моменту консультации на руках у Валентины Михайловны были все необходимые документы, поэтому разговор был по существу. Она все мне подробно объяснила, ответила на все вопросы. Но главное, мой диагноз не подтвердился. Так за один час грамотный специалист решил все вопросы, без лишнего вымогательства денег и ненужных манипуляций.",
-            "date": "22.07.2023"
-
-          },
-          {
-            "name": "Ирина (Балашиха)",
-            "text": "Я не сторонник частной медицины, всегда считала зачем платить, если одни и те же специалисты сидят и гос. поликлиниках и в частных. Но когда поняла, что в Балашихинском онкодиспансере от меня просто открещиваются и тянут время, пришлось пересмотреть принципы. Начала изучать отзывы, стало очевидно, что хирургов, которые не просто разрежут, а постараются удалить все, чтобы не было рецидивов — единицы. Если вы тоже столкнулись с раком яичников и наткнулись на этот отзыв, поверьте, лучше Валентины Михайловны не найти, просто не теряйте время. С операции прошел уже год как я живу полноценной жизнью. Спасибо вам за все!",
-            "date": "03.07.2023"
-
-          },
-          {
-            "name": "Мария (Челябинск)",
-            "text": "Валентину Михайловну на нашем пути послал сам Бог, не иначе. Куда бы мы не обращались с дочкой за помощью, везде советовали Нечушкину ВМ. Было страшно за дочку. Рак яичников в 25 лет! Это страшно для матери, мы готовы были уже лететь за границу, не верили в нашу медицину. Но какое счастье, что Валентина Михайловна взялась за операцию, хотя все отказывались и отправляли на химию. С первой встречи я успокоилась и поняла, что мы в наследных руках. Все прошло как и планировалось, дочка быстро восстанавливается. Верим, что все закончилось. Теперь на контрольные проверки мы только к Валентине Михайловне!",
-            "date": "27.06.2023"
-
-          },
-          {
-            "name": "Екатерина (Санкт-Петербург)",
-            "text": "Хочу выразить огромную благодарность Валентине Михайловне Нечушкиной и ее команде профессионалов. Рак яичников был диагностирован у меня уже на 4 стадии. В НИИ Петрова отправили на химиотерапию на первом этапе, потому что был очень распространенный рак. Я решила услышать второе мнение. Записалась на дистанционную консультацию к Валентине Михайловне. Валентина Михайловна сразу расположила к себе. Очень интеллигентная и приятная женщина. Она объяснила мне все риски и что конечно лучше оперироваться на первом этапе. я решила рискнуть. Мне очень понравилась организация процесса. Ко мне был прикреплен доктор, который дистанционно курировал мое обследование перед операцией. В течение недели я была полностью обследована. Дальше была операция которая длилась очень долго, однако я проснулась без боли. На следующий день с утра моему удивлению не было предела! утром в реанимации я села в кровати при поддержке докторов, мне принесли завтрак. я была очень удивлена, потому что несколько лет назад после удаления миомы матки мне разрешили на первый день только пить воду. К обеду я уже ходила по реанимации, а потом пошла в палату своими ногами. Очень хочется отметить работу анестезиологов-реаниматологов. Я не почувствовала никакой разницы по комфорту с обычной палатой. Единственное что мешало после операции были дренажи. их было 4 штуки и приходилось носить их с собой в пакетике. Но и их потихоньку удаляли. На 5 сутки я уже гуляла по территории клиники, а на 7 сутки выписалась домой с важными рекомендациями восстанавливаться дальше и проходить химиотерапию. Все очень четко, комфортно, доступно и понятно! Огромное спасибо всем докторам!!!",
-            "date": "14.06.2023"
-
-          },
-          {
-            "name": "Светлана (Мурманск)",
-            "text": "Я была очень удивлена, увидев абсолютное внимание, ответственность врачей, поддержку и днем и ночью, операция была сложная, благодаря опытнейшим сотрудникам я получила очень оперативную помощь, была в позитиве даже в реанимации. Такое внимание к людям и есть настоящая профессиональная медпомощь людям. Рада, что вовремя попала в руки золотого врача Нечушкиной В. М., её команды,через месяц после операции я бодрая и активная, вот что значит хорошая команда при лечении. Всем добра, очень порядочные, вежливые, грамотные, внимательные люди! Всего им наилучшего от \"Снегурочки\").",
-            "date": "18.05.2023"
-
-          },
-          {
-            "name": "Мария (Красногорск)",
-            "text": "Огромное спасибо Нечушкиной Валентине Михайловне! Оперировала меня с 3 стадией рака яичников в декабре прошлого года! Операция длилась 11 часов. 2 дня в реанимации. Уже там начала ходить, есть и пить. Живот практически не болел! Хочу сказать, что с Валентиной Михайловной и ее командой все прошло очень хорошо! На 8 сутки уже была дома. Потом была химиотерапия. Сейчас СА-125 в норме! По данным обследований никаких признаков болезни! Низкий поклон Валентине Михайловне! Врач от Бога!",
-            "date": "16.07.2022"
-
-          },
-          {
-            "name": "Антонина (Москва)",
-            "text": "Хочу сказать слова искренней благодарности Валентине Михайловне Нечушкиной! 3 года назад она спасла мне жизнь! Распространённый рак яичников! 3 стадия! Операция длилась 10 часов. Химиотерапии. И вот данных за прогрессирование нет. Живу полноценной жизнью и все благодаря Валентине Михайловне. Очень редко встречаешь врача с которым можно поговорить, обсудить все последствия операции, правильную последовательность действий в той или иной ситуации! При встрече с Валентиной Михайловной она развеяла все мои страхи и я согласилась на хирургическое лечение. Валентина Михайловна крайне образованный и интересный человек! Настоящий профессор! Если она встретилась на вашем пути, не сомневайтесь, это лучший специалист!!!",
-            "date": "30.03.2021"
-
-          },
-          {
-            "name": "Марина (Уссурийск)",
-            "text": "Цель моего отзыва в том, чтобы с одной стороны выразить огромную благодарность талантливому доктору, а с другой стороны - помочь женщинам, столкнувшимся с онкологией, сделать правильный выбор и сохранить свою жизнь. Буду счастлива, если мой отзыв поможет спасти хотя бы одну жизнь. Очень часто онкобольные и их родственники могут слышать от докторов: «К сожалению, мы не Боги….». Да, возможно это и так. Но это не про великолепного хирурга, гинеколога, онколога Нечушкину Валентину Михайловну. Все без исключения ее пациенты и коллеги говорят: «Она первая после Бога! Валентина Михайловна - руки Бога в нашем земном мире!». В феврале 2022 года мне был поставлен диагноз рак яичников III ст. (с метастазами в брюшную полость). Когда я услышала этот диагноз, было страшное непонимание с чего начать, как правильно все сделать, чтобы выстроить грамотное лечение. Здесь надо сразу отметить, что я жила в маленьком провинциальном городе Уссурийск, регулярно один раз в 6 месяцев обследовалась у гинеколога, делала все необходимые обследования. Но либо из-за халатности, либо из-за низкого уровня профессионализма врачей мое заболевание было диагностировано только на третьей стадии. Поэтому доверия к врачам в моем городе у меня уже не было. По ходу анализа информации о лечении этого заболевания моё смятение еще больше усилилось. Я поняла, что дальнейший прогноз моей жизни будет зависеть только от профессионализма хирурга, который будет делать операцию. Да будет благословен тот день, когда я узнала о Валентине Михайловне! Общаясь с ней, сразу понимаешь, что ты - в надежных руках профессионала! К сожалению, за свои 48 лет жизни я таких профессионалов не встречала. Но, видимо, Бог решил, что мне надо еще пожить и направил меня к ней. А дальше все очень оперативно и четко: тщательное обследование, консультация перед операцией (в течение 2-х часов (!) Валентина Михайловна отвечала на мои вопросы). Операция была сложной и длилась 9 часов. Когда хирург по месту жительства увидел выписку, воскликнул: \"Жесть! Пол живота вырезали!\" А я продолжаю жить благодаря Валентине Михайловне и ее команде врачей. И я уверена, что все будет хорошо! После операции Валентина Михайловна меня не бросила, направила на химиотерапию, направила на генетическую экспертизу, где была выявлена наследственная мутация в генах, назначила грамотное лечение, о котором в моем городе даже и не слышали, контролирует как проходит мое дальнейшее лечение, всегда на связи в любое время суток. Дорогие женщины! Уже пройдя сложный путь и зная, какие могут быть запущенные случаи и последствия от неграмотно проведенной операции, хочу сказать: если вы оказались в такой же ситуации, как и я, и читаете этот отзыв, то не раздумывайте и не теряйте время: вам - только к Валентине Михайловне. Поверьте: ей равных нет, она лучшая! Это подтверждают не только ее пациенты, но и все врачи, с которыми я столкнулась во время лечения. Когда доктора узнают, что тебя оперировала Валентина Михайловна, то они все говорят: «Вы сделали правильный выбор!». Приведу в пример цитаты других докторов о Валентине Михайловны, которые я услышала во время лечения: «Вам сделали очень хорошую операцию!», «Вы, видимо, хорошо учились в школе, раз выбрали Валентину Михайловну…», «Она же со скальпелем в руках родилась!». Валентина Михайловна, родненькая, дай Бог Вам и всей Вашей команде крепкого здоровья и всего самого хорошего! Так же от всей души хочу поблагодарить Доктора Сому, хирурга Шемятовского Кирилла Александровича, анестезиологов-реаниматологов: Приходченко Алексея Олеговича, Вяткина Павла Викторовича, Байдал Олега Владиславовича. Храни Вас Бог! С огромной благодарностью, Вербицкая Марина.",
-            "date": "21.03.2020"
-
-          },
-          {
-            "name": "Светлана (Коломна)",
-            "text": "В моей семье случилась беда, мне диагностировали рак яичников. По месту жительства меня отправили на обследование, а потом в областной онкодиспансер. К сожалению, очереди к докторам, возможность записи на гастро и колоноскопию через 2 недели от обращения не добавляли здоровья и нервов. И главное отзывы об областном онкодиспансере оставляли желать лучшего. Мой муж тем временем начал искать знакомого доктора который мог бы хотя бы сориентировать в ситуации. Что лучше, как правильно действовать. И ему это удалось. Один знакомый посоветовал нам обратиться в health-direct. Ощущение, что мы попали в другой мир. Вежливо, четко нам объяснили план действий. Первым этапом была очная консультация у Нечушкиной Валентины Михайловны. Естественно, прочитав отзывы о ней, мы не поверили, что это правда и такое может быть! Но уже через 5 минут общения было понятно, что Валентина Михайловна истинный профессионал своего дела. Я была поражена, когда консультация длилась вместо положенного часа уже 3 час, мои вопросы не иссякали, а Валентина Михайловна продолжала на них отвечать без тени того, что человек торопится, без профессорского снисхождения. В общем, первое впечатление — это мой доктор! При помощи менеджеров health direct в течение 5 дней я завершила список обследований из 19 пунктов. Боюсь представить сколько это занято бы времени по месту жительства. Потом самое страшное— операция. Но и тут Валентина Михайловна успокоила. Она уже много лет работает с одной и той же командой анестезиологов-реаниматологов и за счёт этого союза ей удаётся добиваться тех результатов о которых она заявляет на конференциях (мы с мужем, естественно, посмотрели в интернете не одну лекцию. И это заслуживает огромного уважения. Валентина Михайловна участвует в самых, как я поняла именитых конференциях с докладами. Посмотрите, очень интересно, хотя есть непонятные простому человеку вещи). Перед операцией ко мне пришёл анестезиолог-реаниматолог, все объяснил, успокоил и с улыбкой сказал: до встречи в операционной. Вы знаете, почему то стало интересно, что там в операционной!) честно скажу, что было в операционной не помню. Проснулась на операционном столе, у меня спросили болит ли живот. Я ответила нет. Дальше мне сообщили что время 8 вечера и пора переходить на каталку чтобы ехать в отделение реанимации. Как перебираться? Операция, я ее боялась, боялась боли, непонятных ощущений, а тут я проснулась и с небольшой помощью перешла на каталку. Потом ночью спала. На следующий день со мной индивидуально работал реаниматолог. Под контролем я начала пить воду, специальные питательные смеси, бульон, сидеть в кровати. Но самое мое большое удивление было следующим: после обеда у меня спросили, неужели не хочется встать? Встать?! После 10 часов операции? Реаниматолог улыбнулся. Так может встанем? И вы не поверите, я встала, мы прогулялись по отделению. У меня появилась уверенность в ногах. Боли не было. Удостоверившись что я полностью «самостоятельна» меня перевели в мою палату. Но и тут не оставляли в покое! Я только потом поняла, что казалось бы элементарные вещи, такие как пить воду в достаточном количестве, ходить по коридору, соблюдать диету, не уходить в болезнь, а продолжать общаться с родственниками и друзьями достаточно быстро вернули меня в мое обычное состояние, но уже без грозной болезни. Я безумно благодарна Валентине Михайловне и ее команде! Низкий вам поклон!!!",
-            "date": "13.01.2020"
-
-          }
-        ]
-      },
+  "name": "Valentina Mikhailovna Nechushkina",
+  "location": "Moscow, Russia",
+  "tags": [
+    "Surgeon",
+    "Oncogynecologist"
+  ],
+  "langs": "Russian, English",
+  "desc": "Experience, strength, and science — all describe Valentina Mikhailovna. She performs complex surgeries, teaches, and leads oncogynecology projects at EAFO. Her approach: thoughtfulness, precision, skill. With this specialist, patients know they are in reliable hands.<br/> &nbsp; &nbsp; • Doctor of Medical Sciences, Professor, Oncogynecologist<br/> &nbsp; &nbsp; • Head of the Eurasian Working Group on Gynecologic Oncology<br/> &nbsp; &nbsp; • Specialization: cervical and ovarian cancer, HIPEC, cytoreduction<br/> &nbsp; &nbsp; • Expert and lecturer at PIMU, scientific leader at EAFO",
+  "aboutText": "V. M. Nechushkina is a highly qualified surgical oncogynecologist, proficient in a full range of state-of-the-art diagnostic and therapeutic methods, and in all the surgical procedures used in modern oncogynecology, performed by both abdominal and laparoscopic approaches. <br /> Head of Oncogynecology at Health-Direct. <br /> Chair of the International Oncology Board at Health-Direct. <br />Deputy Director for Science and Chief Researcher at the Autonomous Nonprofit Organization 'Scientific and Educational Center “Eurasian Oncology Program”' (EAFO), Moscow, Russia.<br /> Chair of the Eurasian Working Group on Gynecologic Oncology and member of the Expert Council of the Eurasian Federation of Oncology (EAFO).   <br />   Professor, Department of Oncology, Radiation Therapy, and Radiology, Privolzhsky Research Medical University, Nizhny Novgorod.<br />Her professional interests include: <ul class='list-disc list-inside space-y-2 mt-2'><li> surgical treatment of cervical cancer (stages I–II), including with neoadjuvant and adjuvant chemotherapy;</li><li> fertility-preserving treatment for cervical cancer (stages I–II), including extended trachelectomy for tumors over 2 cm;</li><li> ultraconservative treatment for cervical cancer with primary tumors up to 2 cm;</li><li> surgical treatment of uterine body cancer, including pelvic and lumbar lymphadenectomy;</li><li> cytoreductive surgery for advanced uterine body cancer;</li><li> surgical treatment of advanced borderline ovarian tumors, including organ-preserving surgery;</li><li> surgical treatment of recurrent borderline ovarian tumors;</li><li> surgical treatment of ovarian cancer, including full staging for early disease;</li><li> extensive and combined surgery for advanced ovarian cancer (stages III–IV);</li><li> surgical treatment of recurrent ovarian cancer;</li><li> placement of ports for intraperitoneal chemotherapy;</li><li> pelvic exenteration.</li></ul> <br />Her treatment approaches are based on the latest international randomized studies and meta-analyses and are compliant with European and American guidelines for oncogynecological diseases.",
+  "memberships": {
+    "heading1": "INTERNATIONAL",
+    "international": [
+      "Chair, Eurasian Working Group on Gynecologic Oncology.",
+      "Expert Council Member, Eurasian Federation of Oncology (EAFO).",
+      "Member, European Society of Gynecologic Oncology (ESGO).",
+      "Member, International Gynecologic Cancer Society (IGCS).",
+      "Member, Education Committee, European Society of Surgical Oncology (ESSO).",
+      "Member, World Association of Laparoscopic Surgeons (WALS).",
+      "Honorary Member, Taiwan Association of Gynecologic Oncologists (TAGO)."
+    ],
+    "title2": "RUSSIAN",
+    "russian": [
+      "Chair of the working group on the development of recommendations for drug treatment of uterine cancer, Russian Society of Clinical Oncology (RUSSCO).",
+      "Member of working groups on recommendations for drug treatment of cervical and ovarian cancer, Russian Society of Clinical Oncology (RUSSCO).",
+      "Member, Russian Society of Clinical Oncology (RUSSCO).",
+      "Member, Multidisciplinary Association of Specialists in Reproductive Medicine (MARS).",
+      "Member, Russian Society of Oncogynecologists (RSGO).",
+      "Member, Society of Specialists in Reproductive System Tumors (OSORS)."
+    ]
+  },
+  "awards": [
+    "‘We Will Live’ award (2019) – Winner in the ‘Dynasty in Oncology’ category.",
+    "‘We Will Live’ award (2021) – Winner in the ‘Best Department’ category.",
+    "Honorary certificate from the Ministry of Health of the Russian Federation.",
+    "Medal ‘Excellence in Healthcare’."
+  ],
+  "experience": [
+    "1999–2018 – Researcher, then Senior Researcher, Gynecology Department, N. N. Blokhin Research Institute of Clinical Oncology, RAMS.",
+    "2003–2014 – Executive Secretary, Bulletin of the Russian Oncological Center named after N. N. Blokhin (RAMS).",
+    "2011–2015 – Associate Professor, Department of Oncology and Radiation Therapy, Faculty of Medicine, Pirogov Russian National Research Medical University.",
+    "2015–2020 – Professor, Department of Oncology and Radiation Therapy, Faculty of Medicine, Pirogov Russian National Research Medical University.",
+    "2018–2019 – Deputy Editor-in-Chief, Bulletin of the Russian Oncological Center named after N. N. Blokhin.",
+    "2018–2019 – Lead Researcher, Department of Combined and Radiation Therapy for Oncogynecological Diseases, N. N. Blokhin Research Institute of Clinical Oncology.",
+    "2019–2022 – Consultant in Oncogynecology, MEDINCENTER at the Diplomatic Corps Service, Ministry of Foreign Affairs of the Russian Federation.",
+    "2019–present – Chief Researcher, Autonomous Nonprofit Organization 'Scientific and Educational Center “Eurasian Oncology Program”', EAFO.",
+    "2019–present – Consultant in Oncogynecology, Multi-Disciplinary Medical Center of the Bank of Russia, Moscow.",
+    "2020–2021 – Deputy Director for Science, Institute of Oncogynecology and Mammology at the National Medical Research Center for Obstetrics, Gynecology and Perinatology named after Academician V. I. Kulakov, Ministry of Health of the Russian Federation.",
+    "2020–2021 – Head of the Oncology Department of Surgical Treatment Methods, Institute of Oncogynecology and Mammology at the National Medical Research Center for Obstetrics, Gynecology and Perinatology named after Academician V. I. Kulakov.",
+    "2020–present – Professor, Department of Oncology, Radiation Therapy, and Radiology, Privolzhsky Research Medical University, Nizhny Novgorod.",
+    "2021–present – Consultant, Oncogynecologist, 'SOYUZ' Multi-Disciplinary Clinic.",
+    "2021–present – Deputy Director for Science, Autonomous Nonprofit Organization 'Scientific and Educational Center “Eurasian Oncology Program”', EAFO.",
+    "2024–present – General Director, HD Clinic (HDMC: Health-Direct Medical Center)."
+  ],
+  "education": [
+    "1997 – Graduated with honors from the faculty for research and teaching staff training, I. M. Sechenov Moscow Medical Academy.",
+    "1999 – Completed residency in Oncology at N. N. Blokhin Russian Cancer Research Center, RAMS.",
+    "2002 – Defended dissertation for the degree of Candidate of Medical Sciences on 'Clinical evaluation of DNA-flow cytometry parameters in uterine cancer.'",
+    "2005 – Internship on cancer care organization and clinical research at the National Cancer Institute, Bethesda, USA.",
+    "2008, 2009 – Fellowships in surgical oncogynecology at the National Cancer Institute, Budapest, Hungary.",
+    "2008–2012 – Fellowships in surgical oncogynecology at St. Stephen Hospital, Budapest, Hungary.",
+    "2014 – Defended doctoral dissertation on 'Uterine cancer (prognostic factors and treatment strategies)'.",
+    "2015 – Professional retraining in surgery at Moscow State University of Medicine and Dentistry named after A. I. Evdokimov.",
+    "2015–2016 – Internship in obstetrics and gynecology at the Institute of Medical and Social Technologies.",
+    "2016 – Fellowship in robot-assisted surgery for oncogynecology and the surgical treatment of advanced ovarian cancer at Newcastle Surgical Training Center, UK.",
+    "2018 – Professional retraining in 'Healthcare Organization and Public Health' at Moscow State University of Medicine and Dentistry, A. I. Evdokimov.",
+    "2020 – Course in robot-assisted surgery, International College of Robotic Surgeons, World Laparoscopy Hospital, Gurugram, India.",
+    "2020 – Diploma in Laparoscopic Surgery (D.MAS & F.MAS), World Association of Robotic Surgeons, World Laparoscopy Hospital, Gurugram, India."
+  ],
+  "skills": [
+    "Advanced training in 'Chemo-hormone therapy for malignant tumors', Russian Medical Academy of Postgraduate Education, Moscow, 2016.",
+    "Advanced training in 'Diagnosis and treatment of malignant tumors of the female reproductive system', Russian Medical Academy of Postgraduate Education, Moscow, 2016.",
+    "Repeated advanced training in 'Chemo-hormone therapy for malignant tumors', Russian Medical Academy of Postgraduate Education, Moscow, 2016.",
+    "Advanced training in 'Tumors of the female reproductive system', Faculty of Continuing Professional Education, Moscow State University of Medicine and Dentistry, A. I. Evdokimov, Ministry of Health of Russia, 2018.",
+    "Advanced training in 'Endoscopic surgery in gynecology', Moscow State University of Medicine and Dentistry, A. I. Evdokimov, Ministry of Health of Russia, 2018.",
+    "Certification course in 'Obstetrics and Gynecology', ANO DPO 'Academy of Medical Education', Moscow, 2020 (certificate valid 2000–2025).",
+    "Certification course in 'Oncology', Institute of Continuous Medical Education, Moscow, 2020 (certificate valid 2000–2025).",
+    "Certification course in 'Surgery', ANO DPO 'Academy of Medical Education', Moscow, 2020 (certificate valid 2000–2025).",
+    "Numerous internships at leading oncogynecological clinics abroad, including robot-assisted oncogynecological interventions in the UK and India."
+  ],
+  "scientific": "Professor V. M. Nechushkina is the author of more than 200 publications in Russian and international scientific journals, co-author of 7 manuals, 1 textbook, 2 patents, 7 guidelines, and over 20 clinical recommendations, as well as more than 180 scientific reports in Russian and English. <br /><br />She has translated and edited official publications and educational materials for WHO, ESTRO, ESO, ESMO, IAEA, ARCA, the Eurasian Federation of Oncology (EAFO), and the following medical publications:<br /><ul class='mt-2 space-y-2 list-disc ml-4 list-outside'><li>Bulletin of N. N. Blokhin Russian Cancer Research Center (including annual special supplements on cancer statistics in Russia–CIS: 2005–2011);</li><li>General Practice by Murtagh, McGraw-Hill, 1998;</li><li>Novak’s Gynecology (12th edition), Williams & Wilkins, 1996;</li><li>Manual of Obstetrics by Niswander & Evans, Little, Brown and Company, 1996;</li><li>Manual of Allergy and Immunology by Lawlor, Fisher & Adelman, Little, Brown and Company, 1995;</li><li>Smith's General Urology (15th edition), Lange Medical Books/McGraw-Hill, 1995;</li><li>Quarterly Journal 'World Medicine Standards';</li><li>The New Consultation: Developing Doctor-Patient Communication, Oxford University Press, 2003;</li><li>Color Atlas of Emergency Department Procedures by Custalow, Elsevier Inc., 2006;</li><li>Colposcopy of the Cervix, Vagina, and Vulva by M. S. Baggish, Mosby, 2003;</li><li>Trauma Manual (4th edition) by Moore, Mattox & Feliciano, McGraw-Hill, 2003.</li></ul><br/><br/><b>Teaching Activity</b><br/><ul class='mt-2 space-y-2'><li>2011–2015 – Associate Professor, Department of Oncology and Radiation Therapy, Faculty of Medicine, Pirogov Russian National Research Medical University.</li><li>2015–2020 – Professor, Department of Oncology and Radiation Therapy, Faculty of Medicine, Pirogov Russian National Research Medical University.</li><li>2016 – Certificate of academic title 'Associate Professor' in Oncology, Ministry of Education and Science of the Russian Federation.</li><li>2019 – Visiting Professor, Chinese University, Hong Kong.</li><li>2020–present – Professor, Department of Oncology, Radiation Therapy, and Radiology, Privolzhsky Research Medical University, Nizhny Novgorod</li><li>Prof. Nechushkina has participated in more than 200 scientific conferences, seminars, and congresses (in over a quarter of them as a member of the organizing/scientific/program committee). She is a regular invited lecturer at national and international congresses, including abroad (Hungary, Netherlands, India, Italy, China, USA, Turkey, France, etc.).</li><li>Since 2009, she has held over 20 training events in different countries:<ul class='mt-2 space-y-2 list-disc list-outside ml-6'><li>interactive seminars in Krasnoyarsk, Smolensk, Khabarovsk, Voronezh, and other cities in Russia;</li><li>as part of surgical master classes, Professor Nechushkina demonstrated and taught the most complex oncogynecological surgeries in Hungary (Budapest), Hong Kong, Kazakhstan (Almaty, Astana), India (Chennai), China (Guangzhou), Russia (Vladivostok, Izhevsk, Moscow, Nizhny Novgorod, Orenburg, Samara, Tomsk, Cheboksary, Chelyabinsk, Cherkessk, Yaroslavl).</li></ul></li></ul><br /><br /><p>H-index: 13 <a href='https://scholar.google.com/citations?user=AIvRezEAAAAJ&hl=ru&oi=ao' target='_blank' class='underline'>(Google Scholar)</a></p><br /><p>i10-index: 22 <a href='https://scholar.google.com/citations?user=AIvRezEAAAAJ&hl=ru&oi=ao' target='_blank' class='underline'>(Google Scholar)</a></p>"
+},
       "doctor4": {
         "name": "Kondratyeva Tatyana Tikhonovna",
         "location": "Moscow, Russia",
@@ -500,31 +457,126 @@
         "langs": "",
         "desc": "An attentive and meticulous doctor who treats every patient not as a case, but as a person deserving individual attention and care.<br/>Mikhail Nikolaevich doesn’t just diagnose — he finds the essence of the problem and solutions where others see contradictions.<br/>Patients appreciate his systematic approach, precision, and ability to explain complex things clearly.<br/> &nbsp; &nbsp; • Cardiologist, Therapist, Hepatologist, Family Doctor<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • 40 years of experience<br/> &nbsp; &nbsp; • Specialization: diagnostics and treatment of internal diseases, ENT pathologies, cardiovascular, respiratory, and digestive disorders<br/> &nbsp; &nbsp; • Experience in CIS and European countries<br/> &nbsp; &nbsp; • Consultant for oncological consiliums on supportive therapy and complications"
       },
-      "doctor12": {
-        "name": "Alyoshina Olga Alexandrovna",
-        "location": "Moscow, Russia",
-        "tags": [],
-        "langs": "",
-        "desc": "An experienced hematologist and department head focused on a personalized approach and advanced methods of cellular and immune therapy.<br/>Olga Alexandrovna not only manages her department — she sets standards for the treatment of acute leukemias and malignant lymphomas, participates in international studies, and applies targeted and immunotherapy based on cutting-edge science.<br/> &nbsp; &nbsp; • Hematologist, Oncologist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Head of the Department of Cellular and Immune Therapy, National Medical Research Center of Hematology, Ministry of Health of Russia<br/> &nbsp; &nbsp; • 15 years of experience<br/> &nbsp; &nbsp; • Specialization: acute leukemias, aggressive lymphomas, immune and targeted therapy, clinical protocol development"
-      },
+    "doctor12": {
+  "name": "Olga Alexandrovna Alyoshina",
+  "location": "Moscow, Russia",
+  "tags": ["Hematologist", "Oncologist", "Pediatric Oncologist"],
+  "langs": "",
+  "medExp": "over 15 years",
+  "services": "In-person consultation, remote consultation, international oncological board",
+  "cost": "20,000 rubles",
+  "desc": "An experienced hematologist and department head, focused on an individual approach and the use of advanced methods in cell and immunotherapy.<br/>Olga Alexandrovna not only manages the department — she sets standards in the therapy of acute leukemias and malignant lymphomas, participates in international research, and applies targeted and immunotherapy based on the latest scientific data.<br/> &nbsp; &nbsp; • Hematologist, oncologist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Head of Cell and Immunotherapy Department, National Medical Research Center of Hematology, Ministry of Health of Russia<br/> &nbsp; &nbsp; • Experience: 15 years<br/> &nbsp; &nbsp; • Specialization: acute leukemias, aggressive lymphomas, immunotherapy and targeted therapy, clinical protocol development",
+  "aboutText": "Hematologist, oncologist, member of the Health-Direct International Oncology Board.<br/><br/>Doctor of the highest qualification category.<br/><br/>PhD in Medicine.<br/><br/>Specializes in drug therapy (chemotherapy, targeted therapy, immunotherapy) for acute leukemias and aggressive lymphomas.",
+  "memberships": [
+    "Member of the European Hematology Association (EHA), National Hematology Society (NHS)"
+  ],
+  "experience": [
+    "2011–2020 – Hematologist at the Department of Chemotherapy for Hemoblastoses, Hematopoietic Depression, and Bone Marrow Transplantation, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2015–2018 – Research Associate, Scientific Research and Clinical Recommendations Department, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2017–2021 – Hematologist, Department of Hematology and Chemotherapy of Acute Leukemias, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2018–2020 – Senior Research Associate, Scientific Research and Clinical Recommendations Department, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2020–2024 – Head of Department and Hematologist, Department of Hematology and Chemotherapy of Acute Leukemias, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2022–2024 – Oncologist, Department of Hematology and Chemotherapy of Acute Leukemias, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2022–2023 – Senior Research Associate, Scientific Research and Clinical Recommendations Department, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation.",
+    "2023–present – Head and Hematologist, Department of Cell and Immunotherapy, National Medical Research Center of Hematology, Ministry of Health of the Russian Federation."
+  ],
+  "education": [
+    "2010 – Graduated with honors from the Faculty of Medicine, I. M. Sechenov Moscow Medical Academy, specializing in General Medicine.",
+    "2010–2012 – Clinical residency in 'Hematology and Blood Transfusion' at the National Medical Research Center of Hematology, Ministry of Health of the Russian Federation."
+  ],
+  "internships": [
+    "Regularly completes advanced training at educational institutions in Russia and abroad.",
+    "2014 – Internship at the University Hospital of Leipzig with Professor Dietger Niederwieser.",
+    "2017 – Training in the USA as part of a professional exchange program.",
+    "2017 – Advanced training in 'Hematology' at the Russian Medical Academy of Postgraduate Education, Ministry of Health of the Russian Federation.",
+    "2020 – Advanced training in 'Oncology' at the Russian Medical Academy of Continuous Professional Education, Ministry of Health of the Russian Federation.",
+    "2022 – Received a diploma in 'Pediatric Oncology' at the Dmitry Rogachev National Medical Research Center of Pediatric Hematology, Oncology and Immunology, Ministry of Health of the Russian Federation.",
+    "2022 – Advanced training in 'Hematology' at the Russian Medical Academy of Continuous Professional Education, Ministry of Health of the Russian Federation.",
+    "2023 – Advanced training course 'Fundamentals of Coordinated Academic Clinical Research in Oncology and Hematology' at the N. I. Lobachevsky National Research Nizhny Novgorod State University."
+  ],
+  "scientific": "<b>Field of scientific interests</b><br/><br/>Diagnosis and therapy of acute leukemias and aggressive lymphomas<br/><br/>In 2015 defended a PhD thesis on: 'Study of B-cell clonality and SOCS1 gene mutation status in patients with diffuse large B-cell lymphoma.'<br/><br/>Co-investigator in 2 large clinical studies.<br/><br/>Author and co-author of 235 scientific works."
+},
       "doctor13": {
-        "name": "Prikhodchenko Alexey Olegovich",
-        "location": "Moscow, Russia",
-        "tags": [
-          "Anesthesiologist-Resuscitator"
-        ],
-        "langs": "Russian, English",
-        "desc": "A doctor with over 10 years of experience specializing in intensive care for oncology patients after complex surgeries. Alexey Olegovich combines deep clinical knowledge with a scientific approach, enabling him to provide high-quality perioperative care.<br/> &nbsp; &nbsp; • Anesthesiologist-Resuscitator<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • 10 years of experience<br/> &nbsp; &nbsp; • Head of Anesthesiology and Intensive Care at 'Health-Direct' Medical Center<br/> &nbsp; &nbsp; • Member of the Russian Society of Clinical Oncology (RUSSCO)<br/> &nbsp; &nbsp; • Member of the National Association of Specialists in Thrombosis and Hemostasis (NATG)<br/> &nbsp; &nbsp; • Member of the Russian Association of Supportive Care in Oncology (RASSC)"
-      },
+  "name": "Aleksey Olegovich Prikhodchenko",
+  "location": "Moscow, Russia",
+  "tags": [
+    "Anesthesiologist-Intensivist"
+  ],
+  "medExp": "over 10 years",
+  "services": "In-person and remote consultations, international oncological board",
+  "cost": "15,000 rubles",
+  "langs": "Russian, English",
+  "desc": "A physician with more than 10 years of experience, specializing in intensive care for oncology patients after complex surgical interventions. Aleksey Olegovich combines deep clinical knowledge with a scientific approach, enabling him to expertly manage patients during the perioperative period and deliver high-quality medical care.<br/> &nbsp; &nbsp; • Anesthesiologist-intensivist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Work experience: 10 years<br/> &nbsp; &nbsp; • Head of Anesthesiology and Intensive Care at 'Health-Direct' medical center<br/> &nbsp; &nbsp; • Member of the Russian Society of Clinical Oncology (RUSSCO)<br/> &nbsp; &nbsp; • Member of the National Association of Thrombosis, Clinical Hemostasis, and Hemorheology Specialists (NATG)<br/> &nbsp; &nbsp; • Member of the Society for Supportive Care in Oncology (RASSC)",
+  "aboutText": "PhD in Medicine.<br/><br/>Head of Anesthesiology and Intensive Care, 'Health-Direct'.<br/><br/>Specializes in intensive therapy for oncology patients after extensive and combined surgical procedures, perioperative patient management.",
+  "memberships": [
+    "Member of the Russian Society of Clinical Oncology (RUSSCO), National Association of Thrombosis, Clinical Hemostasis and Hemorheology Specialists (NATG), Society for Supportive Care in Oncology (RASSC)."
+  ],
+  "experience": [
+    "2011 – 2019 – Anesthesiologist-Intensivist at the Department of Intensive Care and Resuscitation No. 1, N. N. Blokhin Research Institute of Clinical Oncology, Russian Cancer Research Center, RAMS.",
+    "2019 – 2021 – Head of the Anesthesiology and Intensive Care Department No. 2, Institute of Anesthesiology, Intensive Care and Transfusiology, National Medical Research Center for Obstetrics, Gynecology and Perinatology named after V. I. Kulakov, Ministry of Health of Russia.",
+    "2022–present – Senior Research Fellow at the Scientific and Educational Center 'Eurasian Oncology Program' (EAFO)."
+  ],
+  "education": [
+    "2009 – Graduated with honors from I. M. Sechenov Moscow Medical Academy, specializing in General Medicine.",
+    "2009 – 2011 – Residency in Anesthesiology and Intensive Care at the N. N. Blokhin Russian Cancer Research Center, RAMS."
+  ],
+  "internships": [
+    "2014 – 'Systemic Mycoses for European intensive care specialists. Preceptorship programme', Madrid, Spain.",
+    "2016 – Advanced professional training in Anesthesiology and Intensive Care, Pirogov Russian National Research Medical University, Ministry of Health of the Russian Federation.",
+    "2020 – Advanced professional training in Anesthesiology and Intensive Care, International Institute of Certified Education and Advanced Training LLC."
+  ],
+  "scientific": "Perioperative characteristics of the hemostatic system in oncology patients.<br/><br/>Anesthesiological support of extensive and combined cancer surgeries.<br/><br/>Intensive therapy for massive blood loss.<br/><br/>Author and co-author of over 20 scientific articles, one monograph, and a national guideline on intensive care.",
+  "reviews": [
+    {
+      "name": "Evgeny (Arkhangelsk)",
+      "text": "Huge thanks to Aleksey Olegovich! He brought me back to life, and thanks to him I am still here. He is a doctor from God, both as a specialist and as a wonderful person. Wishing him health and success in his challenging work!",
+      "date": "15.09.2021"
+    },
+    {
+      "name": "Aleksandr (Nizhny Novgorod)",
+      "text": "It is rare for doctors to write about their colleagues, but in this case I had to. It's always frightening to treat a loved one, especially when there is a life-threatening illness in an elderly person with a history of health issues. My mother was diagnosed with endometrial cancer with lymph node metastases and had recently undergone emergency stenting of her coronary arteries. Valentina Mikhailovna Nechushkina said surgery would be possible only if the anesthesiologist-intensivist gave the green light. I expected to hear 'not possible in this state' from the consultation, but the result with Aleksey Olegovich Prikhodchenko was unexpected. He was attentive, thoughtful, quickly established rapport with my mother, didn't scare us, clearly explained the risks, and agreed to prepare her for the necessary surgery. His knowledge in therapy and cardiology was impressive. Extra diagnostics and preparation didn't take much time and my mother underwent the scheduled surgery. Aleksey Olegovich's excellent anesthesia work and brilliant post-op care meant that the very next day my mother was sitting up, and another day later — already walking, despite her recent heart surgery! Heartfelt thanks to Aleksey Olegovich Prikhodchenko and his colleagues Pavel Viktorovich Vyatkin and Oleg Vladislavovich Baydal for their care! I sincerely admire these doctors. Thank you from me and my mother!",
+      "date": "13.08.2021"
+    }
+  ]
+},
       "doctor14": {
-        "name": "Snegovoy Anton Vladimirovich",
-        "location": "Moscow, Russia",
-        "tags": [
-          "Chemotherapist"
-        ],
-        "langs": "Russian, English",
-        "desc": "An experienced oncologist-chemotherapist who applies modern methods of treating malignant tumors, considering the individual characteristics of each patient. <br/>Anton Vladimirovich is actively engaged in research, serves as the Chairman of the Russian Association of Supportive Care in Oncology (RASSC), and is the author of numerous scientific publications.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • Professor, Doctor of Medical Sciences<br/> &nbsp; &nbsp; • Specialization: chemotherapy for various cancers, supportive therapy, personalized treatment<br/> &nbsp; &nbsp; • Participant in international oncology consiliums<br/> &nbsp; &nbsp; • Head of the Department of Drug Treatment of Tumors, N.A. Lopatkin Research Institute of Urology and Interventional Radiology"
-      },
+  "name": "Anton Vladimirovich Snegovoy",
+  "location": "Moscow, Russia",
+  "tags": [
+    "Chemotherapist"
+  ],
+  "langs": "Russian, English",
+  "medExp": "over 20 years",
+  "services": "Remote consultations, international oncological board",
+  "cost": "15,000 rubles",
+  "desc": "An experienced oncologist and chemotherapist, applying modern methods to treat malignant neoplasms while considering the individual characteristics of each patient. <br/>Anton Vladimirovich is actively involved in research, serves as Chair of the Society for Supportive Care in Oncology (RASSC), and is the author of many scientific publications.<br/> &nbsp; &nbsp; • Oncologist, chemotherapist<br/> &nbsp; &nbsp; • Professor, Doctor of Medical Sciences<br/> &nbsp; &nbsp; • Specialization: chemotherapy for various types of cancer, supportive care, personalized approach to patient treatment<br/> &nbsp; &nbsp; • Participant in international oncological boards<br/> &nbsp; &nbsp; • Head of the Department of Drug Therapy for Tumors, N. A. Lopatkin Research Institute of Urology and Interventional Radiology",
+  "aboutText": "Professor, Doctor of Medical Sciences.<br/><br/>Oncologist, chemotherapist.<br/><br/>Chair of the Society for Supportive Care in Oncology (RASSC).<br/><br/>Specializes in drug therapy for malignant neoplasms and in providing supportive care during chemotherapy, immunotherapy, and targeted therapy.",
+  "memberships": [
+    "Chair of the Society for Supportive Care in Oncology (RASSC), member of the Russian Society of Clinical Oncology (RUSSCO), European Society for Medical Oncology (ESMO), Association of Oncologists of Russia."
+  ],
+  "experience": [
+    "2000–2002 – Surgeon, Besedinskaya Central District Hospital, Kursk Region.",
+    "2002–2004 – Surgeon, Kraskovskaya Central District Hospital, Moscow Region.",
+    "2004–2006 – Researcher, Department of Anesthesiology and Intensive Care No. 3, N. N. Blokhin Research Institute of Clinical Oncology, RAMS.",
+    "2006–2017 – Senior Researcher, Department of Outpatient Chemotherapy (Day Hospital), N. N. Blokhin Research Institute of Clinical Oncology, RAMS.",
+    "2017–2021 – Head, Department of Outpatient Chemotherapy (Day Hospital), N. N. Blokhin National Medical Research Center of Oncology, Ministry of Health of Russia.",
+    "2021–present – Head, Department of Drug Antitumor Therapy, N. A. Lopatkin Research Institute of Urology and Interventional Radiology – branch of the National Medical Research Center for Radiology, Ministry of Health of Russia."
+  ],
+  "education": [
+    "1999 – Graduated from the Faculty of Medicine, Perm State Medical Academy named after E. A. Wagner, specializing in General Medicine.",
+    "1999–2000 – Clinical internship in 'Surgery' at Perm State Medical Academy named after E. A. Wagner.",
+    "2000–2002 – Clinical residency in 'Oncology' at Kursk State Medical University."
+  ],
+  "internships": [
+    "Regularly completes advanced training at educational institutions in Russia and abroad.",
+    "2006 – Clinical Oncology course, European School of Oncology (Malta).",
+    "2016 – Advanced training in 'Oncology' at Moscow State University of Medicine and Dentistry.",
+    "2016 – Advanced training in 'Chemo-hormone therapy for malignant tumors' at the Russian Medical Academy of Postgraduate Education.",
+    "2016 – Clinical Oncology course, European School of Oncology (Zurich, Switzerland).",
+    "2018 – Internship at San Raffaele Hospital (Milan, Italy)."
+  ],
+  "scientific": "Drug therapy for malignant neoplasms, supportive care during chemotherapy, immunotherapy, and targeted therapy.<br/><br/>In 2004, defended his PhD thesis on ‘Early enteral tube feeding in patients with gastric cancer after surgery’.<br/><br/>In 2017, defended his Doctor of Medical Sciences thesis on ‘Modern strategy of supportive care for anticancer drug therapy’.<br/><br/>Author and co-author of over 100 scientific works."
+},
       "doctor15": {
         "name": "Kurnosov Ivan Alexandrovich",
         "location": "Saint Petersburg, Russia",
@@ -533,21 +585,334 @@
         "desc": "A leading neurosurgeon and oncologist for whom every operation is a carefully designed plan with maximum attention to detail. Each of his surgeries integrates science, experience, and deep compassion for the patient.<br/>Ivan Alexandrovich combines advanced neurosurgical techniques with personalized assessment to ensure not only successful treatment but also safe recovery.<br/> &nbsp; &nbsp; • Neurosurgeon, Oncologist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Head of the Department of Neuro-Oncology, N.N. Petrov National Medical Research Center of Oncology<br/> &nbsp; &nbsp; • 9 years of experience<br/> &nbsp; &nbsp; • Specialization: diagnosis and treatment of oncological diseases of the central and peripheral nervous system, skull base tumors, and spinal disorders"
       },
       "doctor16": {
-        "name": "Kononenko Inessa Borisovna",
-        "location": "Moscow, Russia",
-        "tags": [
-          "Chemotherapist"
-        ],
-        "langs": "Russian, English, French",
-        "desc": "For over 25 years, Inessa Borisovna has been developing and implementing personalized chemo- and immunotherapy regimens, emphasizing both effectiveness and treatment tolerability.<br/>Her approach is never random — each therapeutic strategy is built considering the tumor’s molecular features, comorbidities, and patient’s real quality of life.<br/>Patients value her thoughtful approach, clear explanations, and constant support throughout treatment.<br/> &nbsp; &nbsp; • Oncologist, Chemotherapist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Highest qualification category<br/> &nbsp; &nbsp; • 25 years of experience<br/> &nbsp; &nbsp; • Specialization: cancer drug therapy, supportive care, immunotherapy, and targeted therapy<br/> &nbsp; &nbsp; • Executive Director of the Russian Association of Supportive Care in Oncology (RASSC)<br/> &nbsp; &nbsp; • Member of the European Society for Medical Oncology (ESMO) and the Russian Society of Clinical Oncology (RUSSCO)"
-      },
+  "name": "Inessa Borisovna Kononenko",
+  "location": "Moscow, Russia",
+  "tags": [
+    "Chemotherapist"
+  ],
+  "medExp": "over 25 years",
+  "services": "Remote consultations, international oncological board",
+  "cost": "15,000 rubles",
+  "langs": "Russian, English, French",
+  "desc": "For more than 25 years, Inessa Borisovna has specialized in developing and implementing personalized chemotherapy and immunotherapy regimens, emphasizing both effectiveness and tolerability of treatment.<br/>In her work, nothing is arbitrary — every treatment strategy is carefully devised, taking into account the tumor’s molecular features, comorbidities, and the patient's real quality of life.<br/>Patients appreciate her thoughtful approach, clear explanations, and ability to support them at every stage of therapy.<br/> &nbsp; &nbsp; • Oncologist, chemotherapist<br/> &nbsp; &nbsp; • PhD in Medicine<br/> &nbsp; &nbsp; • Doctor of the highest category<br/> &nbsp; &nbsp; • Experience: 25 years<br/> &nbsp; &nbsp; • Specialization: antitumor therapy for malignant neoplasms, supportive therapy during chemotherapy, immunotherapy and targeted therapy<br/> &nbsp; &nbsp; • Executive Director of the Russian Society for Supportive Care in Oncology (RASSC)<br/> &nbsp; &nbsp; • Member of the European Society for Medical Oncology (ESMO) and the Russian Society of Clinical Oncology (RUSSCO)",
+  "aboutText": "Oncologist, chemotherapist. Doctor of the highest category.<br/><br/>PhD in Medicine.<br/><br/>Executive Director of the Society for Supportive Care in Oncology (RASSC).<br/><br/>Member of the accreditation committee for international supportive care centers, International Society for Supportive Care in Cancer (MASCC).<br/><br/>Specializes in antitumor therapy of malignant neoplasms, supportive care during chemotherapy, immunotherapy, and targeted therapy.",
+  "memberships": [
+    "Executive Director of the Society for Supportive Care in Oncology (RASSC), member of the Russian Society of Clinical Oncology (RUSSCO), European Society for Medical Oncology (ESMO), Association of Oncologists of Russia. Member of the accreditation committee for international supportive care centers, International Society for Supportive Care in Cancer (MASCC)."
+  ],
+  "experience": [
+    "1997–2002 – Junior Researcher, Oncologist, Russian Scientific Center for Radiology, Ministry of Health of Russia.",
+    "2002–2005 – Oncologist, Irfan Medical Center Hospital, Baakline Medical Center Hospital, Lebanon.",
+    "2005–2009 – Senior Medical Advisor, AstraZeneca UK Limited Representative Office.",
+    "2009–2021 – Oncologist, Senior Researcher, Department of Outpatient Chemotherapy, N. N. Blokhin National Medical Research Center of Oncology, Ministry of Health of Russia.",
+    "2021–present – Head of the Day Hospital for Drug Therapy of Tumors, N. A. Lopatkin Research Institute of Urology and Interventional Radiology – branch of the National Medical Research Center for Radiology, Ministry of Health of Russia."
+  ],
+  "education": [
+    "1995 – Graduated from the Peoples' Friendship University of Russia.",
+    "1995–1997 – Residency in Oncology and Radiology.",
+    "2008, 2013, 2018 – Advanced training in Oncology at the Department of Oncology, Faculty of Further Professional Education, Moscow State University of Medicine and Dentistry named after A. I. Evdokimov, Ministry of Health of Russia (Moscow)."
+  ],
+  "internships": [
+    "Oncology certificate – accreditation by the European Society for Medical Oncology (ESMO) under the ESMO-MORA system (2016).",
+    "Advanced professional training in hematology, Dmitry Rogachev National Medical Research Center of Pediatric Hematology, Oncology and Immunology, Ministry of Health of Russia (2002).",
+    "Internship in oncology and hematology, Saint George Hospital University Medical Center, Beirut (2004).",
+    "Advanced training in oncology, ESMO Academy, Oxford (2016, 2017).",
+    "Advanced training in 'Chemo-hormone therapy for malignant tumors' at the Russian Medical Academy of Postgraduate Education (Moscow, 2000, 2018, 2022).",
+    "Regularly completes advanced training at educational institutions in Russia and abroad."
+  ],
+  "scientific": "Drug antitumor therapy for solid tumors, antitumor therapy for cancers of unknown primary site, supportive care in oncology.<br/><br/>In 2002, defended her PhD thesis on 'Different applications of tomudex, campto in the treatment of mCRC.'<br/><br/>Author and co-author of more than 60 scientific works.<br/><br/><b>Patents</b><br/><br/>Computer programs:<ul class='mt-2 ml-4 list-disc list-outside space-y-2'><li>individualization of anemia treatment (Certificate № 201766921);</li><li>individualization of febrile neutropenia prevention (Certificate №2017617170);</li><li>individualization of osteomodifying drugs prescription in patients with bone metastases (Certificate № 2017617163).</li></ul>"
+},
       "doctor17": {
         "name": "Timashkov Ivan Alexandrovich",
         "location": "Moscow, Russia",
         "tags": [],
         "langs": "Russian, English",
         "desc": "A specialist whose accuracy determines the right diagnosis. Works with all types of radiological imaging — from joint CT scans to chest and pelvic studies. Helps detect what others might miss. Has extensive experience participating in oncology consiliums.<br/> &nbsp; &nbsp; • Radiologist<br/> &nbsp; &nbsp; • Specialization: X-ray and CT diagnostics of abdominal, ENT, musculoskeletal, gastrointestinal, thoracic, pelvic, spinal, and joint systems<br/> &nbsp; &nbsp; • Experience in oncology and general medical institutions"
+      },
+      "doctor18": {
+  "name": "Dmitry Yuryevich Sinyavin",
+  "location": "Moscow, Russia",
+  "tags": ["Chemotherapist"],
+  "langs": "Russian, English",
+  "desc": "",
+  "medExp": "over 15 years",
+  "services": "Remote consultation, in-person consultation, international oncological board, drug therapy administration",
+  "cost": "15,000 rub remote / 8,000 rub in-person",
+  "aboutText": "Oncologist, oncologist-dermatologist, chemotherapist, participant in the international board Health-Direct.<br/><br/>Specializes in drug therapy (chemotherapy, targeted therapy, immunotherapy) for ovarian, uterine, cervical, breast, stomach, colon, rectum, lung cancers, melanoma, and sarcomas of various locations; comprehensive supportive care during drug treatment; personalized medicine.",
+  "memberships": [
+    "Member of the Russian Society of Clinical Oncology (RUSSCO), European Society for Medical Oncology (ESMO), American Society of Clinical Oncology (ASCO), Moscow Oncology Society, Russian Society of Oncourologists."
+  ],
+  "experience": [
+    "2010–2011 – Oncologist, chemotherapist at N.A. Semashko Central Clinical Hospital, Russian Railways.",
+    "2010–2014 – Oncologist, chemotherapist at OAO 'Medicina'.",
+    "2011–2012 – Oncologist, chemotherapist at City Clinical Hospital named after the Bakhrushin Brothers.",
+    "2014–present – Oncologist, chemotherapist at the multidisciplinary clinic 'SOYUZ'."
+  ],
+  "education": [
+    "2007 – Graduated with honors from the Faculty of Medicine, Moscow State University of Medicine and Dentistry named after A.I. Evdokimov, Ministry of Health of the Russian Federation.",
+    "2009 – Completed residency in Oncology at the Department of Oncology and Radiation Therapy, Moscow State University of Medicine and Dentistry named after A.I. Evdokimov, Ministry of Health of the Russian Federation.",
+    "Completed internships in oncology and drug therapy at Hadassah Clinic (Israel) and Ludwig Maximilian University Clinic, Munich (Germany)."
+  ],
+  "scientific": "<b>Field of scientific interests</b><br/><br/>Drug therapy (chemotherapy, targeted therapy, immunotherapy) for ovarian, uterine, cervical, breast, stomach, colon, rectum, and lung cancers, melanoma, and sarcomas of various locations; comprehensive supportive care during drug treatment; personalized medicine.",
+  "reviews": [
+    {
+      "name": "Nikolay (Kolomna)",
+      "text": "In November 2023 I was diagnosed with stage III cancer of the right lung. Life seemed to end. I was already preparing for death. Thankfully, smart and sensible people nearby advised me to contact Health-Direct. That month flew by like a fast train, and only now do I realize how much had to be done and why. We got confirmation that the cancer was only in the lung. Then I went for more testing to find out what kind of cancer I had. After all this, I received my first chemotherapy session in December. Chemotherapy was administered by oncologist Dmitry Yuryevich Sinyavin, who also supervised my care. He is a very attentive and responsible doctor. I had a total of six chemotherapy sessions. After four sessions, based on the oncology board’s decision, Dmitry Yuryevich advised radiation therapy. I underwent 30 sessions. One month after that, a CT scan showed positive progress. This gave me hope, but the last two chemotherapy infusions were difficult for me. It turned out that a whole team of doctors was involved, and they got me to my last session on time. Now, I am completely cancer-free! Looking back at the past six months, I am immensely grateful to oncologist Dmitry Yuryevich Sinyavin, radiotherapist Aleksandr Evgenyevich Pankratov, and the entire Health-Direct team for the correct treatment plan (it was very different from what would have been given where I live)! More such doctors, please! Thanks to you, I can go on living and see my newly born granddaughter grow up!",
+      "date": "21.07.2024"
+    }
+  ]
+        },
+      "doctor19": {
+        "name": "DJUGASHVILI Maya Shalikoevna",
+        "location": "Moscow, Russia",
+        "tags": ["Radiologist", "Oncologist"],
+        "langs": "Spanish, Russian, English, French, Italian, and Georgian.",
+        "desc": "",
+        "medExp": "Over 20 years",
+        "services": "Remote consultations, International oncological board (multidisciplinary consultation)",
+        "cost": "25,000 rubles",
+        "aboutText": "PhD in Medical Sciences.<br/><br/>Radiation therapist, oncologist.<br/><br/>Professor at the University of Murcia, Spain.",
+        "memberships": [
+          "Affiliated Professor at the University of Tokyo, Japan.",
+          "Member of the Scientific Committee of the National Societies of the European Society for Radiotherapy and Oncology (ESTRO).",
+          "Member of the Scientific Committee of the Transatlantic Radiation Oncology Network (TRONE).",
+          "Member of the Scientific Committee of the Rare Cancer Network.",
+          "Member of the Spanish Association of Radiation Oncology (SEOR).",
+          "Member of the Ibero-American Association of Radiation Oncology (ALATRO)."
+        ],
+        "experience": [
+          "2000–2005 – Oncologist-radiologist in the Department of Radiation Therapy at the N.N. Blokhin Russian Cancer Research Center, Moscow, Russia.",
+          "2011–2018 – International Master’s Degree in Advanced Technological Applications in Radiation Oncology, University of Murcia.",
+          "Since 2008 – Currently working at GenesisCare (Spain) as a leading specialist, heading the international department and several lines of scientific research."
+        ],
+        "internships": [
+          "2006–2008 – Trained in modern radiation therapy technologies at the European University (DUERCC – Diplôme Universitaire Européen de Recherche Clinique en Cancérologie), Gustave Roussy Institute, France.",
+          "2010 – International Master’s in Advanced Technological Applications in Radiation Oncology, University of Murcia and Madrid Oncology Institute (IMO Group), Spain.",
+          "2012 – Master’s in Hematology and Clinical Oncology, University of Murcia and Morales Meseguer University Hospital, Murcia, Spain."
+        ],
+        "education": [
+          "In 1996 graduated from the Moscow State University of Medicine and Dentistry named after A.I. Evdokimov, Ministry of Health of Russia.",
+          "1996–1998 – Residency in Oncology and Radiation Therapy at the N.N. Blokhin Russian Cancer Research Center.",
+          "1998–2001 – Postgraduate studies (PhD) in Oncology and Radiation Therapy at the N.N. Blokhin Russian Cancer Research Center."
+        ],
+        "scientific": "Numerous presentations at international and national oncology conferences.<br/><br/>Official reviewer for the journal 'The Breast', member of the editorial board of the journal 'PROR'.<br/><br/>Has more than 20 publications on prostate, breast, rectal, and gastrointestinal cancers, among others."
+      },
+      "doctor20": {
+        "name": "SHEMYATOVSKY Kirill Alexandrovich",
+        "location": "Moscow, Russia",
+        "tags": ["Surgeon", "Oncologist"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "Over 10 years",
+        "services": "Remote consultations, International oncological board (multidisciplinary consultation)",
+        "cost": "10,000 rubles",
+        "aboutText": "Surgeon, oncologist.<br/><br/>PhD in Medical Sciences.",
+        "experience": [
+          "2013–2017 – Assistant at the Department of Operative Surgery, RUDN University.",
+          "2015–2016 – Ultrasound diagnostics doctor, City Clinical Hospital No. 17.",
+          "2020–2021 – Oncologist-surgeon at the Department of Surgical Oncology, National Medical Research Center for Obstetrics, Gynecology and Perinatology named after V.I. Kulakov.",
+          "Since 2015 – Currently working as a surgeon at NCC No.2, Petrovsky National Research Centre of Surgery."
+        ],
+        "internships": [
+          "Advanced training under the additional professional program 'Laparoscopic Surgery', Moscow State University of Medicine and Dentistry (MSMSU), Moscow, 2015.",
+          "Advanced training under the program 'Use of Modern Polymer Implants in Herniology', MSMSU, Moscow, 2017.",
+          "Advanced training under the program 'Laparoscopic Inguinal Hernia Repair', Moscow Clinical and Training Center of Pirogov Russian National Research Medical University, 2019.",
+          "Certification course in 'Surgery', Russian Medical Academy of Postgraduate Education, Moscow, 2019 (valid through 2024).",
+          "Basic Oncology Courses, EAFO, Moscow, 2019.",
+          "Internship in Surgical Oncology at Kailash Cancer Center, India, 2019.",
+          "Educational course x7 Research 'Good Clinical Practice (GCP)', Saint Petersburg, 2019.",
+          "Educational course 'Molecular Oncology' by Skolkovo Medical Cluster and UNIM, Moscow, 2021."
+        ],
+        "education": [
+          "In 2012 graduated from the Faculty of Medicine, Peoples’ Friendship University of Russia (RUDN), majoring in General Medicine.",
+          "In 2014 completed residency in Surgery at the Peoples’ Friendship University of Russia.",
+          "In 2015 completed professional retraining in Ultrasound Diagnostics at the Faculty of Advanced Training of Medical Workers, RUDN.",
+          "In 2017 completed postgraduate studies and defended a PhD thesis on the topic 'Aspects of Biocompatibility of Mesh Endoprostheses Used for Hernioplasty'.",
+          "In 2020 completed professional retraining in Oncology at the P.A. Herzen Moscow Oncology Research Institute."
+        ],
+        "scientific": "Author of more than 25 publications in Russian and international scientific journals, co-author of 2 educational and methodological manuals, 2 patents, and 1 patient guidebook."
+      },
+      "doctor21": {
+        "name": "KUZMICHEV Dmitry Vladimirovich",
+        "location": "Moscow, Russia",
+        "tags": ["Surgeon", "Oncoproctologist"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "Over 15 years",
+        "services": "Remote consultations, international oncological board, high-tech surgical treatment",
+        "cost": "15,000 rubles",
+        "aboutText": "Oncologist, surgeon, oncoproctologist.<br/><br/>Doctor of Medical Sciences.<br/><br/>Expert in various methods of diagnosis and treatment of malignant tumors of the colon. Performs high-tech standard and combined operations on the colon and rectum, including those using video endoscopic technologies.",
+        "memberships": [
+          "Member of the Board of the Russian Society of Colorectal Cancer Specialists (ROSCR); member of the Russian Society of Clinical Oncology (RUSSCO)."
+        ],
+        "experience": [
+          "2009–2013 – Research Fellow, Surgical Department No. 3 (Proctology), N.N. Blokhin Russian Cancer Research Center, RAMS.",
+          "2013–2020 – Senior Research Fellow, Surgical Department No. 3 (Proctology), N.N. Blokhin Russian Cancer Research Center, RAMS.",
+          "Since 2020 – Leading Researcher, Oncological Department of Surgical Methods of Treatment No. 3 (Coloproctology), N.N. Blokhin National Medical Research Center of Oncology."
+        ],
+        "internships": [
+          "In 2019, completed advanced training in 'Surgery' at the Pirogov Russian National Research Medical University.",
+          "In 2022, completed advanced training in 'Oncology' and passed periodic specialist accreditation at the Pirogov Russian National Research Medical University."
+        ],
+        "education": [
+          "In 2005, graduated from the Moscow State University of Medicine and Dentistry named after N.A. Semashko with a degree in General Medicine, qualifying as a physician.",
+          "In 2007, completed clinical residency with specialization in Oncology (Surgery) at the N.N. Blokhin Russian Cancer Research Center, RAMS."
+        ],
+        "scientific": "In 2009, defended his PhD thesis on 'Combined Treatment of Patients with Rectal Cancer Using New Options for Poly-Radiomodification'.<br/><br/>In 2020, defended his doctoral dissertation on 'Modern Strategy of Complex Treatment for Locally Advanced Rectal Cancer'.<br/><br/>Holder of 10 patents and author of over 90 published works on the most relevant issues in modern oncocoloproctology.<br/><br/><b>Most significant scientific publications:</b><br/><ol class='list-decimal mt-2 list-outside ml-4 space-y-2'><li>Modern Strategy for Creating High-Tech Treatment Programs in Oncoproctology, 2009.</li><li>Combined Treatment of Patients with Rectal Cancer with Regional Metastases (T2-3, N1-2, M0), 2011.</li><li>Comprehensive Treatment of Patients with Distal Rectal Cancer, 2012.</li><li>Possibilities of Performing Sphincter-Sparing Operations in Elderly Patients with Rectal Cancer Under Combined and Complex Therapy, 2013.</li><li>Organ-Preserving Treatment of Rectal Cancer, 2016.</li><li>Modern Opportunities for Using Neoadjuvant Chemotherapy in Combined Treatment of Locally Advanced Rectal Cancer, 2018.</li><li>The Role of Intensified Neoadjuvant Therapy in Locally Advanced Rectal Cancer, 2021.</li><li>Three-Year Long-Term Results of Using SANDWICH Therapy in Patients with Locally Advanced Mid- and Lower-Ampullary Rectal Cancer, 2021.</li><li>Consolidation Chemotherapy with CAPOX After Chemoradiotherapy Improves Survival in Patients with Locally Advanced Rectal Cancer, 2022.</li></ol>"
+      },
+      "doctor22": {
+        "name": "BAYDAL Oleg Vladislavovich",
+        "location": "Moscow, Russia",
+        "tags": ["Anesthesiologist-Resuscitator"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "more than 5 years",
+        "services": "",
+        "cost": "",
+        "aboutText": "Anesthesiologist-resuscitator of the Anesthesiology and Intensive Care department at “Health-Direct”.<br/><br/>Specializes in intensive care for oncological patients after extensive and combined surgical interventions, as well as in perioperative patient management.",
+        "memberships": [
+          "Member of the Russian Society of Clinical Oncology (RUSSCO), the National Association of Specialists in Thrombosis, Clinical Hemostasiology and Hemorheology (NATH), and the Society of Supportive Care in Oncology Specialists (RASSC)."
+        ],
+        "experience": [
+          "2019 – 2020 — Anesthesiologist-resuscitator at the Department of Intensive Care No.1, N.N. Blokhin National Medical Research Center of Oncology, Ministry of Health of Russia.",
+
+          "2020 – 2022 — Anesthesiologist-resuscitator at the Department of Anesthesiology and Intensive Care No.2, Institute of Anesthesiology, Resuscitation and Transfusiology, V.I. Kulakov National Medical Research Center for Obstetrics, Gynecology and Perinatology, Ministry of Health of Russia.",
+
+          "Since 2022 — Anesthesiologist-resuscitator at the Department of Anesthesiology and Intensive Care, V.A. Nasonova Research Institute of Rheumatology."
+        ],
+        "education": [
+          "In 2017, graduated from the A.I. Evdokimov Moscow State University of Medicine and Dentistry with a degree in General Medicine.",
+
+          "In 2019, completed a clinical residency in Anesthesiology and Resuscitation at the N.N. Blokhin National Medical Research Center of Oncology, Ministry of Health of Russia."
+        ],
+        "scientific": "Features of perioperative management of patients after extensive and combined oncological surgeries. Anesthetic support for extensive and combined oncological operations."
+      },
+      "doctor23": {
+        "name": "VYATKIN Pavel Viktorovich",
+        "location": "Moscow, Russia",
+        "tags": ["Anesthesiologist-Resuscitator"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "more than 20 years",
+        "services": "Organization of venous port system installation",
+        "cost": "",
+        "aboutText": "Anesthesiologist-resuscitator in the Anesthesiology and Intensive Care department of “Health-Direct”.<br/><br/>Doctor of the highest qualification category.",
+        "memberships": [
+          "Member of the Russian Society of Clinical Oncology (RUSSCO), the National Association of Specialists in Thrombosis, Clinical Hemostasiology and Hemorheology (NATH), and the Society of Supportive Care in Oncology Specialists (RASSC)."
+        ],
+        "experience": [
+          "2005 – 2006 — Anesthesiologist-resuscitator at the Department of Intensive Care No.1, Research Institute of Clinical Oncology, N.N. Blokhin Russian Cancer Research Center, Russian Academy of Medical Sciences.",
+
+          "2006 – 2020 — Anesthesiologist-resuscitator at the Department of Intensive Care No.1, N.N. Blokhin National Medical Research Center of Oncology, Ministry of Health of Russia.",
+
+          "2020 – 2023 — Anesthesiologist-resuscitator at the Department of Anesthesiology and Intensive Care No.2, Institute of Anesthesiology, Resuscitation and Transfusiology, V.I. Kulakov National Medical Research Center for Obstetrics, Gynecology and Perinatology, Ministry of Health of Russia.",
+
+          "Since 2023 — Anesthesiologist-resuscitator at the Department of Anesthesiology and Intensive Care, V.A. Nasonova Research Institute of Rheumatology."
+        ],
+        "education": [
+          "In 2002, graduated from Ryazan State Medical University with a degree in General Medicine.",
+
+          "In 2003, completed an internship in Surgery at the Russian State Medical University.",
+
+          "In 2005, completed an academic residency in Anesthesiology and Resuscitation at the N.N. Blokhin Russian Cancer Research Center, Russian Academy of Medical Sciences."
+        ],
+        "scientific": "Field of scientific interest:<br/><br/>Features of perioperative management of patients after extensive and combined oncological interventions. Anesthetic support for extensive and combined oncological surgeries. Author and co-author of scientific articles.",
+        "reviews": [
+          {
+            "name": "Olga (Moscow, Zelenograd)",
+            "text": "Everything was wonderful! The attitude of the doctors was at the highest level — caring, attentive, and gentle! A highly personalized approach! They even made the stitch look neat! Impressions: I want to express my sincere gratitude to the doctors for their attentive attitude, professionalism, and care. The venous port system installation was done very carefully and almost painlessly. I was very pleased that everything was explained in detail and all questions were answered. Thank you for your work and your kind hearts!",
+            "date": "11.05.2025"
+          },
+          {
+            "name": "Olga (Moscow, Zelenograd)",
+            "text": "Everything was wonderful! The attitude of the doctors was at the highest level — caring, attentive, and gentle! A highly personalized approach! They even made the stitch look neat! Impressions: I want to express my sincere gratitude to the doctors for their attentive attitude, professionalism, and care. The venous port system installation was done very carefully and almost painlessly. I was very pleased that everything was explained in detail and all questions were answered. Thank you for your work and your kind hearts!",
+            "date": "11.05.2025"
+          }
+        ]
+      },
+      "doctor24": {
+        "name": "GIMRANOV Albert Minusagitovich",
+        "location": "Moscow, Russia",
+        "tags": ["Surgeon", "Oncomammologist"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "more than 25 years",
+        "services": "In-person consultation, remote consultation, international oncological board, high-tech surgical treatment",
+        "cost": "15,000 rubles",
+        "aboutText": "Oncologist, surgeon, plastic surgeon, and member of the international oncological board of Health-Direct.<br/><br/>Highly skilled in various methods of diagnosing and treating benign and malignant breast tumors. Performs high-tech breast surgeries such as mastectomy, mastectomy with immediate implant reconstruction, oncoplastic resections, breast resections combined with different types of perforator flaps (TDAP, LICAP, MICAP), and delayed reconstructions. Also performs a variety of procedures on the regional lymphatic basin: sentinel lymph node biopsy (including dual mapping), different levels of axillary dissection, prescalene lymphadenectomy, and video-assisted parasternal lymphadenectomy, as well as various types of symmetry procedures.",
+        "memberships": [
+          "Member of the Russian Society of Clinical Oncology (RUSSCO), the European Society for Medical Oncology (ESMO), the National Society of Breast Oncologists of Russia, and the Russian Society of Oncomammologists."
+        ],
+        "experience": [
+          "2000–2016 — Oncologist at the Republican Clinical Oncology Dispensary of the Ministry of Health of the Republic of Tatarstan named after Professor M.Z. Sigal.",
+          "Since 2016 — Head of Oncological Department No.4 (Mammology and Plastic Surgery) and oncologist at the same institution."
+        ],
+        "education": [
+          "In 1997, graduated from the Faculty of Medicine at Kazan State Medical Academy — a branch of the Russian Medical Academy of Continuous Professional Education, Ministry of Health of the Russian Federation.",
+
+          "In 1998, completed an internship in Surgery at City Hospital No.2, Naberezhnye Chelny.",
+
+          "In 2000, completed a residency in Oncology at the Department of Oncology, Kazan State Medical Academy — a branch of the Russian Medical Academy of Continuous Professional Education, Ministry of Health of the Russian Federation.",
+
+          "In 2021, completed a residency in Plastic Surgery at Kazan (Volga Region) Federal University, Kazan."
+        ],
+        "internships": [
+          "Breast Cancer Treatment Course, SALK, Salzburg, Austria, 2004.",
+          "Reconstructive and Plastic Surgery in Breast Cancer Course, IEO, Milan, Italy, 2009.",
+          "Reconstructive and Plastic Surgery in Breast Cancer Course, National Cancer Institute, Milan, Italy, 2011.",
+          "Reconstructive and Plastic Surgery in Breast Cancer Course, Regina Elena National Cancer Institute, Rome, Italy, 2014.",
+          "Oncology Service Management Course, Vivantes, Berlin, Germany, 2014.",
+          "Breast Cancer Treatment Course, N.N. Blokhin Russian Cancer Research Center, Moscow, Russia, 2015.",
+          "Breast Cancer Treatment Course, University Hospital Münster, Münster, Germany, 2015.",
+          "Oncology Course, Anadolu Medical Center, Kartepe, Turkey, 2016.",
+          "Breast Cancer Treatment Course, N.N. Blokhin Russian Cancer Research Center, Moscow, Russia, 2017.",
+          "Free Flap Surgery for Breast Reconstruction Course, Sana Clinic, Düsseldorf, Germany, 2017.",
+          "Oncology Training Course, Rambam Health Care Campus, Haifa, Israel, 2021."
+        ],
+        "scientific": "<b>FIELD OF SCIENTIFIC INTEREST</b><br/><br/>Participates in joint projects with Kazan Federal University focused on breast cancer biology.<br/><br/>Has publications in Russian and international journals dedicated to systemic therapy of breast cancer and improvement of surgical treatment methods for breast cancer."
+      },
+      "doctor25": {
+        "name": "KOCHATKOV Alexander Vladimirovich",
+        "location": "Moscow, Russia",
+        "tags": ["Surgeon", "Oncologist", "Coloproctologist"],
+        "langs": "Russian, English.",
+        "desc": "",
+        "medExp": "Over 25 years",
+        "services": "In-person consultation, remote consultation, international oncological board, high-tech surgical treatment",
+        "cost": "15,000 rubles",
+        "aboutText": "Doctor of the highest category, Doctor of Medical Sciences, Professor.<br/><br/>Surgeon, oncologist, coloproctologist, participant of the international oncological board Health-Direct.<br/><br/>Has experience in practical healthcare combined with administrative, organizational, and scientific work.<br/><br/>A leading surgeon and opinion leader in the field of small and large intestine surgery, proctology, oncocoloproctology, and pelvic surgery. Significant experience in upper gastrointestinal surgery and hepatopancreatobiliary surgery.",
+        "memberships": [
+          "Member of the Russian Society of Clinical Oncology (RUSSCO), the European Society for Medical Oncology (ESMO), the American Society of Clinical Oncology (ASCO), the Moscow Society of Oncologists, and the Association of Coloproctologists of Russia."
+        ],
+        "awards": [
+          "2007 – Academia European Prize, category 'Medicine'",
+          "2006 – Foundation for the Promotion of Domestic Medicine and the Presidium of the Russian Academy of Medical Sciences (RAMS)",
+          "2018 – Commendation with entry in the employment record book 'For high professionalism, conscientious work, and participation in a volunteer project'"
+        ],
+        "experience": [
+          "2004 – 2014 – Surgeon, Senior Research Fellow at the Federal State Budgetary Institution ‘National Medical Research Center – Vishnevsky Institute of Surgery’ of the Ministry of Health of the Russian Federation.",
+          "2014 – 2017 – Surgeon, Head of the Center for Oncocoloproctology, Department of Surgical Oncology, Federal State Autonomous Institution ‘National Medical Research Center – Treatment and Rehabilitation Center’ of the Ministry of Health of the Russian Federation.",
+          "2017 – 2022 – Head of the Department of General Oncology, Coloproctology, and Purulent Surgery, Clinical Hospital No. 1, JSC ‘MEDSI Group’.",
+          "2021 – 2022 – Chief Specialist of JSC ‘MEDSI Group’ in the field of Coloproctology.",
+          "2022 – 2022 – Chief Physician, Clinical Hospital No. 2, JSC ‘MEDSI Group’.",
+          "2023 – 2023 – Deputy Chief Physician for Medical Affairs, Clinic on Mezhdunarodnaya, Network of Medical Centers ‘Major Clinic’.",
+          "2023 – present – Surgeon, Oncologist, Coloproctologist, LLC ‘Medexpert Plus’."
+        ],
+        "education": [
+          "1998 – Graduated with honors from the Faculty of Medicine, Russian State Medical University.",
+          "2001 – Completed residency in Surgery at the Vishnevsky Institute of Surgery, Russian Academy of Medical Sciences.",
+          "2004 – Defended PhD dissertation in Medical Sciences at the Vishnevsky Institute of Surgery, RAMS.",
+          "2022 – Master of Management, Specialized Master of Management, Russian Presidential Academy of National Economy and Public Administration (RANEPA), Moscow. Graduated with honors."
+        ],
+        "internships": [
+          "2004 – St. Elisabethenkrankenhaus der Katharina Kaspar Kliniken, Academic Teaching Hospital of the University of Frankfurt, Prof. Ch. Hottenrott.",
+          "2010 – Department of Medical Sciences, Endocrine Tumor Biology, Uppsala University, Sweden.",
+          "2015 – International Training Course on Transanal Endoscopic Operations (TEO) and Introduction to HybridNOTES: TEO for Transanal TME, Parc Tauli Sabadell Hospital Universitari, Spain.",
+          "2015 – Preceptorship Course in Metastatic Colorectal Cancer Management, Villejuif, Paris, France.",
+          "2015 – Minimally Invasive Perianal and Transanal Surgery International Advanced Course, IRCAD, University of Strasbourg, France."
+        ],
+        "scientific": "Author of 84 scientific publications, chapters in three monographs, and one textbook.<br/>Hirsch Index 11.<br/>2005 – PhD in Medical Sciences. Dissertation topic: 'Preoperative Staging and Prognostic Factors in Pancreatic Cancer'.<br/>2012 – Doctor of Medical Sciences. Dissertation topic: 'Neuroendocrine Neoplasms of the Pancreas'.<br/>Since 2019 – Professor, Department of Hospital Surgery No. 1, Faculty of Medicine, Russian National Research Medical University named after N.I. Pirogov, Moscow.<br/>2018–2019 – Professor, Department of Surgery, Faculty of Fundamental Medicine, Moscow State University named after M.V. Lomonosov.<br/>2009–2013 – Scientific Editor, 'Surgery. Journal named after N.I. Pirogov', Moscow.<br/>2008–2013 – 'Key Opinion Leader' in the treatment of patients with neuroendocrine neoplasms of the gastrointestinal tract.<br/>2004–2020 – Participant in scientific conferences (Russian Association of Hepatologists, MOLNEO, ROH, EAFO, IASGO, IHPBA, ENETS, ESMO)."
       }
+
     },
     "tabs": {
       "tab1": "About the Doctor",
