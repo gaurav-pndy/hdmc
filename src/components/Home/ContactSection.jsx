@@ -35,14 +35,14 @@ const ContactSection = () => {
               custStyle="md:w-1/2 h-[65%] left-0 top-0"
             />
             <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#816c65] to-[#c9a89d] z-40 p-4 md:p-10">
-              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-black">
+              <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-white">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}
               </div>
 
               <div className="grid grid-cols-2  gap-4 mb-3">
                 <div>
-                  <label className="block   font-semibold mb-1">
+                  <label className="block  text-white font-semibold mb-1">
                     {t("contact.name")}
                   </label>
                   <input
@@ -54,7 +54,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block   font-semibold mb-1">
+                  <label className="block  text-white font-semibold mb-1">
                     {t("contact.phone")}
                   </label>
                   <input
@@ -68,7 +68,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block   font-semibold mb-1">
+                  <label className="block  text-white font-semibold mb-1">
                     {t("contact.email")}
                   </label>
                   <input
@@ -82,7 +82,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block   font-semibold mb-1">
+                  <label className="block  text-white font-semibold mb-1">
                     {t("contact.city")}
                   </label>
                   <select
@@ -101,7 +101,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block   font-semibold mb-1">
+                <label className="block  text-white font-semibold mb-1">
                   {t("contact.message")}
                 </label>
                 <textarea
@@ -127,7 +127,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree1"
-                  className="text-sm font-medium  "
+                  className="text-sm font-medium  text-white"
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox1") }}
                 ></label>
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree2"
-                  className="text-sm font-medium "
+                  className="text-sm font-medium text-white"
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox2") }}
                 ></label>
               </div>

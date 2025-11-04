@@ -115,9 +115,9 @@ const AddressSection = ({ city }) => {
         <h2 className="text-brand1 text-center text-4xl font-bold mb-6">
           {t("address.title")}
         </h2>
-        <p className="md:text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
+        {/* <p className="md:text-lg text-center text-brand1/80 mb-8 max-w-3xl mx-auto">
           {t("address.subtitle")}
-        </p>
+        </p> */}
 
         {filteredClinics.map((clinic, idx) => (
           <div key={idx} className="grid grid-cols-1 lg:grid-cols-3 gap-8">

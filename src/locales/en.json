@@ -131,6 +131,9 @@
       "title": "International Multispecialty Expert Telemedicine",
       "subtitle": "Expert consultations with leading world specialists",
       "button": "Make an appointment"
+    },
+    "slide3": {
+      "title": "Special Offers"
     }
   },
   "aboutClinic": {
@@ -1177,7 +1180,7 @@
     "button": "Send"
   },
   "address": {
-    "title": "Our Addresses",
+    "title": "Our Address",
     "subtitle": "Two modern clinics in Moscow and Makhachkala for your convenience",
     "route": "Set a route",
     "clinic1": {
