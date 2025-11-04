@@ -97,7 +97,7 @@ const AboutTabs = ({ city }) => {
   return (
     <section id="about-tabs" className="max-w-[87rem] mx-auto  py-12">
       {/* Tabs header */}
-      <nav className="mb-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-4 flex-wrap">
+      <nav className="mb-6 grid grid-cols-2  xl:grid-cols-4 justify-between gap-4 flex-wrap">
         {TABS.map((tab) => (
           <button
             key={tab.key}
@@ -113,11 +113,11 @@ const AboutTabs = ({ city }) => {
             <span
               className={`${
                 activeTab === tab.key ? "text-white" : "text-brand4"
-              } text-xl`}
+              } lg:text-xl`}
             >
               {tab.icon}
             </span>
-            <span className="break-all ">{t(tab.labelKey)}</span>
+            <span className=" text-sm md:text-base">{t(tab.labelKey)}</span>
           </button>
         ))}
       </nav>

@@ -17,6 +17,7 @@ import ExpertiseCenter from "./pages/ExpertiseCenter";
 import ExpertiseDirection from "./pages/ExpertiseDirection";
 import { useState } from "react";
 import Reviews from "./pages/Reviews";
+import AboutDiseases from "./pages/AboutDiseases";
 
 function App() {
   const [city, setCity] = useState("Moscow");
@@ -71,6 +72,10 @@ function App() {
         {
           path: "/early-detection-program",
           element: <EarlyDetection />,
+        },
+        {
+          path: "/about-diseases",
+          element: <AboutDiseases />,
         },
         {
           path: "/leave-a-feedback",

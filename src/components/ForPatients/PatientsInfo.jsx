@@ -1,7 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaAddressCard, FaInfoCircle, FaHeartbeat } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
 import { LuShield } from "react-icons/lu";
 
 const PatientsInfo = () => {
