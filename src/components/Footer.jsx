@@ -63,9 +63,9 @@ const Footer = ({ city }) => {
             {t("footer.documents")}
           </h3>
           <div className="flex flex-col gap-1 text-white/90">
-            <a href="#" className="hover:underline">
+            {/* <a href="#" className="hover:underline">
               {t("footer.priceList")}
-            </a>
+            </a> */}
 
             <Link to="/about#offer" className="hover:underline">
               {t("footer.agreement")}

@@ -202,7 +202,7 @@ const DoctorsSection = () => {
           <SwiperSlide key={doc.id}>
             <Link
               to={`/doctors/${doc.id}`}
-              className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem]"
+              className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[36rem]"
             >
               <div className="flex-1 flex flex-col">
                 {/* Add avatar or doctor photo here if you have */}

@@ -16,47 +16,13 @@ import { useTranslation } from "react-i18next";
 
 const ACCORDION_DATA = [
   {
-    key: "freeCare",
-    icon: <FaFileMedical className="text-white text-2xl" />,
-    title: "forPatients.accordion.freeCareTitle",
-    subtitle: "forPatients.accordion.freeCareSubtitle",
-    contentKey: "forPatients.accordion.freeCareContent",
-  },
-  {
     key: "careConditions",
     icon: <FaClipboardList className="text-white text-2xl" />,
     title: "forPatients.accordion.careConditionsTitle",
     subtitle: "forPatients.accordion.careConditionsSubtitle",
     contentKey: "forPatients.accordion.careConditionsContent",
   },
-  {
-    key: "careQuality",
-    icon: <FaCheckCircle className="text-white text-2xl" />,
-    title: "forPatients.accordion.careQualityTitle",
-    subtitle: "forPatients.accordion.careQualitySubtitle",
-    contentKey: "forPatients.accordion.careQualityContent",
-  },
-  {
-    key: "appointment",
-    icon: <FaCalendarCheck className="text-white text-2xl" />,
-    title: "forPatients.accordion.appointmentTitle",
-    subtitle: "forPatients.accordion.appointmentSubtitle",
-    contentKey: "forPatients.accordion.appointmentContent",
-  },
-  {
-    key: "diagnostics",
-    icon: <FaStethoscope className="text-white text-2xl" />,
-    title: "forPatients.accordion.diagnosticsTitle",
-    subtitle: "forPatients.accordion.diagnosticsSubtitle",
-    contentKey: "forPatients.accordion.diagnosticsContent",
-  },
-  {
-    key: "hospitalization",
-    icon: <FaCalendarDay className="text-white text-2xl" />,
-    title: "forPatients.accordion.hospitalizationTitle",
-    subtitle: "forPatients.accordion.hospitalizationSubtitle",
-    contentKey: "forPatients.accordion.hospitalizationContent",
-  },
+
   {
     key: "paidServices",
     icon: <FaWallet className="text-white text-2xl" />,
@@ -64,20 +30,7 @@ const ACCORDION_DATA = [
     subtitle: "forPatients.accordion.paidServicesSubtitle",
     contentKey: "forPatients.accordion.paidServicesContent",
   },
-  {
-    key: "vacancies",
-    icon: <FaUserMd className="text-white text-2xl" />,
-    title: "forPatients.accordion.vacanciesTitle",
-    subtitle: "forPatients.accordion.vacanciesSubtitle",
-    contentKey: "forPatients.accordion.vacanciesContent",
-  },
-  {
-    key: "medList",
-    icon: <FaPills className="text-white text-2xl" />,
-    title: "forPatients.accordion.medListTitle",
-    subtitle: "forPatients.accordion.medListSubtitle",
-    contentKey: "forPatients.accordion.medListContent",
-  },
+
   {
     key: "standards",
     icon: <FaLightbulb className="text-white text-2xl" />,

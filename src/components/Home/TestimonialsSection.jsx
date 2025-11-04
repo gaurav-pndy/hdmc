@@ -11,71 +11,40 @@ import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
-
-const testimonials = [
-  {
-    country: "USA",
-    isoCode: "us",
-    name: "Sarah Johnson",
-    stars: 5,
-    text: "Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=6",
-  },
-  {
-    country: "USA",
-    isoCode: "us",
-    name: "Sarah Johnson",
-    stars: 5,
-    text: "Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=1",
-    videoId: "dQw4w9WgXcQ",
-  },
-  {
-    country: "India",
-    isoCode: "in",
-    name: "Rahul Mehta",
-    stars: 4.8,
-    text: "The team guided me throughout the treatment process seamlessly.Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=2",
-  },
-  {
-    country: "UAE",
-    isoCode: "ae",
-    name: "Ahmad Al-Rashid",
-    stars: 4.2,
-    text: "The telemedicine service connected me with world-class specialists. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=3",
-    videoId: "dQw4w9WgXcQ",
-  },
-  {
-    country: "UAE",
-    isoCode: "ae",
-    name: "Ahmad Al-Rashid",
-    stars: 4.2,
-    text: "The telemedicine service connected me with world-class specialists. Excellent care and professional IMETC consultation helped me get the right treatment. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=4",
-  },
-  {
-    country: "Spain",
-    isoCode: "es",
-    name: "Maria Garcia",
-    stars: 5,
-    text: "Professional diagnosis and treatment plan from Moscow clinic. Excellent care and professional IMETC consultation helped me get the right treatment.",
-    image: "https://i.pravatar.cc/150?img=5",
-    videoId: "dQw4w9WgXcQ",
-  },
-];
+import { doctorsData } from "../../data/doctors";
 
 const TestimonialsSection = () => {
   const { t } = useTranslation();
   const [selectedIdx, setSelectedIdx] = useState(null);
+  const [readMoreIdx, setReadMoreIdx] = useState(null);
 
-  // Refs for custom navigation
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  // Collect all reviews from doctors data
+  const testimonials = [];
+
+  doctorsData.forEach((doctor) => {
+    // Check if reviews exist and is a translation key
+    if (doctor.reviews && typeof doctor.reviews === "string") {
+      const reviewsArray = t(doctor.reviews, { returnObjects: true });
+
+      if (Array.isArray(reviewsArray)) {
+        reviewsArray.forEach((review) => {
+          testimonials.push({
+            ...review,
+            doctorName: t(doctor.name),
+            doctorId: doctor.id,
+            // If review has videoUrl or videoId, include it
+            videoId: review.videoId || review.videoUrl,
+          });
+        });
+      }
+    }
+  });
 
   const handleOpen = (idx) => setSelectedIdx(idx);
-  const handleClose = () => setSelectedIdx(null);
+  const handleReadMore = (idx) => setReadMoreIdx(idx);
+
+  const prevRef = useRef();
+  const nextRef = useRef();
 
   return (
     <section id="reviews" className="w-full py-12 bg-white ">
@@ -133,6 +102,7 @@ const TestimonialsSection = () => {
                   test={test}
                   idx={idx}
                   handleOpen={handleOpen}
+                  handleReadMore={handleReadMore}
                 />
               </SwiperSlide>
             ))}
@@ -173,11 +143,61 @@ const TestimonialsSection = () => {
               />
             </div>
             <div className="font-bold text-lg text-brand1 mb-2">
-              {testimonials[selectedIdx].name} -{" "}
-              {testimonials[selectedIdx].country}
+              {testimonials[selectedIdx].name}
             </div>
             <div className="text-brand1 text-base leading-snug">
               {testimonials[selectedIdx].text}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Read More modal */}
+      {readMoreIdx !== null && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 pt-14 relative">
+            <button
+              className="absolute top-4 right-4 text-2xl text-brand1 hover:text-brand5"
+              onClick={() => setReadMoreIdx(null)}
+              aria-label="Close"
+            >
+              <IoClose />
+            </button>
+
+            {/* Header with avatar and info */}
+            <div className="flex gap-4 mb-6 pb-4 border-b border-brand4/20">
+              <img
+                src="/nopic.jpg"
+                alt={testimonials[readMoreIdx].name}
+                className="w-24 h-24 rounded-full object-cover border-4 border-brand4/40"
+              />
+              <div className="flex-1">
+                <div className="font-bold text-xl text-brand1 mb-1">
+                  {testimonials[readMoreIdx].name?.match(
+                    /^(.+?)\s*\((.+?)\)$/
+                  )?.[1] || testimonials[readMoreIdx].name}
+                </div>
+                <div className="flex items-center gap-2 text-brand1/70">
+                  <img
+                    src="https://flagcdn.com/24x18/ru.png"
+                    alt="Russia"
+                    className="w-6 h-4 object-cover rounded-sm"
+                  />
+                  {
+                    testimonials[readMoreIdx].name?.match(
+                      /^(.+?)\s*\((.+?)\)$/
+                    )?.[2]
+                  }
+                </div>
+                <div className="flex items-center gap-1 mt-1 text-brand1 font-semibold">
+                  5 <FaStar className="text-yellow-400" />
+                </div>
+              </div>
+            </div>
+
+            {/* Full review text */}
+            <div className="text-brand1 text-base leading-relaxed">
+              "{testimonials[readMoreIdx].text}"
             </div>
           </div>
         </div>
@@ -186,74 +206,116 @@ const TestimonialsSection = () => {
   );
 };
 
-const TestimonialCard = ({ test, idx, handleOpen }) => {
+const TestimonialCard = ({ test, idx, handleOpen, handleReadMore }) => {
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      const element = textRef.current;
+      setIsOverflowing(element.scrollHeight > element.clientHeight);
+    }
+  }, [test.text]);
+
   const hasVideo = !!test.videoId;
+
+  const { t } = useTranslation();
+
+  // Extract name and city from format "Name (City)"
+  const nameMatch = test.name?.match(/^(.+?)\s*\((.+?)\)$/);
+  const displayName = nameMatch ? nameMatch[1].trim() : test.name;
+  const city = nameMatch ? nameMatch[2].trim() : "";
+
+  // All reviews are from Russia, all get 5 stars
+  const isoCode = "ru";
+  const stars = 5;
+
+  // Generate a consistent placeholder image based on index
+  const placeholderImage = `https://i.pravatar.cc/150?img=${(idx % 70) + 1}`;
+
   return (
     <div
-      className={`rounded-lg shadow-md h-96 p-6 flex flex-col transition-all duration-300 hover:shadow-xl ${
+      className={`rounded-lg shadow-md h-80 p-6 flex flex-col transition-all duration-300 hover:shadow-xl ${
         hasVideo
           ? "bg-gradient-to-br from-brand2 to-brand1 text-white "
           : "bg-white text-brand1 "
       } cursor-pointer relative`}
     >
-      {" "}
-      {/* Avatar + name */}{" "}
+      {/* Avatar + name */}
       <div className="flex gap-3 mb-4">
-        {" "}
         <img
-          src={test.image}
-          alt={test.name}
-          className="w-20 md:w-22 h-20 md:h-22 rounded-full object-cover border-4 border-brand4/40"
-        />{" "}
+          src="/nopic.jpg"
+          alt={displayName}
+          className="w-20  h-20  rounded-full object-cover border-4 border-brand4/40"
+        />
         <div className="flex-1 flex items-start justify-between">
-          {" "}
           <div>
-            {" "}
             <div className="font-semibold text-lg md:text-xl">
-              {test.name}
-            </div>{" "}
-            <div className="text-sm md:text-base">
-              {" "}
+              {displayName}
+            </div>
+            {city && (
               <div className="text-sm md:text-base flex items-center gap-2">
-                {" "}
-                {test.isoCode && (
-                  <img
-                    src={`https://flagcdn.com/24x18/${test.isoCode}.png`}
-                    alt={test.country}
-                    className="w-6 h-4 object-cover rounded-sm"
-                  />
-                )}{" "}
-                {test.country}{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
+                <img
+                  src={`https://flagcdn.com/24x18/${isoCode}.png`}
+                  alt="Russia"
+                  className="w-6 h-4 object-cover rounded-sm"
+                />
+                {city}
+              </div>
+            )}
+          </div>
           <div className="flex items-center gap-1 font-semibold">
-            {" "}
-            {test.stars} <FaStar className="text-yellow-300" />{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
-      {/* Text */}{" "}
-      <div className={`flex-1 border-t border-brand4 pt-4 `}>
-        {" "}
-        “{test.text}”{" "}
-      </div>{" "}
-      {/* Play overlay if video */}{" "}
+            {stars} <FaStar className="text-yellow-300" />
+          </div>
+        </div>
+      </div>
+
+      {/* Text */}
+      <div className={`flex-1 border-t border-brand4 pt-4 relative`}>
+        <div
+          ref={textRef}
+          className="line-clamp-5"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 5,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          "{test.text}"
+        </div>
+
+        {isOverflowing && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleReadMore(idx);
+            }}
+            className={`mt-2 text-sm cursor-pointer font-semibold underline ${
+              hasVideo
+                ? "text-white hover:text-brand4"
+                : "text-black hover:text-brand1"
+            }`}
+          >
+            {t("readMore")}
+          </button>
+        )}
+      </div>
+
+      {/* Play overlay if video */}
       {hasVideo && (
         <div
           className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition bg-black/40 rounded-lg"
           onClick={() => handleOpen(idx)}
         >
-          {" "}
           <button
             className="bg-white text-brand1 rounded-full p-4 shadow-lg"
             aria-label="Play video"
           >
-            {" "}
-            <CiPlay1 size={28} />{" "}
-          </button>{" "}
+            <CiPlay1 size={28} />
+          </button>
         </div>
-      )}{" "}
+      )}
     </div>
   );
 };

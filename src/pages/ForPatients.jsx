@@ -66,11 +66,11 @@ const DocumentsTab = ({ t }) => {
   const documents = [
     {
       id: 1,
-      name: "ЕГРЮЛ ЭЙЧДИ КЛИНИК",
-      date: "01-11-2025 12:19",
-      size: "185 KB",
+      name: "Устав ЭЙЧДИ КЛИНИК",
+      date: "01-11-2025 22:55",
+      size: "4,425 KB",
       icon: <FaFileAlt className="text-brand1 text-3xl" />,
-      url: "/docs/ЕГРЮЛ ЭЙЧДИ КЛИНИК.pdf", // Update with actual path
+      url: "/docs/Устав ЭЙЧДИ КЛИНИК.pdf",
     },
     {
       id: 2,
@@ -88,13 +88,14 @@ const DocumentsTab = ({ t }) => {
       icon: <FaFileAlt className="text-brand1 text-3xl" />,
       url: "/docs/ОГРН ИНН ЭЙЧДИ КЛИНИК.pdf",
     },
+
     {
       id: 4,
-      name: "Устав ЭЙЧДИ КЛИНИК",
-      date: "01-11-2025 22:55",
-      size: "4,425 KB",
+      name: "ЕГРЮЛ ЭЙЧДИ КЛИНИК",
+      date: "01-11-2025 12:19",
+      size: "185 KB",
       icon: <FaFileAlt className="text-brand1 text-3xl" />,
-      url: "/docs/Устав ЭЙЧДИ КЛИНИК.pdf",
+      url: "/docs/ЕГРЮЛ ЭЙЧДИ КЛИНИК.pdf", // Update with actual path
     },
   ];
 

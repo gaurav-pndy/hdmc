@@ -6,28 +6,39 @@ import { BiChevronRight } from "react-icons/bi";
 import WaveBackground from "../components/WaveBackground";
 import { useMediaQuery } from "react-responsive";
 import OtherServices from "../components/ServiceDetails/OtherServices";
+import { doctorsData } from "../data/doctors";
+import { FaLocationDot } from "react-icons/fa6";
 
-// Dummy video link (replace with your real one if you have)
-const VIDEO_URL = "/chemo.mp4";
-
-const ServiceDetailsExpertAssessment = () => {
+const ServiceDetails = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("about");
 
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  const TABS = [
+  const { serviceId } = useParams();
+  const service = servicesData.find((s) => s.id === serviceId);
+
+  const baseTabs = [
     { key: "about", label: t("services.tab1") },
+    // Conditionally include "Diseases" tab
+    ...(service?.diseases
+      ? [{ key: "diseases", label: t("services.tab6") }]
+      : []),
     { key: "doctors", label: t("services.tab2") },
     { key: "reviews", label: t("services.tab3") },
     { key: "prices", label: t("services.tab4") },
     { key: "other", label: t("services.tab5") },
   ];
 
-  const { serviceId } = useParams();
-  const service = servicesData.find((s) => s.id === serviceId);
+  const TABS = baseTabs;
 
   const navigate = useNavigate();
+
+  let doctors = [];
+  let tags = [];
+  if (service.doctors) {
+    doctors = doctorsData.filter((doc) => service.doctors?.includes(doc.id));
+  }
 
   const scrollToServices = () => {
     navigate("/"); // go to home
@@ -149,14 +160,68 @@ const ServiceDetailsExpertAssessment = () => {
             dangerouslySetInnerHTML={{ __html: t(service.about) }}
           ></div>
         )}
+        {activeTab === "diseases" && (
+          <div
+            className="bg-white rounded-2xl shadow p-8 text-lg "
+            style={{
+              color: service.color1,
+            }}
+            dangerouslySetInnerHTML={{ __html: t(service.diseases) }}
+          ></div>
+        )}
         {/* ВРАЧИ */}
         {activeTab === "doctors" && (
           <div className="bg-white rounded-2xl shadow p-8">
             {/* Place your doctors grid or reusable doctors component here. */}
-            <div className="text-brand1 font-bold text-xl mb-3">
-              Врачи этого направления
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
+              {doctors.length > 0 &&
+                doctors.map((doc) => (
+                  <Link
+                    key={doc.id}
+                    to={`/doctors/${doc.id}`}
+                    className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[34rem]"
+                  >
+                    <div className="flex-1 flex flex-col">
+                      {/* Add avatar or doctor photo here if you have */}
+                      <img
+                        src={t(doc.image)}
+                        alt={t(doc.name)}
+                        className="w-full h-60 object-top object-cover rounded-lg"
+                      />
+                      <div className="font-bold text-black text-xl mt-4 mb-3">
+                        {t(doc.name)}
+                      </div>
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {t(doc.tags, { returnObjects: true }).map((tag, i) => (
+                          <span
+                            key={i}
+                            className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="text-brand1 text-sm mb-3 line-clamp-2">
+                        {t(doc.desc)}
+                      </div>
+                      <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
+                        <span className="flex items-center">
+                          <FaLocationDot className="mr-1" /> {t(doc.location)}
+                        </span>
+                      </div>
+                      <div className="text-brand1/60 text-xs">
+                        {t("doctors.languages")}:
+                      </div>
+                      <div className="text-brand1 text-sm font-medium">
+                        {t(doc.langs)}
+                      </div>
+                    </div>
+                    <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
+                      {t("doctors.viewProfile")}
+                    </button>
+                  </Link>
+                ))}
             </div>
-            <div className="text-brand1/70">Докторский штат будет здесь.</div>
           </div>
         )}
         {/* ОТЗЫВЫ */}
@@ -174,22 +239,6 @@ const ServiceDetailsExpertAssessment = () => {
             <div className="text-brand1 font-bold text-xl mb-3">
               Стоимость консультации
             </div>
-            {/* <table className="w-full mt-4 border">
-              <thead>
-                <tr className="bg-brand4/20 text-left">
-                  <th className="px-4 py-2">Наименование</th>
-                  <th className="px-4 py-2">Стоимость</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border-t px-4 py-2">
-                    Экспертная оценка результатов КТ/МРТ/ПЭТ-КТ
-                  </td>
-                  <td className="border-t px-4 py-2">15 000 ₽</td>
-                </tr>
-              </tbody>
-            </table> */}
           </div>
         )}
 
@@ -199,4 +248,4 @@ const ServiceDetailsExpertAssessment = () => {
   );
 };
 
-export default ServiceDetailsExpertAssessment;
+export default ServiceDetails;

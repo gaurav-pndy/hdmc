@@ -544,7 +544,7 @@ const Header = ({ city, setCity }) => {
         >
           <div className="hidden lg:flex flex-col">
             <label htmlFor="city" className="text-xs mb-1">
-              Select your City:
+              {t("header.selectCity")}
             </label>
             <select
               value={city}

@@ -408,7 +408,7 @@ const DoctorDetails = () => {
                           <h3 className="font-semibold text-lg text-brand1">
                             {review.name}
                           </h3>
-                          <p className="text-sm text-gray-500">{review.date}</p>
+                          {/* <p className="text-sm text-gray-500">{review.date}</p> */}
                         </div>
 
                         <div className="flex items-center gap-1 mb-3">
@@ -433,9 +433,9 @@ const DoctorDetails = () => {
                         {review.text.length > 200 && (
                           <button
                             onClick={() => setExpanded(isExpanded ? null : i)}
-                            className="mt-2  font-medium hover:underline focus:outline-none"
+                            className="mt-2 cursor-pointer font-medium hover:underline focus:outline-none"
                           >
-                            {isExpanded ? "Show less" : "Read more"}
+                            {isExpanded ? t("showLess") : t("readMore")}
                           </button>
                         )}
                       </div>

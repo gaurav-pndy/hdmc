@@ -35,79 +35,7 @@ const PatientsInfo = () => {
       <div className="md:text-lg text-brand1/80 mb-8 max-w-3xl mx-auto text-center">
         {t("forPatients.info.subtitle")}
       </div>
-      {/* Contact Info */}
-      <div className="bg-white border border-brand4/20 rounded-2xl p-6 mb-7 shadow-sm">
-        <div className="flex items-center  gap-3 mb-6 text-brand1">
-          <div className="flex h-14 w-14 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
-            <FiPhone className="text-white text-3xl" />
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl font-semibold ">
-              {t("forPatients.info.contactHeading")}
-            </h3>
-            <p className="text-brand1/80 md:text-lg">
-              {t("forPatients.info.contactSubheading")}
-            </p>
-          </div>
-        </div>
 
-        <div className="mb-6">
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.heading1")}
-          </h4>
-
-          <div className="text-brand1/90 md:text-lg">
-            <p>{t("forPatients.info.contact1")}</p>
-            <p>
-              <span className="font-medium">
-                {" "}
-                {t("forPatients.info.address")}:{" "}
-              </span>
-              {t("forPatients.info.moscowAddress1")}
-            </p>
-            <p>
-              {" "}
-              <span className="font-medium">
-                {t("forPatients.info.phone")}:
-              </span>{" "}
-              +7 (495) 514-20-58
-            </p>
-          </div>
-        </div>
-
-        <div className="mb-6">
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.heading2")}
-          </h4>
-
-          <div className="text-brand1/90 md:text-lg">
-            <p>{t("forPatients.info.contact2")}</p>
-            <p>
-              <span className="font-medium">
-                {" "}
-                {t("forPatients.info.hotline")}:{" "}
-              </span>
-              8-800-500-18-35
-            </p>
-          </div>
-        </div>
-        <div>
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.heading3")}
-          </h4>
-
-          <div className="text-brand1/90 md:text-lg">
-            <p>{t("forPatients.info.contact3")}</p>
-            <p>
-              <span className="font-medium">
-                {" "}
-                {t("forPatients.info.consulting")}:{" "}
-              </span>
-              8-800-555-49-43
-            </p>
-          </div>
-        </div>
-      </div>
       {/* Patient Rights */}
       <div className="bg-white border border-brand4/20 rounded-2xl p-6 mb-7 shadow-sm">
         <div className="flex items-center  gap-3 mb-6 text-brand1">
@@ -158,53 +86,6 @@ const PatientsInfo = () => {
         </div>
       </div>
       {/* Types of Medical Care */}
-      <div className="bg-white border border-brand4/20 rounded-2xl p-6 shadow-sm">
-        <div className="flex items-center  gap-3 mb-6 text-brand1">
-          <div className="flex h-14 w-14 items-center justify-center bg-gradient-to-br from-[#125e84] to-[#33babd] rounded-lg shrink-0 mt-1">
-            <LuShield className="text-white text-3xl" />
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl font-semibold ">
-              {t("forPatients.info.careTitle")}
-            </h3>
-            <p className="text-brand1/80 md:text-lg">
-              {t("forPatients.info.careSubtitle")}
-            </p>
-          </div>
-        </div>
-        <div className="mb-6">
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.care.heading1")}
-          </h4>
-
-          <ul className="text-brand1/90 md:text-lg list-disc list-inside space-y-1.5 ml-4">
-            <li>{t("forPatients.info.care.type1")}</li>
-            <li>{t("forPatients.info.care.type2")}</li>
-            <li>{t("forPatients.info.care.type3")}</li>
-            <li>{t("forPatients.info.care.type4")}</li>
-          </ul>
-        </div>
-        <div className="mb-6">
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.care.heading2")}
-          </h4>
-
-          <ul className="text-brand1/90 md:text-lg list-disc list-inside space-y-1.5 ml-4">
-            <li>{t("forPatients.info.care.form1")}</li>
-            <li>{t("forPatients.info.care.form2")}</li>
-            <li>{t("forPatients.info.care.form3")}</li>
-          </ul>
-        </div>
-        <div className="">
-          <h4 className="text-lg md:text-xl mb-2 ">
-            {t("forPatients.info.care.heading3")}
-          </h4>
-
-          <p className="text-brand1/90 md:text-lg ml-4">
-            {t("forPatients.info.care.riskInfo")}
-          </p>
-        </div>
-      </div>
     </section>
   );
 };

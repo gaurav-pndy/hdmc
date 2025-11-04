@@ -48,7 +48,7 @@ export const doctorsData = [
     skills: "doctors.doctorsList.doctor3.skills",
     scientific: "doctors.doctorsList.doctor3.scientific",
 
-    // reviews: "doctors.doctorsList.doctor3.reviews",
+    reviews: "doctors.doctorsList.doctor3.reviews",
     videos: [
       "https://vk.com/video_ext.php?oid=-220639958&id=456239028&hash=2e155e876c4e6b33",
       "https://vk.com/video_ext.php?oid=-220639958&id=456239028&hash=2e155e876c4e6b33",
