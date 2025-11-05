@@ -34,7 +34,218 @@ const DoctorsSection = () => {
   }));
 
   // Filtering logic
-  const allTags = Array.from(new Set(cards.flatMap((doc) => doc.tags || [])));
+
+  const specializations = [
+    {
+      label: t("header.doctorsDrop.d1"),
+      subItems: [
+        {
+          category: t("header.doctorsDrop.subItems.h1"),
+          items: [
+            {
+              label: t("header.doctorsDrop.subItems.s1"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s2"),
+              path: "/doctors/radiotherapist",
+            },
+          ],
+        },
+        {
+          category: t("header.doctorsDrop.subItems.h2"),
+          items: [
+            {
+              label: t("header.doctorsDrop.subItems.s3"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s4"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s5"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s6"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s7"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s8"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s9"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s10"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s11"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s12"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s13"),
+              path: "/doctors",
+            },
+            {
+              label: t("header.doctorsDrop.subItems.s14"),
+              path: "/doctors",
+            },
+            { label: t("header.doctorsDrop.subItems.s15"), path: "/doctors" },
+          ],
+        },
+      ],
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d2"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d3"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d4"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d5"),
+    },
+
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d7"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d8"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d9"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d10"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d11"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d12"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d13"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d14"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d15"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d16"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d17"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d18"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d19"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d20"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d21"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d22"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d23"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d24"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d25"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d26"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d27"),
+    },
+    {
+      path: "/doctors",
+      label: t("header.doctorsDrop.d28"),
+    },
+  ];
+
+  // Helper to flatten nested specialization structure and return all unique labels
+  const getAllSpecializationObjects = (specializations) => {
+    const result = [];
+
+    const traverse = (node) => {
+      if (!node) return;
+      if (node.label && !node.subItems && !node.items) result.push(node.label);
+      if (node.items && Array.isArray(node.items)) node.items.forEach(traverse);
+      if (node.subItems && Array.isArray(node.subItems))
+        node.subItems.forEach(traverse);
+    };
+
+    // Start from subItems of the first, skipping root heading, and also add others as before
+    if (specializations[0]?.subItems) {
+      specializations[0].subItems.forEach(traverse);
+    }
+    specializations.slice(1).forEach(traverse);
+
+    // Remove duplicates, then create objects with sequential ID and label
+    const uniqueLabels = Array.from(new Set(result));
+    return uniqueLabels.map((label, idx) => ({
+      id: `specialization${idx + 1}`,
+      label,
+    }));
+  };
+
+  const specializationOptions = getAllSpecializationObjects(specializations);
+
+  const idToLabelMap = Object.fromEntries(
+    specializationOptions.map((opt) => [opt.id, opt.label])
+  );
 
   const filteredDoctors = cards.filter((doc) => {
     const matchesType =
@@ -43,8 +254,9 @@ const DoctorsSection = () => {
       (type === "Remote" && doc.type === "remote");
 
     const matchesSpecialization =
+      !specialization || // initial state, possibly undefined
       specialization === "All" ||
-      (doc.tags && doc.tags.includes(specialization));
+      (doc.tags && doc.tags.includes(idToLabelMap[specialization]));
 
     const matchesSearch =
       doc.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -94,29 +306,6 @@ const DoctorsSection = () => {
 
       {/* --- Filter Bar --- */}
       <div className="w-full bg-white border border-brand4/30 rounded-xl shadow-sm mt-10 md:mt-12">
-        {/* Top Row: Search + Toggle Filters */}
-        {/* <div className="flex flex-col md:flex-row items-center gap-3 px-4 py-3 border-b border-brand4/20">
-          <input
-            type="text"
-            placeholder={t("doctors.filter.enterName")}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="flex-1 border border-brand4/40 rounded-lg px-4 py-2.5 outline-none text-brand1 placeholder:text-brand1/50 focus:border-brand1 transition-all"
-          />
-          <button
-            onClick={() => setShowFilters((prev) => !prev)}
-            className="flex items-center gap-2 text-brand1 text-sm font-medium hover:text-brand1/80 transition"
-          >
-            <FiFilter />{" "}
-            {showFilters
-              ? t("doctors.filter.hideFilters")
-              : t("doctors.filter.refine")}
-          </button>
-          <button className="flex items-center gap-2 bg-brand1 text-white font-medium rounded-lg px-6 py-2.5 hover:bg-brand1/90 transition">
-            <FiSearch className="text-lg" /> {t("doctors.filter.start")}
-          </button>
-        </div> */}
-
         {/* Expandable Filters */}
         <AnimatePresence>
           <motion.div
@@ -162,9 +351,9 @@ const DoctorsSection = () => {
                 className="w-full border border-brand4/40 rounded-lg px-3 py-2.5 text-sm text-brand1 outline-none focus:border-brand1 transition-all bg-white"
               >
                 <option value="All">{t("doctors.filter.all")}</option>
-                {allTags.map((tag, i) => (
-                  <option key={i} value={tag}>
-                    {tag}
+                {specializationOptions.map((opt) => (
+                  <option key={opt.id} value={opt.id}>
+                    {opt.label}
                   </option>
                 ))}
               </select>

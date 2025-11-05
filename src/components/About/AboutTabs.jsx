@@ -117,7 +117,9 @@ const AboutTabs = ({ city }) => {
             >
               {tab.icon}
             </span>
-            <span className=" text-sm md:text-base">{t(tab.labelKey)}</span>
+            <span className=" text-sm md:text-base text-left">
+              {t(tab.labelKey)}
+            </span>
           </button>
         ))}
       </nav>

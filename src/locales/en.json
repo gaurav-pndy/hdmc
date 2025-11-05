@@ -134,6 +134,9 @@
     },
     "slide3": {
       "title": "Special Offers"
+    },
+    "slide4": {
+      "title": "Charitable Foundation"
     }
   },
   "aboutClinic": {
@@ -1132,7 +1135,7 @@
         "desc": "Comprehensive medical examination once a year"
       },
       "feature5": {
-        "title": "IMETC Consultations",
+        "title": "Telemedicine Consultation",
         "desc": "Remote international consultations"
       },
       "feature6": {
@@ -1186,14 +1189,14 @@
     "clinic1": {
       "title": "HDMC",
       "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1",
-      "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+      "schedule": "From 8:00 to 23:00, without days off"
     },
     "clinic2": {
       "title": "Ali-Gadzhi Akushinskogo Avenue",
       "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala",
-      "schedule": "Mon–Fri: 08:00–21:00, Sat–Sun: 09:00–18:00"
+      "schedule": "From 8:00 to 23:00, without days off"
     },
-    "button": "Enroll in this clinic"
+    "button": "Make an appointment"
   },
   "actionBtns": {
     "btn1": "Book an Appointment",
