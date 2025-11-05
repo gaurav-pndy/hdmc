@@ -190,7 +190,8 @@ const DoctorsSection = () => {
         slidesPerView={1}
         breakpoints={{
           768: { slidesPerView: 2 },
-          1200: { slidesPerView: 4 },
+          1200: { slidesPerView: 3 },
+          1380: { slidesPerView: 4 },
         }}
         className="w-full h-full overflow-visible mt-2"
         navigation={{
