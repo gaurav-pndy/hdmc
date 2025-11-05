@@ -74,7 +74,7 @@ function App() {
           element: <EarlyDetection />,
         },
         {
-          path: "/about-diseases",
+          path: "/about-diseases/:newsId",
           element: <AboutDiseases />,
         },
         {

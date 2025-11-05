@@ -16,6 +16,7 @@ import {
 import { MdHealthAndSafety } from "react-icons/md";
 import AppointmentTab from "../components/ForPatients/AppointmentTab";
 import PreparationTab from "../components/ForPatients/PreparationTab";
+import NewsTab from "../components/ForPatients/NewsTab";
 
 // Preparation Tab Component
 
@@ -44,20 +45,6 @@ const InsuranceTab = ({ t }) => (
     </div>
     <button className="inline-block cursor-pointer rounded-lg font-semibold px-5 py-2 shadow transition-all duration-300 border border-brand3 text-brand3 hover:bg-gray-200">
       {t("forPatientsPage.btn4")}
-    </button>
-  </div>
-);
-
-const BlogTab = ({ t }) => (
-  <div className="space-y-4">
-    <h2 className="text-3xl font-bold text-black mb-3 pb-3 border-b border-brand4">
-      {t("forPatientsPage.heading5")}
-    </h2>
-    <div className="text-brand1/90 md:text-lg mb-4">
-      {t("forPatientsPage.text5")}
-    </div>
-    <button className="inline-block cursor-pointer rounded-lg font-semibold px-5 py-2 shadow transition-all duration-300 border border-brand3 text-brand3 hover:bg-gray-200">
-      {t("forPatientsPage.btn5")}
     </button>
   </div>
 );
@@ -183,7 +170,7 @@ const PATIENT_TABS = [
     key: "blog",
     labelKey: "forPatientsPage.heading5",
     icon: <FaBlog />,
-    component: BlogTab,
+    component: NewsTab,
   },
   {
     key: "documents",
