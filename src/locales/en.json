@@ -141,7 +141,7 @@
   },
   "aboutClinic": {
     "title": "About Clinic",
-    "subtitle": "Multidisciplinary clinics in Moscow and Makhachkala with advanced diagnostics and expert specialists.",
+    "subtitle": "A multidisciplinary clinic in Moscow with modern diagnostics and expert specialists.",
     "feature1": {
       "title": "Moscow & Makhachkala",
       "desc": "Modern clinics in two cities"
@@ -155,8 +155,12 @@
       "desc": "Top category doctors"
     },
     "feature4": {
-      "title": "24/7 Diagnosis",
-      "desc": "Early diagnosis of diseases is a personalized approach"
+      "title": "Early diagnosis of diseases is a personalized approach",
+      "desc": ""
+    },
+    "feature5": {
+      "title": "Working hours",
+      "desc": "from 8:00 to 23:00 seven days a week"
     },
    "stat1": {
   "value": "40+",
@@ -180,6 +184,7 @@
     "title": "Our Doctors",
     "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. </div> <br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. </div> <br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
     "filter": {
+      "consultType": "Type of Consultation",
       "enterName": "Enter specialization or doctor's name",
       "hideFilters": "Hide Filters",
       "refine": "Refine Search",

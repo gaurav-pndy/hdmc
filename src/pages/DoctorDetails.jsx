@@ -82,6 +82,18 @@ const DoctorDetails = () => {
   if (doctor.scientific) {
     scientific = t(doctor.scientific);
   }
+  let medExp;
+  let services;
+  let cost;
+  if (doctor.medExp) {
+    medExp = t(doctor.medExp);
+  }
+  if (doctor.services) {
+    services = t(doctor.services);
+  }
+  if (doctor.cost) {
+    cost = t(doctor.cost);
+  }
 
   const TAB_LIST = [
     { key: "about", labelKey: "doctors.tabs.tab1" },

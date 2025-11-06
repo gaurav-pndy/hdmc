@@ -14,7 +14,7 @@ const contacts = [
     title: "about.contacts.heading1",
     // subtitle: "about.contacts.roszdravnadzorDesc",
     address: "about.contacts.address1",
-    phone: "about.contacts.phone1",
+    phone: "8 (800) 555-49-43",
     email: "uprav@77.rospotrebnadzor.ru",
     website: "http://77.rospotrebnadzor.ru",
   },

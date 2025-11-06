@@ -96,7 +96,7 @@ const AboutInfo = ({ city }) => {
               {t("about.info.tax")}
             </div>
             <div className="text-[#125e84]/90 font-medium">
-              {city === "Moscow" ? "774301001" : "0572024746"}
+              {city === "Moscow" ? "9727077651" : "0572024746"}
             </div>
           </div>
           <div className="space-y-1">
@@ -104,7 +104,7 @@ const AboutInfo = ({ city }) => {
               {t("about.info.checkpoint")}
             </div>
             <div className="text-[#125e84]/90 font-medium">
-              {city === "Moscow" ? "774301001" : "057201001"}
+              {city === "Moscow" ? "772701001" : "057201001"}
             </div>
           </div>
         </div>

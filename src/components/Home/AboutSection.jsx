@@ -3,16 +3,18 @@ import { useTranslation } from "react-i18next";
 import { FiUsers } from "react-icons/fi";
 import { LuBuilding2 } from "react-icons/lu";
 import { SlBadge } from "react-icons/sl";
-import { FaRegClock } from "react-icons/fa";
+import { FaRegClock, FaStethoscope } from "react-icons/fa";
 import WaveBackground from "../WaveBackground";
 import { Link } from "react-router-dom";
+import { FaUsersLine } from "react-icons/fa6";
+import { GiMedicines } from "react-icons/gi";
 
 const features = [
-  {
-    icon: <LuBuilding2 className="text-white text-xl" />,
-    title: "aboutClinic.feature1.title",
-    desc: "aboutClinic.feature1.desc",
-  },
+  // {
+  //   icon: <LuBuilding2 className="text-white text-xl" />,
+  //   title: "aboutClinic.feature1.title",
+  //   desc: "aboutClinic.feature1.desc",
+  // },
   {
     icon: <FiUsers className="text-white text-xl" />,
     title: "aboutClinic.feature2.title",
@@ -24,17 +26,28 @@ const features = [
     desc: "aboutClinic.feature3.desc",
   },
   {
-    icon: <FaRegClock className="text-white text-xl" />,
-    // title: "aboutClinic.feature4.title",
+    icon: <FaStethoscope className="text-white text-xl" />,
+    title: "aboutClinic.feature4.title",
     desc: "aboutClinic.feature4.desc",
+  },
+  {
+    icon: <FaRegClock className="text-white text-xl" />,
+    title: "aboutClinic.feature5.title",
+    desc: "aboutClinic.feature5.desc",
   },
 ];
 
 const stats = [
   { value: "aboutClinic.stat1.value", label: "aboutClinic.stat1.label" },
   { value: "aboutClinic.stat2.value", label: "aboutClinic.stat2.label" },
-  { label: "aboutClinic.stat3.label" },
-  { label: "aboutClinic.stat4.label" },
+  {
+    label: "aboutClinic.stat3.label",
+    icon: <FaUsersLine className="text-4xl text-brand1 mb-1" />,
+  },
+  {
+    label: "aboutClinic.stat4.label",
+    icon: <GiMedicines className="text-4xl text-brand1 mb-1" />,
+  },
 ];
 
 const AboutSection = () => {
@@ -67,7 +80,7 @@ const AboutSection = () => {
                   </div>
                   <div>
                     {f.title && (
-                      <div className="font-medium z-40 text-black leading-snug mb-1">
+                      <div className="font-medium z-40 text-black leading-5 mb-1">
                         {t(f.title)}
                       </div>
                     )}
@@ -92,8 +105,14 @@ const AboutSection = () => {
                       {t(s.value)}
                     </span>
                   )}
+                  {
+                    s.icon &&
+                      // <span className="text-brand1 text-2xl md:text-3xl font-bold mb-1">
+                      s.icon
+                    // </span>
+                  }
 
-                  <span className="text-brand1/80 text-sm md:text-base font-normal">
+                  <span className="text-brand1/80 leading-5 text-sm md:text-base font-normal">
                     {t(s.label)}
                   </span>
                 </div>

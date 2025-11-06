@@ -42,9 +42,9 @@ const Footer = ({ city }) => {
             <a href="#" className=" hover:text-brand2">
               {t("header.forPatients")}
             </a>
-            <a href="#" className=" hover:text-brand2">
+            {/* <a href="#" className=" hover:text-brand2">
               {t("header.ctScan")}{" "}
-            </a>
+            </a> */}
             <a href="#" className=" hover:text-brand2">
               {t("header.offers")}
             </a>

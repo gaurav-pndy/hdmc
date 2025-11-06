@@ -721,7 +721,7 @@ const PreparationTab = ({ t }) => {
         {/* Endoscopy */}
         <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
           <button
-            onClick={() => toggleSection("endoscopy")}
+            onClick={() => toggleSection("endoscopy1")}
             className="w-full flex items-center justify-between p-5 hover:bg-gray-50 transition-colors"
           >
             <div className="flex items-center gap-3">
@@ -729,21 +729,18 @@ const PreparationTab = ({ t }) => {
                 <FaMicroscope className="text-brand1 text-2xl" />
               </div>
               <span className="font-semibold text-lg text-brand1 text-left">
-                Инструментальные исследования
+                Эзофагогастродуоденоскопия:
               </span>
             </div>
             <BiChevronDown
               className={`text-3xl text-brand3 transition-transform ${
-                openSection === "endoscopy" ? "rotate-180" : ""
+                openSection === "endoscopy1" ? "rotate-180" : ""
               }`}
             />
           </button>
-          {openSection === "endoscopy" && (
+          {openSection === "endoscopy1" && (
             <div className="p-5 pt-0 space-y-4 text-brand1/90">
               <div className="bg-brand1/5 p-4 rounded-lg">
-                <p className="font-bold text-brand1 mb-2">
-                  Эзофагогастродуоденоскопия:
-                </p>
                 <ul className="list-disc list-outside ml-4 space-y-1">
                   <li>
                     Если проведение эзофагогастродуоденоскопия (ЭГДС)
@@ -770,8 +767,31 @@ const PreparationTab = ({ t }) => {
                   </li>
                 </ul>
               </div>
+            </div>
+          )}
+        </div>
+        <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+          <button
+            onClick={() => toggleSection("endoscopy2")}
+            className="w-full flex items-center justify-between p-5 hover:bg-gray-50 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <div className="bg-brand1/20 p-2 rounded-lg">
+                <FaMicroscope className="text-brand1 text-2xl" />
+              </div>
+              <span className="font-semibold text-lg text-brand1 text-left">
+                Колоноскопия:{" "}
+              </span>
+            </div>
+            <BiChevronDown
+              className={`text-3xl text-brand3 transition-transform ${
+                openSection === "endoscopy2" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {openSection === "endoscopy2" && (
+            <div className="p-5 pt-0 space-y-4 text-brand1/90">
               <div className="bg-brand1/5 p-4 rounded-lg">
-                <p className="font-bold text-brand1 mb-2">Колоноскопия:</p>
                 <ul className="list-disc list-outside ml-4 space-y-1">
                   <li>
                     Самое важное условие качественной колоноскопии – полное
@@ -793,8 +813,31 @@ const PreparationTab = ({ t }) => {
                   </li>
                 </ul>
               </div>
+            </div>
+          )}
+        </div>
+        <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+          <button
+            onClick={() => toggleSection("endoscopy3")}
+            className="w-full flex items-center justify-between p-5 hover:bg-gray-50 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <div className="bg-brand1/20 p-2 rounded-lg">
+                <FaMicroscope className="text-brand1 text-2xl" />
+              </div>
+              <span className="font-semibold text-lg text-brand1 text-left">
+                ПЭТ-КТ:
+              </span>
+            </div>
+            <BiChevronDown
+              className={`text-3xl text-brand3 transition-transform ${
+                openSection === "endoscopy3" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {openSection === "endoscopy3" && (
+            <div className="p-5 pt-0 space-y-4 text-brand1/90">
               <div className="bg-brand1/5 p-4 rounded-lg">
-                <p className="font-bold text-brand1 mb-2">ПЭТ-КТ:</p>
                 <p class="font-semibold">
                   Заложите на процедуру не менее 2-3 часов.{" "}
                 </p>{" "}

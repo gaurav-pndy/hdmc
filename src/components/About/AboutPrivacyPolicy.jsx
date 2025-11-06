@@ -58,13 +58,34 @@ const AboutPrivacyPolicy = () => {
             {t("about.privacy.section2Subtitle")}
           </p>
           <ul className="ml-9 list-disc text-[#125e84]/80  space-y-2 marker:text-[#63cacc]">
-            <li className="leading-relaxed">{t("about.privacy.point21")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point22")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point23")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point24")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point25")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point26")}</li>
-            <li className="leading-relaxed">{t("about.privacy.point27")}</li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point21") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point22") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point23") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point24") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point25") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point26") }}
+            ></li>
+            <li
+              className="leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("about.privacy.point27") }}
+            ></li>
           </ul>
         </div>
 
@@ -185,7 +206,7 @@ const AboutPrivacyPolicy = () => {
         <div>
           <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
-              7
+              8
             </span>
             {t("about.privacy.section8Title")}
           </h3>
@@ -206,7 +227,7 @@ const AboutPrivacyPolicy = () => {
         <div>
           <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
-              7
+              9
             </span>
             {t("about.privacy.section9Title")}
           </h3>
@@ -227,7 +248,7 @@ const AboutPrivacyPolicy = () => {
         <div>
           <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
-              7
+              10
             </span>
             {t("about.privacy.section10Title")}
           </h3>
@@ -252,7 +273,7 @@ const AboutPrivacyPolicy = () => {
         <div>
           <h3 className="font-bold text-xl text-[#125e84] mb-3 flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center bg-[#63cacc]/10 rounded-lg  font-bold text-[#63cacc] shrink-0">
-              7
+              11
             </span>
             {t("about.privacy.section11Title")}
           </h3>

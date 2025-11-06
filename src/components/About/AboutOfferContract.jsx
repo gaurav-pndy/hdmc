@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaFileSignature, FaInfoCircle } from "react-icons/fa";
 
-const AboutOfferContract = () => {
+const AboutOfferContract = ({ city }) => {
   const { t } = useTranslation();
 
   return (
@@ -234,9 +234,6 @@ const AboutOfferContract = () => {
             {t("about.contract.section9Title")}
           </h3>
           <div className="ml-9 space-y-3">
-            <p className="text-[#125e84]/80 leading-relaxed mb-4">
-              {t("about.contract.section9Text")}
-            </p>
             <div className="bg-[#63cacc]/5 rounded-xl p-4 border border-[#63cacc]/20 space-y-2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
                 <div>
@@ -244,7 +241,9 @@ const AboutOfferContract = () => {
                     {t("about.contract.orgName")}
                   </span>
                   <p className="text-[#125e84] font-medium">
-                    {t("about.contract.orgDetails")}
+                    {city === "Moscow"
+                      ? t("about.info.companyName1")
+                      : t("about.info.companyName2")}
                   </p>
                 </div>
                 <div>
@@ -252,26 +251,28 @@ const AboutOfferContract = () => {
                     {t("about.contract.legalAddress")}
                   </span>
                   <p className="text-[#125e84] font-medium">
-                    {t("about.contract.legalAddressValue")}
+                    {city === "Moscow"
+                      ? t("about.info.moscowAddress")
+                      : t("about.info.makhachkalaAddress")}
                   </p>
                 </div>
                 <div>
                   <span className="text-[#125e84]/60 text-sm uppercase tracking-wide">
                     {t("about.contract.taxId")}
                   </span>
-                  <p className="text-[#125e84] font-medium">7712345678</p>
+                  <p className="text-[#125e84] font-medium">9727077651</p>
                 </div>
                 <div>
                   <span className="text-[#125e84]/60 text-xs uppercase tracking-wide">
                     {t("about.contract.checkpoint")}
                   </span>
-                  <p className="text-[#125e84] font-medium">771201001</p>
+                  <p className="text-[#125e84] font-medium">772701001</p>
                 </div>
                 <div>
                   <span className="text-[#125e84]/60 text-sm uppercase tracking-wide">
                     {t("about.contract.ogrn")}
                   </span>
-                  <p className="text-[#125e84] font-medium">1234567890123</p>
+                  <p className="text-[#125e84] font-medium">1247700412068</p>
                 </div>
                 <div>
                   <span className="text-[#125e84]/60 text-sm uppercase tracking-wide">

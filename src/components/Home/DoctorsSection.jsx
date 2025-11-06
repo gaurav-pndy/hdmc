@@ -140,7 +140,7 @@ const DoctorsSection = () => {
             {/* Type of Consultation */}
             <div>
               <label className="text-sm font-medium text-brand1 block mb-2">
-                Type of consultation
+                {t("doctors.filter.consultType")}
               </label>
               <div className="flex gap-3">
                 {[

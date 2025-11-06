@@ -6,9 +6,9 @@ export default function NewsTab() {
   const { t } = useTranslation();
   return (
     <section>
-      <h2 className="text-3xl mb-10 md:text-4xl font-bold text-brand1">
+      {/* <h2 className="text-3xl mb-10 md:text-4xl font-bold text-brand1">
         Запись на приём
-      </h2>
+      </h2> */}
       <div className="grid gap-10">
         {newsData.map((news) => (
           <div
@@ -30,9 +30,9 @@ export default function NewsTab() {
                 <h3 className="text-2xl md:text-3xl font-semibold text-brand1 mb-4">
                   {t(news.title)}
                 </h3>
-                <p className="text-brand2 md:text-lg ">
+                {/* <p className="text-brand2 md:text-lg ">
                   {t("news.published")}: {news.date}
-                </p>
+                </p> */}
               </div>
 
               <div className="mt-6">
