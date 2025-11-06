@@ -199,10 +199,32 @@ const DoctorDetails = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="prose max-w-none text-brand1 text-lg mb-10"
-              dangerouslySetInnerHTML={{ __html: descHtml }}
-            />
+            <div className="max-w-xl my-10 space-y-4 text-lg">
+              {medExp && (
+                <div className="flex items-start gap-3">
+                  <span className="font-semibold text-brand1 whitespace-nowrap">
+                    {t("doctors.medExp")}:
+                  </span>
+                  <span className="text-brand1/80 text-lg">{medExp}</span>
+                </div>
+              )}
+              {services && (
+                <div className="flex items-start gap-3 ">
+                  <span className="font-semibold text-brand1 whitespace-nowrap">
+                    {t("doctors.services")}:
+                  </span>
+                  <span className="text-brand1/80 text-lg">{services}</span>
+                </div>
+              )}
+              {cost && (
+                <div className="flex items-start gap-3 ">
+                  <span className="font-semibold text-brand1 whitespace-nowrap">
+                    {t("doctors.cost")}:
+                  </span>
+                  <span className="text-brand1/80 text-lg">{cost}</span>
+                </div>
+              )}
+            </div>
           </div>
           <div className="mt-8 bg-white rounded-3xl shadow-xl border border-brand4/10 px-6 md:px-10 py-8">
             {/* Tab navigation */}

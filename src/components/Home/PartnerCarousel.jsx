@@ -18,7 +18,7 @@ const PartnerCarousel = () => {
         {allLogos.concat(allLogos).map((logo, i) => (
           <div
             key={i}
-            className="flex justify-center items-center flex-shrink-0 w-40 sm:w-[180px] md:w-[200px] lg:w-[220px] px-6"
+            className="flex justify-center items-center flex-shrink-0 w-40  md:w-[200px] lg:w-[220px] px-6"
           >
             <a
               href={logo.url}
