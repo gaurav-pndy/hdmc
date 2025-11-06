@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const AboutPartners = () => {
   return (
-    <div className="space-y-16">
+    <div className="space-y-10 pb-10">
       {partnerSections.map(({ id, titleKey, logos }) => (
         <PartnerGrid key={id} id={id} titleKey={titleKey} logos={logos} />
       ))}
@@ -35,9 +35,9 @@ const PartnerGrid = ({ id, titleKey, logos }) => {
   return (
     <div id={id} className="">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-brand1 mb-5">
+        {/* <h2 className="text-3xl font-bold text-center text-brand1 mb-5">
           {t(titleKey)}
-        </h2>
+        </h2> */}
         <div className={`${getGridLayoutClasses()} gap-8`}>
           {logos.map((logo, index) => (
             <div

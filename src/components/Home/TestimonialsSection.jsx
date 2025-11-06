@@ -95,6 +95,7 @@ const TestimonialsSection = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+            className="custom-swiper" // Add this class
           >
             {testimonials.map((test, idx) => (
               <SwiperSlide key={idx} className="py-10">

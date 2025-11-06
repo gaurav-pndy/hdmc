@@ -446,9 +446,9 @@ const ServiceDetails = () => {
                       {/* Type of Consultation */}
                       <div>
                         <label className="text-sm font-medium text-brand1 block mb-2">
-                          Type of consultation
+                          {t("doctors.filter.consultType")}
                         </label>
-                        <div className="flex gap-3">
+                        <div className="flex flex-wrap gap-3">
                           {[
                             { label: t("doctors.filter.all"), value: "All" },
                             {

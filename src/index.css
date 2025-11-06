@@ -8,3 +8,8 @@
         --color-brand5: #33babd;
 }
 
+/* In your CSS file or globals.css */
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  display: none !important;
+}
