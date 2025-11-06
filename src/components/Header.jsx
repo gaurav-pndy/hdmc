@@ -551,8 +551,8 @@ const Header = ({ city, setCity }) => {
               onChange={(e) => setCity(e.target.value)}
               className="border rounded px-2 py-0.5"
             >
-              <option value="Moscow">Moscow</option>
-              <option value="Makhachkala">Makhachkala</option>
+              <option value="Moscow">{t("moscow")}</option>
+              <option value="Makhachkala">{t("machakhkala")}</option>
             </select>
           </div>
 
