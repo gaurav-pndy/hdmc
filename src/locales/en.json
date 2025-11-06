@@ -323,16 +323,19 @@
   "reviews": [
     {
       "name": "Semyon (Moscow)",
+          "gender": "male",
       "text": "I was looking for a remote consultation option as a second opinion for relatives. Since there are many such services, it’s hard to choose! I was advised to contact Dr. Soma. The administrator was attentive and didn’t give the impression of trying to sell the service. She explained everything clearly. I was told what documents to send and what data to include. The result of the consultation came in a few days. As a result, the relatives decided to come for further examination and treatment under Dr. Soma’s supervision. The administrator even helped with accommodation options, which was unexpected.",
       "date": "31.01.2023"
     },
     {
       "name": "Anna (Saint Petersburg)",
+          "gender": "female",
       "text": "I want to share my impression of Dr. Soma! I was looking for a good specialist who could answer all my questions clearly, leaving no doubts about further actions. After reviewing all my documents, Dr. Soma ordered an additional test, after which I understood exactly what I needed to do next. Most importantly, I felt that there’s a doctor who takes responsibility and monitors my condition, which brings peace of mind. He explains everything clearly and objectively, without loud or empty words. His team is organized, responsive, and attentive to detail. I’ve contacted Dr. Soma’s team several times — their professionalism inspires trust.",
       "date": "10.10.2022"
     },
     {
       "name": "Mikhail (Barnaul)",
+          "gender": "male",
       "text": "Dr. Soma is a very experienced specialist with over 25 years of professional practice. He spends a lot of time consulting patients and is very patient despite his busy schedule. His vast experience allows him to make accurate diagnoses and provide expert conclusions.",
       "date": "09.09.2022"
     }
@@ -430,70 +433,87 @@
   "reviews": [
   {
     "name": "Ekaterina (Nizhny Novgorod)",
+    "gender": "female",
     "text": "I am very happy that we were recommended Valentina Mikhailovna Nechushkina in Nizhny Novgorod—many doctor acquaintances said there is no one better. I was terribly afraid of surgery and ready to refuse treatment, but after talking with Valentina Mikhailovna, I immediately trusted her. I quickly gathered all tests and came for a personal meeting. After our conversation, I calmed down and agreed to hospitalization. The surgery lasted 9.5 hours and after it, the entire staff was by my side. Every day I communicated with the team and was amazed at how attentive and positive the doctors were and how kind and caring the nurses were. I gradually recovered by the sixth day and am preparing for discharge. I have only positive impressions of the Soyuz Clinic and its work. Huge thanks for saving me. I thank God I ended up here. The clinic employs real professionals and heartful people who care about patients’ recovery. The surgery was of the highest quality. Thank you for saving me."
   },
   {
     "name": "Ekaterina (Novomoskovsk)",
+    "gender": "female",
     "text": "I sought help from Valentina Mikhailovna Nechushkina. Stage 4 ovarian cancer. Interval cytoreduction was performed. The operation lasted more than 8 hours! She managed to remove all tumor and metastases with the highest quality! She is not just a doctor but an angel who fights to save patients. Deep gratitude and long happy life wishes to her! I never regretted turning to her. She and her team are the best doctors! Currently recovering post-surgery and starting next chemotherapy course. Recovery is successful! After surgery, I walked from ICU to ward on my own! The doctors constantly monitored me in ward and ICU. Dressings every day, no pain at all! Valentina Mikhailovna personally visited and answered all questions! Now I hope for successful treatment and long remission!"
   },
   {
     "name": "Svetlana (Moscow)",
+    "gender": "female",
     "text": "Thank you for the golden hands of surgeon Valentina Mikhailovna Nechushkina. Deep gratitude to her and the whole team who took part in my surgery. I appreciated the attentive and gentle attitude toward patients."
   },
   {
     "name": "Elena (Moscow)",
+    "gender": "female",
     "text": "Once again, I express my gratitude to Valentina Mikhailovna! Four years after her surgery. Cancer was complicated. I am especially grateful to God and her that she was the one treating me (the surgery was on 23.07.2020 at Kulakov Institute). Before surgery, another doctor warned me about statistics: five-year survival rate in my case was 20%. But four years have passed. Properly performed surgery is extremely important (I realized this during chemotherapy at Blokhin). I am deeply grateful! At Blokhin Institute, all doctors I met (ultrasound, chemotherapy, lab) proudly said they had the happiness to work with you and that you are the best professional in this surgery field. If you read my review—I am endlessly grateful to you and Alexey Sergeevich who recommended only you as the best professional!"
   },
   {
     "name": "Irina (Moscow)",
+    "gender": "female",
     "text": "Valentina Mikhailovna is a wonderful doctor and person; she provided great professional, moral, informational support. Her empathy and compassion for the patient is striking. Wonderful, cohesive team work."
   },
   {
     "name": "Yana (Ramenskoye)",
+    "gender": "female",
     "text": "All doctors are professionals, sensitive and attentive, you feel you are in reliable hands, thank you very much!"
   },
   {
     "name": "Karina (Moscow)",
+    "gender": "female",
     "text": "Excellent team—qualified specialists, attentive and responsive. Brilliant surgeon, Valentina Mikhailovna Nechushkina, who performed my surgery. Very attentive surgeon who observed me post-surgery—Timur Ravshanovich. Treatment fully met my expectations."
   },
   {
     "name": "Svetlana (Moscow)",
+    "gender": "female",
     "text": "I write this review a year after surgery and rejoice. I am alive and healthy! This second chance at life was given by wonderful doctor Valentina Mikhailovna Nechushkina and her team. My story began in autumn 2022 with an acute abdomen, difficulty breathing, scapula pain, abdominal swelling. Examination revealed unfortunate diagnosis—stage III high-grade ovarian cancer with ascites. Oncology dispensary suggested chemotherapy then surgery. I searched for a surgeon. Thank God I met an acquaintance who recommended the International project \"Health-Direct\" and the Eurasian Oncology Program (EAFO), consulting the best oncologists. So I came to Valentina Mikhailovna Nechushkina. She explained everything in detail (including diagrams) about the diagnosis, consequences, and treatment. Successful treatment depends on primary complete cytoreductive surgery, followed by chemotherapy. Leaving the office, I felt like on wings. After signing the contract, I was in the hands of a professional team focused on results. Attentiveness and kindness of doctors and the possibility of staying in touch at all stages impressed me. The complex surgery lasted 11 hours removing 14 items including liver ligament, uterus with adnexa, metastases with rectum, greater omentum, spleen, pancreas, stomach wall, gall bladder, appendix. Later I learned such surgeries involve multi-specialists: abdominal surgeons, urologists, etc. World-class surgeons Valentina Mikhailovna Nechushkina and Kirill Alexandrovich Shemyatovsky performed full cytoreduction. Deep gratitude to surgeons, project leader Dr. Soma, anesthesiologist Aleksey Olegovich Prikhodchenko, intensivists Oleg Vladislavovich Baydal, Pavel Viktorovich Vyatkin, nurses, secretaries. Wishing them all well-being and health!"
   },
   {
     "name": "Anna (Kirov)",
+    "gender": "female",
     "text": "I treated for three years in my city with wrong diagnosis and treatment, while disease progressed... Once I turned to Health-Direct, correct diagnosis was made promptly and surgery with further treatment proposed. Tests and a coordinator monitored me and guided through the process. Then I was admitted to the clinic, prepped, operated, stayed a week in excellent conditions, and was prescribed follow-up treatment on discharge. I want to sincerely thank the entire cohesive team of doctors; each is a professional and a kind, caring person. I am happy fate led me to these people! Special thanks to Valentina Mikhailovna Nechushkina, Kirill Alexandrovich Shemyatovsky, Aleksey Olegovich Prikhodchenko, Oleg Vladislavovich Baydal, Dmitry Yuryevich Sinyavin, Timur Ravshanovich Safarov, all nurses with golden hands, and everyone who contributed to my treatment! Deep respect!"
   },
   {
     "name": "Anastasia (Kaliningrad)",
+    "gender": "female",
     "text": "I was suspected to have cervical cancer in private clinic. I kept retaking many tests, ultrasounds; doctor couldn’t confirm diagnosis. A friend who survived cancer gave me Valentina Mikhailovna’s contacts. I live in another region, face-to-face consultation was hard, but couldn’t wait. Remote consultations are very convenient. I sent all documents ahead, manager forwarded them to doctor, I was told what further tests to pass and documents to get from prior treatment hospital. By consultation, Valentina Mikhailovna had all documents, so conversation was to the point, she explained everything thoroughly and answered all questions. Most importantly, my diagnosis was not confirmed. Thus, in one hour, a competent specialist solved all problems without unnecessary charges and manipulations."
   },
   {
     "name": "Irina (Balashikha)",
+    "gender": "female",
     "text": "I was skeptical about private medicine as the same specialists work in government and private clinics. But when at Balashikha cancer center they ignored me and delayed treatment, I reconsidered. Reviews made clear very few surgeons try to thoroughly remove tumors and prevent recurrences. If you face ovarian cancer and read this review, believe me, Valentina Mikhailovna is top-notch, don’t waste time. It’s been a year since my surgery and I live a full life. Thanks!"
   },
   {
     "name": "Ekaterina (Saint Petersburg)",
+    "gender": "female",
     "text": "Huge gratitude to Valentina Mikhailovna Nechushkina and her professional team. Stage 4 ovarian cancer was diagnosed. At Petrov Institute, chemotherapy came first due to widespread cancer. I sought a second opinion and booked remote consultation with Valentina Mikhailovna—immediately felt she was pleasant and polite, explained risks, and recommended operation first. I trusted her. The process was well organized with a doctor remotely supervising pre-op exams. Surgery was long but I woke without pain. Next morning, I sat up in ICU with doctor’s support, surprisingly quick recovery compared to my prior myoma surgery. Walking started next day and continued well. Anesthesia team’s work was outstanding. Only drains caused discomfort but were removed gradually. By day 5, I walked clinic grounds, day 7 discharged with chemo recommendations. All was clear, comfortable, and excellent. Huge thanks to all doctors!"
   },
   {
     "name": "Svetlana (Murmansk)",
+    "gender": "female",
     "text": "Very impressed by doctors’ full attention, responsibility, and day and night support. Surgery was difficult but the experienced staff provided prompt help; I felt positive even in ICU. Such care is true professional medical aid. Glad I ended with doctor Valentina Mikhailovna Nechushkina and her team. A month post-surgery, I am active and energetic. A great team for treatment. Wishing all good health and kindness!"
   },
   {
     "name": "Maria (Krasnogorsk)",
+    "gender": "female",
     "text": "Huge thanks to Valentina Mikhailovna Nechushkina! She operated on me for stage 3 ovarian cancer last December! Surgery lasted 11 hours; 2 days in ICU. Began walking, eating, drinking quickly post-op; hardly any abdominal pain! Everything went very well with Valentina Mikhailovna and her team! By day 8, I was home, then chemotherapy. Now CA-125 is normal! No signs of disease per tests! Deep gratitude to Valentina Mikhailovna! A godsend doctor!"
   },
   {
     "name": "Antonina (Moscow)",
+    "gender": "female",
     "text": "I want to sincerely thank Valentina Mikhailovna Nechushkina! Three years ago she saved my life! Advanced ovarian cancer, stage 3! Surgery lasted 10 hours, plus chemotherapy. No progression now. Living fully thanks to her. Rarely meet doctors you can discuss surgery aftermath and decisions with. Meeting her relieved all fears, I agreed to surgery. She is highly educated and fascinating—a true professor! If she is your doctor, trust her; she’s the best! Patients and doctors alike confirm—‘You made the right choice!’ Doctors say: ‘Very good surgery’, ‘She was born with scalpel in hand!’ Dear Valentina Mikhailovna, God bless you and your team! Many thanks to Dr. Soma, Kirill Alexandrovich Shemyatovsky, Aleksey Olegovich Prikhodchenko, Pavel Viktorovich Vyatkin, Oleg Vladislavovich Baydal. God bless!"
   },
   {
     "name": "Marina (Ussuriysk)",
+    "gender": "female",
     "text": "My review aims to express huge thanks to a talented doctor and help women facing oncology make the right choice to save lives. I'll be happy if my review saves even one life. Cancer patients often hear, ‘We are not gods...’ Maybe so, but not about wonderful surgeon, gynecologist, oncologist Valentina Mikhailovna Nechushkina. All patients and colleagues say: ‘She’s second only to God! Valentina Mikhailovna is the hands of God in our world!’ Diagnosed with stage III ovarian cancer with peritoneal metastases in Feb 2022. Terrified and confused how to start treatment, living in a small town with previous regular checks but late diagnosis due to negligence or low doctor professionalism. Life depended on surgeon’s professionalism. Blessed I found Valentina Mikhailovna! You immediately feel safe with her. After thorough evaluation and long consultation, surgery lasted 9 hours. Local surgeon was shocked seeing discharge papers ‘Wow you had half your abdomen removed!’ But I remain alive thanks to Valentina Mikhailovna and team. Post-op she guided chemo and genetic tests, found hereditary gene mutation, prescribed expert treatment unknown locally, monitors my course, is always reachable day or night. Dear women facing similar situations: don’t hesitate—only Valentina Mikhailovna. She’s unsurpassed, confirmed by patients and doctors. Other doctors praise her surgery and skill. Dear Valentina Mikhailovna, God bless you and your team! Sincere thanks to Dr. Soma, Kirill Alexandrovich Shemyatovsky, Aleksey Olegovich Prikhodchenko, Pavel Viktorovich Vyatkin, Oleg Vladislavovich Baydal. God bless!"
   },
   {
     "name": "Svetlana (Kolomna)",
+    "gender": "female",
     "text": "My family suffered misfortune: ovarian cancer diagnosed. Local hospital queues, delayed tests, and bad reviews caused stress. Husband found a doctor through a friend who advised Health-Direct. It felt like a different world. Clear plan given first by phone. First, met Valentina Mikhailovna Nechushkina in person. Skeptical about reviews, but after five minutes knew she was the right doctor. Consultation lasted three hours; she patiently answered questions without hurry or condescension. First impression: my doctor! Within five days, completed 19 complicated diagnostics thanks to Health-Direct managers. Most frightening was surgery, but Valentina Mikhailovna reassured. Long-term collaboration with the same anesthesia team ensures great results. Next day after surgery, I could sit and walk around ICU. Transferred to my room, care continued. Simple things like hydration, walking, diet, and social interaction quickly restored me. Immense gratitude to Valentina Mikhailovna and her team!"
   }
 ]
@@ -627,11 +647,13 @@
   "reviews": [
     {
       "name": "Evgeny (Arkhangelsk)",
+       "gender": "male",
       "text": "Huge thanks to Aleksey Olegovich! He brought me back to life, and thanks to him I am still here. He is a doctor from God, both as a specialist and as a wonderful person. Wishing him health and success in his challenging work!",
       "date": "15.09.2021"
     },
     {
       "name": "Aleksandr (Nizhny Novgorod)",
+       "gender": "male",
       "text": "It is rare for doctors to write about their colleagues, but in this case I had to. It's always frightening to treat a loved one, especially when there is a life-threatening illness in an elderly person with a history of health issues. My mother was diagnosed with endometrial cancer with lymph node metastases and had recently undergone emergency stenting of her coronary arteries. Valentina Mikhailovna Nechushkina said surgery would be possible only if the anesthesiologist-intensivist gave the green light. I expected to hear 'not possible in this state' from the consultation, but the result with Aleksey Olegovich Prikhodchenko was unexpected. He was attentive, thoughtful, quickly established rapport with my mother, didn't scare us, clearly explained the risks, and agreed to prepare her for the necessary surgery. His knowledge in therapy and cardiology was impressive. Extra diagnostics and preparation didn't take much time and my mother underwent the scheduled surgery. Aleksey Olegovich's excellent anesthesia work and brilliant post-op care meant that the very next day my mother was sitting up, and another day later — already walking, despite her recent heart surgery! Heartfelt thanks to Aleksey Olegovich Prikhodchenko and his colleagues Pavel Viktorovich Vyatkin and Oleg Vladislavovich Baydal for their care! I sincerely admire these doctors. Thank you from me and my mother!",
       "date": "13.08.2021"
     }
@@ -754,6 +776,7 @@
   "reviews": [
     {
       "name": "Nikolay (Kolomna)",
+       "gender": "male",
       "text": "In November 2023 I was diagnosed with stage III cancer of the right lung. Life seemed to end. I was already preparing for death. Thankfully, smart and sensible people nearby advised me to contact Health-Direct. That month flew by like a fast train, and only now do I realize how much had to be done and why. We got confirmation that the cancer was only in the lung. Then I went for more testing to find out what kind of cancer I had. After all this, I received my first chemotherapy session in December. Chemotherapy was administered by oncologist Dmitry Yuryevich Sinyavin, who also supervised my care. He is a very attentive and responsible doctor. I had a total of six chemotherapy sessions. After four sessions, based on the oncology board’s decision, Dmitry Yuryevich advised radiation therapy. I underwent 30 sessions. One month after that, a CT scan showed positive progress. This gave me hope, but the last two chemotherapy infusions were difficult for me. It turned out that a whole team of doctors was involved, and they got me to my last session on time. Now, I am completely cancer-free! Looking back at the past six months, I am immensely grateful to oncologist Dmitry Yuryevich Sinyavin, radiotherapist Aleksandr Evgenyevich Pankratov, and the entire Health-Direct team for the correct treatment plan (it was very different from what would have been given where I live)! More such doctors, please! Thanks to you, I can go on living and see my newly born granddaughter grow up!",
       "date": "21.07.2024"
     }
@@ -917,11 +940,13 @@
         "reviews": [
           {
             "name": "Olga (Moscow, Zelenograd)",
+             "gender": "female",
             "text": "Everything was wonderful! The attitude of the doctors was at the highest level — caring, attentive, and gentle! A highly personalized approach! They even made the stitch look neat! Impressions: I want to express my sincere gratitude to the doctors for their attentive attitude, professionalism, and care. The venous port system installation was done very carefully and almost painlessly. I was very pleased that everything was explained in detail and all questions were answered. Thank you for your work and your kind hearts!",
             "date": "11.05.2025"
           },
           {
             "name": "Olga (Moscow, Zelenograd)",
+             "gender": "female",
             "text": "Everything was wonderful! The attitude of the doctors was at the highest level — caring, attentive, and gentle! A highly personalized approach! They even made the stitch look neat! Impressions: I want to express my sincere gratitude to the doctors for their attentive attitude, professionalism, and care. The venous port system installation was done very carefully and almost painlessly. I was very pleased that everything was explained in detail and all questions were answered. Thank you for your work and your kind hearts!",
             "date": "11.05.2025"
           }

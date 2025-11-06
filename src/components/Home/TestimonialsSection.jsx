@@ -244,7 +244,7 @@ const TestimonialCard = ({ test, idx, handleOpen, handleReadMore }) => {
       {/* Avatar + name */}
       <div className="flex gap-3 mb-4">
         <img
-          src="/nopic.jpg"
+          src={test.gender === "male" ? "/male.svg" : "/female.svg"}
           alt={displayName}
           className="w-20  h-20  rounded-full object-cover border-4 border-brand4/40"
         />
