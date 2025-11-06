@@ -2390,6 +2390,24 @@
   }
 }
 
+},
+"partners": {
+  "heroTitle": "Our Collaborators",
+  "heroSubtitle": "Together we deliver exceptional medical education and patient care",
+  "introText": "Our partnership with collaborators play a vital role in the success of our events, enabling us to deliver seamless and exceptional experiences for all involved. Each partnership we forge is dedicated to elevating the quality of care provided to patients, ensuring they receive the utmost attention and support.",
+  "sections": {
+    "organizers": "Organizers",
+    "scientific": "Scientific & Educational Partners",
+    "medical": "Medical Partners",
+    "corporate": "Corporate Partners",
+    "social": "Social Partners",
+    "technical": "Information & Technical Partners"
+  },
+  "cta": {
+    "title": "Interested in Collaboration?",
+    "subtitle": "Join our network of partners and help shape the future of medical education",
+    "button": "Contact Us for Partnership"
+  }
 }
 
 }
