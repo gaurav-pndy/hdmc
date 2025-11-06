@@ -14,6 +14,7 @@ import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
+import PartnerCarousel from "../components/Home/PartnerCarousel";
 
 const Home = ({ city }) => {
   const location = useLocation();
@@ -116,6 +117,7 @@ const Home = ({ city }) => {
       </div>
 
       <ActionButtons />
+      <PartnerCarousel />
     </div>
   );
 };
