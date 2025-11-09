@@ -527,14 +527,14 @@ const ServiceDetails = () => {
                     <SwiperSlide key={doc.id}>
                       <Link
                         to={`/doctors/${doc.id}`}
-                        className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between lg:min-h-[40rem]"
+                        className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between md:min-h-[30rem]"
                       >
                         <div className="flex-1 flex flex-col">
                           {/* Add avatar or doctor photo here if you have */}
                           <img
                             src={doc.image}
                             alt={doc.name}
-                            className="w-full h-60 object-cover object-top rounded-lg"
+                            className="w-full h-64 object-cover object-top rounded-lg"
                           />
                           <div className="font-bold text-black text-xl mt-4 mb-3">
                             {doc.name}
@@ -549,7 +549,7 @@ const ServiceDetails = () => {
                               </span>
                             ))}
                           </div>
-                          <div className="text-brand1 text-sm mb-3 line-clamp-2">
+                          {/* <div className="text-brand1 text-sm mb-3 line-clamp-2">
                             {doc.desc}
                           </div>
                           <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
@@ -562,7 +562,7 @@ const ServiceDetails = () => {
                           </div>
                           <div className="text-brand1 text-sm font-medium">
                             {doc.langs}
-                          </div>
+                          </div> */}
                         </div>
                         <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
                           {t("doctors.viewProfile")}

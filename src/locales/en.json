@@ -1223,12 +1223,12 @@
     "route": "Set a route",
     "clinic1": {
       "title": "HDMC",
-      "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1",
+      "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1, 4th and 5th floor",
       "schedule": "From 8:00 to 23:00, without days off"
     },
     "clinic2": {
       "title": "Ali-Gadzhi Akushinskogo Avenue",
-      "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala",
+      "address": "Ali-Gadzhi Akushinskogo Avenue Building 7, Makhachkala, 2nd floor",
       "schedule": "From 8:00 to 23:00, without days off"
     },
     "button": "Make an appointment"
@@ -1377,7 +1377,7 @@
   },
   "about": {
     "hero": {
-      "title": "About Our Clinic",
+      "title": "About Clinic",
       "subtitle": "A multidisciplinary medical organization with international quality standards"
     },
     "tabs": {

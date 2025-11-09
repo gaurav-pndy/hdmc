@@ -552,7 +552,7 @@ const Header = ({ city, setCity }) => {
               className="border rounded px-2 py-0.5"
             >
               <option value="Moscow">{t("moscow")}</option>
-              <option value="Makhachkala">{t("machakhkala")}</option>
+              <option value="Makhachkala">{t("makhachkala")}</option>
             </select>
           </div>
 
@@ -762,7 +762,7 @@ const Header = ({ city, setCity }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/3 mt-2 grid grid-cols-4 gap-6 xl:gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-5xl"
+                  className="absolute left-1/2 -translate-x-1/3 mt-18 grid grid-cols-4 gap-6 xl:gap-10 bg-white  shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-5xl"
                 >
                   {aboutItems.map((a, idx) => (
                     <Link
@@ -807,7 +807,7 @@ const Header = ({ city, setCity }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-rows-7  grid-flow-col gap-8  bg-white shadow-lg shadow-black/40 rounded-xl p-6  z-50 w-3xl xl:w-6xl font-normal"
+                  className="absolute left-1/2 -translate-x-1/2 mt-18 grid grid-rows-7  grid-flow-col gap-6  bg-white shadow-lg shadow-black/40 rounded-xl p-6  z-50 w-3xl xl:w-6xl font-normal"
                 >
                   {doctorsItems.map((d, idx) => (
                     <div
@@ -901,7 +901,7 @@ const Header = ({ city, setCity }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-4 gap-5 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-18 grid grid-cols-4 gap-5 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-3xl xl:w-6xl"
                 >
                   {services.map((s, idx) => (
                     <Link
@@ -956,7 +956,7 @@ const Header = ({ city, setCity }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-2 grid grid-cols-3 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-2xl xl:w-4xl"
+                  className="absolute left-1/2 -translate-x-1/2 mt-18 grid grid-cols-3 gap-6 xl:gap-10 bg-white shadow-lg shadow-black/40 rounded-xl p-6 z-40 w-2xl xl:w-4xl"
                 >
                   {patientItems.map((p, idx) => (
                     <Link
@@ -1020,7 +1020,7 @@ const Header = ({ city, setCity }) => {
         </div>
       </motion.nav>
 
-      <nav className="hidden lg:flex  py-2 w-full bg-brand1/10 justify-end ">
+      <nav className="hidden lg:flex z-100 py-2 w-full bg-brand1/10 justify-end ">
         <div className="hidden max-w-[90rem] px-4  mx-auto md:flex gap-3 xl:gap-6  justify-end items-center flex-1 text-sm xl:text-base font-medium">
           {" "}
           <Link

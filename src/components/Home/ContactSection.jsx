@@ -11,7 +11,8 @@ const ContactSection = () => {
     email: "",
     city: "",
     message: "",
-    agree: false,
+    agree1: false,
+    agree2: false,
   });
 
   return (
@@ -118,9 +119,9 @@ const ContactSection = () => {
               <div className="flex items-start mt-4">
                 <input
                   type="checkbox"
-                  checked={form.agree}
+                  checked={form.agree1}
                   onChange={(e) =>
-                    setForm({ ...form, agree: e.target.checked })
+                    setForm({ ...form, agree1: e.target.checked })
                   }
                   className="mr-2 mt-1"
                   id="form-agree1"
@@ -135,9 +136,9 @@ const ContactSection = () => {
               <div className="flex items-start mt-2 mb-4">
                 <input
                   type="checkbox"
-                  checked={form.agree}
+                  checked={form.agree2}
                   onChange={(e) =>
-                    setForm({ ...form, agree: e.target.checked })
+                    setForm({ ...form, agree2: e.target.checked })
                   }
                   className="mr-2 mt-1"
                   id="form-agree2"
