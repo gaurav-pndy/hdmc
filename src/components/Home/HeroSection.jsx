@@ -81,7 +81,7 @@ const HeroSection = () => {
                 <img
                   src="https://www.shutterstock.com/shutterstock/photos/2656913525/display_1500/stock-photo-person-s-hands-cupping-around-a-glowing-holographic-icon-representing-customer-loyalty-vip-clients-2656913525.jpg"
                   alt="Hero illustration"
-                  className=" w-full md:min-h-[28rem] max-h-[28rem] h-full object-cover "
+                  className=" w-full md:min-h-[28rem] max-h-[30rem] 2xl:max-h-[33rem] h-full object-cover "
                 ></img>
                 <div
                   className={`absolute  inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
@@ -130,7 +130,7 @@ const HeroSection = () => {
                   playsInline
                   src="https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm"
                   alt="Hero illustration"
-                  className=" w-full md:min-h-[28rem]  max-h-[28rem] h-full object-cover "
+                  className=" w-full md:min-h-[28rem]  max-h-[30rem] 2xl:max-h-[33rem] h-full object-cover "
                 ></video>
                 <div
                   className={`absolute inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
@@ -173,7 +173,7 @@ const HeroSection = () => {
                   playsInline
                   src="https://www.shutterstock.com/shutterstock/videos/1067598875/preview/stock-footage-joyful-young-couple-friends-african-american-man-woman-s-in-t-shirts-isolated-on-yellow.webm"
                   alt="Hero illustration"
-                  className=" w-full  md:min-h-[28rem] max-h-[28rem] h-full object-cover "
+                  className=" w-full  md:min-h-[28rem] max-h-[30rem] 2xl:max-h-[33rem] h-full object-cover "
                 ></video>
                 <div
                   className={`absolute inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
@@ -216,7 +216,7 @@ const HeroSection = () => {
                   playsInline
                   src="https://www.shutterstock.com/shutterstock/videos/3411047139/preview/stock-footage-male-and-female-hands-with-heart-shape-concept-of-love-life-care-compassion-mercy.webm"
                   alt="Hero illustration"
-                  className=" w-full  md:min-h-[28rem] max-h-[28rem] h-full object-cover "
+                  className=" w-full  md:min-h-[28rem] max-h-[30rem] 2xl:max-h-[33rem] h-full object-cover "
                 ></video>
                 <div
                   className={`absolute inset-0 bg-gradient-to-b   md:bg-gradient-to-r  
