@@ -9,7 +9,7 @@ const AppLayout = ({ city, setCity }) => {
     <div>
       <ScrollToTop />
       <Header city={city} setCity={setCity} />
-      <div className="mt-14 lg:mt-40">
+      <div className="mt-14 lg:mt-42 xl:mt-44">
         <Outlet />
         <FloatingButton />
         <Footer city={city} />
