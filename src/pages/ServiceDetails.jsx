@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FiFilter, FiSearch } from "react-icons/fi";
 
-const ServiceDetails = () => {
+const ServiceDetails = ({ setShowPopup }) => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("about");
 
@@ -351,7 +351,10 @@ const ServiceDetails = () => {
           {/* <p className="text-white text-lg md:text-2xl mb-6 drop-shadow">
             {service.subtitle && t(service.subtitle)}
           </p> */}
-          <button className="flex relative z-40 items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white ">
+          <button
+            onClick={() => setShowPopup(true)}
+            className="flex relative z-40 items-center justify-center gap-2 w-full md:w-fit px-6 py-3 rounded-lg bg-white text-brand1 text-lg font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white "
+          >
             {service.btn ? t(service.btn) : t("services.s1.btn")}
           </button>
         </div>

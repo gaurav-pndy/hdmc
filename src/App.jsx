@@ -21,13 +21,21 @@ import AboutDiseases from "./pages/AboutDiseases";
 
 function App() {
   const [city, setCity] = useState("Moscow");
+  const [showPopup, setShowPopup] = useState(false);
   const router = createBrowserRouter([
     {
-      element: <AppLayout city={city} setCity={setCity} />,
+      element: (
+        <AppLayout
+          city={city}
+          setCity={setCity}
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+      ),
       children: [
         {
           path: "/",
-          element: <Home city={city} />,
+          element: <Home city={city} setShowPopup={setShowPopup} />,
         },
         {
           path: "/doctors",
@@ -35,7 +43,7 @@ function App() {
         },
         {
           path: "/doctors/:doctorId",
-          element: <DoctorDetails />,
+          element: <DoctorDetails setShowPopup={setShowPopup} />,
         },
         {
           path: "/for-patients",
@@ -51,11 +59,11 @@ function App() {
         },
         {
           path: "/telemedicine-consultation",
-          element: <Telemedicine />,
+          element: <Telemedicine setShowPopup={setShowPopup} />,
         },
         {
           path: "/center-of-expertise",
-          element: <ExpertiseCenter />,
+          element: <ExpertiseCenter setShowPopup={setShowPopup} />,
         },
         {
           path: "/center-of-expertise/:direction",
@@ -67,11 +75,11 @@ function App() {
         },
         {
           path: "/services/:serviceId",
-          element: <ServiceDetails />,
+          element: <ServiceDetails setShowPopup={setShowPopup} />,
         },
         {
           path: "/early-detection-program",
-          element: <EarlyDetection />,
+          element: <EarlyDetection setShowPopup={setShowPopup} />,
         },
         {
           path: "/about-diseases/:newsId",

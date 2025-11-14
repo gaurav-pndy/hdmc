@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaCalendarCheck, FaPhoneAlt, FaRegSmile } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ActionButtons = () => {
+const ActionButtons = ({ setShowPopup }) => {
   const { t } = useTranslation();
 
   return (
@@ -11,6 +11,7 @@ const ActionButtons = () => {
       <div className="flex flex-wrap gap-5 justify-between max-w-7xl mx-auto">
         {/* Book an appointment */}
         <button
+          onClick={() => setShowPopup(true)}
           className="
         flex items-center gap-2 w-full md:w-fit
         px-8 py-3 

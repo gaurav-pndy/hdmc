@@ -15,7 +15,7 @@ import { i } from "framer-motion/client";
 import { MdWork } from "react-icons/md";
 import { GiDiploma } from "react-icons/gi";
 
-const DoctorDetails = () => {
+const DoctorDetails = ({ setShowPopup }) => {
   const { doctorId } = useParams();
   const { t } = useTranslation();
   const doctor = doctorsData.find((doc) => doc.id === doctorId);
@@ -137,7 +137,10 @@ const DoctorDetails = () => {
                 className="w-full h-full object-cover aspect-square rounded-2xl"
               />
             </div>
-            <button className="w-full bg-brand1 text-white rounded-2xl py-3 font-semibold text-lg mb-2 hover:bg-brand5 transition-all shadow">
+            <button
+              onClick={() => setShowPopup(true)}
+              className="w-full bg-brand1 text-white rounded-2xl py-3 font-semibold text-lg mb-2 hover:bg-brand5 transition-all shadow"
+            >
               {t("doctors.bookAppt")}
             </button>
             <button className="w-full border-2 border-brand1 text-brand1 rounded-2xl py-3 font-semibold text-lg bg-white hover:bg-brand4/10 transition-all shadow">

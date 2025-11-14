@@ -5,7 +5,7 @@ import EarlyWhy from "../components/EarlyDetection/EarlyWhy";
 import OncoInsurance from "../components/EarlyDetection/OncoInsurance";
 import { useTranslation } from "react-i18next";
 
-const EarlyDetection = () => {
+const EarlyDetection = ({ setShowPopup }) => {
   const { t } = useTranslation();
   return (
     <div>
@@ -14,7 +14,10 @@ const EarlyDetection = () => {
       <EarlyWhy />
       <OncoInsurance />
       <div className="flex w-full justify-center my-10">
-        <button className="  bg-[#125e84] text-white px-10 py-3.5 text-lg rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap ">
+        <button
+          onClick={() => setShowPopup(true)}
+          className="  bg-[#125e84] text-white px-10 py-3.5 text-lg rounded-lg  hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap "
+        >
           {t("earlyDetection.insurance.appointmentBtn")}
         </button>
       </div>

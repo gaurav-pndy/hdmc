@@ -16,7 +16,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import PartnerCarousel from "../components/Home/PartnerCarousel";
 
-const Home = ({ city }) => {
+const Home = ({ city, setShowPopup }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Home = ({ city }) => {
       <TestimonialsSection />
 
       {/* <BookingForm /> */}
-      <AddressSection city={city} />
+      <AddressSection city={city} setShowPopup={setShowPopup} />
       <ContactSection />
       <div className="pb-16">
         <div className="text-center text-brand1 font-bold text-2xl md:text-4xl mb-16 ">
@@ -116,7 +116,7 @@ const Home = ({ city }) => {
         </div>
       </div>
 
-      <ActionButtons />
+      <ActionButtons setShowPopup={setShowPopup} />
       <PartnerCarousel />
     </div>
   );

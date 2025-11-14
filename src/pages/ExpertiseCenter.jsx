@@ -20,7 +20,7 @@ import { FaChild } from "react-icons/fa6";
 import { RiSurgicalMaskFill } from "react-icons/ri";
 import { MdBloodtype } from "react-icons/md";
 
-const ExpertiseCenter = () => {
+const ExpertiseCenter = ({ setShowPopup }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -129,7 +129,10 @@ const ExpertiseCenter = () => {
         <div className="text-white/80 md:text-lg mb-5">
           {t("expertise.cta.subtitle")}{" "}
         </div>
-        <button className="mb-1 px-7 py-3 rounded-xl bg-white/80 text-brand1 font-bold text-lg shadow hover:bg-white transition">
+        <button
+          onClick={() => setShowPopup(true)}
+          className="mb-1 px-7 py-3 rounded-xl bg-white/80 text-brand1 font-bold text-lg shadow hover:bg-white transition"
+        >
           {t("expertise.cta.btn")}
         </button>
       </div>

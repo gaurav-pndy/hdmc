@@ -65,7 +65,7 @@ import {
 import { BsThermometerHalf } from "react-icons/bs";
 import { AiOutlineUserSwitch } from "react-icons/ai";
 
-const Header = ({ city, setCity }) => {
+const Header = ({ city, setCity, setShowPopup }) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false); // mobile dropdown
@@ -1053,7 +1053,10 @@ const Header = ({ city, setCity }) => {
             {" "}
             Pathologica
           </a>{" "}
-          <button className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2">
+          <button
+            onClick={() => setShowPopup(true)}
+            className=" min-w-48 xl:min-w-56 bg-[#125e84] text-white px-4 py-2 rounded-lg font-normal hover:bg-brand5/90 cursor-pointer transition-all duration-300 whitespace-nowrap hidden md:flex justify-center items-center gap-2"
+          >
             <FaCalendarCheck className="text-lg" />
 
             {t("header.bookAppointment")}
@@ -1172,7 +1175,10 @@ const Header = ({ city, setCity }) => {
                   <FaUser className="text-lg" />
                   {t("header.personalAccount")}
                 </button>
-                <button className="border border-[#125e84] text-[#125e84] px-6 py-2 rounded-lg font-medium flex gap-2 items-center hover:bg-[#125e84]/10 cursor-pointer transition whitespace-nowrap">
+                <button
+                  onClick={() => setShowPopup(true)}
+                  className="border border-[#125e84] text-[#125e84] px-6 py-2 rounded-lg font-medium flex gap-2 items-center hover:bg-[#125e84]/10 cursor-pointer transition whitespace-nowrap"
+                >
                   <FaCalendarCheck className="text-lg" />
 
                   {t("header.bookAppointment")}

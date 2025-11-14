@@ -4,7 +4,7 @@ import { FaUserMd, FaStethoscope, FaClock, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import WaveBackground from "../WaveBackground";
 
-const TelemedicineHero = () => {
+const TelemedicineHero = ({ setShowPopup }) => {
   const { t } = useTranslation();
 
   // Animation variants
@@ -52,7 +52,10 @@ const TelemedicineHero = () => {
         </p>
 
         <div className="flex flex-col md:flex-row md:justify-start gap-4">
-          <button className="flex relative z-40 items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg bg-white text-brand1 font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white">
+          <button
+            onClick={() => setShowPopup(true)}
+            className="flex relative z-40 items-center justify-center gap-2 w-full md:w-auto px-6 py-3 rounded-lg bg-white text-brand1 font-medium hover:text-white hover:bg-transparent cursor-pointer transition-all duration-300 border border-white"
+          >
             {t("telemedicine.hero.ctaConsult")}
             <FaArrowRight className="ml-2" />
           </button>

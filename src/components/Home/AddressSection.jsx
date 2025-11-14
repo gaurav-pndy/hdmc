@@ -75,7 +75,7 @@ const YandexMap = ({ center, zoom, placemarks, language }) => {
   return <div ref={mapRef} style={{ width: "100%", height: "100%" }} />;
 };
 
-const AddressSection = ({ city }) => {
+const AddressSection = ({ city, setShowPopup }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
@@ -143,7 +143,10 @@ const AddressSection = ({ city }) => {
                 <span className="font-semibold">{t("address.route")}</span>
               </div>
 
-              <button className="bg-brand1 text-white font-semibold rounded-lg px-4 py-2.5 shadow hover:bg-brand5/90  cursor-pointer transition-all duration-300 text-sm w-full">
+              <button
+                onClick={() => setShowPopup(true)}
+                className="bg-brand1 text-white font-semibold rounded-lg px-4 py-2.5 shadow hover:bg-brand5/90  cursor-pointer transition-all duration-300 text-sm w-full"
+              >
                 {t("address.button")}
               </button>
             </div>

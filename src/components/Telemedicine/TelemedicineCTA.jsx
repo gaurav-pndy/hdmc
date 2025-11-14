@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaClock, FaShieldAlt, FaArrowRight } from "react-icons/fa";
 import WaveBackground from "../WaveBackground";
 
-const TelemedicineCTA = () => {
+const TelemedicineCTA = ({ setShowPopup }) => {
   const { t } = useTranslation();
 
   return (
@@ -34,7 +34,10 @@ const TelemedicineCTA = () => {
             {t("telemedicine.cta.subtitle")}
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-end z-40 mb-6">
-            <button className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl  text-brand1  font-semibold hover:bg-transparent border border-white transition-all  duration-300 cursor-pointer hover:text-white">
+            <button
+              onClick={() => setShowPopup(true)}
+              className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl  text-brand1  font-semibold hover:bg-transparent border border-white transition-all  duration-300 cursor-pointer hover:text-white"
+            >
               {t("telemedicine.cta.cta1")}
               <FaArrowRight className="ml-2" />
             </button>

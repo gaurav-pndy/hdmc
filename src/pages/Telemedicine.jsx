@@ -5,14 +5,14 @@ import TelemedicineExperts from "../components/Telemedicine/TelemedicineExperts"
 import TelemedicineHowItWorks from "../components/Telemedicine/TelemedicineHowItWorks";
 import TelemedicineCTA from "../components/Telemedicine/TelemedicineCTA";
 
-const Telemedicine = () => {
+const Telemedicine = ({ setShowPopup }) => {
   return (
     <div>
-      <TelemedicineHero />
+      <TelemedicineHero setShowPopup={setShowPopup} />
       <TelemedicineAdvantages />
       <TelemedicineExperts />
       <TelemedicineHowItWorks />
-      <TelemedicineCTA />
+      <TelemedicineCTA setShowPopup={setShowPopup} />
     </div>
   );
 };
