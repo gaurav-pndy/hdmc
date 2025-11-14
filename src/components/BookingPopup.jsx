@@ -25,7 +25,7 @@ const BookingPopup = ({ show, onClose }) => {
         <iframe
           src="https://b22284.oz.1denta.ru/company/22284/menu?o="
           className="w-full h-[70vh] md:h-[80vh]"
-          loading="lazy"
+          //   loading="lazy"
         />
       </div>
 
