@@ -26,6 +26,8 @@ const BookingPopup = ({ show, onClose }) => {
           src="https://1dn.su/5SC"
           className="w-full h-[70vh] md:h-[80vh]"
           //   loading="lazy"
+          title="Booking Widget"
+          allow="camera; microphone"
         />
       </div>
 
