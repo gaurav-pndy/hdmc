@@ -23,7 +23,7 @@ const BookingPopup = ({ show, onClose }) => {
 
         {/* Iframe */}
         <iframe
-          src="https://1dn.su/5SC"
+          src="https://app.1denta.ru/booking/booking?orgid=22284&networkid=767#/main';"
           className="w-full h-[70vh] md:h-[80vh]"
           //   loading="lazy"
           title="Booking Widget"
