@@ -17,7 +17,7 @@ import {
 import { MdWork } from "react-icons/md";
 import { GiDiploma } from "react-icons/gi";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3003/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
 
 const DoctorDetails = ({ setShowPopup }) => {
   const { doctorId } = useParams();
