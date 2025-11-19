@@ -197,6 +197,9 @@
       "remote": "Remote",
       "specialization": "Doctor Specialization"
     },
+    "searchPlaceholder": "Search the doctors...",
+    "noDoctors":"There are currently no specialists available in this field.",
+    "noVideos": "No Videos",
     "languages": "Languages known",
     "location": "Location",
     "about": "About Doctor",
@@ -1772,7 +1775,47 @@
   "btn5": "Read the Blog",
   "heading6": "Documents",
   "text6": "Transparent prices for all clinic services. Up-to-date price list with descriptions of medical procedures. We maintain an honest pricing policy with no hidden fees.",
-  "btn6": "View Prices"
+  "btn6": "View Prices",
+
+
+  "offers": {
+      "viewDetails": "View Details",
+      "popular": "Popular",
+      "daysLeft": "{{count}}d left",
+      "activeOffers": "Active Offers",
+      "popularDeals": "Popular Deals",
+      "endingSoon": "Ending Soon",
+      "moreBenefits": "+{{count}} more benefits",
+      "termsTitle": "Terms & Conditions",
+      "validUntil":"Valid Until",
+      "limitedTime":"Limited Time",
+      "seeMore": "See more",
+
+      "terms": {
+        "noCombination": "Offers cannot be combined with other promotions",
+        "availability": "Subject to availability and doctor's schedule",
+        "modification": "Clinic management reserves the right to modify terms",
+        "contact": "Please contact us for more details"
+      },
+      "noOffers": {
+        "title": "No Current Offers",
+        "description": "There are no active promotions at the moment. Please check back later for special offers and discounts.",
+        "refresh": "Refresh Offers",
+        "contact": "Contact Us"
+      },
+      "errors": {
+        "loading": "Unable to Load Offers",
+        "description": "We encountered an error while loading special offers.",
+        "tryAgain": "Try Again"
+      },
+      "loading": "Loading special offers...",
+      "categories": {
+        "specialOffer": "Special Offer",
+        "consultation": "Consultation",
+        "package": "Package Deal",
+        "seasonal": "Seasonal Offer"
+      }
+    }
 },
   "expertise": {
   "title": "International expert centers",
@@ -2436,6 +2479,65 @@
     "subtitle": "Join our network of partners and help shape the future of medical education",
     "button": "Contact Us for Partnership"
   }
-}
+},
+
+  "careersPage": {
+    "title": "Join Our Team",
+    "subtitle": "Discover exciting career opportunities and grow with us",
+    "openPositions": "Open Positions",
+    "totalApplications": "Total Applications",
+    "activeRoles": "Active Roles",
+    "errors": {
+      "loading": "Error Loading Vacancies"
+    },
+    "tryAgain": "Try Again",
+    "noVacancies": {
+      "title": "No Open Positions",
+      "description": "There are no current job openings. Please check back later for new opportunities."
+    },
+    "refresh": "Refresh",
+    "salaryNotSpecified": "Salary not specified",
+    "employmentTypes": {
+      "full-time": "Full Time",
+      "part-time": "Part Time",
+      "contract": "Contract",
+      "internship": "Internship",
+      "remote": "Remote"
+    },
+    "views": "Views",
+    "applications": "Applications",
+    "deadline": "Deadline",
+    "urgent": "Urgent",
+    "active": "Active",
+    "applyNow": "Apply Now",
+    "closed": "Closed",
+    "applyFor": "Apply for",
+    "requirements": "Requirements",
+    "firstName": "First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "resume": "Resume/CV",
+    "acceptedFormats": "Accepted formats: PDF, DOC, DOCX (Max 5MB)",
+    "agreeTerms": "I agree to the processing of my personal data and accept the privacy policy",
+    "cancel": "Cancel",
+    "submitting": "Submitting...",
+    "submitApplication": "Submit Application",
+    "applicationSuccess": {
+      "title": "Application Submitted!",
+      "message": "Thank you for applying. We will review your application and contact you soon."
+    },
+    "close": "Close",
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Email is invalid",
+      "phoneRequired": "Phone number is required",
+      "resumeRequired": "Resume is required",
+      "agreeTerms": "You must agree to the terms"
+    }
+  }
 
 }

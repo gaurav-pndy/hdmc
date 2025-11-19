@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
@@ -9,91 +9,134 @@ import {
   FaAward,
   FaGraduationCap,
   FaChalkboardTeacher,
+  FaSpinner,
+  FaVideo,
+  FaUser,
+  FaClinicMedical,
 } from "react-icons/fa";
-import { doctorsData } from "../data/doctors";
-import { i } from "framer-motion/client";
 import { MdWork } from "react-icons/md";
 import { GiDiploma } from "react-icons/gi";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3003/api";
+
 const DoctorDetails = ({ setShowPopup }) => {
   const { doctorId } = useParams();
-  const { t } = useTranslation();
-  const doctor = doctorsData.find((doc) => doc.id === doctorId);
-  if (!doctor) {
-    return (
-      <div className="max-w-5xl mx-auto mt-10 p-8 text-center">
-        <div className="text-brand1 text-xl font-semibold">
-          {t("doctors.notFound")}
-        </div>
-      </div>
-    );
-  }
-
+  const { t, i18n } = useTranslation();
+  const [doctor, setDoctor] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [expanded, setExpanded] = useState();
 
-  const name = t(doctor.name);
-  const location = t(doctor.location);
-  const tags = t(doctor.tags, { returnObjects: true });
-  const langs = t(doctor.langs);
-  const descHtml = t(doctor.desc);
-  let aboutText;
-  if (doctor.aboutText) {
-    aboutText = t(doctor.aboutText);
-  }
-  let memberships;
-  if (doctor.memberships) {
-    memberships = t(doctor.memberships, { returnObjects: true });
-  }
-  let membershipInt;
-  let membershipRus;
-  if (doctor.membershipInt && doctor.membershipRus) {
-    membershipInt = t(doctor.membershipInt, { returnObjects: true });
-    membershipRus = t(doctor.membershipRus, { returnObjects: true });
-  }
-  let awards;
-  if (doctor.awards) {
-    awards = t(doctor.awards, { returnObjects: true });
-  }
-  let education;
-  let experience;
-  if (doctor.education) {
-    education = t(doctor.education, { returnObjects: true });
-  }
-  if (doctor.experience) {
-    experience = t(doctor.experience, { returnObjects: true });
-  }
-  let skills;
-  if (doctor.skills) {
-    skills = t(doctor.skills, { returnObjects: true });
-  }
-  let qualifications;
-  if (doctor.qualifications) {
-    qualifications = t(doctor.qualifications, { returnObjects: true });
-  }
-  let reviews = [];
-  if (doctor.reviews) {
-    reviews = t(doctor.reviews, { returnObjects: true });
-  }
-  let videos;
-  if (doctor.videos) {
-    videos = doctor.videos;
-  }
-  let scientific;
-  if (doctor.scientific) {
-    scientific = t(doctor.scientific);
-  }
-  let medExp;
-  let services;
-  let cost;
-  if (doctor.medExp) {
-    medExp = t(doctor.medExp);
-  }
-  if (doctor.services) {
-    services = t(doctor.services);
-  }
-  if (doctor.cost) {
-    cost = t(doctor.cost);
-  }
+  // Fetch doctor data from backend
+  useEffect(() => {
+    const fetchDoctor = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${API_BASE}/website/doctors/${doctorId}`);
+
+        if (!response.ok) throw new Error("Failed to fetch doctor");
+
+        const result = await response.json();
+
+        if (result.success) {
+          setDoctor(result.data);
+        } else {
+          throw new Error(result.error);
+        }
+      } catch (err) {
+        setError(err.message);
+        console.error("Error fetching doctor:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDoctor();
+  }, [doctorId]);
+
+  // Helper function to get localized field from backend data
+  const getLocalizedField = (field, fallback = "") => {
+    if (!field) return fallback;
+    return field[i18n.language] || field.en || field.ru || fallback;
+  };
+
+  // Format doctor data for display
+  const formatDoctorData = (doc) => {
+    if (!doc) return null;
+
+    const fullName = `${getLocalizedField(doc.firstName)} ${getLocalizedField(
+      doc.lastName
+    )}`.trim();
+    const specialty = getLocalizedField(doc.specialty);
+    const location = getLocalizedField(doc.location);
+    const about = getLocalizedField(doc.about);
+    const position = getLocalizedField(doc.position);
+    const workExperience = getLocalizedField(doc.workExperience);
+    const education = getLocalizedField(doc.education);
+    const advancedTraining = getLocalizedField(doc.advancedTraining);
+    const scientificActivities = getLocalizedField(doc.scientificActivities);
+    const internationalMemberships = getLocalizedField(
+      doc.internationalMemberships
+    );
+    const russianMemberships = getLocalizedField(doc.russianMemberships);
+    const awards = getLocalizedField(doc.awards);
+    const regalia = getLocalizedField(doc.regalia);
+
+    // Get branches
+    const branches = doc.branches
+      ? doc.branches
+          .map((branch) => getLocalizedField(branch))
+          .filter(Boolean)
+          .join(", ")
+      : "";
+
+    // Create tags from specialty and subSpecialties
+    const tags = [specialty];
+    if (doc.subSpecialties && doc.subSpecialties.length > 0) {
+      tags.push(
+        ...doc.subSpecialties
+          .map((sub) => getLocalizedField(sub))
+          .filter(Boolean)
+      );
+    }
+
+    // Format languages
+    const languages = doc.languages
+      ? doc.languages
+          .map((lang) => getLocalizedField(lang))
+          .filter(Boolean)
+          .join(", ")
+      : "";
+
+    return {
+      id: doc.id || doc._id,
+      name: fullName,
+      specialty,
+      location,
+      branches,
+      about,
+      position,
+      workExperience,
+      education,
+      advancedTraining,
+      scientificActivities,
+      internationalMemberships,
+      russianMemberships,
+      awards,
+      regalia,
+      tags: tags.filter((tag) => tag && tag.trim() !== ""),
+      languages,
+      image: doc.imageUrl || doc.photo || "/default-doctor.jpg",
+      profilePicture: doc.profilePicture,
+      reviewStats: doc.reviewStats,
+      fees: `${doc.feesAmount} ${doc.currency}`,
+      services: doc.services,
+      reviews: doc.reviews || [],
+      videoUrl: doc.videoUrl || [],
+    };
+  };
+
+  const formattedDoctor = doctor ? formatDoctorData(doctor) : null;
 
   const TAB_LIST = [
     { key: "about", labelKey: "doctors.tabs.tab1" },
@@ -116,7 +159,7 @@ const DoctorDetails = ({ setShowPopup }) => {
     const target = sectionRefs[key]?.current;
     if (target) {
       const topOffset =
-        target.getBoundingClientRect().top + window.scrollY - 200; // 100px top margin
+        target.getBoundingClientRect().top + window.scrollY - 200;
       window.scrollTo({
         top: topOffset,
         behavior: "smooth",
@@ -124,19 +167,140 @@ const DoctorDetails = ({ setShowPopup }) => {
     }
   };
 
+  // Custom CSS for rich text content
+  const richTextStyles = `
+    .prose ul { 
+      list-style-type: disc; 
+      margin-left: 1.5rem; 
+      margin-bottom: 1rem;
+    }
+    .prose ol { 
+      list-style-type: decimal; 
+      margin-left: 1.5rem; 
+      margin-bottom: 1rem;
+    }
+    .prose li { 
+      margin-bottom: 0.5rem; 
+      line-height: 1.6;
+    }
+    .prose strong { 
+      font-weight: 600; 
+      color: #125e84;
+    }
+    .prose em { 
+      font-style: italic; 
+      color: #666;
+    }
+    .prose h2 { 
+      font-size: 1.5rem; 
+      font-weight: 600; 
+      color: #125e84; 
+      margin-top: 1.5rem; 
+      margin-bottom: 1rem;
+    }
+    .prose h3 { 
+      font-size: 1.25rem; 
+      font-weight: 600; 
+      color: #33babd; 
+      margin-top: 1.25rem; 
+      margin-bottom: 0.75rem;
+    }
+    .prose p { 
+      margin-bottom: 1rem; 
+      line-height: 1.6;
+    }
+    .prose a { 
+      color: #33babd; 
+      text-decoration: underline;
+    }
+    .prose blockquote {
+      border-left: 4px solid #33babd;
+      padding-left: 1rem;
+      margin-left: 0;
+      font-style: italic;
+      color: #666;
+    }
+  `;
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-white to-brand4/10 py-12 flex justify-center items-center">
+        <div className="text-center">
+          <FaSpinner className="animate-spin text-4xl text-brand1 mx-auto mb-4" />
+          <p className="text-brand1 text-lg">Loading doctor profile...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error || !formattedDoctor) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-white to-brand4/10 py-12 flex justify-center items-center">
+        <div className="text-center text-red-600">
+          <p className="mb-4">Error loading doctor profile: {error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-2 bg-brand1 text-white rounded-lg hover:bg-brand5/90 transition-colors"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-brand4/10 py-12">
+      {/* Inject custom styles for rich text content */}
+      <style dangerouslySetInnerHTML={{ __html: richTextStyles }} />
+
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10">
         {/* Sticky/fixed doctor card */}
         <aside className="md:w-80 flex-shrink-0 mb-8 md:mb-0">
           <div className="md:sticky md:top-48 flex flex-col items-center">
-            <div className="bg-white rounded-2xl shadow-xl border border-brand4/10 overflow-hidden mb-6 w-full">
+            <div className="bg-white rounded-2xl shadow-xl border border-brand4/10 overflow-hidden mb-6 w-full relative">
               <img
-                src={doctor.image}
-                alt={name}
+                src={formattedDoctor.image}
+                alt={formattedDoctor.name}
                 className="w-full h-full object-cover aspect-square rounded-2xl"
+                onError={(e) => {
+                  e.target.src = "/doctors.png";
+                  e.target.className =
+                    "w-full h-full object-cover aspect-square rounded-2xl bg-gray-200";
+                }}
               />
             </div>
+
+            {/* Rating */}
+            {formattedDoctor.reviewStats &&
+              formattedDoctor.reviewStats.averageRating > 0 && (
+                <div className="flex items-center justify-center mb-4 w-full bg-white rounded-xl p-4 shadow-md">
+                  <div className="flex items-center gap-2">
+                    <div className="flex text-yellow-400">
+                      {"★".repeat(
+                        Math.floor(formattedDoctor.reviewStats.averageRating)
+                      )}
+                      {"☆".repeat(
+                        5 -
+                          Math.floor(formattedDoctor.reviewStats.averageRating)
+                      )}
+                    </div>
+                    <span className="text-brand1 font-semibold">
+                      {formattedDoctor.reviewStats.averageRating.toFixed(1)}
+                    </span>
+                    <span className="text-brand1/70 text-sm">
+                      ({formattedDoctor.reviewStats.totalReviews} review
+                      {formattedDoctor.reviewStats.totalReviews !== 1
+                        ? "s"
+                        : ""}
+                      )
+                    </span>
+                  </div>
+                </div>
+              )}
+
             <button
               onClick={() => setShowPopup(true)}
               className="w-full bg-brand1 text-white rounded-2xl py-3 font-semibold text-lg mb-2 hover:bg-brand5 transition-all shadow"
@@ -154,27 +318,34 @@ const DoctorDetails = ({ setShowPopup }) => {
           <div className="bg-white rounded-3xl shadow-xl border border-brand4/10 px-6 md:px-10 py-8">
             <div className="flex">
               <h1 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand1 mb-4">
-                {name}
+                {formattedDoctor.name}
               </h1>
               <p className="flex-1 text-right whitespace-nowrap text-brand1/80 text-lg font-semibold">
-                {" "}
-                {reviews.length} {t("doctors.reviews")}
+                {formattedDoctor.reviews.length} {t("doctors.reviews")}
               </p>
             </div>
+
+            {/* Position */}
+            {formattedDoctor.position && (
+              <p className="text-brand1 text-xl font-medium mb-4">
+                {formattedDoctor.position}
+              </p>
+            )}
+
             <div className="flex flex-wrap gap-2 mb-4">
-              {Array.isArray(tags)
-                ? tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-4 py-1.5 bg-brand4/20 text-brand1 rounded-full text-base font-semibold border border-brand4/30"
-                    >
-                      {tag}
-                    </span>
-                  ))
-                : null}
+              {formattedDoctor.tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-1.5 bg-brand4/20 text-brand1 rounded-full text-base font-semibold border border-brand4/30"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
+
             {/* Info cards with icons and brand colors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              {/* Location/Branch Card */}
               <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
                 <div className="flex items-center justify-center w-10 md:w-12 h-10 md:h-12 from-[#125e84] to-[#33babd] bg-gradient-to-br rounded-xl">
                   <FaMapMarkerAlt className="text-white text-2xl" />
@@ -184,10 +355,17 @@ const DoctorDetails = ({ setShowPopup }) => {
                     {t("doctors.location")}
                   </div>
                   <div className="text-brand1 md:text-lg font-medium">
-                    {location}
+                    {formattedDoctor.location}
                   </div>
+                  {formattedDoctor.branches && (
+                    <div className="text-xs text-brand1/70 mt-1">
+                      <strong>Branches:</strong> {formattedDoctor.branches}
+                    </div>
+                  )}
                 </div>
               </div>
+
+              {/* Languages Card */}
               <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
                 <div className="flex items-center justify-center w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#c668a9] to-[#af6ca5] rounded-xl">
                   <FaLanguage className="text-white text-2xl" />
@@ -197,38 +375,63 @@ const DoctorDetails = ({ setShowPopup }) => {
                     {t("doctors.languages")}
                   </div>
                   <div className="text-brand1 md:text-lg font-medium">
-                    {langs}
+                    {formattedDoctor.languages}
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="max-w-xl my-10 space-y-4 text-lg">
-              {medExp && (
-                <div className="flex items-start gap-3">
-                  <span className="font-semibold text-brand1 whitespace-nowrap">
-                    {t("doctors.medExp")}:
-                  </span>
-                  <span className="text-brand1/80 text-lg">{medExp}</span>
+
+              {/* Services Card */}
+              {(formattedDoctor.services?.online ||
+                formattedDoctor.services?.offline) && (
+                <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
+                  <div className="flex items-center justify-center w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-xl">
+                    <FaVideo className="text-white text-2xl" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-brand1/60 uppercase tracking-wide mb-1">
+                      Services
+                    </div>
+                    <div className="space-y-1">
+                      {formattedDoctor.services?.online && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <span className="text-brand1 text-sm font-medium">
+                            Remote Consultation
+                          </span>
+                        </div>
+                      )}
+                      {formattedDoctor.services?.offline && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                          <span className="text-brand1 text-sm font-medium">
+                            In-Person Consultation
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               )}
-              {services && (
-                <div className="flex items-start gap-3 ">
-                  <span className="font-semibold text-brand1 whitespace-nowrap">
-                    {t("doctors.services")}:
-                  </span>
-                  <span className="text-brand1/80 text-lg">{services}</span>
-                </div>
-              )}
-              {cost && (
-                <div className="flex items-start gap-3 ">
-                  <span className="font-semibold text-brand1 whitespace-nowrap">
-                    {t("doctors.cost")}:
-                  </span>
-                  <span className="text-brand1/80 text-lg">{cost}</span>
+
+              {/* Branches Card (if location is empty) */}
+              {!formattedDoctor.location && formattedDoctor.branches && (
+                <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
+                  <div className="flex items-center justify-center w-10 md:w-12 h-10 md:h-12 bg-gradient-to-br from-[#34d399] to-[#10b981] rounded-xl">
+                    <FaClinicMedical className="text-white text-2xl" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-brand1/60 uppercase tracking-wide mb-1">
+                      Branches
+                    </div>
+                    <div className="text-brand1 md:text-lg font-medium">
+                      {formattedDoctor.branches}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
           </div>
+
           <div className="mt-8 bg-white rounded-3xl shadow-xl border border-brand4/10 px-6 md:px-10 py-8">
             {/* Tab navigation */}
             <nav className="flex gap-6 mb-5 overflow-x-auto scrollbar-none px-2">
@@ -242,49 +445,23 @@ const DoctorDetails = ({ setShowPopup }) => {
                 </button>
               ))}
             </nav>
-            {/* Tab sections (IDs/refs for scroll target) */}
+
+            {/* About Section */}
             <section ref={sectionRefs.about} className="pt-2 pb-6 scroll-mt-28">
               <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab1")}
               </h2>
               <div className="text-gray-700">
-                <div
-                  className=""
-                  dangerouslySetInnerHTML={{ __html: aboutText }}
-                ></div>
-
-                {membershipInt && membershipRus && (
-                  <div className="mt-8">
-                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
-                      <span className="bg-brand3 p-2.5 rounded-lg">
-                        <FaUserTie className="shrink-0 text-2xl text-white" />
-                      </span>{" "}
-                      {t("doctors.membershipsTitle")}
-                    </h2>
-                    <h3 className="text-lg  text-black font-semibold  mb-2">
-                      {t("doctors.international")}
-                    </h3>
-                    <ul className="space-y-2">
-                      {membershipInt.map((item, i) => (
-                        <li key={i} className="">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <h3 className="text-lg text-black  font-semibold  mb-2 mt-6">
-                      {t("doctors.russian")}
-                    </h3>
-                    <ul className="space-y-2">
-                      {membershipRus.map((item, i) => (
-                        <li key={i} className="">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {formattedDoctor.about && (
+                  <div
+                    className="prose max-w-none"
+                    dangerouslySetInnerHTML={{ __html: formattedDoctor.about }}
+                  />
                 )}
 
-                {memberships && (
+                {/* Professional Memberships */}
+                {(formattedDoctor.internationalMemberships ||
+                  formattedDoctor.russianMemberships) && (
                   <div className="mt-8">
                     <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
                       <span className="bg-brand3 p-2.5 rounded-lg">
@@ -293,17 +470,38 @@ const DoctorDetails = ({ setShowPopup }) => {
                       {t("doctors.membershipsTitle")}
                     </h2>
 
-                    <ul className="space-y-2">
-                      {memberships.map((item, i) => (
-                        <li key={i} className="">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    {formattedDoctor.internationalMemberships && (
+                      <>
+                        <h3 className="text-lg text-black font-semibold mb-2">
+                          {t("doctors.international")}
+                        </h3>
+                        <div
+                          className="prose max-w-none"
+                          dangerouslySetInnerHTML={{
+                            __html: formattedDoctor.internationalMemberships,
+                          }}
+                        />
+                      </>
+                    )}
+
+                    {formattedDoctor.russianMemberships && (
+                      <>
+                        <h3 className="text-lg text-black font-semibold mb-2 mt-6">
+                          {t("doctors.russian")}
+                        </h3>
+                        <div
+                          className="prose max-w-none"
+                          dangerouslySetInnerHTML={{
+                            __html: formattedDoctor.russianMemberships,
+                          }}
+                        />
+                      </>
+                    )}
                   </div>
                 )}
 
-                {awards && (
+                {/* Awards */}
+                {formattedDoctor.awards && (
                   <div className="mt-8">
                     <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
                       <span className="bg-brand3 p-2.5 rounded-lg">
@@ -311,27 +509,31 @@ const DoctorDetails = ({ setShowPopup }) => {
                       </span>{" "}
                       {t("doctors.awardsTitle")}
                     </h2>
-                    <ul>
-                      {awards.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div
+                      className="prose max-w-none"
+                      dangerouslySetInnerHTML={{
+                        __html: formattedDoctor.awards,
+                      }}
+                    />
                   </div>
                 )}
 
-                <div className="mt-8">
-                  <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
-                    <span className="bg-brand3 p-2.5 rounded-lg">
-                      <FaLanguage className="shrink-0 text-2xl text-white" />
-                    </span>{" "}
-                    {t("doctors.langsTitle")}
-                  </h2>
-                  <p>{langs}</p>
-                </div>
+                {/* Regalia */}
+                {formattedDoctor.regalia && (
+                  <div className="mt-8">
+                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
+                      <span className="bg-brand3 p-2.5 rounded-lg">
+                        <GiDiploma className="shrink-0 text-2xl text-white" />
+                      </span>{" "}
+                      {t("doctors.regaliaTitle")}
+                    </h2>
+                    <p>{formattedDoctor.regalia}</p>
+                  </div>
+                )}
               </div>
             </section>
+
+            {/* Experience & Education Section */}
             <section
               ref={sectionRefs.experience}
               className="pt-2 pb-6 scroll-mt-28 mt-16"
@@ -339,78 +541,61 @@ const DoctorDetails = ({ setShowPopup }) => {
               <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab2")}
               </h2>
-              <div className="text-gray-700 ">
-                {experience && (
-                  <div className="">
+              <div className="text-gray-700">
+                {formattedDoctor.workExperience && (
+                  <div className="mb-8">
                     <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
                       <span className="bg-brand3 p-2.5 rounded-lg">
                         <MdWork className="shrink-0 text-2xl text-white" />
                       </span>{" "}
                       {t("doctors.expTitle")}
                     </h2>
-                    <ul>
-                      {experience.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div
+                      className="prose max-w-none"
+                      dangerouslySetInnerHTML={{
+                        __html: formattedDoctor.workExperience,
+                      }}
+                    />
                   </div>
                 )}
 
-                {education && (
-                  <div className="mt-8">
+                {formattedDoctor.education && (
+                  <div className="mb-8">
                     <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
                       <span className="bg-brand3 p-2.5 rounded-lg">
                         <FaGraduationCap className="shrink-0 text-2xl text-white" />
                       </span>{" "}
                       {t("doctors.eduTitle")}
                     </h2>
-                    <ul>
-                      {education.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div
+                      className="prose max-w-none"
+                      dangerouslySetInnerHTML={{
+                        __html: formattedDoctor.education,
+                      }}
+                    />
                   </div>
                 )}
-                {qualifications && (
-                  <div className="mt-8">
-                    <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
-                      <span className="bg-brand3 p-2.5 rounded-lg">
-                        <GiDiploma className="shrink-0 text-2xl text-white" />
-                      </span>{" "}
-                      {t("doctors.qualTitle")}
-                    </h2>
-                    <ul>
-                      {qualifications.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {skills && (
-                  <div className="mt-8">
+
+                {formattedDoctor.advancedTraining && (
+                  <div className="mb-8">
                     <h2 className="font-semibold flex items-center gap-2 md:gap-4 text-[1.6rem] mb-5 text-brand1">
                       <span className="bg-brand3 p-2.5 rounded-lg">
                         <FaChalkboardTeacher className="shrink-0 text-2xl text-white" />
                       </span>{" "}
-                      {t("doctors.skillsTitle")}
+                      {t("doctors.advancedTrainingTitle")}
                     </h2>
-                    <ul>
-                      {skills.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div
+                      className="prose max-w-none"
+                      dangerouslySetInnerHTML={{
+                        __html: formattedDoctor.advancedTraining,
+                      }}
+                    />
                   </div>
                 )}
               </div>
             </section>
+
+            {/* Scientific Activities Section */}
             <section
               ref={sectionRefs.activities}
               className="pt-2 pb-6 scroll-mt-28 mt-16"
@@ -418,13 +603,17 @@ const DoctorDetails = ({ setShowPopup }) => {
               <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab3")}
               </h2>
-              {scientific && (
+              {formattedDoctor.scientificActivities && (
                 <div
-                  className="text-gray-700"
-                  dangerouslySetInnerHTML={{ __html: scientific }}
-                ></div>
+                  className="prose max-w-none text-gray-700"
+                  dangerouslySetInnerHTML={{
+                    __html: formattedDoctor.scientificActivities,
+                  }}
+                />
               )}
             </section>
+
+            {/* Reviews Section */}
             <section
               ref={sectionRefs.reviews}
               className="pt-2 pb-6 scroll-mt-28 mt-16"
@@ -432,9 +621,9 @@ const DoctorDetails = ({ setShowPopup }) => {
               <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab4")}
               </h2>
-              {reviews.length > 0 && (
+              {formattedDoctor.reviews.length > 0 ? (
                 <div className="space-y-6 mt-6">
-                  {reviews.map((review, i) => {
+                  {formattedDoctor.reviews.map((review, i) => {
                     const isExpanded = expanded === i;
                     return (
                       <div
@@ -443,9 +632,13 @@ const DoctorDetails = ({ setShowPopup }) => {
                       >
                         <div className="flex items-center justify-between mb-2">
                           <h3 className="font-semibold text-lg text-brand1">
-                            {review.name}
+                            {review.patientName}
                           </h3>
-                          {/* <p className="text-sm text-gray-500">{review.date}</p> */}
+                          {review.date && (
+                            <p className="text-sm text-gray-500">
+                              {new Date(review.date).toLocaleDateString()}
+                            </p>
+                          )}
                         </div>
 
                         <div className="flex items-center gap-1 mb-3">
@@ -454,7 +647,11 @@ const DoctorDetails = ({ setShowPopup }) => {
                             .map((_, index) => (
                               <FaStar
                                 key={index}
-                                className="text-yellow-400 text-lg"
+                                className={`text-lg ${
+                                  index < review.rating
+                                    ? "text-yellow-400"
+                                    : "text-gray-300"
+                                }`}
                               />
                             ))}
                         </div>
@@ -464,23 +661,30 @@ const DoctorDetails = ({ setShowPopup }) => {
                             isExpanded ? "line-clamp-none" : "line-clamp-4"
                           }`}
                         >
-                          {review.text}
+                          {review.description}
                         </p>
 
-                        {review.text.length > 200 && (
-                          <button
-                            onClick={() => setExpanded(isExpanded ? null : i)}
-                            className="mt-2 cursor-pointer font-medium hover:underline focus:outline-none"
-                          >
-                            {isExpanded ? t("showLess") : t("readMore")}
-                          </button>
-                        )}
+                        {review.description &&
+                          review.description.length > 200 && (
+                            <button
+                              onClick={() => setExpanded(isExpanded ? null : i)}
+                              className="mt-2 cursor-pointer font-medium hover:underline focus:outline-none"
+                            >
+                              {isExpanded ? t("showLess") : t("readMore")}
+                            </button>
+                          )}
                       </div>
                     );
                   })}
                 </div>
+              ) : (
+                <p className="text-gray-500 text-center py-8">
+                  {t("doctors.noReviews")}
+                </p>
               )}
             </section>
+
+            {/* Video Section */}
             <section
               ref={sectionRefs.video}
               className="pt-2 pb-2 scroll-mt-28 mt-16"
@@ -488,9 +692,10 @@ const DoctorDetails = ({ setShowPopup }) => {
               <h2 className="text-xl border-b pb-2 border-brand5 md:text-4xl font-semibold text-brand1 mb-10">
                 {t("doctors.tabs.tab5")}
               </h2>
-              {videos && (
+              {formattedDoctor.videoUrl &&
+              formattedDoctor.videoUrl.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                  {videos.map((video, i) => (
+                  {formattedDoctor.videoUrl.map((video, i) => (
                     <div
                       key={i}
                       className="aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
@@ -504,6 +709,10 @@ const DoctorDetails = ({ setShowPopup }) => {
                     </div>
                   ))}
                 </div>
+              ) : (
+                <p className="text-gray-500 text-center py-8">
+                  {t("doctors.noVideos")}
+                </p>
               )}
             </section>
           </div>

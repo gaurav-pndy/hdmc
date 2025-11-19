@@ -13,6 +13,7 @@
     "@headlessui/react": "^2.2.9",
     "@pbe/react-yandex-maps": "^1.2.5",
     "@tailwindcss/vite": "^4.1.13",
+    "dotenv": "^17.2.3",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.22",
     "i18next": "^25.5.2",

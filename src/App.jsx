@@ -18,6 +18,7 @@ import ExpertiseDirection from "./pages/ExpertiseDirection";
 import { useState } from "react";
 import Reviews from "./pages/Reviews";
 import AboutDiseases from "./pages/AboutDiseases";
+import CareersPage from "./pages/CareersPage";
 
 function App() {
   const [city, setCity] = useState("Moscow");
@@ -84,6 +85,10 @@ function App() {
         {
           path: "/about-diseases/:newsId",
           element: <AboutDiseases />,
+        },
+        {
+          path: "/vacancies",
+          element: <CareersPage setShowPopup={setShowPopup} />,
         },
         {
           path: "/leave-a-feedback",
