@@ -1,253 +1,145 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaSpinner } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FiFilter, FiSearch } from "react-icons/fi";
-import { doctorsData } from "../../data/doctors";
 import { Link } from "react-router-dom";
 import WaveBackground from "../WaveBackground";
-import { specializationsData } from "../../data/specializations";
+
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
 
 const DoctorsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [type, setType] = useState("All");
   const [specialization, setSpecialization] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [doctors, setDoctors] = useState([]);
+  const [specializations, setSpecializations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Helper to get a translated value (array or string)
-  const getT = (key) => {
-    const value = t(key, { returnObjects: true });
-    return Array.isArray(value) ? value : String(value).split("<br/>");
-  };
+  // Fetch doctors data from backend
+  const fetchDoctors = async () => {
+    try {
+      setLoading(true);
+      const params = new URLSearchParams();
 
-  // Prepare doctor list with translations
-  const cards = doctorsData.map((doc) => ({
-    ...doc,
-    name: t(doc.name),
-    location: t(doc.location),
-    tags: getT(doc.tags),
-    langs: t(doc.langs),
-    desc: getT(doc.desc).join(" "),
-  }));
+      if (type !== "All") params.append("type", type);
+      if (specialization !== "All")
+        params.append("specialization", specialization);
+      if (searchTerm) params.append("search", searchTerm);
+      params.append("language", i18n.language);
+      params.append("page", "1");
+      params.append("limit", "12"); // Limit for homepage section
 
-  // Filtering logic
+      const response = await fetch(`${API_BASE}/website/doctors?${params}`);
+      if (!response.ok) throw new Error("Failed to fetch doctors");
 
-  const specializations = [
-    {
-      label: t("header.doctorsDrop.d1"),
-      subItems: [
-        {
-          category: t("header.doctorsDrop.subItems.h1"),
-          items: [
-            {
-              label: t("header.doctorsDrop.subItems.s1"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s2"),
-              path: "/doctors/radiotherapist",
-            },
-          ],
-        },
-        {
-          category: t("header.doctorsDrop.subItems.h2"),
-          items: [
-            {
-              label: t("header.doctorsDrop.subItems.s3"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s4"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s5"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s6"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s7"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s8"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s9"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s10"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s11"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s12"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s13"),
-              path: "/doctors",
-            },
-            {
-              label: t("header.doctorsDrop.subItems.s14"),
-              path: "/doctors",
-            },
-            { label: t("header.doctorsDrop.subItems.s15"), path: "/doctors" },
-          ],
-        },
-      ],
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d2"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d3"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d4"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d5"),
-    },
+      const result = await response.json();
 
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d7"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d8"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d9"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d10"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d11"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d12"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d13"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d14"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d15"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d16"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d17"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d18"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d19"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d20"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d21"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d22"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d23"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d24"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d25"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d26"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d27"),
-    },
-    {
-      path: "/doctors",
-      label: t("header.doctorsDrop.d28"),
-    },
-  ];
-
-  // Helper to flatten nested specialization structure and return all unique labels
-  const getAllSpecializationObjects = (specializations) => {
-    const result = [];
-
-    const traverse = (node) => {
-      if (!node) return;
-      if (node.label && !node.subItems && !node.items) result.push(node.label);
-      if (node.items && Array.isArray(node.items)) node.items.forEach(traverse);
-      if (node.subItems && Array.isArray(node.subItems))
-        node.subItems.forEach(traverse);
-    };
-
-    // Start from subItems of the first, skipping root heading, and also add others as before
-    if (specializations[0]?.subItems) {
-      specializations[0].subItems.forEach(traverse);
+      if (result.success) {
+        setDoctors(result.data || []);
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (err) {
+      setError(err.message);
+      console.error("Error fetching doctors:", err);
+    } finally {
+      setLoading(false);
     }
-    specializations.slice(1).forEach(traverse);
-
-    // Remove duplicates, then create objects with sequential ID and label
-    const uniqueLabels = Array.from(new Set(result));
-    return uniqueLabels.map((label, idx) => ({
-      id: `specialization${idx + 1}`,
-      label,
-    }));
   };
 
-  const specializationOptions = getAllSpecializationObjects(specializations);
+  // Fetch specializations data from backend
+  const fetchSpecializations = async () => {
+    try {
+      const response = await fetch(
+        `${API_BASE}/website/doctors/specializations?language=${i18n.language}`
+      );
+      if (!response.ok) throw new Error("Failed to fetch specializations");
 
-  const idToLabelMap = Object.fromEntries(
-    specializationOptions.map((opt) => [opt.id, opt.label])
-  );
+      const result = await response.json();
 
+      if (result.success) {
+        setSpecializations(result.data || []);
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (err) {
+      console.error("Error fetching specializations:", err);
+      setSpecializations([]);
+    }
+  };
+
+  // Initial data fetch
+  useEffect(() => {
+    fetchDoctors();
+    fetchSpecializations();
+  }, [i18n.language]);
+
+  // Refetch when filters change with debounce
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      fetchDoctors();
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [type, specialization, searchTerm, i18n.language]);
+
+  // Helper function to get localized field from backend data
+  const getLocalizedField = (field, fallback = "") => {
+    if (!field) return fallback;
+    return field[i18n.language] || field.en || field.ru || fallback;
+  };
+
+  // Prepare doctor cards for display from backend data
+  const cards = doctors.map((doc) => {
+    const fullName = `${getLocalizedField(doc.firstName)} ${getLocalizedField(
+      doc.lastName
+    )}`.trim();
+    const specialty = getLocalizedField(doc.specialty);
+    const location = getLocalizedField(doc.location);
+    const about = getLocalizedField(doc.about);
+    const position = getLocalizedField(doc.position);
+
+    // Create tags from specialty and subSpecialties
+    const tags = [specialty];
+    if (doc.subSpecialties && doc.subSpecialties.length > 0) {
+      tags.push(
+        ...doc.subSpecialties
+          .map((sub) => getLocalizedField(sub))
+          .filter(Boolean)
+      );
+    }
+
+    // Format languages
+    const languages = doc.languages
+      ? doc.languages
+          .map((lang) => getLocalizedField(lang))
+          .filter(Boolean)
+          .join(", ")
+      : "";
+
+    return {
+      id: doc.id || doc._id,
+      name: fullName,
+      specialty,
+      location,
+      about,
+      position,
+      tags: tags.filter((tag) => tag && tag.trim() !== ""),
+      languages,
+      image: doc.imageUrl || "/default-doctor.jpg",
+      type: doc.services?.online ? "remote" : "personal", // Determine type based on services
+      fees: doc.feesAmount ? `${doc.feesAmount} ${doc.currency || ''}` : "",
+    };
+  });
+
+  // Filter doctors based on type
   const filteredDoctors = cards.filter((doc) => {
     const matchesType =
       type === "All" ||
@@ -255,16 +147,47 @@ const DoctorsSection = () => {
       (type === "Remote" && doc.type === "remote");
 
     const matchesSpecialization =
-      !specialization || // initial state, possibly undefined
       specialization === "All" ||
-      (doc.tags && doc.tags.includes(idToLabelMap[specialization]));
+      (doc.tags && doc.tags.some(tag => 
+        specializations.some(spec => spec.label === tag && spec.id === specialization)
+      ));
 
     const matchesSearch =
       doc.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doc.desc.toLowerCase().includes(searchTerm.toLowerCase());
+      doc.about.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doc.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
     return matchesType && matchesSpecialization && matchesSearch;
   });
+
+  // Loading state
+  if (loading && doctors.length === 0) {
+    return (
+      <section className="w-full py-16 flex justify-center items-center min-h-96">
+        <div className="text-center">
+          <FaSpinner className="animate-spin text-4xl text-brand1 mx-auto mb-4" />
+          <p className="text-brand1 text-lg">{t("loading") || "Loading doctors..."}</p>
+        </div>
+      </section>
+    );
+  }
+
+  // Error state
+  if (error && doctors.length === 0) {
+    return (
+      <section className="w-full py-16 flex justify-center items-center min-h-96">
+        <div className="text-center text-red-600">
+          <p className="mb-4">{t("error") || "Error"}: {error}</p>
+          <button
+            onClick={fetchDoctors}
+            className="px-6 py-2 bg-brand1 text-white rounded-lg hover:bg-brand5/90 transition-colors"
+          >
+            {t("tryAgain") || "Try Again"}
+          </button>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -272,14 +195,14 @@ const DoctorsSection = () => {
       className="w-full py-16 flex flex-col items-start max-w-[87rem] px-4 mx-auto"
     >
       {/* --- Header --- */}
-      <section className="relative rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
+      <section className="relative rounded-xl mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
         <WaveBackground
           stroke="rgba(51, 186, 189,"
           custStyle="md:w-1/2 h-[65%] right-0 bottom-0"
         />
 
-        <div className="w-full   h-full z-30 -mb-[1px] md:-mb-0">
-          <div className="relative w-full  h-full">
+        <div className="w-full h-full z-30 -mb-[1px] md:-mb-0">
+          <div className="relative w-full h-full">
             <video
               autoPlay
               loop
@@ -290,11 +213,11 @@ const DoctorsSection = () => {
               className="max-w-2xl w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
             />
             <div
-              className={`absolute   inset-0 bg-gradient-to-t via-30%  md:bg-gradient-to-l from-[#5279be] via-[#5279be]/40 to-transparent  `}
+              className={`absolute inset-0 bg-gradient-to-t via-30% md:bg-gradient-to-l from-[#5279be] via-[#5279be]/40 to-transparent`}
             ></div>
           </div>
         </div>
-        <div className="text-left md:text-right w-full md:min-h-96  h-full  p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
+        <div className="text-left md:text-right w-full md:min-h-96 h-full p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
           <h2 className="text-white z-40 text-4xl md:text-5xl font-bold mb-6">
             {t("doctors.title")}
           </h2>
@@ -352,9 +275,9 @@ const DoctorsSection = () => {
                 className="w-full border border-brand4/40 rounded-lg px-3 py-2.5 text-sm text-brand1 outline-none focus:border-brand1 transition-all bg-white"
               >
                 <option value="All">{t("doctors.filter.all")}</option>
-                {specializationOptions.map((opt) => (
+                {specializations.map((opt) => (
                   <option key={opt.id} value={opt.id}>
-                    {opt.label}
+                    {getLocalizedField(opt.label)}
                   </option>
                 ))}
               </select>
@@ -373,70 +296,133 @@ const DoctorsSection = () => {
         </button>
       </div>
 
+      {/* Loading state for filtered results */}
+      {loading && doctors.length > 0 && (
+        <div className="w-full flex justify-center py-8">
+          <FaSpinner className="animate-spin text-brand1 text-xl" />
+        </div>
+      )}
+
       {/* --- Swiper with Filtered Results --- */}
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 },
-          1380: { slidesPerView: 4 },
-        }}
-        className="w-full h-full overflow-visible mt-2"
-        navigation={{
-          prevEl: ".prev-btn",
-          nextEl: ".next-btn",
-        }}
-      >
-        {filteredDoctors.map((doc) => (
-          <SwiperSlide key={doc.id}>
-            <Link
-              to={`/doctors/${doc.id}`}
-              className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[30rem]"
-            >
-              <div className="flex-1 flex flex-col">
-                {/* Add avatar or doctor photo here if you have */}
-                <img
-                  src={doc.image}
-                  alt={doc.name}
-                  className="w-full h-64 object-cover object-top rounded-lg"
+      {filteredDoctors.length > 0 ? (
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 },
+            1380: { slidesPerView: 4 },
+          }}
+          className="w-full h-full overflow-visible mt-2"
+          navigation={{
+            prevEl: ".prev-btn",
+            nextEl: ".next-btn",
+          }}
+        >
+          {filteredDoctors.map((doc) => (
+            <SwiperSlide key={doc.id}>
+              <Link
+                to={`/doctors/${doc.id}`}
+                className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[30rem]"
+              >
+                <div className="flex-1 flex flex-col">
+                  <img
+                    src={doc.image}
+                    alt={doc.name}
+                    className="w-full h-64 object-cover object-top rounded-lg bg-gray-100"
+                    onError={(e) => {
+                      e.target.src = "/doctors.png";
+                    }}
+                  />
+                  <div className="font-bold text-black text-xl mt-4 mb-3">
+                    {doc.name}
+                  </div>
+                  {doc.position && (
+                    <p className="text-brand1 text-sm font-medium mb-3">
+                      {doc.position}
+                    </p>
+                  )}
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {doc.tags.slice(0, 3).map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                    {doc.tags.length > 3 && (
+                      <span className="px-2 py-1 rounded-full border border-brand4 text-black text-xs">
+                        +{doc.tags.length - 3}
+                      </span>
+                    )}
+                  </div>
+                  {doc.location && (
+                    <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
+                      <span className="flex items-center">
+                        <FaLocationDot className="mr-1" /> {doc.location}
+                      </span>
+                    </div>
+                  )}
+
+                  {/*
+                  {doc.languages && (
+                    <>
+                      <div className="text-brand1/60 text-xs">
+                        {t("doctors.languages")}:
+                      </div>
+                      <div className="text-brand1 text-sm font-medium">
+                        {doc.languages}
+                      </div>
+                    </>
+                  )}
+                    */}
+                </div>
+                <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
+                  {t("doctors.viewProfile")}
+                </button>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        !loading && (
+          <div className="w-full text-center py-12">
+            <div className="max-w-md mx-auto">
+              <svg
+                className="w-24 h-24 text-brand4/40 mx-auto mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"
                 />
-                <div className="font-bold text-black text-xl mt-4 mb-3">
-                  {doc.name}
-                </div>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {doc.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 rounded-full border border-brand4 text-black text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                {/* <div className="text-brand1 text-sm mb-3 line-clamp-2">
-                  {doc.desc}
-                </div> */}
-                {/* <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
-                  <span className="flex items-center">
-                    <FaLocationDot className="mr-1" /> {doc.location}
-                  </span>
-                </div>
-                <div className="text-brand1/60 text-xs">
-                  {t("doctors.languages")}:
-                </div>
-                <div className="text-brand1 text-sm font-medium">
-                  {doc.langs}
-                </div> */}
-              </div>
-              <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
-                {t("doctors.viewProfile")}
+              </svg>
+              <h3 className="text-brand1 text-xl font-semibold mb-2">
+                No doctors found
+              </h3>
+              <p className="text-brand1/70 mb-6">
+                No doctors match your current filters. Try adjusting your search criteria.
+              </p>
+              <button
+                onClick={() => {
+                  setType("All");
+                  setSpecialization("All");
+                  setSearchTerm("");
+                }}
+                className="px-6 py-2 bg-brand1 text-white rounded-lg hover:bg-brand5/90 transition-colors font-medium"
+              >
+                Reset All Filters
               </button>
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </div>
+          </div>
+        )
+      )}
 
       <div className="w-full mt-10 flex justify-center">
         <Link
