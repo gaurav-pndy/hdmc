@@ -7,7 +7,8 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://apimanager.health-direct.ru/api";
 
 const BlogDetails = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -56,8 +57,8 @@ const BlogDetails = () => {
   };
 
   const formatDate = (dateString) => {
-    if (!dateString) return t('blogDetails.noDate') || 'No date';
-    
+    if (!dateString) return t("blogDetails.noDate") || "No date";
+
     try {
       return new Date(dateString).toLocaleDateString(currentLanguage, {
         year: "numeric",
@@ -65,7 +66,7 @@ const BlogDetails = () => {
         day: "numeric",
       });
     } catch (error) {
-      console.error('Error formatting date:', error);
+      console.error("Error formatting date:", error);
       return dateString;
     }
   };
@@ -86,10 +87,7 @@ const BlogDetails = () => {
         <div className="text-red-500 text-lg">
           {t("blogDetails.error") || "Error"}: {error}
         </div>
-        <Link 
-          to="/news" 
-          className="ml-4 text-blue-600 hover:underline"
-        >
+        <Link to="/news" className="ml-4 text-blue-600 hover:underline">
           {t("blogDetails.backToNews") || "Back to News"}
         </Link>
       </div>
@@ -102,10 +100,7 @@ const BlogDetails = () => {
         <div className="text-gray-600 text-lg mb-4">
           {t("blogDetails.blogNotFound") || "Blog not found"}
         </div>
-        <Link 
-          to="/for-patients#blog" 
-          className="text-blue-600 hover:underline"
-        >
+        <Link to="/for-patients#blog" className="text-blue-600 hover:underline">
           {t("blogDetails.backToNews") || "Back to News"}
         </Link>
       </div>
@@ -180,7 +175,7 @@ const BlogDetails = () => {
           <div className="relative w-full h-full">
             {blog.image ? (
               <img
-                src={`${API_BASE_URL}${blog.image}`}
+                src={`${API_BASE}${blog.image}`}
                 alt={blog.title}
                 className="w-full max-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
                 onError={(e) => {
@@ -340,9 +335,7 @@ const BlogDetails = () => {
                     <span className="font-medium text-gray-600 block mb-2">
                       {t("blogDetails.tags") || "Tags"}:
                     </span>
-                    <p className="text-gray-800">
-                      {blog.tags.join(', ')}
-                    </p>
+                    <p className="text-gray-800">{blog.tags.join(", ")}</p>
                   </div>
                 )}
               </div>
