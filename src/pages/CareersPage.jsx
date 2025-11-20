@@ -60,6 +60,7 @@ const CareersPage = () => {
 
       const queryParams = new URLSearchParams({
         status: "published",
+        lang: i18n.language, // Pass current language to API
         ...filters,
       });
 
@@ -86,7 +87,7 @@ const CareersPage = () => {
 
   useEffect(() => {
     fetchVacancies();
-  }, [filters]);
+  }, [filters, i18n.language]); // Refetch when language changes
 
   // Check if vacancy is open for applications
   const isVacancyOpen = (vacancy) => {
@@ -169,6 +170,21 @@ const CareersPage = () => {
     });
   };
 
+  // Helper function to get localized text (handles both strings and objects)
+  const getLocalizedText = (data) => {
+    if (!data) return "";
+    
+    // If it's already a string (localized data from API)
+    if (typeof data === "string") return data;
+    
+    // If it's a multilingual object
+    if (typeof data === "object") {
+      return data[i18n.language] || data.en || "";
+    }
+    
+    return "";
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -176,7 +192,7 @@ const CareersPage = () => {
           <div className="text-center">
             <FaSpinner className="animate-spin text-4xl text-brand1 mx-auto mb-4" />
             <p className="text-lg text-gray-600">
-              Loading career opportunities...
+              {t("careersPage.loading", "Loading career opportunities...")}
             </p>
           </div>
         </div>
@@ -208,55 +224,14 @@ const CareersPage = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Stats Bar 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-200">
-            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaBriefcase className="text-blue-600 text-xl" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              {vacancies.length}
-            </h3>
-            <p className="text-gray-600">
-              {t("careersPage.openPositions", "Open Positions")}
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-200">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaUsers className="text-green-600 text-xl" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              {vacancies.reduce(
-                (total, vacancy) => total + (vacancy.applicationCount || 0),
-                0
-              )}
-            </h3>
-            <p className="text-gray-600">
-              {t("careersPage.totalApplications", "Total Applications")}
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-200">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaClock className="text-purple-600 text-xl" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              {vacancies.filter((v) => isVacancyOpen(v)).length}
-            </h3>
-            <p className="text-gray-600">
-              {t("careersPage.activeRoles", "Active Roles")}
-            </p>
-          </div>
-        </div>
-        */}
-
         {/* Filters */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 mb-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-2">
               <FaFilter className="text-gray-400" />
-              <span className="font-semibold text-gray-700">Filters:</span>
+              <span className="font-semibold text-gray-700">
+                {t("careersPage.filters", "Filters")}:
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-4">
@@ -267,12 +242,24 @@ const CareersPage = () => {
                 }
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand1 focus:border-transparent"
               >
-                <option value="">All Departments</option>
-                <option value="medical">Medical</option>
-                <option value="nursing">Nursing</option>
-                <option value="administrative">Administrative</option>
-                <option value="technical">Technical</option>
-                <option value="support">Support</option>
+                <option value="">
+                  {t("careersPage.allDepartments", "All Departments")}
+                </option>
+                <option value="medical">
+                  {t("careersPage.medical", "Medical")}
+                </option>
+                <option value="nursing">
+                  {t("careersPage.nursing", "Nursing")}
+                </option>
+                <option value="administrative">
+                  {t("careersPage.administrative", "Administrative")}
+                </option>
+                <option value="technical">
+                  {t("careersPage.technical", "Technical")}
+                </option>
+                <option value="support">
+                  {t("careersPage.support", "Support")}
+                </option>
               </select>
 
               <select
@@ -282,12 +269,24 @@ const CareersPage = () => {
                 }
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand1 focus:border-transparent"
               >
-                <option value="">All Types</option>
-                <option value="full-time">Full Time</option>
-                <option value="part-time">Part Time</option>
-                <option value="contract">Contract</option>
-                <option value="internship">Internship</option>
-                <option value="remote">Remote</option>
+                <option value="">
+                  {t("careersPage.allTypes", "All Types")}
+                </option>
+                <option value="full-time">
+                  {t("careersPage.fullTime", "Full Time")}
+                </option>
+                <option value="part-time">
+                  {t("careersPage.partTime", "Part Time")}
+                </option>
+                <option value="contract">
+                  {t("careersPage.contract", "Contract")}
+                </option>
+                <option value="internship">
+                  {t("careersPage.internship", "Internship")}
+                </option>
+                <option value="remote">
+                  {t("careersPage.remote", "Remote")}
+                </option>
               </select>
 
               {(filters.department || filters.employmentType) && (
@@ -295,7 +294,7 @@ const CareersPage = () => {
                   onClick={clearFilters}
                   className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
                 >
-                  Clear Filters
+                  {t("careersPage.clearFilters", "Clear Filters")}
                 </button>
               )}
             </div>
@@ -335,6 +334,8 @@ const CareersPage = () => {
                   setSelectedVacancy(vacancy);
                   setShowApplicationForm(true);
                 }}
+                getLocalizedText={getLocalizedText}
+                t={t}
               />
             ))}
           </div>
@@ -377,6 +378,7 @@ const CareersPage = () => {
           loading={applicationLoading}
           error={applicationError}
           success={applicationSuccess}
+          t={t}
         />
       )}
     </div>
@@ -384,9 +386,7 @@ const CareersPage = () => {
 };
 
 // Vacancy Card Component
-const VacancyCard = ({ vacancy, isOpen, onApply }) => {
-  const { t } = useTranslation();
-
+const VacancyCard = ({ vacancy, isOpen, onApply, getLocalizedText, t }) => {
   const formatSalary = (salary) => {
     if (!salary || !salary.min)
       return t("careersPage.salaryNotSpecified", "Salary not specified");
@@ -450,12 +450,12 @@ const VacancyCard = ({ vacancy, isOpen, onApply }) => {
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {vacancy.title}
+                  {getLocalizedText(vacancy.title)}
                 </h3>
                 <div className="flex flex-wrap gap-2 text-sm text-gray-600">
                   <span className="flex items-center gap-1">
                     <FaMapMarkerAlt className="text-gray-400" />
-                    {vacancy.location}
+                    {getLocalizedText(vacancy.location)}
                   </span>
                   <span className="flex items-center gap-1">
                     <FaClock className="text-gray-400" />
@@ -464,7 +464,7 @@ const VacancyCard = ({ vacancy, isOpen, onApply }) => {
                           `careersPage.employmentTypes.${vacancy.employmentType}`,
                           vacancy.employmentType
                         )
-                      : "Full-time"}
+                      : t("careersPage.fullTime", "Full-time")}
                   </span>
                   {vacancy.salaryRange && (
                     <span className="flex items-center gap-1">
@@ -480,7 +480,7 @@ const VacancyCard = ({ vacancy, isOpen, onApply }) => {
                 {getStatusBadge()}
                 {vacancy.department && (
                   <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
-                    {vacancy.department}
+                    {getLocalizedText(vacancy.department)}
                   </span>
                 )}
               </div>
@@ -489,7 +489,7 @@ const VacancyCard = ({ vacancy, isOpen, onApply }) => {
             {/* Description with HTML support */}
             <div
               className="text-gray-600 mb-4 line-clamp-3"
-              dangerouslySetInnerHTML={createMarkup(vacancy.description)}
+              dangerouslySetInnerHTML={createMarkup(getLocalizedText(vacancy.description))}
             />
 
             {/* Requirements (if available) */}
@@ -500,7 +500,7 @@ const VacancyCard = ({ vacancy, isOpen, onApply }) => {
                 </h4>
                 <div
                   className="text-gray-600 text-sm line-clamp-2"
-                  dangerouslySetInnerHTML={createMarkup(vacancy.requirements)}
+                  dangerouslySetInnerHTML={createMarkup(getLocalizedText(vacancy.requirements))}
                 />
               </div>
             )}
