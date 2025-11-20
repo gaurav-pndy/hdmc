@@ -15,7 +15,8 @@ import {
 } from "react-icons/fa";
 
 const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://apimanager.health-direct.ru/api";
 
 // Basic HTML sanitization function
 const sanitizeHTML = (html) => {
@@ -173,15 +174,15 @@ const CareersPage = () => {
   // Helper function to get localized text (handles both strings and objects)
   const getLocalizedText = (data) => {
     if (!data) return "";
-    
+
     // If it's already a string (localized data from API)
     if (typeof data === "string") return data;
-    
+
     // If it's a multilingual object
     if (typeof data === "object") {
       return data[i18n.language] || data.en || "";
     }
-    
+
     return "";
   };
 
@@ -491,7 +492,9 @@ const VacancyCard = ({ vacancy, isOpen, onApply, getLocalizedText, t }) => {
             {/* Description with HTML support */}
             <div
               className="text-gray-600 mb-4 line-clamp-3"
-              dangerouslySetInnerHTML={createMarkup(getLocalizedText(vacancy.description))}
+              dangerouslySetInnerHTML={createMarkup(
+                getLocalizedText(vacancy.description)
+              )}
             />
 
             {/* Requirements (if available) */}
@@ -502,7 +505,9 @@ const VacancyCard = ({ vacancy, isOpen, onApply, getLocalizedText, t }) => {
                 </h4>
                 <div
                   className="text-gray-600 text-sm line-clamp-2"
-                  dangerouslySetInnerHTML={createMarkup(getLocalizedText(vacancy.requirements))}
+                  dangerouslySetInnerHTML={createMarkup(
+                    getLocalizedText(vacancy.requirements)
+                  )}
                 />
               </div>
             )}
@@ -528,15 +533,16 @@ const VacancyCard = ({ vacancy, isOpen, onApply, getLocalizedText, t }) => {
                   </span>
                 )}
               </div>
-
-              <button
-                onClick={onApply}
-                disabled={!isOpen}
-                className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${getButtonStyle()}`}
-              >
-                {getButtonText()}
-                {isOpen && <FaArrowRight className="text-sm" />}
-              </button>
+              {vacancy.showApplyButton && (
+                <button
+                  onClick={onApply}
+                  disabled={!isOpen}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${getButtonStyle()}`}
+                >
+                  {getButtonText()}
+                  {isOpen && <FaArrowRight className="text-sm" />}
+                </button>
+              )}
             </div>
           </div>
         </div>
