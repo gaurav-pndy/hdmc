@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 
 const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:3003/api";
+  import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
 
 // Basic HTML sanitization function
 const sanitizeHTML = (html) => {

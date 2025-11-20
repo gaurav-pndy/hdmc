@@ -19,6 +19,7 @@ import { useState } from "react";
 import Reviews from "./pages/Reviews";
 import AboutDiseases from "./pages/AboutDiseases";
 import CareersPage from "./pages/CareersPage";
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   const [city, setCity] = useState("Moscow");
@@ -101,6 +102,11 @@ function App() {
         {
           path: "/privacy-policy",
           element: <PriPolicy />,
+        },
+
+        {
+          path: "/blog/:blogId",
+          element: <BlogDetails />,
         },
       ],
     },
