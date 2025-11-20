@@ -17,7 +17,9 @@ import {
 import { MdWork } from "react-icons/md";
 import { GiDiploma } from "react-icons/gi";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://apimanager.health-direct.ru/api";
 
 const DoctorDetails = ({ setShowPopup }) => {
   const { doctorId } = useParams();
@@ -345,7 +347,7 @@ const DoctorDetails = ({ setShowPopup }) => {
 
             {/* Info cards with icons and brand colors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              {/* Location/Branch Card */}
+              {/* Location/Branch Card
               <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
                 <div className="flex items-center justify-center w-10 md:w-12 h-10 md:h-12 from-[#125e84] to-[#33babd] bg-gradient-to-br rounded-xl">
                   <FaMapMarkerAlt className="text-white text-2xl" />
@@ -364,6 +366,7 @@ const DoctorDetails = ({ setShowPopup }) => {
                   )}
                 </div>
               </div>
+               */}
 
               {/* Languages Card */}
               <div className="flex items-start gap-3 p-4 bg-brand4/10 rounded-xl border border-brand4/20">
@@ -388,9 +391,11 @@ const DoctorDetails = ({ setShowPopup }) => {
                     <FaVideo className="text-white text-2xl" />
                   </div>
                   <div>
+                    {/*
                     <div className="text-xs font-semibold text-brand1/60 uppercase tracking-wide mb-1">
                       Services
                     </div>
+                    */}
                     <div className="space-y-1">
                       {formattedDoctor.services?.online && (
                         <div className="flex items-center gap-2">

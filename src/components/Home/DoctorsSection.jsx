@@ -324,7 +324,7 @@ const DoctorsSection = () => {
             <SwiperSlide key={doc.id}>
               <Link
                 to={`/doctors/${doc.id}`}
-                className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between min-h-[30rem]"
+                className="bg-white my-4 rounded-xl hover:scale-105 hover:bg-brand4/20 hover:shadow-lg cursor-pointer shadow-md transition-all duration-300 p-4 flex flex-col justify-between"
               >
                 <div className="flex-1 flex flex-col">
                   <img
@@ -343,7 +343,7 @@ const DoctorsSection = () => {
                       {doc.position}
                     </p>
                   )}
-                  <div className="flex flex-wrap gap-1 mb-3">
+                  <div className="flex flex-wrap gap-1">
                     {doc.tags.slice(0, 3).map((tag, i) => (
                       <span
                         key={i}
@@ -358,26 +358,9 @@ const DoctorsSection = () => {
                       </span>
                     )}
                   </div>
-                  {doc.location && (
-                    <div className="flex flex-row gap-4 items-center mb-3 text-brand1/90 text-xs">
-                      <span className="flex items-center">
-                        <FaLocationDot className="mr-1" /> {doc.location}
-                      </span>
-                    </div>
-                  )}
+                  
 
-                  {/*
-                  {doc.languages && (
-                    <>
-                      <div className="text-brand1/60 text-xs">
-                        {t("doctors.languages")}:
-                      </div>
-                      <div className="text-brand1 text-sm font-medium">
-                        {doc.languages}
-                      </div>
-                    </>
-                  )}
-                    */}
+              
                 </div>
                 <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
                   {t("doctors.viewProfile")}

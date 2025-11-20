@@ -380,7 +380,7 @@ const DoctorsPage = () => {
             <Link
               key={doc.id}
               to={`/doctors/${doc.id}`}
-              className="bg-white rounded-2xl shadow-2xl hover:scale-105 hover:bg-brand4/20 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] cursor-pointer transition-all duration-300 p-6 flex flex-col justify-between min-h-[32rem] group mt-4"
+              className="bg-white rounded-2xl shadow-2xl hover:scale-105 hover:bg-brand4/20 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] cursor-pointer transition-all duration-300 p-6 flex flex-col justify-between group mt-4"
             >
               {" "}
               <div className="flex-1 flex flex-col">
@@ -397,7 +397,7 @@ const DoctorsPage = () => {
                     }}
                   />
 
-                  {/* Service Type Badges - Glass Effect with React Icons */}
+                  {/* Service Type Badges - Glass Effect with React Icons 
                   <div className="absolute bottom-3 left-3 right-3 flex gap-2">
                     {doc.services?.online && (
                       <div className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-full backdrop-blur-md bg-black/20 border border-white/30 shadow-lg">
@@ -416,6 +416,7 @@ const DoctorsPage = () => {
                       </div>
                     )}
                   </div>
+                  */}
                 </div>
 
                 {/* Doctor Information */}
@@ -431,7 +432,7 @@ const DoctorsPage = () => {
                     </p>
                   )}
 
-                  {/* Rating */}
+                  {/* Rating 
                   {doc.reviewStats && doc.reviewStats.averageRating > 0 && (
                     <div className="flex items-center mb-3">
                       <div className="flex text-yellow-400 mr-2">
@@ -446,8 +447,9 @@ const DoctorsPage = () => {
                       </span>
                     </div>
                   )}
+                    
 
-                  {/* Specialties */}
+                  {/* Specialties  */}
                   <div className="flex flex-wrap gap-1 mb-3">
                     {doc.tags.slice(0, 3).map((tag, i) => (
                       <span
@@ -463,21 +465,24 @@ const DoctorsPage = () => {
                       </span>
                     )}
                   </div>
+                 
 
-                  {/* Location */}
+                  {/* Location 
                   {doc.location && (
                     <div className="flex items-center text-brand1/70 text-sm mb-3">
                       <FaMapMarkerAlt className="w-3 h-3 mr-1.5" />
                       <span className="line-clamp-1">{doc.location}</span>
                     </div>
                   )}
+                  */}
 
-                  {/* Fees */}
+                  {/* Fees 
                   <div className="text-brand1 font-semibold text-lg mb-3">
                     Consultation: {doc.fees}
                   </div>
+                  */}
 
-                  {/* About (truncated) - Using dangerouslySetInnerHTML for HTML content */}
+                  {/* About (truncated) - Using dangerouslySetInnerHTML for HTML content
                   {doc.about && (
                     <div
                       className="text-brand1/80 text-sm line-clamp-3 mb-3 leading-relaxed"
@@ -489,6 +494,7 @@ const DoctorsPage = () => {
                       }}
                     />
                   )}
+                     */}
                 </div>
               </div>
               {/* View Profile Button */}
