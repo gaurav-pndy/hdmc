@@ -307,7 +307,7 @@ const OffersTab = () => {
             {formattedOffers.map((offer) => (
               <div
                 key={offer.id}
-                className="group relative bg-white rounded-3xl border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+                className="group relative bg-white rounded-3xl border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 flex flex-col h-full"
               >
                 {/* Popularity Badge */}
                 {offer.popularity > 80 && (
@@ -357,8 +357,8 @@ const OffersTab = () => {
                   </div>
                 )}
 
-                {/* Content */}
-                <div className="p-6">
+                {/* Content - flex-grow to push button to bottom */}
+                <div className="p-6 flex flex-col flex-grow">
                   {/* Category and Discount */}
                   <div className="flex justify-between items-start mb-4">
                     <span className="inline-block bg-brand4/20 text-brand1 px-3 py-1 rounded-full text-sm font-medium">
@@ -378,13 +378,18 @@ const OffersTab = () => {
                     maxLines={2}
                   />
 
-                  {/* Validity */}
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-                    <FaClock className="text-gray-400" />
-                    <span>{offer.validity}</span>
-                  </div>
+                  {/* Validity - Only show if available */}
+                  {offer.validity && (
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                      <FaClock className="text-gray-400" />
+                      <span>{offer.validity}</span>
+                    </div>
+                  )}
 
-                  {/* Action Button */}
+                  {/* Spacer to push button to bottom */}
+                  <div className="flex-grow"></div>
+
+                  {/* Action Button - Always at bottom */}
                   <button
                     onClick={() => {
                       if (offer.targetUrl) {
@@ -393,7 +398,7 @@ const OffersTab = () => {
                         setSelectedOffer(offer);
                       }
                     }}
-                    className="w-full bg-gradient-to-r from-brand1 to-brand3 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                    className="w-full bg-gradient-to-r from-brand1 to-brand3 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn mt-4"
                   >
                     {offer.buttonText}
                     <FaArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -402,38 +407,6 @@ const OffersTab = () => {
               </div>
             ))}
           </div>
-
-          {/* Stats Section
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center">
-              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <FaTag className="text-white text-xl" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-2">{formattedOffers.length}</h4>
-              <p className="text-gray-600">{t("forPatientsPage.offers.activeOffers")}</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center">
-              <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <FaUsers className="text-white text-xl" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                {formattedOffers.filter(o => o.popularity > 80).length}
-              </h4>
-              <p className="text-gray-600">{t("forPatientsPage.offers.popularDeals")}</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <FaClock className="text-white text-xl" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                {formattedOffers.filter(o => o.daysLeft !== null && o.daysLeft <= 7).length}
-              </h4>
-              <p className="text-gray-600">{t("forPatientsPage.offers.endingSoon")}</p>
-            </div>
-          </div>
-           */}
 
           {/* Terms & Conditions */}
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 mt-8 border border-gray-200">

@@ -1768,6 +1768,7 @@
       "validUntil": "Valid Until",
       "limitedTime": "Limited Time",
       "seeMore": "See more",
+      "seeLess": "See Less",
 
       "terms": {
         "noCombination": "Offers cannot be combined with other promotions",
@@ -2536,5 +2537,8 @@
   "noBlogs": "No blogs available",
   "noTitle": "Untitled",
   "noTags": "No tags",
-  "more": "more"
+  "more": "more",
+  "common":{
+    "close": "Close"
+  }
 }

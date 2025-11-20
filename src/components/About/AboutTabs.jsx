@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom"; // ✅ important
+import { useLocation } from "react-router-dom";
 import {
   FaHospital,
   FaPhoneAlt,
@@ -27,6 +27,7 @@ import PatientsAccordion from "../ForPatients/PatientsAccordion";
 import AboutVacancies from "./AboutVacancies";
 import AboutPartners from "./AboutPartners";
 import { BiSolidContact } from "react-icons/bi";
+import CareersPage from "../../pages/CareersPage";
 
 const TABS = [
   {
@@ -70,7 +71,7 @@ const TABS = [
     key: "vacancies",
     labelKey: "about.tabs.vacancies",
     icon: <FaUserPlus />,
-    component: AboutVacancies,
+    component: CareersPage,
   },
   {
     key: "partners",
@@ -85,7 +86,7 @@ const AboutTabs = ({ city }) => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(TABS[0].key);
 
-  // ✅ Detect active tab from URL hash (#patients or #doctors)
+  // Detect active tab from URL hash (#patients or #doctors)
   useEffect(() => {
     if (location.hash) {
       const hashKey = location.hash.replace("#", "");
