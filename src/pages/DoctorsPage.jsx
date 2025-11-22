@@ -201,10 +201,10 @@ const DoctorsPage = ({ setShowPopup }) => {
           <h1 className="text-white relative z-40 text-4xl md:text-6xl xl:text-7xl font-bold mb-4">
             {t("doctors.title") || "Our Doctors"}
           </h1>
-          <p className="text-white/90 relative z-40 text-lg">
-            {t("doctors.subtitle") ||
-              "Find the right specialist for your needs"}
-          </p>
+          <p
+            className="text-white/90 relative z-40 "
+            dangerouslySetInnerHTML={{ __html: t("doctors.subtitle") }}
+          ></p>
         </div>
         <div className="w-full h-full z-30 -mt-[1px] md:-mt-0">
           <div className="relative w-full h-full">
@@ -215,7 +215,7 @@ const DoctorsPage = ({ setShowPopup }) => {
               playsInline
               src="https://www.shutterstock.com/shutterstock/videos/1072064371/preview/stock-footage-close-up-hands-of-therapist-gp-and-patient-doctor-strokes-arm-of-ill-woman-consoling-after-news.webm"
               alt="Services illustration"
-              className="max-w-2xl w-full md:min-h-96 max-h-[28rem] h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+              className="max-w-2xl w-full md:min-h-96 max-h-[31rem] h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-b via-30% md:bg-gradient-to-r from-[#6f6763] via-[#6f6763]/40 to-transparent"></div>
           </div>

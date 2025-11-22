@@ -2567,6 +2567,18 @@
   "para3": "Information about your use of the site collected through cookies will be transferred to Yandex LLC and Google LLC, which will process this information to evaluate your use of the site, compile reports for us on site activity, and provide other services. Yandex LLC and Google LLC process this information in accordance with the terms of use of their services.",
   "para4": "HD Clinic LLC processes user data in accordance with the “Personal Data Processing Policy.” Some site features may be used without providing personal data. However, to use certain special features of the site, it is necessary to provide some information, including personal data. By staying on the site, you agree to the cookie usage policy.",
   "footer": "You may refuse the use of cookies by selecting the appropriate settings in your browser."
+},
+
+"care": {
+  "title": "Oncological Care",
+  "tab1": "Expert consultation",
+  "tab2": "Examination / additional diagnostics",
+  "tab3": "Individual treatment plan",
+  "tab4": "International oncology board (tumor board)",
+  "tab5": "Treatment (chemo / targeted / immunotherapy / surgery)",
+  "tab6": "Supportive therapy and rehabilitation",
+  "tab7": "Dynamic follow-up"
 }
+
 
 }

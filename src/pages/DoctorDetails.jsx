@@ -345,7 +345,7 @@ const DoctorDetails = ({ setShowPopup }) => {
               ))}
               <span className="px-4 py-1.5 bg-brand4/20 text-brand1 rounded-full text-base font-semibold border border-brand4/30">
                 стаж :{" "}
-                {doctor.yearsOfExperience ? doctor.yearsOfExperience : "N/A"}
+                {doctor.yearOfExperience ? doctor.yearOfExperience : "N/A"}
               </span>
             </div>
           </div>

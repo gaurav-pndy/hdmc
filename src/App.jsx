@@ -21,6 +21,7 @@ import AboutDiseases from "./pages/AboutDiseases";
 import CareersPage from "./pages/CareersPage";
 import BlogDetails from "./pages/BlogDetails";
 import CookiPolicy from "./pages/CookiPolicy";
+import OncologicalCare from "./pages/OncologicalCare";
 
 function App() {
   const [city, setCity] = useState("Moscow");
@@ -112,6 +113,10 @@ function App() {
         {
           path: "/cookie-policy",
           element: <CookiPolicy />,
+        },
+        {
+          path: "/oncological-care",
+          element: <OncologicalCare />,
         },
       ],
     },
