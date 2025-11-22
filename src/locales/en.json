@@ -2577,7 +2577,20 @@
   "tab4": "International oncology board (tumor board)",
   "tab5": "Treatment (chemo / targeted / immunotherapy / surgery)",
   "tab6": "Supportive therapy and rehabilitation",
-  "tab7": "Dynamic follow-up"
+  "tab7": "Dynamic follow-up",
+  "block1": {
+    "title": "Personal Patient Coordinator",
+    "point1": "This is your main point of contact: the specialist answers questions, schedules appointments, organizes visits and examinations, and helps with documents.",
+    "point2": "They do not replace the doctor but work closely with your attending physician and diagnostic team. This means they are always aware of your treatment plan, which significantly saves time — yours and your family's."
+  },
+  "block2": {
+    "title": "Comfort and Service",
+    "point1": "Private rooms",
+    "point2": "Modern treatment standards",
+    "point3": "VIP options (personal assistance)"
+  },
+  "btn1": "Contact the coordinator",
+  "btn2": "Learn more about International Oncology Boards"
 }
 
 

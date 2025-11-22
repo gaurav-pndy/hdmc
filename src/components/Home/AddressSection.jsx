@@ -151,7 +151,7 @@ const AddressSection = ({ city, setShowPopup }) => {
               </button>
 
               <div
-                className="text-brand1 text-left text-sm mt-4"
+                className="text-brand1 text-left text-sm mt-2"
                 dangerouslySetInnerHTML={{ __html: t("address.parkingText") }}
               ></div>
             </div>
