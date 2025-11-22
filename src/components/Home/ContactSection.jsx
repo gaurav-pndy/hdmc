@@ -123,6 +123,21 @@ const ContactSection = () => {
 
                 {/* Name + Phone + Email + City */}
                 <div className="grid grid-cols-2 gap-4 mb-3">
+                  {/* Last Name */}
+                  <div>
+                    <label className="block text-white font-semibold mb-1">
+                      {t("contact.lastName")} *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
+                      value={form.lastName}
+                      onChange={(e) =>
+                        setForm({ ...form, lastName: e.target.value })
+                      }
+                    />
+                  </div>
                   {/* First Name */}
                   <div>
                     <label className="block text-white font-semibold mb-1">
@@ -150,22 +165,6 @@ const ContactSection = () => {
                       value={form.middleName}
                       onChange={(e) =>
                         setForm({ ...form, middleName: e.target.value })
-                      }
-                    />
-                  </div>
-
-                  {/* Last Name */}
-                  <div>
-                    <label className="block text-white font-semibold mb-1">
-                      {t("contact.lastName")} *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
-                      value={form.lastName}
-                      onChange={(e) =>
-                        setForm({ ...form, lastName: e.target.value })
                       }
                     />
                   </div>
