@@ -13,3 +13,13 @@
 .custom-swiper .swiper-button-prev {
   display: none !important;
 }
+
+
+.react-international-phone-input-container{
+  z-index: 50 !important;
+  position: relative !important;
+}
+
+.react-international-phone-country-selector-dropdown{
+  width: auto !important;
+}

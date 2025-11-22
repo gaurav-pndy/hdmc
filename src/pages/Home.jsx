@@ -68,7 +68,7 @@ const Home = ({ city, setShowPopup }) => {
 
       <PatientMap />
       <MembershipSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* <BookingForm /> */}
       <AddressSection city={city} setShowPopup={setShowPopup} />

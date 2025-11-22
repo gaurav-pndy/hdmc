@@ -1,19 +1,37 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IoPaperPlaneOutline } from "react-icons/io5";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 import WaveBackground from "../WaveBackground";
 
 const ContactSection = () => {
   const { t } = useTranslation();
   const [form, setForm] = useState({
-    name: "",
+    firstName: "",
+    middleName: "",
+    lastName: "",
     phone: "",
+    messagingApps: [],
     email: "",
     city: "",
     message: "",
     agree1: false,
     agree2: false,
   });
+
+  const toggleMessagingApp = (app) => {
+    setForm((prev) => {
+      const exists = prev.messagingApps.includes(app);
+      if (exists) {
+        return {
+          ...prev,
+          messagingApps: prev.messagingApps.filter((a) => a !== app),
+        };
+      }
+      return { ...prev, messagingApps: [...prev.messagingApps, app] };
+    });
+  };
 
   return (
     <section className="w-full bg-[#fafbfc] py-16 mb-8">
@@ -27,49 +45,116 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="">
-          {/* Form Card with Image Background + Gradient Overlay */}
-
-          <section className="relative  rounded-xl  mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
+        <div>
+          <section className="relative rounded-xl mx-auto grid md:grid-cols-2 items-center overflow-hidden md:min-h-96">
             <WaveBackground
               stroke="rgba(251, 186, 189,"
               custStyle="md:w-1/2 h-[65%] left-0 top-0"
             />
+
             <div className="relative bg-gradient-to-b md:bg-gradient-to-r from-[#816c65] to-[#c9a89d] z-40 p-4 md:p-10">
               <div className="font-medium text-2xl mb-10 flex items-center gap-2 text-white">
                 <IoPaperPlaneOutline />
                 {t("contact.heading")}
               </div>
 
-              <div className="grid grid-cols-2  gap-4 mb-3">
+              {/* Name + Phone + Email + City */}
+              <div className="grid grid-cols-2 gap-4 mb-3">
+                {/* First Name */}
                 <div>
-                  <label className="block  text-white font-semibold mb-1">
-                    {t("contact.name")}
+                  <label className="block text-white font-semibold mb-1">
+                    {t("contact.firstName")}
                   </label>
                   <input
                     type="text"
                     className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  />
-                </div>
-
-                <div>
-                  <label className="block  text-white font-semibold mb-1">
-                    {t("contact.phone")}
-                  </label>
-                  <input
-                    type="number"
-                    className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
-                    value={form.phone}
+                    value={form.firstName}
                     onChange={(e) =>
-                      setForm({ ...form, phone: e.target.value })
+                      setForm({ ...form, firstName: e.target.value })
                     }
                   />
                 </div>
 
+                {/* Middle Name */}
                 <div>
-                  <label className="block  text-white font-semibold mb-1">
+                  <label className="block text-white font-semibold mb-1">
+                    {t("contact.middleName")}
+                  </label>
+                  <input
+                    type="text"
+                    className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
+                    value={form.middleName}
+                    onChange={(e) =>
+                      setForm({ ...form, middleName: e.target.value })
+                    }
+                  />
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <label className="block text-white font-semibold mb-1">
+                    {t("contact.lastName")}
+                  </label>
+                  <input
+                    type="text"
+                    className="border border-brand4 bg-white/90 text-sm rounded-lg px-3 py-2 w-full backdrop-blur-sm"
+                    value={form.lastName}
+                    onChange={(e) =>
+                      setForm({ ...form, lastName: e.target.value })
+                    }
+                  />
+                </div>
+
+                {/* Phone with country code (react-international-phone) */}
+                <div>
+                  <label className="block text-white font-semibold mb-1">
+                    {t("contact.phone")}
+                  </label>
+                  <PhoneInput
+                    defaultCountry="ru"
+                    value={form.phone}
+                    onChange={(phone) => setForm({ ...form, phone })}
+                    className="border border-brand4 rounded-lg bg-white/90 text-sm w-full backdrop-blur-sm"
+                    inputClassName="!bg-transparent !border-none !w-full !px-3 !py-2 focus:!outline-none"
+                  />
+                  {/* Messaging apps below phone */}
+                  <div className="">
+                    <div className="flex flex-wrap gap-4 text-white text-sm mt-2">
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          className="accent-[#59302a]"
+                          checked={form.messagingApps.includes("Whatsapp")}
+                          onChange={() => toggleMessagingApp("Whatsapp")}
+                        />
+                        <span>Whatsapp</span>
+                      </label>
+
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          className="accent-[#59302a]"
+                          checked={form.messagingApps.includes("Telegram")}
+                          onChange={() => toggleMessagingApp("Telegram")}
+                        />
+                        <span>Telegram</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          className="accent-[#59302a]"
+                          checked={form.messagingApps.includes("Max")}
+                          onChange={() => toggleMessagingApp("Max")}
+                        />
+                        <span>Max</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-white font-semibold mb-1">
                     {t("contact.email")}
                   </label>
                   <input
@@ -82,8 +167,9 @@ const ContactSection = () => {
                   />
                 </div>
 
+                {/* City */}
                 <div>
-                  <label className="block  text-white font-semibold mb-1">
+                  <label className="block text-white font-semibold mb-1">
                     {t("contact.city")}
                   </label>
                   <select
@@ -101,8 +187,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
+              {/* Message */}
               <div>
-                <label className="block  text-white font-semibold mb-1">
+                <label className="block text-white font-semibold mb-1">
                   {t("contact.message")}
                 </label>
                 <textarea
@@ -128,7 +215,7 @@ const ContactSection = () => {
                 />
                 <label
                   htmlFor="form-agree1"
-                  className="text-sm font-medium  text-white"
+                  className="text-sm font-medium text-white"
                   dangerouslySetInnerHTML={{ __html: t("contact.checkbox1") }}
                 ></label>
               </div>
@@ -159,16 +246,15 @@ const ContactSection = () => {
                 {t("contact.button")}
               </button>
             </div>
-            <div className="w-full   h-full z-30 -mt-[2px] md:-mt-0">
-              <div className="relative w-full  h-full">
+
+            <div className="w-full h-full z-30 -mt-[2px] md:-mt-0">
+              <div className="relative w-full h-full">
                 <img
                   src="https://www.shutterstock.com/shutterstock/photos/2560601181/display_1500/stock-photo-businessman-interacting-with-a-glowing-paper-plane-icon-on-a-virtual-interface-symbolizing-message-2560601181.jpg"
                   alt="Services illustration"
-                  className=" w-full md:min-h-96  h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
+                  className="w-full md:min-h-96 h-full object-cover md:rounded-tr-2xl md:rounded-br-2xl"
                 />
-                <div
-                  className={`absolute   inset-0 bg-gradient-to-b via-30%  md:bg-gradient-to-r from-[#c9a89d] via-[#c9a89d]/40 to-transparent  `}
-                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b via-30% md:bg-gradient-to-r from-[#c9a89d] via-[#c9a89d]/40 to-transparent" />
               </div>
             </div>
           </section>

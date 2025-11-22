@@ -10,6 +10,7 @@ import { LuUsers } from "react-icons/lu";
 import WaveBackground from "../WaveBackground";
 import { MdDiscount } from "react-icons/md";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -48,37 +49,42 @@ const HeroSection = () => {
       >
         <SwiperSlide>
           <div
-            className={`mx-auto relative w-full grid lg:grid-cols-5 items-stretch`}
+            className={`mx-auto relative w-full  grid lg:grid-cols-5 items-stretch`}
           >
             <WaveBackground
               stroke="rgba(100, 100, 100,"
               custStyle="lg:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex flex-col  md:flex-row lg:col-span-2 px-6 lg:px-0 md:pl-12 lg:pl-6 xl:pl-20 w-full py-6  xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#002b3e] to-[#016885]">
+            <div className="flex flex-col  md:flex-row lg:col-span-2 px-6 lg:px-0 md:pl-12 lg:pl-6 xl:pl-20 w-full py-6 min-h-[30rem] md:min-h-auto xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#002b3e] to-[#016885]">
               <div className="flex-1 flex flex-col items-start">
                 <div className="mb-2 flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-3 mr-4">
                     <SlBadge className="text-2xl p-0 text-white " />
                   </div>
                   <div className="w-1 h-12 bg-white/40 rounded" />
+                  <span className="text-white/80 md:text-lg ml-2">
+                    {" "}
+                    {t("hero.slide1.tag")}
+                  </span>
                 </div>
                 <h1 className="text-white font-bold z-40 text-3xl lg:text-2xl xl:text-5xl xl:leading-12 mb-2">
                   {t("hero.slide1.title")}
                 </h1>
-                <div className="text-gray-200 text-lg z-40 xl:text-xl mb-4">
-                  {t("hero.slide1.subtitle")}
-                </div>
-                <button className="bg-white relative z-40 text-teal-900 font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                <ul className="text-gray-200 list-disc ml-4 mt-4 text-lg z-40 xl:text-xl mb-4">
+                  <li>{t("hero.slide1.subtitle1")} </li>
+                  <li>{t("hero.slide1.subtitle2")} </li>
+                </ul>
+                {/* <button className="bg-white relative z-40 text-teal-900 font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
                   {t("hero.slide1.button")}
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="w-full lg:col-span-3 -mt-[2px] lg:-mt-0 lg:-ml-[1px] -z-10 flex items-center">
               <div className="relative w-full">
                 <img
-                  src="https://www.shutterstock.com/shutterstock/photos/2656913525/display_1500/stock-photo-person-s-hands-cupping-around-a-glowing-holographic-icon-representing-customer-loyalty-vip-clients-2656913525.jpg"
+                  src="https://images.unsplash.com/photo-1598885159329-9377168ac375?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Hero illustration"
-                  className="w-full md:max-h-[28rem] lg:max-h-80 xl:max-h-[28rem] h-auto object-cover"
+                  className="w-full md:max-h-[28rem] lg:max-h-80 xl:max-h-[31rem] h-auto object-cover"
                 />
                 <div
                   className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#016885] via-[#016885]/40 to-transparent via-40%`}
@@ -96,7 +102,7 @@ const HeroSection = () => {
               stroke="rgba(200, 200, 200,"
               custStyle="lg:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex flex-col md:flex-row lg:w-[45%] px-6 lg:px-0 md:pl-12 lg:pl-6 xl:pl-20 w-full py-6  xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#989996] to-[#cbd0ce]">
+            <div className="flex flex-col md:flex-row lg:w-[60%] px-6 lg:px-0 md:pl-12 lg:pl-6 xl:pl-20 w-full py-6  xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#989996] to-[#cbd0ce]">
               <div className="flex-1 flex flex-col items-start">
                 <div className="mb-2 flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-3 mr-4">
@@ -107,23 +113,31 @@ const HeroSection = () => {
                 <h1 className="text-white font-bold z-40 text-3xl lg:text-2xl xl:text-5xl xl:leading-12 mb-2">
                   {t("hero.slide2.title")}
                 </h1>
-                <div className="text-gray-200 text-lg z-40 xl:text-xl mb-4">
-                  {t("hero.slide2.subtitle")}
+                <ul className="text-gray-200 list-disc ml-4 mt-2 md:mt-4 text-sm z-40 xl:text-xl mb-4">
+                  <li>{t("hero.slide2.subtitle1")} </li>
+                  <li>{t("hero.slide2.subtitle2")} </li>
+                  <li>{t("hero.slide2.subtitle3")} </li>
+                  <li>{t("hero.slide2.subtitle4")} </li>
+                  <li>{t("hero.slide2.subtitle5")} </li>
+                </ul>
+                <div className="flex text-sm md:text-base gap-2 md:gap-4">
+                  <button className="bg-white relative z-40 text-teal-900 font-semibold rounded-lg px-4 md:px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
+                    {t("hero.slide2.button1")}
+                  </button>
+                  <Link
+                    to="/doctors/691873789569e6f27ac8f6ef"
+                    className="bg-white flex justify-center relative z-40 text-teal-900 font-semibold rounded-lg px-4 md:px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300"
+                  >
+                    {t("hero.slide2.button2")}
+                  </Link>
                 </div>
-                <button className="bg-white relative z-40 text-teal-900 font-semibold rounded-lg px-8 py-3 shadow hover:bg-gray-200 transition-all duration-300">
-                  {t("hero.slide2.button")}
-                </button>
               </div>
             </div>
-            <div className="w-full lg:w-[55%] -z-10 flex items-center">
+            <div className="w-full lg:w-[40%] -z-10 flex items-center">
               <div className="relative w-full">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src="https://www.shutterstock.com/shutterstock/videos/1111753583/preview/stock-footage-videoconference-event-of-group-multinational-physicians-cardiologists-having-medical-council-using.webm"
-                  className="w-full h-auto object-contain"
+                <img
+                  src="/hero2.jpg"
+                  className="w-full max-h-80 md:max-h-[31rem] h-auto object-cover object-top"
                 />
                 <div
                   className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#cbd0ce] via-[#cbd0ce]/30 to-transparent via-20%`}
@@ -135,37 +149,43 @@ const HeroSection = () => {
 
         <SwiperSlide>
           <div
-            className={`mx-auto relative w-full min-h-[62.5vh] md:min-h-auto h-full grid lg:flex  items-stretch`}
+            className={`mx-auto relative w-full min-h-[84vh] md:min-h-auto h-full grid lg:flex  items-stretch`}
           >
             <WaveBackground
               stroke="rgba(200, 200, 200,"
               custStyle="lg:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex lg:w-[48%] flex-col md:flex-row md:min-h-[17.5rem] lg:min-h-auto px-6 md:pl-12 xl:pl-20 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#e9a25f] to-[#df952f]">
+            <div className="flex lg:w-[48%] flex-col md:flex-row md:min-h-[17.5rem] lg:min-h-auto px-6 md:pl-12 xl:pl-20 w-full py-6 md:py-10 xl:py-0 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#52656c] to-[#cececc]">
               <div className="flex-1 flex flex-col items-start">
                 <div className="mb-2 flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-3 mr-4">
                     <MdDiscount className="text-2xl text-white " />
                   </div>
                   <div className="w-1 h-12 bg-white/40 rounded" />
+                  <span className="text-white/80 md:text-lg ml-2">
+                    {" "}
+                    {t("hero.slide3.tag")}
+                  </span>
                 </div>
                 <h1 className="text-white font-bold z-40 text-3xl xl:text-5xl leading-12 mb-2">
                   {t("hero.slide3.title")}
                 </h1>
+                <ul className="text-gray-200 list-disc ml-4 mt-4 text-lg z-40 xl:text-xl mb-4">
+                  <li>{t("hero.slide3.subtitle1")} </li>
+                  <li>{t("hero.slide3.subtitle2")} </li>
+                  <li>{t("hero.slide3.subtitle3")} </li>
+                  <li>{t("hero.slide3.subtitle4")} </li>
+                </ul>
               </div>
             </div>
             <div className="w-full lg:w-[52%] h-full -mt-[2px] lg:-mt-0 lg:-ml-[1px] -z-10 flex items-center">
               <div className="relative w-full h-full">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src="https://www.shutterstock.com/shutterstock/videos/1067598875/preview/stock-footage-joyful-young-couple-friends-african-american-man-woman-s-in-t-shirts-isolated-on-yellow.webm"
-                  className="w-full h-full md:h-auto  object-cover md:object-contain"
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1681400584017-8fb0a5856bea?q=80&w=1238&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className="w-full h-full md:h-auto lg:min-h-96  object-cover xl:max-h-[31rem]"
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#df952f] via-[#df952f]/30 to-transparent via-20%`}
+                  className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#cececc] via-[#cececc]/30 to-transparent via-20%`}
                 ></div>
               </div>
             </div>
@@ -174,13 +194,13 @@ const HeroSection = () => {
 
         <SwiperSlide>
           <div
-            className={`mx-auto relative w-full min-h-[62.5vh] md:min-h-auto grid lg:flex items-stretch`}
+            className={`mx-auto relative w-full min-h-[84vh] md:min-h-auto grid lg:flex items-stretch`}
           >
             <WaveBackground
               stroke="rgba(100, 100, 100,"
               custStyle="md:w-[40%] h-[60%] left-0 top-0"
             />
-            <div className="flex flex-col lg:w-[48%] md:flex-row md:min-h-[17.5rem] lg:min-h-auto  px-6 md:pl-12 xl:pl-20 w-full py-6 md:py-10 xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#3e7963] to-[#164a3d]">
+            <div className="flex flex-col lg:w-[48%] md:flex-row md:min-h-[17.5rem] lg:min-h-auto  px-6 md:pl-12 xl:pl-20 w-full py-6 md:py-10 xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#3a183e] to-[#888291]">
               <div className="flex-1 flex flex-col items-start">
                 <div className="mb-2 flex z-40 items-center">
                   <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-3 mr-4">
@@ -195,16 +215,50 @@ const HeroSection = () => {
             </div>
             <div className="w-full lg:w-[52%] h-full -mt-[2px] lg:-mt-0 lg:-ml-[1px]  -z-10 flex items-center">
               <div className="relative w-full h-full">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src="https://www.shutterstock.com/shutterstock/videos/3411047139/preview/stock-footage-male-and-female-hands-with-heart-shape-concept-of-love-life-care-compassion-mercy.webm"
-                  className="w-full h-full md:h-auto object-cover md:object-contain"
+                <img
+                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className="w-full h-full max-h-[31rem] md:h-auto object-cover "
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#164a3d] via-[#164a3d]/30 to-transparent via-20%`}
+                  className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#888291] via-[#888291]/30 to-transparent via-20%`}
+                ></div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`mx-auto relative w-full min-h-[84vh] md:min-h-auto grid lg:flex items-stretch`}
+          >
+            <WaveBackground
+              stroke="rgba(100, 100, 100,"
+              custStyle="md:w-[40%] h-[60%] left-0 top-0"
+            />
+            <div className="flex flex-col lg:w-[48%] md:flex-row md:min-h-[17.5rem] lg:min-h-auto  px-6 md:pl-12 xl:pl-20 w-full py-6 md:py-10 xl:py-4 mx-auto items-center gap-10 bg-gradient-to-b lg:bg-gradient-to-r from-[#164a3d] to-[#3e7963]">
+              <div className="flex-1 flex flex-col items-start">
+                <div className="mb-2 flex z-40 items-center">
+                  <div className="bg-white/[0.13] flex justify-center items-center rounded-full p-3 mr-4">
+                    <FaHandHoldingHeart className="text-2xl text-white " />
+                  </div>
+                  <div className="w-1 h-12 bg-white/40 rounded" />
+                  <span className="text-white/80 text-lg ml-2">
+                    {" "}
+                    {t("hero.slide5.tag")}
+                  </span>
+                </div>
+                <h1 className="text-white font-bold z-40 text-3xl lg:text-5xl leading-12 mb-2">
+                  {t("hero.slide5.title")}
+                </h1>
+              </div>
+            </div>
+            <div className="w-full lg:w-[52%] h-full -mt-[2px] lg:-mt-0 lg:-ml-[1px]  -z-10 flex items-center">
+              <div className="relative w-full h-full">
+                <img
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className="w-full h-full md:h-auto object-cover max-h-[31rem]"
+                />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#3e7963] via-[#3e7963]/30 to-transparent via-20%`}
                 ></div>
               </div>
             </div>

@@ -37,11 +37,12 @@
     "telemedicine": "Telemedicine",
     "addresses": "Addresses",
     "contact": "Contact",
-    "about": "About Us",
+    "about": "About the clinic",
     "forPatients": "For Patients",
     "ctScan": "CT Scan 24/7",
     "offers": "Offers",
     "reviews": "Reviews",
+    "blog": "Blog/News",
     "expertise": "Center Of Expertise",
     "cityConfirm": {
       "question": "Is your city Moscow ?",
@@ -53,7 +54,7 @@
     "makhachkala": "Makhachkala",
     "moscowAddress": "Aminyevskoye Highway 6, <br />подъезд 1",
     "makhachkalaAddress": "Ali-Gadzhi Akushinskogo Avenue 7",
-    "search": "Search...",
+    "search": "Diagnosis/Service Search",
     "about1": "Information about the medical organization",
     "about2": "Licenses and certificates",
     "about3": "Contacts of regulatory authorities",
@@ -69,6 +70,7 @@
     "patient5": "About diseases",
     "patient6": "Documents",
     "oncologist": "Oncologists",
+    "oncologicalCare": "Oncological Care",
     "doctorsDrop": {
       "d1": "Oncologists",
       "d2": "Pathologist",
@@ -119,24 +121,40 @@
       }
     }
   },
-  "hero": {
-    "slide1": {
-      "title": "HDMC+ Premium Membership",
-      "subtitle": "Priority scheduling, discounted checkups, personal care coordinator",
-      "button": "Join HDMC+"
-    },
-    "slide2": {
-      "title": "International Multispecialty Expert Telemedicine",
-      "subtitle": "Expert consultations with leading world specialists",
-      "button": "Make an appointment"
-    },
-    "slide3": {
-      "title": "Special Offers"
-    },
-    "slide4": {
-      "title": "Charitable Foundation"
-    }
+ "hero": {
+  "slide1": {
+    "tag": "Expert oncological care",
+    "title": "Expert-level oncologists",
+    "subtitle1": "Personalized approach for every patient",
+    "subtitle2": "Center for modern anti-tumor therapy",
+    "button": "Join HDMC+"
   },
+  "slide2": {
+    "title": "NECHUSHKINA Valentina Mikhailovna",
+    "subtitle1": "Head of the Oncogynecology Department at Health-Direct",
+    "subtitle2": "Over 25 years of experience in oncogynecology, more than 10,000 successful surgeries",
+    "subtitle3": "Practicing surgeon, oncologist, obstetrician-gynecologist, Doctor of Medical Sciences, professor",
+    "subtitle4": "World-renowned oncogynecologist",
+    "subtitle5": "Five-year overall survival rate for ovarian cancer patients (stages IIIC–IV) operated on at the first stage is over 80%",
+    "button1": "Make an appointment",
+    "button2": "About the specialist"
+  },
+  "slide3": {
+    "tag": "Center for modern anti-tumor therapy",
+    "title": "Expert-level oncologists",
+    "subtitle1": "Your comfort and safety.",
+    "subtitle2": "International treatment standards.",
+    "subtitle3": "Personalized pathways without unnecessary procedures.",
+    "subtitle4": "A personal coordinator at every step."
+  },
+  "slide4": {
+    "title": "Multidisciplinary outpatient clinic"
+  },
+  "slide5": {
+    "tag": "Comprehensive check-up programs",
+    "title": "Take care of yourself in advance"
+  }
+},
   "aboutClinic": {
     "title": "About Clinic",
     "subtitle": "A multidisciplinary clinic in Moscow with modern diagnostics and expert specialists.",
@@ -1187,7 +1205,9 @@
     "title": "Contact Us",
     "subtitle": "Get in touch with us in any convenient way. We work for your health and are ready to answer all your questions.",
     "heading": "Send a Message",
-    "name": "Name",
+     "firstName": "First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
     "email": "Email",
     "phone": "Phone",
     "city": "City",

@@ -43,7 +43,7 @@ const PATIENT_TABS = [
   },
   {
     key: "blog",
-    labelKey: "forPatientsPage.heading5",
+    labelKey: "header.blog",
     icon: <FaBlog />,
     component: NewsTab,
   },
@@ -146,7 +146,7 @@ const ForPatients = () => {
               >
                 {tab.icon}
               </span>
-              <span className="break-all">{t(tab.labelKey)}</span>
+              <span className="">{t(tab.labelKey)}</span>
             </button>
           ))}
         </nav>
