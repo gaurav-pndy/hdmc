@@ -1186,7 +1186,8 @@
   },
   "testimonials": {
     "title": "Leave a Review",
-    "yourReview": "Your review",
+    "yourName": "Your Name",
+    "yourReview": "Your Review",
     "uploadVideo": "Upload Video (Optional)",
     "clickOrDrag": "Click or drag video to upload",
     "videoSelected": "Video selected: ",

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const FeedbackForm = () => {
   const { t } = useTranslation();
+  const [reviewName, setReviewName] = useState("");
   const [reviewText, setReviewText] = useState("");
   const [videoFile, setVideoFile] = useState(null);
 
@@ -10,6 +11,7 @@ const FeedbackForm = () => {
     e.preventDefault();
     // TODO: Handle form submission logic here e.g. API call
     alert(t("testimonials.submitted") || "Review submitted");
+    setReviewName("");
     setReviewText("");
     setVideoFile(null);
   };
@@ -25,6 +27,18 @@ const FeedbackForm = () => {
           onSubmit={handleSubmit}
           className="bg-white p-8 rounded-lg shadow-md border border-brand4 max-w-5xl mx-auto"
         >
+          <label
+            className="block text-brand1 font-semibold mb-2"
+            htmlFor="review-text"
+          >
+            {t("testimonials.yourName") || "[translate:Ваш отзыв]"}
+          </label>
+          <input
+            id="review-name"
+            className="w-full border border-brand4 rounded-lg p-3 mb-6 text-brand1 focus:outline-none focus:ring-2 focus:ring-brand1"
+            value={reviewName}
+            onChange={(e) => setReviewName(e.target.value)}
+          ></input>
           <label
             className="block text-brand1 font-semibold mb-2"
             htmlFor="review-text"

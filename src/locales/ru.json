@@ -1390,6 +1390,7 @@
   },
   "testimonials": {
   "title": "Оставить отзыв",
+  "yourName": "ваше имя",
   "yourReview": "Ваш отзыв",
   "uploadVideo": "Загрузить видео (необязательно)",
   "videoSelected": "Выбранное видео",
