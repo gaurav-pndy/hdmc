@@ -10,9 +10,11 @@ import { FiFilter, FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import WaveBackground from "../WaveBackground";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://apimanager.health-direct.ru/api";
 
-const DoctorsSection = () => {
+const DoctorsSection = ({ setShowPopup }) => {
   const { t, i18n } = useTranslation();
   const [type, setType] = useState("All");
   const [specialization, setSpecialization] = useState("All");
@@ -135,7 +137,7 @@ const DoctorsSection = () => {
       languages,
       image: doc.imageUrl || "/default-doctor.jpg",
       type: doc.services?.online ? "remote" : "personal", // Determine type based on services
-      fees: doc.feesAmount ? `${doc.feesAmount} ${doc.currency || ''}` : "",
+      fees: doc.feesAmount ? `${doc.feesAmount} ${doc.currency || ""}` : "",
     };
   });
 
@@ -148,14 +150,19 @@ const DoctorsSection = () => {
 
     const matchesSpecialization =
       specialization === "All" ||
-      (doc.tags && doc.tags.some(tag => 
-        specializations.some(spec => spec.label === tag && spec.id === specialization)
-      ));
+      (doc.tags &&
+        doc.tags.some((tag) =>
+          specializations.some(
+            (spec) => spec.label === tag && spec.id === specialization
+          )
+        ));
 
     const matchesSearch =
       doc.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       doc.about.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doc.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      doc.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
 
     return matchesType && matchesSpecialization && matchesSearch;
   });
@@ -166,7 +173,9 @@ const DoctorsSection = () => {
       <section className="w-full py-16 flex justify-center items-center min-h-96">
         <div className="text-center">
           <FaSpinner className="animate-spin text-4xl text-brand1 mx-auto mb-4" />
-          <p className="text-brand1 text-lg">{t("loading") || "Loading doctors..."}</p>
+          <p className="text-brand1 text-lg">
+            {t("loading") || "Loading doctors..."}
+          </p>
         </div>
       </section>
     );
@@ -177,7 +186,9 @@ const DoctorsSection = () => {
     return (
       <section className="w-full py-16 flex justify-center items-center min-h-96">
         <div className="text-center text-red-600">
-          <p className="mb-4">{t("error") || "Error"}: {error}</p>
+          <p className="mb-4">
+            {t("error") || "Error"}: {error}
+          </p>
           <button
             onClick={fetchDoctors}
             className="px-6 py-2 bg-brand1 text-white rounded-lg hover:bg-brand5/90 transition-colors"
@@ -218,8 +229,8 @@ const DoctorsSection = () => {
           </div>
         </div>
         <div className="text-left md:text-right w-full md:min-h-96 h-full p-6 pb-16 md:p-6 lg:pr-10 xl:pr-12 bg-gradient-to-t md:bg-gradient-to-l from-[#27407f] to-[#5279be]">
-          <h2 className="text-white z-40 text-4xl md:text-5xl font-bold mb-6">
-            {t("doctors.title")}
+          <h2 className="text-white z-40 text-3xl md:text-4xl font-bold mb-6">
+            {t("doctors.title1")}
           </h2>
           <p
             className="md:text-lg z-40 text-white"
@@ -320,7 +331,7 @@ const DoctorsSection = () => {
             nextEl: ".next-btn",
           }}
         >
-          {filteredDoctors.map((doc) => (
+          {filteredDoctors.slice(0, 5).map((doc) => (
             <SwiperSlide key={doc.id}>
               <Link
                 to={`/doctors/${doc.id}`}
@@ -358,13 +369,19 @@ const DoctorsSection = () => {
                       </span>
                     )}
                   </div>
-                  
-
-              
                 </div>
-                <button className="mt-4 px-6 py-2.5 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center">
-                  {t("doctors.viewProfile")}
+                <button
+                  onClick={() => setShowPopup(true)}
+                  className="mt-4 px-6 py-2.5 w-full border border-brand1 bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center cursor-pointer"
+                >
+                  {t("doctors.btn1")}
                 </button>
+                <Link
+                  to={`/doctors/${doc.id}`}
+                  className="mt-2 px-6 py-2.5 w-full border bg-white border-brand1 hover:bg-brand1 text-brand1 hover:text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center cursor-pointer"
+                >
+                  {t("doctors.btn2")}
+                </Link>
               </Link>
             </SwiperSlide>
           ))}
@@ -390,7 +407,8 @@ const DoctorsSection = () => {
                 No doctors found
               </h3>
               <p className="text-brand1/70 mb-6">
-                No doctors match your current filters. Try adjusting your search criteria.
+                No doctors match your current filters. Try adjusting your search
+                criteria.
               </p>
               <button
                 onClick={() => {

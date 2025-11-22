@@ -120,7 +120,7 @@ const AddressSection = ({ city, setShowPopup }) => {
         </p> */}
 
         {filteredClinics.map((clinic, idx) => (
-          <div key={idx} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl shadow p-6 md:p-8 flex flex-col gap-3">
               <div className="flex items-start text-left gap-2 text-black text-lg mb-1">
                 <FaMapMarkerAlt className="mt-1.5 text-brand1" />
@@ -149,9 +149,14 @@ const AddressSection = ({ city, setShowPopup }) => {
               >
                 {t("address.button")}
               </button>
+
+              <div
+                className="text-brand1 text-left text-sm mt-4"
+                dangerouslySetInnerHTML={{ __html: t("address.parkingText") }}
+              ></div>
             </div>
 
-            <div className="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow">
+            <div className=" bg-white rounded-xl overflow-hidden shadow">
               <YandexMap
                 center={clinic.coords}
                 zoom={clinic.zoom}

@@ -44,6 +44,8 @@
     "reviews": "Reviews",
     "blog": "Blog/News",
     "expertise": "Center Of Expertise",
+    "priceList": "Price List",
+    "vacancies": "Vacancies",
     "cityConfirm": {
       "question": "Is your city Moscow ?",
       "yes": "Yes",
@@ -158,47 +160,29 @@
   "aboutClinic": {
     "title": "About Clinic",
     "subtitle": "A multidisciplinary clinic in Moscow with modern diagnostics and expert specialists.",
-    "feature1": {
-      "title": "Moscow & Makhachkala",
-      "desc": "Modern clinics in two cities"
-    },
-    "feature2": {
-      "title": "International Standards",
-      "desc": "World-class quality"
-    },
-    "feature3": {
-      "title": "Multidisciplinary Team",
-      "desc": "Top category doctors"
-    },
-    "feature4": {
-      "title": "Early diagnosis of diseases is a personalized approach",
-      "desc": ""
-    },
-    "feature5": {
-      "title": "Working hours",
-      "desc": "from 8:00 to 23:00 seven days a week"
-    },
-    "stat1": {
-      "value": "40+",
-      "label": "specialties"
-    },
-    "stat2": {
-      "value": "50+",
-      "label": "experts"
-    },
-    "stat3": {
-      "value": "24/7",
-      "label": "Oncological board"
-    },
-    "stat4": {
-      "value": "10k+",
-      "label": "Telemedicine"
-    },
+   "feature1": {
+  "desc": "Multidisciplinary outpatient clinic — diagnostics and therapy in one place."
+},
+"feature2": {
+  "desc": "Center for modern anti-tumor therapy."
+},
+"feature3": {
+  "desc": "Doctors of the highest category"
+},
+"feature4": {
+  "desc": "Personalized care pathways without unnecessary procedures."
+},
+"feature5": {
+  "desc": "A personal coordinator at every step."
+},
+"descText": "A multidisciplinary expert-level clinic in Moscow. The uniqueness of the clinic lies in combining medical knowledge with wisdom and an individualized approach to every patient. We treat not just the disease, but the person — considering their character, physiological characteristics, and needs. Every specialist at the clinic, in addition to their primary specialization, has experience working with oncology patients and maintains oncological vigilance. Thus, diagnostics and treatment in the clinic are carried out at the highest level, taking into account knowledge of prevention, early detection, treatment, management, and additional examinations for all patients, including oncology patients. Attentive care, refined through years of experience, in diagnosing and treating all conditions is our priority! We work with all patients professionally, without unnecessary anxiety, with confidence at every step.",
+"footnote": "Make an appointment for a consultation — start with a clear plan of action.",
     "moreBtn": "Learn More"
   },
   "doctors": {
+    "title1": "A modern multidisciplinary outpatient clinic. A wide diagnostic and treatment base",
     "title": "Our Doctors",
-    "subtitle": "Our team is more than just experienced specialists. <br/> These are doctors shaping the modern medical landscape — organizing national and international conferences and seminars, publishing scientific papers, developing clinical guidelines and educational programs. </div> <br/> By working in an interdisciplinary format and combining expertise across fields, we create accessible and effective algorithms even for the most complex clinical cases. </div> <br/> We don’t compete — we build a professional community where knowledge, experience, and collaboration work for the benefit of the patient.",
+    "subtitle": "Our approach is based on evidence-based medicine and interdisciplinary collaboration. Each clinical step is evaluated taking into account the patient's medical history: we choose safe examination methods, plan treatment without increasing risks, and coordinate tactics in medical consultations. Our priority is safety, consistency, precision of actions and respect for the patient.<br/>The long-term experience of specialists working with patients, including after oncological diseases, allows them to correctly assess the condition after surgery, chemotherapy and radiation therapy, and take into account the specifics of drug interactions and limitations in diagnosis. We are here to carefully understand the situation and offer an informed, safe solution.",
     "filter": {
       "consultType": "Type of Consultation",
       "enterName": "Enter specialization or doctor's name",
@@ -211,6 +195,9 @@
       "remote": "Remote",
       "specialization": "Doctor Specialization"
     },
+
+     "btn1": "Sign up",
+    "btn2": "Learn More",
     "searchPlaceholder": "Search the doctors...",
     "noDoctors": "There are currently no specialists available in this field.",
     "noVideos": "No Videos",
@@ -1198,7 +1185,12 @@
     }
   },
   "testimonials": {
-    "title": "Feedback from our Patients",
+    "title": "Leave a Review",
+    "yourReview": "Your review",
+    "uploadVideo": "Upload Video (Optional)",
+    "clickOrDrag": "Click or drag video to upload",
+    "videoSelected": "Video selected: ",
+    "btn": "Leave Review",
     "allBtn": "All reviews"
   },
   "contact": {
@@ -1226,8 +1218,8 @@
     "route": "Set a route",
     "clinic1": {
       "title": "HDMC",
-      "address": "Kvartal West, Moscow, Aminyevskoye Highway Building 6, Entrance 1, 4th and 5th floor",
-      "schedule": "From 8:00 to 23:00, without days off"
+      "address": "Business center Kvartal West, <br/>Moscow, 6 Aminyevskoe highway, entrance 1, 4th and 5th floors",
+      "schedule": "from 8:00 to 23:00, seven days a week"
     },
     "clinic2": {
       "title": "Ali-Gadzhi Akushinskogo Avenue",
@@ -1243,8 +1235,9 @@
   },
   "footer": {
     "desc": "International project \"Health-Direct\" <br />Autonomous Non-Profit Organization <br />\"Scientific and Educational Center\" <br />\"Eurasian Oncology Program 'EAFO'\"",
-    "navigation": "Navigation",
-    "documents": "Documents",
+    "navigation": "Fast Links",
+    "licenses": "Licenses and Permits",
+    "documents": "Legal Documents",
     "priceList": "Service Price List",
     "agreement": "Offer Agreement",
     "privacy": "Privacy Policy",
@@ -2560,5 +2553,20 @@
   "more": "more",
   "common":{
     "close": "Close"
-  }
+  },
+
+
+  "cookie": {
+  "message": "By staying on the website, you agree to the ",
+  "link": "cookie usage policy",
+  "accept": "Accept",
+  "heading": "Cookie Usage Agreement",
+  "lastUpdated": "Updated: September 03",
+  "para1": "HD Clinic LLC uses cookies — small text files placed on users’ computers for the purpose of analyzing their activity, enabling the proper functioning of this web resource (hereinafter referred to as the site), site navigation, correct operation of services, web analytics, visitor action recordings, tracking traffic sources, and evaluating the effectiveness of online and offline advertising, necessary for advertising and analytical services.",
+  "para2": "The site uses the Yandex.Metrica web analytics service provided by Yandex LLC and the google.ru/analytics web analytics service provided by Google LLC. These services use cookie technology. The information collected using cookies (the user's IP address, date and time of the site visit, browser and operating system types, type and model of mobile device, traffic source, information about user behavior on the site including the number and names of viewed pages; age, gender, interests, geographic location of the user, and other technical data) cannot identify you, but may help us improve the site’s performance.",
+  "para3": "Information about your use of the site collected through cookies will be transferred to Yandex LLC and Google LLC, which will process this information to evaluate your use of the site, compile reports for us on site activity, and provide other services. Yandex LLC and Google LLC process this information in accordance with the terms of use of their services.",
+  "para4": "HD Clinic LLC processes user data in accordance with the “Personal Data Processing Policy.” Some site features may be used without providing personal data. However, to use certain special features of the site, it is necessary to provide some information, including personal data. By staying on the site, you agree to the cookie usage policy.",
+  "footer": "You may refuse the use of cookies by selecting the appropriate settings in your browser."
+}
+
 }

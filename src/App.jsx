@@ -42,7 +42,7 @@ function App() {
         },
         {
           path: "/doctors",
-          element: <DoctorsPage />,
+          element: <DoctorsPage setShowPopup={setShowPopup} />,
         },
         {
           path: "/doctors/:doctorId",

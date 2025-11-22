@@ -11,9 +11,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import WaveBackground from "../components/WaveBackground";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://apimanager.health-direct.ru/api";
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://apimanager.health-direct.ru/api";
 
-const DoctorsPage = () => {
+const DoctorsPage = ({ setShowPopup }) => {
   const { t, i18n } = useTranslation();
   const [type, setType] = useState("All");
   const [specialization, setSpecialization] = useState("All");
@@ -465,42 +467,21 @@ const DoctorsPage = () => {
                       </span>
                     )}
                   </div>
-                 
-
-                  {/* Location 
-                  {doc.location && (
-                    <div className="flex items-center text-brand1/70 text-sm mb-3">
-                      <FaMapMarkerAlt className="w-3 h-3 mr-1.5" />
-                      <span className="line-clamp-1">{doc.location}</span>
-                    </div>
-                  )}
-                  */}
-
-                  {/* Fees 
-                  <div className="text-brand1 font-semibold text-lg mb-3">
-                    Consultation: {doc.fees}
-                  </div>
-                  */}
-
-                  {/* About (truncated) - Using dangerouslySetInnerHTML for HTML content
-                  {doc.about && (
-                    <div
-                      className="text-brand1/80 text-sm line-clamp-3 mb-3 leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          doc.about.length > 150
-                            ? doc.about.substring(0, 150) + "..."
-                            : doc.about,
-                      }}
-                    />
-                  )}
-                     */}
                 </div>
               </div>
               {/* View Profile Button */}
-              <button className="mt-4 px-6 py-3 w-full bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center group-hover:shadow-xl group-hover:shadow-brand1/50 transform group-hover:-translate-y-0.5">
-                {t("doctors.viewProfile") || "View Full Profile"}
+              <button
+                onClick={() => setShowPopup(true)}
+                className="mt-4 px-6 py-2.5 w-full border border-brand1 bg-brand1 hover:bg-brand5/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center cursor-pointer"
+              >
+                {t("doctors.btn1")}
               </button>
+              <Link
+                to={`/doctors/${doc.id}`}
+                className="mt-2 px-6 py-2.5 w-full border bg-white border-brand1 hover:bg-brand1 text-brand1 hover:text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand1/30 text-center cursor-pointer"
+              >
+                {t("doctors.btn2")}
+              </Link>
             </Link>
           ))}
         </div>
